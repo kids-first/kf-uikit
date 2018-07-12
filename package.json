@@ -1,0 +1,33 @@
+{
+  "name": "kf-uikit",
+  "version": "0.0.1",
+  "description": "Kids First Design System",
+  "main": "src/index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kids-first/kf-uikit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kids-first/kf-uikit/issues"
+  },
+  "homepage": "https://github.com/kids-first/kf-uikit#readme",
+  "devDependencies": {
+    "@storybook/react": "^3.4.8",
+    "babel-core": "^6.26.3"
+  },
+  "dependencies": {
+    "emotion": "^9.2.5",
+    "emotion-theming": "^9.2.5",
+    "lodash": "^4.17.10",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-emotion": "^9.2.5",
+    "styled-components": "^3.3.3",
+    "styled-system": "^2.3.6"
+  }
+}
