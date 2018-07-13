@@ -21,8 +21,9 @@ export const textStyles = complexStyle({
 });
 
 const applyDefaultTypeStyles = Component => {
+  let isP = Component === 'p';
   const styledComponent = styled(Component.toLowerCase())`
-    ${({ theme }) => theme[Component.toLowerCase()]};
+    ${({ theme }) => theme[isP ? 'paragraph' : Component.toLowerCase()]};
     ${space}
     ${width}
     ${fontSize}
@@ -37,11 +38,11 @@ const applyDefaultTypeStyles = Component => {
     ${textStyles}
     ${({ css }) => css}
 `;
-  styledComponent.displayName = Component;
+  styledComponent.displayName = Component.toUpperCase();
   return styledComponent;
 };
 
-export const P = applyDefaultTypeStyles('P');
+export const P = applyDefaultTypeStyles('p');
 export const Span = applyDefaultTypeStyles('Span');
 
 export const H1 = applyDefaultTypeStyles('H1');

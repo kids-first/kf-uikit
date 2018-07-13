@@ -1,5 +1,5 @@
 import { css } from 'react-emotion';
-import { headings, textUtils, fonts } from './Typography';
+import { headings, textUtils, fonts, paragraph } from './Typography';
 import colors from './Colors';
 import buttons from './Buttons';
 // import layout from './Layout';
@@ -38,5 +38,6 @@ export default {
   colors,
   fonts,
   ...headings,
+  paragraph,
   ...buttons
 };
