@@ -9,21 +9,7 @@ const baseFontSize = 16;
 
 // typographic scale
 // px based
-export const fontSizesScale = [
-  12,
-  14,
-  16,
-  18,
-  20,
-  24,
-  30,
-  32,
-  36,
-  48,
-  64,
-  96,
-  128
-];
+export const fontSizesScale = [14, 16, 18, 20, 24, 30, 32, 36, 48, 64, 96, 128];
 // keyed object to make sizes more declarative
 // ex. fontSizes['32']
 export const fontSizes = zipObject(
@@ -104,25 +90,6 @@ export const headings = {
     ${paragraph}
     font-size: ${fontSizes['14']};
     font-weight: ${fontWeights.thin};
-  `
-};
-
-export const links = {
-  internalLink: `
-    color: #a42c90;
-    font-weight: bold;
-    &:hover {
-      cursor: pointer;
-      color: ${colors.hover};
-    }
-  `,
-  externalLink: `
-    color: ${colors.primary};
-    cursor: pointer;
-    &:hover,
-    &.active {
-      color: ${colors.highlight};
-    }
   `
 };
 

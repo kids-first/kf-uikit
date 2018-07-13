@@ -20,33 +20,36 @@ export const textStyles = complexStyle({
   key: 'textStyles'
 });
 
-const applyDefaultTypeStyles = Component => styled(Component)`
-  ${({ theme }) => theme[Component]};
-  ${space}
-  ${width}
-  ${fontSize}
-  ${fontWeight}
-  ${color}
-  ${fontFamily}
-  ${borders}
-  ${letterSpacing}
-  ${lineHeight}
-  ${hover}
-  ${textAlign}
-  ${textStyles}
-  ${({ css }) => css}
+const applyDefaultTypeStyles = Component => {
+  const styledComponent = styled(Component.toLowerCase())`
+    ${({ theme }) => theme[Component.toLowerCase()]};
+    ${space}
+    ${width}
+    ${fontSize}
+    ${fontWeight}
+    ${color}
+    ${fontFamily}
+    ${borders}
+    ${letterSpacing}
+    ${lineHeight}
+    ${hover}
+    ${textAlign}
+    ${textStyles}
+    ${({ css }) => css}
 `;
+  styledComponent.displayName = Component;
+  return styledComponent;
+};
 
-export const P = applyDefaultTypeStyles('p');
-export const Span = applyDefaultTypeStyles('span');
-export const SmallText = applyDefaultTypeStyles('small');
+export const P = applyDefaultTypeStyles('P');
+export const Span = applyDefaultTypeStyles('Span');
 
-export const H1 = applyDefaultTypeStyles('h1');
+export const H1 = applyDefaultTypeStyles('H1');
 
-export const H2 = applyDefaultTypeStyles('h2');
+export const H2 = applyDefaultTypeStyles('H2');
 
-export const H3 = applyDefaultTypeStyles('h3');
+export const H3 = applyDefaultTypeStyles('H3');
 
-export const H4 = applyDefaultTypeStyles('h4');
+export const H4 = applyDefaultTypeStyles('H4');
 
-export const H5 = applyDefaultTypeStyles('h5');
+export const H5 = applyDefaultTypeStyles('H5');

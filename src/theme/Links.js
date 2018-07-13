@@ -7,7 +7,15 @@ const links = {
       textDecoration: 'jnone'
     }
   },
-  externalLink: css`
+  internalLink: `
+    color: #a42c90;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+      color: ${colors.hover};
+    }
+  `,
+  externalLink: `
     color: ${colors.primary};
     cursor: pointer;
     &:hover,
