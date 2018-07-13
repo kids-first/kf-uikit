@@ -2,8 +2,9 @@ import { css } from 'react-emotion';
 import { headings, textUtils, fonts } from './Typography';
 import colors from './Colors';
 import buttons from './Buttons';
-import layout from './Layout';
-import links from './Links';
+// import layout from './Layout';
+// import links from './Links';
+
 const mixins = {
   linkButtonActive: css`
     border-radius: 19px;
@@ -34,11 +35,8 @@ const components = {
 };
 
 export default {
-  ...colors,
-  ...layout,
-  ...components,
-  ...buttons,
-  ...mixins,
+  colors,
+  fonts,
   ...headings,
-  fonts
+  ...buttons
 };
