@@ -39,5 +39,7 @@ export default {
   fonts,
   ...headings,
   paragraph,
-  ...buttons
+  textStyles: {
+    ...textUtils
+  }
 };

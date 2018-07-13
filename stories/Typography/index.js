@@ -94,3 +94,41 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add(
     </P>
   ))
 );
+
+storiesOf(`${base.replace('/stories/', '')}`, module).add(
+  'text utility props',
+  withInfo({
+    text:
+      'these are specific shorthand props that can be passed to any Typography component',
+    inline: true,
+    header: false
+  })(() => (
+    <div
+      style={{ maxWidth: '50%', border: '1px solid black', padding: '10px' }}
+    >
+      <H4>Alignment</H4>
+      <P center>center </P>
+      <P left>left </P>
+      <P right>right </P>
+      <hr />
+
+      <H4>Decoration</H4>
+      <P underline>underline </P>
+      <P clean>clean (no-decoration) </P>
+      <hr />
+
+      <H4> Case</H4>
+      <P caps>Capitalize </P>
+      <P upper>Upper </P>
+      <P lower>lower </P>
+      <hr />
+
+      <H4> Style</H4>
+      <P italic>italics </P>
+      <hr />
+
+      <H4> Size</H4>
+      <P small>Small 75% </P>
+    </div>
+  ))
+);
