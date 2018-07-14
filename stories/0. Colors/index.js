@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import base from 'paths.macro';
 import { pick, keyBy } from 'lodash';
-import colors from '../../src/theme/Colors';
+import colors, { gradients } from '../../src/theme/Colors';
 import {
   H1,
   H2,
@@ -224,6 +224,66 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('Background', () => (
   >
     {Object.keys(bgColorsHash).map(name => (
       <Swatch key={name} color={bgColorsHash[name]} name={name} />
+    ))}
+  </div>
+));
+
+const borderColorsHash = hashColors(colors.border);
+storiesOf(`${base.replace('/stories/', '')}`, module).add('Borders', () => (
+  <div
+    style={{
+      padding: 30,
+      width: (SWATCH_WIDTH + 48) * 4,
+      display: 'flex',
+      flexWrap: 'wrap',
+      flexDirection: 'row'
+    }}
+  >
+    {Object.keys(borderColorsHash).map(name => (
+      <Swatch key={name} color={borderColorsHash[name]} name={name} />
+    ))}
+  </div>
+));
+
+const GradientSwatch = ({ color, name }) => (
+  <div
+    name={name}
+    style={{
+      marginBottom: 48,
+      marginRight: 48,
+      width: SWATCH_WIDTH * 2
+    }}
+  >
+    <div
+      style={{
+        width: SWATCH_WIDTH * 2,
+        height: SWATCH_WIDTH,
+        backgroundImage: color,
+        borderRadius: 4,
+        marginBottom: 8
+      }}
+    />
+    <H3 mb="5px" bold>
+      {name}
+    </H3>
+    <P my="0" small>
+      background-image: {color}
+    </P>
+  </div>
+);
+storiesOf(`${base.replace('/stories/', '')}`, module).add('Gradients', () => (
+  <div
+    style={{
+      backgroundColor: '#fcfcfc',
+      padding: 30,
+      width: (SWATCH_WIDTH + 48) * 2,
+      display: 'flex',
+      flexWrap: 'wrap',
+      flexDirection: 'row'
+    }}
+  >
+    {Object.keys(gradients).map(name => (
+      <GradientSwatch key={name} color={gradients[name]} name={name} />
     ))}
   </div>
 ));
