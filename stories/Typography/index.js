@@ -1,7 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import base from 'paths.macro';
-import { H1, H2, H3, H4, H5, P } from '../../src/components/Typography';
+import {
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  P,
+  BlockQuote
+} from '../../src/components/Typography';
 import { withInfo } from '@storybook/addon-info';
 import theme from '../../src/theme/defaultTheme';
 const info = (css, component) =>
@@ -38,6 +46,11 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add(
         clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
         amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
         nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+        <BlockQuote>
+          Contingent on available funds, the DRC award is expected to provide
+          funding for five years of up to a total of approximately $14.8
+          million.
+        </BlockQuote>
         sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
         rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
         ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
@@ -92,6 +105,16 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add(
       rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
       dolor sit amet.
     </P>
+  ))
+);
+
+storiesOf(`${base.replace('/stories/', '')}`, module).add(
+  'BlockQuote',
+  info(theme.blockquote, () => (
+    <BlockQuote>
+      Contingent on available funds, the DRC award is expected to provide
+      funding for five years of up to a total of approximately $14.8 million.
+    </BlockQuote>
   ))
 );
 

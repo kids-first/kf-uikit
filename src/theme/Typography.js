@@ -9,7 +9,21 @@ const baseFontSize = 16;
 
 // typographic scale
 // px based
-export const fontSizesScale = [14, 16, 18, 20, 24, 30, 32, 36, 48, 64, 96, 128];
+export const fontSizesScale = [
+  14,
+  16,
+  18,
+  20,
+  22,
+  24,
+  30,
+  32,
+  36,
+  48,
+  64,
+  96,
+  128
+];
 // keyed object to make sizes more declarative
 // ex. fontSizes['32']
 export const fontSizes = zipObject(
@@ -92,6 +106,16 @@ export const headings = {
     font-weight: ${fontWeights.thin};
   `
 };
+
+export const blockquote = `
+  margin: 20px 0;
+  padding: 5px 15px;
+  ${paragraph}
+  border-left: 5px solid ${colors.border.blue};
+  color: ${colors.secondary};
+  font-size: ${fontSizes['22']};
+  font-style: italic;
+`;
 
 export const textUtils = {
   center: { textAlign: 'center' },

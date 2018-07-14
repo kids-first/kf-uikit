@@ -37,7 +37,8 @@ const colors = {
   },
   border: {
     grey: '#cacbcf',
-    error: `#e45562`
+    error: `#e45562`,
+    blue: '#00adee'
   },
   error: {
     dark: '#d8202f', //red

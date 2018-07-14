@@ -44,6 +44,7 @@ const applyDefaultTypeStyles = Component => {
 
 export const P = applyDefaultTypeStyles('p');
 export const Span = applyDefaultTypeStyles('Span');
+export const BlockQuote = applyDefaultTypeStyles('blockquote');
 
 export const H1 = applyDefaultTypeStyles('H1');
 
