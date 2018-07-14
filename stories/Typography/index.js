@@ -18,10 +18,55 @@ const info = (css, component) =>
   withInfo({
     text: css.replace(/;/gi, ';\n'),
     inline: true,
-    header: false,
-    propTypes: false
+    header: false
   })(component);
+storiesOf(`${base.replace('/stories/', '')}`, module).add(
+  'Fonts',
+  withInfo({
+    text: `
+      Fonts are imported from Google Fonts using 
+      ~~~html
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:400,500,700"
+  rel="stylesheet">
+      ~~~
+      or
+      ~~~js
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:400,500,700');
 
+      ~~~
+    `,
+    inline: true,
+    header: false,
+    source: false
+  })(() => (
+    <div>
+      <H1 mb="0">Montserrat</H1>
+      <H1 my="0" small fontWeight="300">
+        {' '}
+        thin: 300
+      </H1>
+      <H1 mt="0" small fontWeight="400">
+        {' '}
+        regular: 400
+      </H1>
+      <H1 mb="0" fontFamily="OpenSans">
+        OpenSans
+      </H1>
+      <H1 my="0" small fontWeight="400" fontFamily="OpenSans">
+        {' '}
+        regular: 400
+      </H1>
+      <H1 my="0" small fontWeight="500" fontFamily="OpenSans">
+        {' '}
+        normal: 500
+      </H1>
+      <H1 mt="0" small fontWeight="700" fontFamily="OpenSans">
+        {' '}
+        bold: 700
+      </H1>
+    </div>
+  ))
+);
 storiesOf(`${base.replace('/stories/', '')}`, module).add(
   'Type Specimen',
   () => (
