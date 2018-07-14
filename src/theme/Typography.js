@@ -33,7 +33,7 @@ export const fontSizes = zipObject(
 
 // for any scale, either array or objects will work
 // em based
-export const lineHeightsScale = [0.95, 1, 1.125, 1.25, 1.44, 1.5, 1.86];
+export const lineHeightsScale = [0.95, 1, 1.125, 1.25, 1.44, 1.5, 1.86, 2];
 export const lineHeights = zipObject(lineHeightsScale, lineHeightsScale);
 
 // based on imported fonts in index.css
@@ -51,7 +51,10 @@ export const letterSpacings = {
   heading: '0.5px'
 };
 
-const typographyBase = `text-decoration: none; border: none;`;
+const typographyBase = `
+  text-decoration: none; 
+  border: none;
+`;
 
 const headingsBase = `
   font-family: ${fonts.default};
@@ -116,6 +119,50 @@ export const blockquote = `
   font-size: ${fontSizes['22']};
   font-style: italic;
 `;
+
+export const lists = {
+  ul: `
+      ${paragraph}
+      margin-top: 0;
+      margin-bottom: 11px;
+      line-height: ${lineHeights['2']};
+      -webkit-margin-before: 1em;
+      -webkit-margin-after: 1em;
+  `,
+  ol: `
+      counter-reset: li;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+    li {
+      ${paragraph}
+      position: relative;
+      margin: 0 0 0 12px;
+      padding: 0 28px 30px;
+      border-left: 2px solid ${colors.grey[2]};
+      line-height: ${lineHeights['1.5']};
+      &:before {
+        content: counter(li);
+        font-size: ${fontSizes['14']};
+        line-height: ${lineHeights['1.86']}; //26px
+        font-family: ${fonts.default};
+        font-weight: ${fontWeights.bold};
+        counter-increment: li;
+        position: absolute;
+        left: -14px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 26px;
+        padding: 0;
+        color: #fff;
+        background: ${colors.border.blue};
+        border-radius: 50%;
+        text-align: center;
+      }
+    }
+  `
+};
 
 export const textUtils = {
   center: { textAlign: 'center' },

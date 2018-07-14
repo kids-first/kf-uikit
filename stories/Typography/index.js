@@ -8,7 +8,9 @@ import {
   H4,
   H5,
   P,
-  BlockQuote
+  BlockQuote,
+  UL,
+  OL
 } from '../../src/components/Typography';
 import { withInfo } from '@storybook/addon-info';
 import theme from '../../src/theme/defaultTheme';
@@ -46,18 +48,63 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add(
         clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
         amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
         nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-        <BlockQuote>
-          Contingent on available funds, the DRC award is expected to provide
-          funding for five years of up to a total of approximately $14.8
-          million.
-        </BlockQuote>
         sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
         rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-        est Lorem ipsum dolor sit amet.
+        ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+        <UL>
+          <li>Adolescent Idiopathic Scoliosis </li>
+          <li>Cancer Susceptibility </li>
+          <li>Congenital Diaphragmatic Hernia </li>
+          <li>Craniofacial Microsomia </li>
+          <li>Disorders of Sex Development </li>
+          <li>Enchondromatoses </li>
+          <li>Ewing Sarcoma </li>
+          <li>Familial Leukemia </li>
+          <li>Hearing Loss </li>
+        </UL>{' '}
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+        sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </P>
+      <BlockQuote>
+        Contingent on available funds, the DRC award is expected to provide
+        funding for five years of up to a total of approximately $14.8 million.
+      </BlockQuote>
+      <hr />
+      <H4>
+        Users can get started in the Kids First DRC Data Portal in three easy
+        steps:
+      </H4>
+      <P>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua.At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+        rebum.
+        <OL>
+          <li>
+            Register for the Kids First DRC Data Portal and complete your online
+            profile.
+          </li>
+          <li>
+            Browse and search through clinical &amp; phenotypic data in the File
+            Repository to build a cohort of interest.
+          </li>
+          <li>
+            Push your dbGaP authorized genomic files to Cavatica (or download)
+            to begin your analysis on the data.
+          </li>
+        </OL>{' '}
+        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
+        ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+        ipsum dolor sit amet.
       </P>
     </div>
   )
@@ -115,6 +162,45 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add(
       Contingent on available funds, the DRC award is expected to provide
       funding for five years of up to a total of approximately $14.8 million.
     </BlockQuote>
+  ))
+);
+
+storiesOf(`${base.replace('/stories/', '')}`, module).add(
+  'UL',
+  info(theme.ul, () => (
+    <UL>
+      <li>Adolescent Idiopathic Scoliosis </li>
+      <li>Cancer Susceptibility </li>
+      <li>Congenital Diaphragmatic Hernia </li>
+      <li>Craniofacial Microsomia </li>
+      <li>Disorders of Sex Development </li>
+      <li>Enchondromatoses </li>
+      <li>Ewing Sarcoma </li>
+      <li>Familial Leukemia </li>
+      <li>Hearing Loss </li>
+    </UL>
+  ))
+);
+
+storiesOf(`${base.replace('/stories/', '')}`, module).add(
+  'OL',
+  info(theme.ol, () => (
+    <OL>
+      <li>
+        Click edit underneath your name. This will bring up a box to edit your
+        basic profile information.
+      </li>
+      <li>
+        To add a profile picture, click on the button that says “Change
+        Gravatar”. You will be redirected to Wordpress &amp; Gravatar’s website
+        to complete the profile picture set up the process.
+      </li>
+      <li>
+        Once you have set up &amp; selected a profile picture within the
+        Gravatar platform, navigate back to your DRC Portal Profile and refresh
+        the page to see your new profile picture.{' '}
+      </li>
+    </OL>
   ))
 );
 

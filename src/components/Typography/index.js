@@ -42,10 +42,6 @@ const applyDefaultTypeStyles = Component => {
   return styledComponent;
 };
 
-export const P = applyDefaultTypeStyles('p');
-export const Span = applyDefaultTypeStyles('Span');
-export const BlockQuote = applyDefaultTypeStyles('blockquote');
-
 export const H1 = applyDefaultTypeStyles('H1');
 
 export const H2 = applyDefaultTypeStyles('H2');
@@ -55,3 +51,9 @@ export const H3 = applyDefaultTypeStyles('H3');
 export const H4 = applyDefaultTypeStyles('H4');
 
 export const H5 = applyDefaultTypeStyles('H5');
+
+export const P = applyDefaultTypeStyles('p');
+export const Span = applyDefaultTypeStyles('Span');
+export const BlockQuote = applyDefaultTypeStyles('blockquote');
+export const UL = applyDefaultTypeStyles('ul');
+export const OL = applyDefaultTypeStyles('ol');

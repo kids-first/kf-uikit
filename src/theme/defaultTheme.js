@@ -4,7 +4,8 @@ import {
   textUtils,
   fonts,
   paragraph,
-  blockquote
+  blockquote,
+  lists
 } from './Typography';
 import colors from './Colors';
 import buttons from './Buttons';
@@ -46,6 +47,7 @@ export default {
   ...headings,
   paragraph,
   blockquote,
+  ...lists,
   textStyles: {
     ...textUtils
   }
