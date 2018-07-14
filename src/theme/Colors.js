@@ -1,8 +1,10 @@
 const colors = {
-  white: '#ffffff',
   primary: '#90278e', //magenta
   secondary: '#2b388f', //purplish blue
   tertiary: '#009bb8', //teal-blue
+
+  white: '#ffffff',
+  black: '#000',
 
   highlight: '#e83a9c', //pink
 
