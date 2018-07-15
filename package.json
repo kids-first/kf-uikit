@@ -1,6 +1,6 @@
 {
   "name": "kf-uikit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Kids First Design System",
   "main": "src/index.js",
   "scripts": {
