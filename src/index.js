@@ -1,4 +1,4 @@
-export { defaultTheme * KFTheme } from './theme/defaultTheme';
+export { defaultTheme as KFTheme } from './theme/defaultTheme';
 export {
   H1,
   H2,
