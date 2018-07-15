@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Kids First Design System",
   "main": "src/index.js",
-  "private": true,
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
