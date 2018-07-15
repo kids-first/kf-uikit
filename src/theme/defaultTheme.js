@@ -8,7 +8,7 @@ import {
   lists
 } from './Typography';
 import colors from './Colors';
-import buttons from './Buttons';
+// import buttons from './Buttons';
 // import layout from './Layout';
 // import links from './Links';
 
