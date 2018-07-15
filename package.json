@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Kids First Design System",
   "main": "src/index.js",
+  "private": true,
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
@@ -10,12 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/kids-first/kf-uikit.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/kids-first/kf-uikit/issues"
   },
-  "homepage": "https://github.com/kids-first/kf-uikit#readme",
   "devDependencies": {
     "@storybook/addon-info": "^3.4.8",
     "@storybook/react": "^3.4.8",
