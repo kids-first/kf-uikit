@@ -1,11 +1,10 @@
 {
   "name": "kf-uikit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Kids First Design System",
   "main": "dist/index.js",
   "scripts": {
-    "prepare":
-      "rm -rf dist && mkdir dist && babel src --out-dir dist --copy-files",
+    "prepare": "rm -rf dist && mkdir dist && babel src --out-dir dist --copy-files",
     "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "repository": {
