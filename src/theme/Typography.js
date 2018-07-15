@@ -75,7 +75,7 @@ export const headings = {
     font-size: ${fontSizes['36']};
     font-weight: ${fontWeights.normal};
     letter-spacing: ${letterSpacings.heading};
-    background-image: ${gradients.blue};
+    background-image: ${gradients.research};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;`,
