@@ -1,4 +1,4 @@
-import { css } from 'react-emotion';
+import { css } from 'emotion';
 import {
   headings,
   textUtils,
@@ -12,14 +12,14 @@ import colors from './Colors';
 // import layout from './Layout';
 // import links from './Links';
 
-const mixins = {
-  linkButtonActive: css`
-    border-radius: 19px;
-    background-color: ${colors.primaryHover};
-    border: solid 2px ${colors.borderGrey};
-    color: ${colors.white};
-  `
-};
+// const mixins = {
+//   linkButtonActive: css`
+//     border-radius: 19px;
+//     background-color: ${colors.primaryHover};
+//     border: solid 2px ${colors.borderGrey};
+//     color: ${colors.white};
+//   `
+// };
 
 const components = {
   textStyles: {
