@@ -30,21 +30,44 @@ const baseStyles = complexStyle({
   key: 'baseStyles'
 });
 
-export const applyDefaultStyles = Component => styled(Component)`
+export const applyDefaultStyles = Component => {
+  const styledComponent = styled(Component.toLowerCase())`
   ${baseStyles}
-  ${space}
-  ${width}
-  ${fontSize}
-  ${fontWeight}
-  ${color}
-  ${maxWidth}
-  ${justifySelf}
-  ${alignSelf}
-  ${borders}
-  ${borderRadius}
-  ${lineHeight}
-  ${overflow}
-  ${overflowY}
-  ${hover}
-  ${textAlign}
-`;
+   ${space}
+   ${width}
+   ${fontSize}
+   ${fontWeight}
+   ${color}
+   ${maxWidth}
+   ${justifySelf}
+   ${alignSelf}
+   ${borders}
+   ${borderRadius}
+   ${lineHeight}
+   ${overflow}
+   ${overflowY}
+   ${hover}
+   ${textAlign}
+ `;
+  styledComponent.displayName = Component.toUpperCase();
+  return styledComponent;
+};
+
+// export const applyDefaultStyles = Component => styled(Component)`
+//   ${baseStyles}
+//   ${space}
+//   ${width}
+//   ${fontSize}
+//   ${fontWeight}
+//   ${color}
+//   ${maxWidth}
+//   ${justifySelf}
+//   ${alignSelf}
+//   ${borders}
+//   ${borderRadius}
+//   ${lineHeight}
+//   ${overflow}
+//   ${overflowY}
+//   ${hover}
+//   ${textAlign}
+// `;
