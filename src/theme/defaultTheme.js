@@ -1,4 +1,4 @@
-import { css } from 'emotion';
+import { css } from '../kfFeels/kfEmotion';
 import {
   headings,
   textUtils,
