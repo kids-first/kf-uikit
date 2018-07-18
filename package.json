@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "prepare": "rm -rf dist && mkdir dist && babel src --out-dir dist",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o storybook-static"
   },
   "repository": {
     "type": "git",
