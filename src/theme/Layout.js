@@ -14,20 +14,20 @@ const layout = {
       flexDirection: 'column'
     }
   },
-  column: css`
+  column: `
     display: flex;
     flex-direction: column;
   `,
-  row: css`
+  row: `
     display: flex;
     flex-direction: row;
   `,
-  center: css`
+  center: `
     display: flex;
     align-items: center;
     justify-content: center;
   `,
-  fillCenter: css`
+  fillCenter: `
     width: 100%;
     height: 100%;
     display: flex;

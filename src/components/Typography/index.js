@@ -1,4 +1,5 @@
-import styled from 'react-emotion';
+import styled from '../../kfFeels/kfReactEmotion';
+
 // import { Trans } from 'react-i18next'; TODO: add Trans by default
 import {
   width,

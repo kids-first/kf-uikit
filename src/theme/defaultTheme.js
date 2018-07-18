@@ -1,4 +1,5 @@
-import { css } from 'emotion';
+import { css } from '../kfFeels/kfEmotion';
+
 import {
   headings,
   textUtils,
@@ -8,18 +9,11 @@ import {
   lists
 } from './Typography';
 import colors from './Colors';
+
 // import buttons from './Buttons';
 // import layout from './Layout';
-// import links from './Links';
 
-// const mixins = {
-//   linkButtonActive: css`
-//     border-radius: 19px;
-//     background-color: ${colors.primaryHover};
-//     border: solid 2px ${colors.borderGrey};
-//     color: ${colors.white};
-//   `
-// };
+import layout from './Layout';
 
 const components = {
   textStyles: {
