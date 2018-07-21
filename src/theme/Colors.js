@@ -16,7 +16,7 @@ const palette = {
   // B/W
   white: 'rgb(255,255,255)',
   black: 'rgb(0,0,0)',
-  grey: [...Array(12).keys()].map(i => chroma('rgb(0,0,0)').brighten(i/2)),
+  grey: [...Array(12).keys()].map(i => chroma('rgb(0,0,0)').brighten(i/2).css()),
 	...brand,
 	...states,
 }

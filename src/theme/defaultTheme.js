@@ -1,7 +1,10 @@
 import colors from './Colors';
-import fontSizes from './Typography';
+import { fonts, fontSizes } from './Typography';
 
+console.log(colors);
 const theme = {
+  fontSizes,
+  fonts,
   colors: colors
 }
 

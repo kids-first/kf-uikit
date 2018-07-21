@@ -16,6 +16,16 @@ stories.add('Brand', () => (
   { info: { inline: true, header: false, text: 'hello'} }
 );
 
+stories.add('Greyscale', () => (
+  <div>
+    {theme.colors.grey.map((name, i) => (
+      <SwatchDisplay key={i} name={`grey.${i}`} color={name}/>
+    ))}
+  </div>
+  ),
+  { info: { inline: true, header: false, text: 'hello'} }
+);
+
 stories.add('States', () => (
   <div>
     {['info','warn','error'].map(name => (
