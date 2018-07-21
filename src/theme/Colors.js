@@ -1,50 +1,47 @@
+import chroma from 'chroma-js';
+
+const pallette = {
+  // B/W
+  white: 'rgb(255,255,255)',
+  black: 'rgb(0,0,0)',
+  grey: [...Array(12).keys()].map(i => chroma('rgb(0,0,0)').brighten(i/2)),
+
+  // Branding
+  primary: 'rgb(144,39,142)',   //magenta
+  secondary: 'rgb(43,56,143)',  //purplish blue
+  tertiary: 'rgb(0,155,184)',   //teal-blue
+
+  info: 'rgb(232,58,156)', // pink
+  error: 'rgb(232,58,156)',
+}
+
 const colors = {
-  primary: '#90278e', //magenta
-  secondary: '#2b388f', //purplish blue
-  tertiary: '#009bb8', //teal-blue
+  ...pallette,
 
-  white: '#ffffff',
-  black: '#000',
+  active: 'rgb(0,175,237)',     //light blue
+  inactive: '#999',
 
-  highlight: '#e83a9c', //pink
-
-  active: '#00afed', //light blue
-  inactive: '#dedfe4', //grey
-
-  optionSelected: '#E5F6FD', //light blue
-  //TODO: make all grayscale colors the same color space either all rgb or all hex
-  grey: [
-    'rgb(237,238,241)', //grey for table backgrounds
-    '#74757d', //rgb(116, 117, 125) dark grey text on greyScale5
-    '#d4d6dd',
-    'rgb(107,98,98)',
-    'rgb(245,245,245)',
-    '#e0e1e6',
-    'rgb(212, 214, 221)', //#d4d6dd
-    'rgb(144,144,144)', //not enough contrast on white background
-    'rgb(61,61,61)',
-    'rgb(52, 52, 52)', //#343434
-    'rgb(36,36,36)'
-  ],
+  optionSelected: 'rgb(229,246,253)', //light blue
 
   hover: {
-    main: '#c03299', //also pink
-    primary: '#404c9a', //purple
-    tertiary: '#19a9c4' //lighter teal-blue
+    main: chroma(pallette.info).brighten(0.1),
+    primary: chroma(pallette.primary).brighten(1),
+    tertiary: chroma(pallette.secondary).brighten(1)
   },
+
   background: {
-    grey: '#f4f5f8',
-    error: '#f9dee1',
-    tertiary: '#edeef1' // light light blue
+    grey: pallette.grey[1],
+    error: pallette.error,
+    tertiary: 'rgb(237,238,241)' // light light blue
   },
   border: {
-    grey: '#cacbcf',
-    error: `#e45562`,
-    blue: '#00adee'
+    grey: 'rgb(202,203,207)',
+    error: `rgb(228,85,98)`,
+    blue: 'rgb(0,173,238)'
   },
   error: {
-    dark: '#d8202f', //red
-    light: '#fadfe1' //light red (pink) fill
+    dark: 'rgb(216,32,47)', //red
+    light: 'rgb(250,223,225)' //light red (pink) fill
   }
 };
 
