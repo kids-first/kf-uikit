@@ -36,6 +36,12 @@
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.6.5.tgz#097729b84a5164f71f9acd2570ecfd1354d7b360"
 
+"@emotion/is-prop-valid@^0.6.1":
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.6.5.tgz#25071b70957f250e7a8a543a9a187b09161f4d1c"
+  dependencies:
+    "@emotion/memoize" "^0.6.5"
+
 "@emotion/memoize@^0.6.1", "@emotion/memoize@^0.6.5":
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.6.5.tgz#f868c314b889e7c3d84868a1d1cc323fbb40ca86"
@@ -76,20 +82,23 @@
     react-inspector "^2.2.2"
     uuid "^3.2.1"
 
-"@storybook/addon-info@^3.4.8":
-  version "3.4.8"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-3.4.8.tgz#aa97bf2548e5981a99848c7e9ab2a674c5fae95c"
+"@storybook/addon-info@v4.0.0-alpha.9":
+  version "4.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.0.0-alpha.9.tgz#eb7f623118aa44e527980cd240cffc25e6cad7a0"
   dependencies:
-    "@storybook/client-logger" "3.4.8"
-    "@storybook/components" "3.4.8"
+    "@storybook/addons" "4.0.0-alpha.9"
+    "@storybook/client-logger" "4.0.0-alpha.9"
+    "@storybook/components" "4.0.0-alpha.9"
     babel-runtime "^6.26.0"
-    glamor "^2.20.40"
-    glamorous "^4.12.1"
+    core-js "2.5.7"
+    emotion "^9.1.3"
     global "^4.3.2"
     marksy "^6.0.3"
     nested-object-assign "^1.0.1"
     prop-types "^15.6.1"
     react-addons-create-fragment "^15.5.3"
+    react-emotion "^9.1.3"
+    react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
 "@storybook/addon-knobs@^3.4.8":
@@ -122,6 +131,14 @@
   version "3.4.8"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.4.8.tgz#ff1142d8f0963dd28b7c6f88dc9d3be170ac6600"
 
+"@storybook/addons@4.0.0-alpha.9":
+  version "4.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.0-alpha.9.tgz#20990e11eaf543e5abdcf872a3bb71d2d649d035"
+  dependencies:
+    "@storybook/channels" "4.0.0-alpha.9"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
 "@storybook/channel-postmessage@3.4.8":
   version "3.4.8"
   resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-3.4.8.tgz#4df9b315f6ceff07f33334a633f24c7b81a3ac28"
@@ -134,9 +151,17 @@
   version "3.4.8"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.4.8.tgz#df0aff0d20a9597402e76caa7e5ddb088ede3591"
 
+"@storybook/channels@4.0.0-alpha.9":
+  version "4.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.0-alpha.9.tgz#ad2cf3444a8bf2d205ccd491ceb0b8e9a21ae561"
+
 "@storybook/client-logger@3.4.8":
   version "3.4.8"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.4.8.tgz#82d6e1c2cb3e37184cc597a933f64b38fb61b88b"
+
+"@storybook/client-logger@4.0.0-alpha.9":
+  version "4.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.0.0-alpha.9.tgz#a4e6b18a71ea6c9c724556a3f9e9917e10d7e14c"
 
 "@storybook/codemod@^3.2.6":
   version "3.4.8"
@@ -151,6 +176,19 @@
     glamor "^2.20.40"
     glamorous "^4.12.1"
     prop-types "^15.6.1"
+
+"@storybook/components@4.0.0-alpha.9":
+  version "4.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.0.0-alpha.9.tgz#b0036726e055d7c3e2efb5ef3c7ec2ba9c4f5a8d"
+  dependencies:
+    emotion "^9.1.3"
+    emotion-theming "^9.1.2"
+    global "^4.3.2"
+    lodash.pick "^4.4.0"
+    lodash.throttle "^4.1.1"
+    prop-types "^15.6.1"
+    react-emotion "^9.1.3"
+    react-split-pane "^0.1.77"
 
 "@storybook/core@3.4.8":
   version "3.4.8"
@@ -2039,6 +2077,10 @@ chownr@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.0.1.tgz#e2a75042a9551908bebd25b8523d5f9769d79181"
 
+chroma-js@^1.3.7:
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/chroma-js/-/chroma-js-1.3.7.tgz#38db1b46c99b002b77aa5e6b6744589388f28425"
+
 chroma@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/chroma/-/chroma-0.0.1.tgz#a59132defa72113b9312fa98d2587c67d309f989"
@@ -2295,13 +2337,13 @@ copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
 
+core-js@2.5.7, core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0, core-js@^2.5.3:
+  version "2.5.7"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
+
 core-js@^1.0.0:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
-
-core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0, core-js@^2.5.3:
-  version "2.5.7"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.7.tgz#f972608ff0cead68b841a16a932d0b183791814e"
 
 core-util-is@~1.0.0:
   version "1.0.2"
@@ -2322,6 +2364,12 @@ create-ecdh@^4.0.0:
   dependencies:
     bn.js "^4.1.0"
     elliptic "^6.0.0"
+
+create-emotion-styled@^9.2.6:
+  version "9.2.6"
+  resolved "https://registry.yarnpkg.com/create-emotion-styled/-/create-emotion-styled-9.2.6.tgz#25be44a298e6e49d833ecf2247836284dc9c2042"
+  dependencies:
+    "@emotion/is-prop-valid" "^0.6.1"
 
 create-emotion@^9.2.6:
   version "9.2.6"
@@ -2767,7 +2815,13 @@ emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
 
-emotion@^9.2.6:
+emotion-theming@^9.1.2, emotion-theming@^9.2.6:
+  version "9.2.6"
+  resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-9.2.6.tgz#ca69b94e28f66a5d9ca1e259633246beaa24afbc"
+  dependencies:
+    hoist-non-react-statics "^2.3.1"
+
+emotion@^9.1.3, emotion@^9.2.6:
   version "9.2.6"
   resolved "https://registry.yarnpkg.com/emotion/-/emotion-9.2.6.tgz#48517515e769bca6d8f7ff18425a7f133b010f22"
   dependencies:
@@ -3566,6 +3620,10 @@ hmac-drbg@^1.0.0:
 hoist-non-react-statics@1.x.x, hoist-non-react-statics@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
+
+hoist-non-react-statics@^2.3.1:
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
 
 home-or-tmp@^1.0.0:
   version "1.0.0"
@@ -5783,6 +5841,13 @@ react-dom@^16.4.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
+
+react-emotion@^9.1.3, react-emotion@^9.2.6:
+  version "9.2.6"
+  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.2.6.tgz#3941f78779f9a8ad8300042ddfa9b2cb111442c2"
+  dependencies:
+    babel-plugin-emotion "^9.2.6"
+    create-emotion-styled "^9.2.6"
 
 react-error-overlay@^4.0.0:
   version "4.0.0"
