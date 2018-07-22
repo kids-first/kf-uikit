@@ -19,10 +19,10 @@ export const TopBar = styled('div')`
 
 TopBar.propTypes = {
   ...color.propTypes,
-  bgcolor: PropTypes.string
+  barColor: PropTypes.string
 }
 
 TopBar.defaultProps = {
 	bg: 'community',
-  bgcolor: null
+  barColor: null
 }

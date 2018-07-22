@@ -6,6 +6,5 @@ const theme = {
   fontFamily: fonts.default,
   colors: colors
 }
-console.log(theme);
 
 export default theme;
