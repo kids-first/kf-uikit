@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@storybook/addon-centered": "^3.4.8",
     "@storybook/addon-info": "v4.0.0-alpha.9",
     "@storybook/addon-knobs": "^3.4.8",
     "chroma": "^0.0.1",

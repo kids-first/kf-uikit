@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'react-emotion';
-import chroma from 'chroma-js';
 import {
   border,
   borderColor,
@@ -9,6 +8,7 @@ import {
   fontSize,
   width
 } from 'styled-system';
+import { BaseHeading, BaseTypography } from './Typography';
 
 
 export const CardContainer = styled('div')`
@@ -17,13 +17,9 @@ export const CardContainer = styled('div')`
   flex-direction: column;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  width: auto,
+  width: auto;
   min-width: 240px;
   max-width: 500px;
-  h3 {
-    padding: 0px;
-    margin: 5px;
-  }
   p {
     margin: 5px
   }
@@ -46,24 +42,25 @@ CardContainer.defaultProps = {
   borderColor: 'grey.9'
 }
 
-export const CardTitle = styled('h3')`
+export const CardTitle = styled(BaseHeading)`
   width: 100%;
-  ${space}
   ${color}
+  ${space}
   ${fontSize}
 `
 
 CardTitle.propTypes = {
   ...color.propTypes,
+  ...space.propTypes,
   ...fontSize.propTypes,
 }
 
 CardTitle.defaultProps = {
-  fontSize: 2,
-  pl: 1
+  pl: 1,
+  fontSize: 3,
 }
 
-export const CardBody = styled('p')`
+export const CardBody = styled(BaseTypography)`
   width: 100%;
   ${space}
   ${color}
