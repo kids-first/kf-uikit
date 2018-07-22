@@ -43,7 +43,7 @@ CardContainer.defaultProps = {
 }
 
 export const CardTitle = styled(BaseHeading)`
-  width: 100%;
+  width: auto;
   ${color}
   ${space}
   ${fontSize}
@@ -57,6 +57,7 @@ CardTitle.propTypes = {
 
 CardTitle.defaultProps = {
   pl: 1,
+  pr: 1,
   fontSize: 3,
 }
 

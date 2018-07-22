@@ -1,11 +1,11 @@
 import colors from './Colors';
-import { fonts, fontSizes } from './Typography';
+import { fonts, fontSizes, headings } from './Typography';
 
-console.log(colors);
 const theme = {
   fontSizes,
-  fonts,
+  fontFamily: fonts.default,
   colors: colors
 }
+console.log(theme);
 
 export default theme;

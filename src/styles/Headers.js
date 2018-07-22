@@ -1,7 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import chroma from 'chroma-js';
-import colors from '../theme/Colors';
 import {
   color
 } from 'styled-system';
@@ -13,14 +12,17 @@ export const TopBar = styled('div')`
   height: 6px;
   margin: none;
   padding: none;
-  background-image: ${colors.research};
+  background-color: ${props => props.barColor? props.barColor: null};
+  background-image: ${props => props.barColor ? null : props.theme.colors.research};
   ${color}
 `
 
 TopBar.propTypes = {
   ...color.propTypes,
+  bgcolor: PropTypes.string
 }
 
 TopBar.defaultProps = {
-	bg: 'cammunity'
+	bg: 'community',
+  bgcolor: null
 }
