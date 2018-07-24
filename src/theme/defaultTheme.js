@@ -1,9 +1,10 @@
 import colors from './Colors';
-import { fonts, fontSizes, headings } from './Typography';
+import { fonts, fontSizes, fontWeights, headings } from './Typography';
 
 const theme = {
+  fonts,
   fontSizes,
-  fontFamily: fonts.default,
+  fontWeights,
   colors: colors
 }
 
