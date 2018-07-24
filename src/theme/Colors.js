@@ -29,8 +29,30 @@ const palette = {
   ...gradients
 }
 
+const buttons = {
+  primary: {
+    fg: palette.white,
+    bg: chroma(brand.secondary).brighten(0.5).css(),
+    hover: chroma(brand.secondary).brighten(1).css(),
+    disabled: chroma(brand.secondary).brighten(0.5).desaturate(1).css()
+  },
+  info: {
+    fg: palette.white,
+    bg: chroma(brand.tertiary).css(),
+    hover: chroma(brand.tertiary).brighten(0.5).css(),
+    disabled: chroma(brand.tertiary).brighten(0.5).desaturate(0.5).css()
+  },
+  warn: {
+    fg: palette.white,
+    bg: chroma(brand.primary).css(),
+    hover: chroma(brand.primary).brighten(0.5).css(),
+    disabled: chroma(brand.primary).brighten(0.5).desaturate(1.5).css()
+  }
+}
+
 const colors = {
-  ...palette
+  ...palette,
+  buttons
 }
 
 export default colors;
