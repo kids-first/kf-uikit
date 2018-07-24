@@ -12,8 +12,7 @@ stories.add('Brand', () => (
       <SwatchDisplay key={name} name={name} color={theme.colors[name]}/>
     ))}
   </div>
-  ),
-  { info: { inline: true, header: false, text: 'hello'} }
+  )
 );
 
 stories.add('Greyscale', () => (
@@ -22,8 +21,7 @@ stories.add('Greyscale', () => (
       <SwatchDisplay key={i} name={`grey.${i}`} color={name}/>
     ))}
   </div>
-  ),
-  { info: { inline: true, header: false, text: 'hello'} }
+  )
 );
 
 stories.add('States', () => (
@@ -32,6 +30,5 @@ stories.add('States', () => (
       <SwatchDisplay key={name} name={name} color={theme.colors[name]}/>
     ))}
   </div>
-  ),
-  { info: { inline: true, header: false, text: 'hello'} }
+  )
 );

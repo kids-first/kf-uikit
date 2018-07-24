@@ -1,12 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, color, text } from '@storybook/addon-knobs';
 import { Heading } from '../../src/styles/Headings';
 import { Text } from '../../src/styles/Text';
 
 
 let stories = storiesOf('Typography', module);
-stories.addDecorator(withKnobs);
 
 stories.add('Example', () => (
   <div>
@@ -35,8 +33,7 @@ stories.add('Example', () => (
       Suspendisse urna dolor, sagittis varius convallis at, commodo vel ante. Integer non convallis dui, id accumsan est. Vestibulum volutpat bibendum semper. Praesent ex nisl, mattis a nisl a, hendrerit posuere magna. Sed varius orci quis dui sollicitudin dignissim. Proin facilisis pretium diam sed porttitor. 
     </Text.p>
   </div>
-  ),
-  { info: { inline: true, header: false, text: 'hello'} }
+  )
 );
 
 stories.add('Headings', () => (
@@ -47,8 +44,7 @@ stories.add('Headings', () => (
     <Heading.h4>The quick brown fox jumps over the lazy dog</Heading.h4>
     <Heading.h5>The quick brown fox jumps over the lazy dog</Heading.h5>
   </div>
-  ),
-  { info: { inline: true, header: false, text: 'hello'} }
+  )
 );
 
 stories.add('Copy', () => (
@@ -59,8 +55,7 @@ stories.add('Copy', () => (
     </Text.p>
 
   </div>
-  ),
-  { info: { inline: true, header: false, text: 'hello'} }
+  )
 );
 
 stories.add('List', () => (
@@ -71,7 +66,6 @@ stories.add('List', () => (
       <Text.li>Milk</Text.li>
     </Text.ul>
   </div>
-  ),
-  { info: { inline: true, header: false, text: 'hello'} }
+  )
 );
 
