@@ -8,7 +8,8 @@ import {
   fontSize,
   width
 } from 'styled-system';
-import { BaseHeading, BaseTypography } from './Typography';
+import { Heading } from './Headings';
+import { Text } from './Text';
 
 
 export const CardContainer = styled('div')`
@@ -42,7 +43,7 @@ CardContainer.defaultProps = {
   borderColor: 'grey.9'
 }
 
-export const CardTitle = styled(BaseHeading)`
+export const CardTitle = styled(Heading.h3)`
   width: auto;
   ${color}
   ${space}
@@ -56,12 +57,14 @@ CardTitle.propTypes = {
 }
 
 CardTitle.defaultProps = {
+  p: 0,
+  m: 0,
   pl: 1,
   pr: 1,
   fontSize: 3,
 }
 
-export const CardBody = styled(BaseTypography)`
+export const CardBody = styled(Text.p)`
   width: 100%;
   ${space}
   ${color}

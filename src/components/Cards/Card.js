@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import chroma from 'chroma-js';
 import { CardContainer, CardTitle, CardBody } from '../../styles/Cards';
+import { Heading } from '../../styles/Headings';
+import { Text } from '../../styles/Text';
 import { TopBar } from '../../styles/Headers';
 
 

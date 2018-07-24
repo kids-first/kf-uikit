@@ -6,7 +6,6 @@ import {
   fontSize,
   width
 } from 'styled-system';
-import { BaseHeading, BaseTypography } from './Typography';
 
 
 export const NavContainer = styled('nav')`

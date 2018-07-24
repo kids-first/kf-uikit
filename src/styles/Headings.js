@@ -9,7 +9,6 @@ import {
   textAlign,
   lineHeight
 } from 'styled-system';
-import { BaseTypography } from './Typography';
 
 
 export const Heading = styled('span')`
