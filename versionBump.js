@@ -5,8 +5,8 @@ const fs = require("fs");
 const options = [
   {
     files: "storybook-config.json",
-    from: '"]',
-    to: '","' + pjVersion + '"]'
+    from: "]",
+    to: ',"' + pjVersion + '"]'
   },
   {
     files: "_redirects",

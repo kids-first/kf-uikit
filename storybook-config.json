@@ -1,8 +1,8 @@
 {
   "storybook": {
     "versions": {
-      "availableVersions": ["0.0.0"],
-      "hostname": "kf-uikit.netlify.com",
+      "availableVersions": ["0.0.0", "0.0.1"],
+      "hostname": "localhost:8000",
       "localhost": "localhost:9001",
       "regex": "/([^/]+?)/?$"
     }

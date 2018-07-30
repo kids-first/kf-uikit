@@ -7,7 +7,9 @@
     "prepare": "rm -rf dist && mkdir dist && babel src --out-dir dist",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build":
-      "build-storybook -c .storybook -o dist/$npm_package_version && node versionBump.js"
+      "build-storybook -c .storybook -o dist/$npm_package_version && node versionBump.js",
+    "storybook:build:serve":
+      "build-storybook -c .storybook -o dist/$npm_package_version && node versionBump.js && cd ./dist && python -m SimpleHTTPServer"
   },
   "repository": {
     "type": "git",
