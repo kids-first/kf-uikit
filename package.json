@@ -1,12 +1,13 @@
 {
   "name": "kf-uikit",
-  "version": "0.0.6",
+  "version": "0.0.1",
   "description": "Kids First Design System",
   "main": "dist/index.js",
   "scripts": {
     "prepare": "rm -rf dist && mkdir dist && babel src --out-dir dist",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook-build": "build-storybook -c .storybook -o .storybook-static"
+    "storybook:build": "build-storybook -c .storybook -o dist/$npm_package_version && node versionBump.js",
+    "storybook:build:serve": "build-storybook -c .storybook -o dist/$npm_package_version && node versionBump.js && cd ./dist && python -m SimpleHTTPServer"
   },
   "repository": {
     "type": "git",
@@ -23,21 +24,28 @@
     "@babel/preset-env": "^7.0.0-beta.53",
     "@babel/preset-react": "^7.0.0-beta.53",
     "@emotion/babel-plugin-core": "^0.6.6",
+    "@storybook/addon-actions": "^3.4.8",
     "@storybook/addon-info": "^3.4.8",
+    "@storybook/addon-knobs": "^3.4.8",
     "@storybook/react": "^3.4.8",
     "babel-plugin-macros": "^2.2.2",
+    "babel-plugin-react-docgen": "^2.0.0-rc.1",
     "chroma-js": "^1.3.7"
   },
   "dependencies": {
+    "@buildit/storybook-addon-versions": "^0.4.3",
     "create-emotion": "^9.2.6",
     "create-emotion-styled": "^9.2.6",
     "emotion": "^9.2.5",
     "emotion-theming": "^9.2.5",
     "lodash": "^4.17.10",
     "paths.macro": "^2.0.2",
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
+    "react-docgen": "^2.21.0",
     "react-dom": "^16.4.1",
     "react-emotion": "^9.2.5",
+    "replace-in-file": "^3.4.0",
     "styled-components": "^3.3.3",
     "styled-system": "^2.3.6"
   }
