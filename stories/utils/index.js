@@ -12,11 +12,11 @@ const mdListFromArr = arr =>
     .replace(/,/g, " ");
 
 export const componentShould = ({
-  preText: ''
+  preText = "",
   doThis = [],
   notThis = [],
   guidelines = "",
-  postText: ''
+  postText = ""
 }) => `
   ${preText}
 

@@ -25,6 +25,7 @@
     "@babel/preset-react": "^7.0.0-beta.53",
     "@emotion/babel-plugin-core": "^0.6.6",
     "@storybook/addon-info": "^3.4.8",
+    "@storybook/addon-knobs": "^3.4.8",
     "@storybook/react": "^3.4.8",
     "babel-plugin-macros": "^2.2.2",
     "babel-plugin-react-docgen": "^2.0.0-rc.1",
