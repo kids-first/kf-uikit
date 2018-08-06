@@ -4,23 +4,22 @@ const minimums = {
   aa: 4.5,
   aaLarge: 3,
   aaa: 7,
-  aaaLarge: 4.5
+  aaaLarge: 4.5,
 };
 
-export const processColor = hex => {
-  hex = chroma(hex).hex();
-  const rgba = chroma(hex).rgba();
-  const contrast = chroma.contrast(hex, 'white');
+export default function processColor(hex) {
+  const hexc = chroma(hex).hex();
+  const rgba = chroma(hexc).rgba();
+  const contrast = chroma.contrast(hexc, 'white');
   return {
-    hex,
+    hexc,
     rgba,
     contrast,
     accessibility: {
       aa: contrast >= minimums.aa,
       aaLarge: contrast >= minimums.aaLarge,
       aaa: contrast >= minimums.aaa,
-      aaaLarge: contrast >= minimums.aaaLarge
-    }
+      aaaLarge: contrast >= minimums.aaaLarge,
+    },
   };
-};
-
+}
