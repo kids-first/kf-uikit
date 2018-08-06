@@ -1,9 +1,9 @@
-import colors, { gradients } from './Colors';
 import { zipObject } from 'lodash';
+import colors, { gradients } from './Colors';
 
 export const fonts = {
   default: 'Montserrat, Helvetica, sans-serif',
-  details: 'Open Sans'
+  details: 'Open Sans',
 };
 const baseFontSize = 16;
 
@@ -22,13 +22,13 @@ export const fontSizesScale = [
   48,
   64,
   96,
-  128
+  128,
 ];
 // keyed object to make sizes more declarative
 // ex. fontSizes['32']
 export const fontSizes = zipObject(
   fontSizesScale,
-  fontSizesScale.map(v => v + 'px')
+  fontSizesScale.map(v => `${v}px`),
 );
 
 // for any scale, either array or objects will work
@@ -42,13 +42,13 @@ export const fontWeights = {
   thin: 300,
   regular: 400,
   normal: 500,
-  bold: 700
+  bold: 700,
 };
 
 export const letterSpacings = {
   normal: 'normal',
   caps: '0.25em',
-  heading: '0.5px'
+  heading: '0.5px',
 };
 
 const typographyBase = `
@@ -107,7 +107,7 @@ export const headings = {
     ${paragraph}
     font-size: ${fontSizes['14']};
     font-weight: ${fontWeights.thin};
-  `
+  `,
 };
 
 export const blockquote = `
@@ -161,7 +161,7 @@ export const lists = {
         text-align: center;
       }
     }
-  `
+  `,
 };
 
 export const textUtils = {
@@ -174,5 +174,5 @@ export const textUtils = {
   caps: { textTransform: 'capitalize' },
   upper: { textTransform: 'uppercase' },
   lower: { textTransform: 'lowercase' },
-  small: { fontSize: '75%' }
+  small: { fontSize: '75%' },
 };
