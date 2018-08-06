@@ -1,4 +1,3 @@
-import styled from '../kfFeels/kfReactEmotion';
 import {
   space,
   width,
@@ -8,26 +7,21 @@ import {
   fontWeight,
   borders,
   borderRadius,
-  alignItems,
-  justifyContent,
-  flexGrow,
-  flexWrap,
-  flexBasis,
-  flexDirection,
   justifySelf,
   alignSelf,
   maxWidth,
   complexStyle,
   hover,
-  textAlign
+  textAlign,
 } from 'styled-system';
+import styled from '../kfFeels/kfReactEmotion';
 
-export const applyProp = (name, value) => (value ? `${name}: ${value};` : ``);
-export const overflow = ({ overflow }) => applyProp(`overflow`, overflow);
-export const overflowY = ({ overflowY }) => applyProp(`overflow-y`, overflowY);
+export const applyProp = (name, value) => (value ? `${name}: ${value};` : '');
+export const overflow = ({ ov }) => applyProp('overflow', ov);
+export const overflowY = ({ ov }) => applyProp('overflow-y', ov);
 const baseStyles = complexStyle({
   prop: 'baseStyle',
-  key: 'baseStyles'
+  key: 'baseStyles',
 });
 
 export const applyDefaultStyles = Component => styled(Component)`
