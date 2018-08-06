@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import styled from 'react-emotion';
 
 const BaseButton = styled('button')`
@@ -37,9 +38,14 @@ const BigWhiteButtonContent = styled('span')`
 `;
 const BigWhiteButtonBase = ({ children, ...x }) => (
   <Button {...x}>
-    <BigWhiteButtonContent>{children}</BigWhiteButtonContent>
+    <BigWhiteButtonContent>
+      {children}
+    </BigWhiteButtonContent>
   </Button>
 );
+BigWhiteButtonBase.propTypes = {
+  children: propTypes.element
+}
 export const BigWhiteButton = styled(BigWhiteButtonBase)`
   background: ${({ theme }) => theme.white};
   border: 1px solid ${({ theme }) => theme.greyScale8};
