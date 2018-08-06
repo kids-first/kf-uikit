@@ -7,13 +7,14 @@ import {
   flexDirection,
   complexStyle,
 } from 'styled-system';
-import { applyDefaultStyles } from '../../utils';
+import { applyDefaultStyles } from '../../utils/styling';
 import styled from '../../kfFeels/kfReactEmotion';
 
 const boxStyles = complexStyle({
   prop: 'boxStyle',
   key: 'boxStyles',
 });
+console.log(applyDefaultStyles);
 export const Box = styled(applyDefaultStyles('div'))`
   ${boxStyles};
 `;
