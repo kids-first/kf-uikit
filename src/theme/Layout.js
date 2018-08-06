@@ -3,16 +3,16 @@ const layout = {
     center: {
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
-    }
+      justifyContent: 'center',
+    },
   },
   flexStyles: {
     row: {
-      flexDirection: 'row'
+      flexDirection: 'row',
     },
     column: {
-      flexDirection: 'column'
-    }
+      flexDirection: 'column',
+    },
   },
   column: `
     display: flex;
@@ -33,6 +33,6 @@ const layout = {
     display: flex;
     align-items: center;
     justify-content: center;
-  `
+  `,
 };
 export default layout;
