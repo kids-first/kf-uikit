@@ -9,10 +9,10 @@ const minimums = {
 
 export default function processColor(hex) {
   const hexc = chroma(hex).hex();
-  const rgba = chroma(hexc).rgba();
+  const rgba = chroma(hex).rgba();
   const contrast = chroma.contrast(hexc, 'white');
   return {
-    hexc,
+    hex: hexc,
     rgba,
     contrast,
     accessibility: {

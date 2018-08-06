@@ -14,7 +14,7 @@ import {
   UL,
   OL
 } from '../../src/components/Typography';
-import { processColor } from '../../src/utils';
+import processColor from '../../src/utils/colors';
 
 const SWATCH_WIDTH = 100;
 
