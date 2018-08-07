@@ -1,6 +1,3 @@
-import styled from '../../kfFeels/kfReactEmotion';
-
-// import { Trans } from 'react-i18next'; TODO: add Trans by default
 import {
   width,
   fontSize,
@@ -13,16 +10,17 @@ import {
   color,
   borders,
   hover,
-  complexStyle
+  complexStyle,
 } from 'styled-system';
+import styled from '../../kfFeels/kfReactEmotion';
 
 export const textStyles = complexStyle({
   prop: 'textStyle',
-  key: 'textStyles'
+  key: 'textStyles',
 });
 
-const applyDefaultTypeStyles = Component => {
-  let isP = Component === 'p';
+function applyDefaultTypeStyles(Component) {
+  const isP = Component === 'p';
   const styledComponent = styled(Component.toLowerCase())`
     ${({ theme }) => theme[isP ? 'paragraph' : Component.toLowerCase()]};
     ${space}
@@ -41,7 +39,7 @@ const applyDefaultTypeStyles = Component => {
 `;
   styledComponent.displayName = Component.toUpperCase();
   return styledComponent;
-};
+}
 
 export const H1 = applyDefaultTypeStyles('H1');
 

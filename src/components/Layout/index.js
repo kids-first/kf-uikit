@@ -1,39 +1,27 @@
-import styled from '../../kfFeels/kfReactEmotion';
 import {
-  space,
-  width,
-  fontSize,
-  color,
-  lineHeight,
-  fontWeight,
-  borders,
-  borderRadius,
   alignItems,
   justifyContent,
   flexGrow,
   flexWrap,
   flexBasis,
   flexDirection,
-  justifySelf,
-  alignSelf,
-  maxWidth,
   complexStyle,
-  hover,
-  textAlign
 } from 'styled-system';
-import { applyDefaultStyles } from '../../utils';
+import { applyDefaultStyles } from '../../utils/styling';
+import styled from '../../kfFeels/kfReactEmotion';
 
 const boxStyles = complexStyle({
   prop: 'boxStyle',
-  key: 'boxStyles'
+  key: 'boxStyles',
 });
+console.log(applyDefaultStyles);
 export const Box = styled(applyDefaultStyles('div'))`
   ${boxStyles};
 `;
 
 const flexStyles = complexStyle({
   prop: 'flexStyle',
-  key: 'flexStyles'
+  key: 'flexStyles',
 });
 export const Flex = styled(Box)`
   display: flex;
