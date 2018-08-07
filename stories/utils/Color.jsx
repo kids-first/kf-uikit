@@ -1,6 +1,7 @@
 import React from "react";
 import propTypes from "prop-types";
 import { space, color, fontSize } from 'styled-system';
+import chroma from 'chroma-js';
 import styled from '../../src/kfFeels/kfReactEmotion';
 import {
   H3,
@@ -52,16 +53,16 @@ Badge.propTypes = {
  */
 const ColorSpecimen = (props) => (
   <Box m={24} w={128} display="inline-block">
-    <Swatch color={props.hex}/>
+    <Swatch color={chroma(props.color).css()}/>
     <H3 mb={1}>{ props.name }</H3>
     <P mt={0} mb={0} small>
-      hex: {props.hex}
+      hex: {chroma(props.color).hex()}
     </P>
     <P mt={0} small>
-      rgba: {props.rgba}
+      rgb: {chroma(props.color).css()}
     </P>
-    <Badge bg={props.hex}>AAAaaa</Badge>
-    <Badge color='white' bg={props.hex}>AAAaaa</Badge>
+    <Badge bg={chroma(props.color).css()}>AAAaaa</Badge>
+    <Badge color='white' bg={chroma(props).css()}>AAAaaa</Badge>
   </Box>
 )
 
@@ -73,8 +74,7 @@ ColorSpecimen.propTypes = {
 
 ColorSpecimen.defaultProps = {
   name: 'Color',
-  hex: '#999',
-  rgba: '#999',
+  color: '#999',
 }
 
 
