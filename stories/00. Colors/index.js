@@ -14,9 +14,10 @@ import {
   UL,
   OL
 } from '../../src/components/Typography';
+import { Box } from '../../src/components/Layout';
 import processColor from '../../src/utils/colors';
+import ColorSpecimen, { GradientSpecimen } from '../utils/Color';
 
-const SWATCH_WIDTH = 100;
 
 const hashColors = clrs => {
   return Object.keys(clrs).reduce((acc, name) => {
@@ -30,90 +31,6 @@ const hashColors = clrs => {
   }, {});
 };
 
-const info = (css, component) =>
-  withInfo({
-    text: css.replace(/;/gi, ';\n'),
-    inline: true,
-    header: false
-  })(component);
-
-const Badge = ({ children, filled, style }) => (
-  <div
-    style={{
-      borderRadius: 4,
-      backgroundColor: filled ? colors.grey[1] : 'transparent',
-      paddingLeft: 8,
-      paddingRight: 8,
-      borderWidth: 1,
-      borderColor: '#333',
-      fontFamily: 'OpenSans',
-      ...style
-    }}
-  >
-    <P
-      style={{
-        color: filled ? '#fff' : '#333',
-        fontFamily: 'OpenSans'
-      }}
-      small
-    >
-      {children}
-    </P>
-  </div>
-);
-
-export default Badge;
-
-const AccessibilityBadge = ({ level }) => {
-  let text;
-  switch (true) {
-    case level.aaa:
-      text = 'AAA';
-      break;
-    case level.aa:
-      text = 'AA';
-      break;
-    case level.aaLarge:
-      text = 'AA Large';
-      break;
-    default:
-      text = null;
-  }
-  return text && <Badge filled>{text}</Badge>;
-};
-
-const Swatch = ({ color, name }) => (
-  <div
-    name={name}
-    style={{
-      marginBottom: 48,
-      marginRight: 48,
-      width: SWATCH_WIDTH
-    }}
-  >
-    <div
-      style={{
-        width: SWATCH_WIDTH,
-        height: SWATCH_WIDTH,
-        backgroundColor: color.hex,
-        borderRadius: 4,
-        marginBottom: 8
-      }}
-    />
-    <H3 mb="5px" bold>
-      {name}
-    </H3>
-    <P my="0" small>
-      hex: {color.hex}
-    </P>
-    <P my="0" small>
-      rgba({color.rgba.map(
-        (val, i, arr) => `${val}${i !== arr.length - 1 ? ',' : ''}`
-      )})
-    </P>
-    <AccessibilityBadge level={color.accessibility} />
-  </div>
-);
 
 const brandColors = hashColors(
   pick(colors, ['primary', 'secondary', 'tertiary', 'white'])
@@ -121,19 +38,20 @@ const brandColors = hashColors(
 storiesOf(`${base.replace('/stories/', '')}`, module).add('Brand', () => (
   <div
     style={{
-      backgroundColor: '#fcfcfc',
-      padding: 30,
-      width: (SWATCH_WIDTH + 48) * 4,
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'row'
     }}
   >
     {Object.keys(brandColors).map(name => (
-      <Swatch key={name} color={brandColors[name]} name={name} />
+      <ColorSpecimen
+        key={name}
+        color={brandColors[name].hex}
+        name={name} />
     ))}
   </div>
 ));
+
 
 const greyScaleHash = colors.grey
   .map((hex, idx) => ({ [`grey${idx}`]: hex }))
@@ -144,18 +62,20 @@ const greyScaleHash = colors.grey
 storiesOf(`${base.replace('/stories/', '')}`, module).add('GreyScale', () => (
   <div
     style={{
-      padding: 30,
-      width: (SWATCH_WIDTH + 48) * 4,
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'row'
     }}
   >
     {Object.keys(greyScaleHash).map(name => (
-      <Swatch key={name} color={greyScaleHash[name]} name={name} />
+      <ColorSpecimen
+        key={name}
+        color={greyScaleHash[name].hex}
+        name={name} />
     ))}
   </div>
 ));
+
 
 const stateColors = hashColors(
   pick(colors, [
@@ -171,9 +91,6 @@ const stateColors = hashColors(
 storiesOf(`${base.replace('/stories/', '')}`, module).add('States', () => (
   <div
     style={{
-      backgroundColor: '#fcfcfc',
-      padding: 30,
-      width: (SWATCH_WIDTH + 48) * 4,
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'row'
@@ -181,109 +98,83 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('States', () => (
   >
     {Object.keys(stateColors).map(name => {
       if (stateColors[name].hex) {
-        return <Swatch key={name} color={stateColors[name]} name={name} />;
+        return (<ColorSpecimen
+                  key={name}
+                  color={stateColors[name].hex}
+                  name={name} />);
       } else {
         let nestedColors = stateColors[name];
         return (
-          <div
-            style={{
-              border: `1px solid ${colors.border.grey}`,
-              padding: '0 20px',
-              marginBottom: 10,
-              width: '100%',
-              display: 'flex',
-              flexWrap: 'wrap',
-              flexDirection: 'row'
-            }}
-          >
+          <Box p={1} mb={4} width="100%"
+            border='1px solid'>
             <H2 width="100%">{name}</H2>
             {Object.keys(nestedColors).map(nestedName => (
-              <Swatch
-                key={nestedName}
-                color={stateColors[name][nestedName]}
-                name={nestedName}
-              />
+              <ColorSpecimen
+                  key={nestedName}
+                  color={stateColors[name][nestedName].hex}
+                  rgba={stateColors[name][nestedName].rgba}
+                  name={nestedName} />
             ))}
-          </div>
+          </Box>
         );
       }
     })}
   </div>
 ));
 
+
 const bgColorsHash = hashColors(colors.background);
 storiesOf(`${base.replace('/stories/', '')}`, module).add('Background', () => (
   <div
     style={{
-      padding: 30,
-      width: (SWATCH_WIDTH + 48) * 4,
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'row'
     }}
   >
     {Object.keys(bgColorsHash).map(name => (
-      <Swatch key={name} color={bgColorsHash[name]} name={name} />
+        <ColorSpecimen
+          key={name}
+          color={bgColorsHash[name].hex}
+          rgba={bgColorsHash[name].rgba}
+          name={name} />
     ))}
   </div>
 ));
+
 
 const borderColorsHash = hashColors(colors.border);
 storiesOf(`${base.replace('/stories/', '')}`, module).add('Borders', () => (
   <div
     style={{
-      padding: 30,
-      width: (SWATCH_WIDTH + 48) * 4,
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'row'
     }}
   >
     {Object.keys(borderColorsHash).map(name => (
-      <Swatch key={name} color={borderColorsHash[name]} name={name} />
+      <ColorSpecimen
+        key={name}
+        color={borderColorsHash[name].hex}
+        rgba={borderColorsHash[name].rgba}
+        name={name} />
     ))}
   </div>
 ));
 
-const GradientSwatch = ({ color, name }) => (
-  <div
-    name={name}
-    style={{
-      marginBottom: 48,
-      marginRight: 48,
-      width: SWATCH_WIDTH * 2
-    }}
-  >
-    <div
-      style={{
-        width: SWATCH_WIDTH * 2,
-        height: SWATCH_WIDTH,
-        backgroundImage: color,
-        borderRadius: 4,
-        marginBottom: 8
-      }}
-    />
-    <H3 mb="5px" bold>
-      {name}
-    </H3>
-    <P my="0" small>
-      background-image: {color}
-    </P>
-  </div>
-);
+
 storiesOf(`${base.replace('/stories/', '')}`, module).add('Gradients', () => (
   <div
     style={{
-      backgroundColor: '#fcfcfc',
-      padding: 30,
-      width: (SWATCH_WIDTH + 48) * 2,
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'row'
     }}
   >
     {Object.keys(gradients).map(name => (
-      <GradientSwatch key={name} color={gradients[name]} name={name} />
+<div>
+      <GradientSpecimen key={name} gradient={gradients[name]} name={name} />
+</div>
     ))}
   </div>
 ));

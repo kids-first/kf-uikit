@@ -23,3 +23,22 @@ export default function processColor(hex) {
     },
   };
 }
+
+
+/**
+ * Computes the wcag grade (AAA, AAALarge, AA, AALarge) for a foreground color
+ * on a background color
+ */
+export function wcagGrade(fg, bg) {
+  const contrast = chroma.contrast(fg, bg);
+  if (contrast >= minimums.aaa) {
+    return 'AAA';
+  }
+  if (contrast >= minimums.aa) {
+    return 'AA';
+  }
+  if (contrast >= minimums.aaLarge) {
+    return 'AA Large';
+  }
+  return 'Low Contrast';
+}
