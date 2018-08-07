@@ -16,7 +16,7 @@ import {
 } from '../../src/components/Typography';
 import { Box } from '../../src/components/Layout';
 import processColor from '../../src/utils/colors';
-import ColorSpecimen from '../../src/components/Utilities/Color';
+import ColorSpecimen from '../utils/Color';
 
 
 const hashColors = clrs => {

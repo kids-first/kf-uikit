@@ -1,12 +1,12 @@
 import React from "react";
 import propTypes from "prop-types";
 import { space, color, fontSize } from 'styled-system';
-import styled from '../../kfFeels/kfReactEmotion';
+import styled from '../../src/kfFeels/kfReactEmotion';
 import {
   H3,
   P,
-} from '../Typography';
-import { Box } from '../Layout';
+} from '../../src/components/Typography';
+import { Box } from '../../src/components/Layout';
 
 /**
  * A basic square swatch to display a color
