@@ -2,8 +2,9 @@
   "name": "kf-uikit",
   "version": "0.0.0",
   "description": "Kids First Design System",
-  "main": "dist/$npm_package_version/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prepare": "rm -rf dist && mkdir dist && babel src --out-dir dist",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build":
       "build-storybook -c .storybook -o ./storybook-static/$npm_package_version && node versionBump.js",
@@ -18,7 +19,11 @@
     "url": "https://github.com/kids-first/kf-uikit/issues"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.56",
+    "@babel/cli": "^7.0.0-beta.53",
+    "@babel/core": "^7.0.0-beta.53",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.53",
+    "@babel/plugin-transform-template-literals": "^7.0.0-beta.53",
+    "babel-plugin-react-docgen": "^2.0.0-rc.1",
     "@babel/preset-env": "^7.0.0-beta.56",
     "@babel/preset-react": "^7.0.0-beta.56",
     "@emotion/babel-plugin-core": "^0.6.6",

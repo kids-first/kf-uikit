@@ -1,4 +1,7 @@
+
 dist/
+storybook-static/
+
 # Logs
 logs
 *.log
