@@ -46,8 +46,7 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('Brand', () => (
     {Object.keys(brandColors).map(name => (
       <ColorSpecimen
         key={name}
-        hex={brandColors[name].hex}
-        rgba={brandColors[name].rgba}
+        color={brandColors[name].hex}
         name={name} />
     ))}
   </div>
@@ -71,8 +70,7 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('GreyScale', () => (
     {Object.keys(greyScaleHash).map(name => (
       <ColorSpecimen
         key={name}
-        hex={greyScaleHash[name].hex}
-        rgba={greyScaleHash[name].rgba}
+        color={greyScaleHash[name].hex}
         name={name} />
     ))}
   </div>
@@ -102,8 +100,7 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('States', () => (
       if (stateColors[name].hex) {
         return (<ColorSpecimen
                   key={name}
-                  hex={stateColors[name].hex}
-                  rgba={stateColors[name].rgba}
+                  color={stateColors[name].hex}
                   name={name} />);
       } else {
         let nestedColors = stateColors[name];
@@ -114,7 +111,7 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('States', () => (
             {Object.keys(nestedColors).map(nestedName => (
               <ColorSpecimen
                   key={nestedName}
-                  hex={stateColors[name][nestedName].hex}
+                  color={stateColors[name][nestedName].hex}
                   rgba={stateColors[name][nestedName].rgba}
                   name={nestedName} />
             ))}
@@ -138,7 +135,7 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('Background', () => (
     {Object.keys(bgColorsHash).map(name => (
         <ColorSpecimen
           key={name}
-          hex={bgColorsHash[name].hex}
+          color={bgColorsHash[name].hex}
           rgba={bgColorsHash[name].rgba}
           name={name} />
     ))}
@@ -157,7 +154,7 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('Borders', () => (
     {Object.keys(borderColorsHash).map(name => (
       <ColorSpecimen
         key={name}
-        hex={borderColorsHash[name].hex}
+        color={borderColorsHash[name].hex}
         rgba={borderColorsHash[name].rgba}
         name={name} />
     ))}

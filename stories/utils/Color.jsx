@@ -8,6 +8,7 @@ import {
   P,
 } from '../../src/components/Typography';
 import { Box } from '../../src/components/Layout';
+import { wcagGrade } from '../../src/utils/colors';
 
 /**
  * A basic square swatch to display a color
@@ -61,15 +62,14 @@ const ColorSpecimen = (props) => (
     <P mt={0} small>
       rgb: {chroma(props.color).css()}
     </P>
-    <Badge bg={chroma(props.color).css()}>AAAaaa</Badge>
-    <Badge color='white' bg={chroma(props).css()}>AAAaaa</Badge>
+    <Badge color='black' bg={chroma(props.color).css()}>{wcagGrade('black', props.color)}</Badge>
+    <Badge color='white' bg={chroma(props.color).css()}>{wcagGrade('white', props.color)}</Badge>
   </Box>
 )
 
 ColorSpecimen.propTypes = {
   name: propTypes.string,
-  hex: propTypes.string,
-  rgba: propTypes.string,
+  color: propTypes.string,
 }
 
 ColorSpecimen.defaultProps = {
