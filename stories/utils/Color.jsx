@@ -30,6 +30,14 @@ Swatch.propTypes = {
 }
 
 /**
+ * A basic square swatch to display a gradient
+ */
+const GradientSwatch = styled(Swatch)`
+  width: 256px;
+  background-color: none;
+  background-image: ${props => props.gradient};
+`
+/**
  * A simple badge
  */
 const Badge = styled('span')`
@@ -53,7 +61,7 @@ Badge.propTypes = {
  * specimen on a badge of that color
  */
 const ColorSpecimen = (props) => (
-  <Box m={24} w={128} display="inline-block">
+  <Box m={24} w={256} display="inline-block">
     <Swatch color={chroma(props.color).css()}/>
     <H3 mb={1}>{ props.name }</H3>
     <P mt={0} mb={0} small>
@@ -75,6 +83,30 @@ ColorSpecimen.propTypes = {
 ColorSpecimen.defaultProps = {
   name: 'Color',
   color: '#999',
+}
+
+
+/**
+ * Displays a gradient swatch with title and value
+ */
+export const GradientSpecimen = (props) => (
+  <Box m={24} w={256} display="inline-block">
+    <GradientSwatch gradient={props.gradient}/>
+    <H3 mb={1}>{ props.name }</H3>
+    <P mt={0} mb={0} small>
+      hex: {props.gradient}
+    </P>
+  </Box>
+)
+
+GradientSpecimen.propTypes = {
+  name: propTypes.string,
+  color: propTypes.string,
+}
+
+GradientSpecimen.defaultProps = {
+  name: 'Gradient',
+  gradient: 'linear-gradient(to right, #fff, #000)',
 }
 
 

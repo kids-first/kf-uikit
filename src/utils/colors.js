@@ -31,8 +31,14 @@ export default function processColor(hex) {
  */
 export function wcagGrade(fg, bg) {
   const contrast = chroma.contrast(fg, bg);
-  if (contrast >= minimums.aaa) { return 'AAA' } else
-  if (contrast >= minimums.aa) { return 'AA' } else
-  if (contrast >= minimums.aaLarge) { return 'AA Large' } else
-  { return 'Low Contrast' }
+  if (contrast >= minimums.aaa) {
+    return 'AAA';
+  }
+  if (contrast >= minimums.aa) {
+    return 'AA';
+  }
+  if (contrast >= minimums.aaLarge) {
+    return 'AA Large';
+  }
+  return 'Low Contrast';
 }

@@ -16,7 +16,7 @@ import {
 } from '../../src/components/Typography';
 import { Box } from '../../src/components/Layout';
 import processColor from '../../src/utils/colors';
-import ColorSpecimen from '../utils/Color';
+import ColorSpecimen, { GradientSpecimen } from '../utils/Color';
 
 
 const hashColors = clrs => {
@@ -142,6 +142,7 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('Background', () => (
   </div>
 ));
 
+
 const borderColorsHash = hashColors(colors.border);
 storiesOf(`${base.replace('/stories/', '')}`, module).add('Borders', () => (
   <div
@@ -162,44 +163,18 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('Borders', () => (
 ));
 
 
-const GradientSwatch = ({ color, name }) => (
-  <div
-    name={name}
-    style={{
-      marginBottom: 48,
-      marginRight: 48,
-      width: 128 * 2
-    }}
-  >
-    <div
-      style={{
-        width: 128 * 2,
-        height: 128,
-        backgroundImage: color,
-        borderRadius: 4,
-        marginBottom: 8
-      }}
-    />
-    <H3 mb="5px" bold>
-      {name}
-    </H3>
-    <P my="0" small>
-      background-image: {color}
-    </P>
-  </div>
-);
 storiesOf(`${base.replace('/stories/', '')}`, module).add('Gradients', () => (
   <div
     style={{
-      backgroundColor: '#fcfcfc',
-      width: (128+ 48) * 2,
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'row'
     }}
   >
     {Object.keys(gradients).map(name => (
-      <GradientSwatch key={name} color={gradients[name]} name={name} />
+<div>
+      <GradientSpecimen key={name} gradient={gradients[name]} name={name} />
+</div>
     ))}
   </div>
 ));
