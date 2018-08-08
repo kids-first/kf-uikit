@@ -1,11 +1,4 @@
-import {
-  headings,
-  textUtils,
-  fonts,
-  paragraph,
-  blockquote,
-  lists,
-} from './Typography';
+import { headings, textUtils, fonts, paragraph, blockquote, lists } from './Typography';
 import colors from './Colors';
 
 export default {
