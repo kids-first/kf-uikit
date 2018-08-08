@@ -7,7 +7,7 @@ const minimums = {
   aaaLarge: 4.5,
 };
 
-export default function processColor(hex) {
+export function processColor(hex) {
   const hexc = chroma(hex).hex();
   const rgba = chroma(hex).rgba();
   const contrast = chroma.contrast(hexc, 'white');
@@ -23,7 +23,6 @@ export default function processColor(hex) {
     },
   };
 }
-
 
 /**
  * Computes the wcag grade (AAA, AAALarge, AA, AALarge) for a foreground color
@@ -42,3 +41,11 @@ export function wcagGrade(fg, bg) {
   }
   return 'Low Contrast';
 }
+
+export const hashColors = clrs => Object.keys(clrs).reduce((acc, name) => ({
+  ...acc,
+  [name]:
+    typeof clrs[name] === 'object'
+      ? hashColors(clrs[name])
+      : processColor(clrs[name]),
+}), {});

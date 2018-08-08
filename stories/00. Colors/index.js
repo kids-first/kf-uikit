@@ -1,46 +1,24 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import base from 'paths.macro';
-import { pick, keyBy } from 'lodash';
-import colors, { gradients } from '../../src/theme/Colors';
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  P,
-  BlockQuote,
-  UL,
-  OL
-} from '../../src/components/Typography';
+import { pick } from 'lodash';
+import colors from '../../src/theme/Colors';
+import { H2 } from '../../src/components/Typography';
 import { Box } from '../../src/components/Layout';
-import processColor from '../../src/utils/colors';
+import { hashColors, processColor } from '../../src/utils/colors';
 import ColorSpecimen, { GradientSpecimen } from '../utils/Color';
-
-
-const hashColors = clrs => {
-  return Object.keys(clrs).reduce((acc, name) => {
-    return {
-      ...acc,
-      [name]:
-        typeof clrs[name] === 'object'
-          ? hashColors(clrs[name])
-          : processColor(clrs[name])
-    };
-  }, {});
-};
-
+const uikitStories = storiesOf(`${base.replace('/stories/', '')}`, module);
 
 const brandColors = hashColors(
-  pick(colors, ['primary', 'secondary', 'tertiary', 'white'])
+  pick(colors, ['primary', 'secondary', 'tertiary', 'white']),
 );
-storiesOf(`${base.replace('/stories/', '')}`, module).add('Brand', () => (
+
+uikitStories.add('Brand', () => (
   <div
     style={{
       display: 'flex',
       flexWrap: 'wrap',
-      flexDirection: 'row'
+      flexDirection: 'row',
     }}
   >
     {Object.keys(brandColors).map(name => (
@@ -59,12 +37,12 @@ const greyScaleHash = colors.grey
     return { ...acc, [Object.keys(grey)[0]]: processColor(colors.grey[idx]) };
   }, {});
 
-storiesOf(`${base.replace('/stories/', '')}`, module).add('GreyScale', () => (
+uikitStories.add('GreyScale', () => (
   <div
     style={{
       display: 'flex',
       flexWrap: 'wrap',
-      flexDirection: 'row'
+      flexDirection: 'row',
     }}
   >
     {Object.keys(greyScaleHash).map(name => (
@@ -84,16 +62,16 @@ const stateColors = hashColors(
     'inactive',
     'optionSelected',
     'hover',
-    'error'
-  ])
+    'error',
+  ]),
 );
 
-storiesOf(`${base.replace('/stories/', '')}`, module).add('States', () => (
+uikitStories.add('States', () => (
   <div
     style={{
       display: 'flex',
       flexWrap: 'wrap',
-      flexDirection: 'row'
+      flexDirection: 'row',
     }}
   >
     {Object.keys(stateColors).map(name => {
@@ -124,12 +102,12 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('States', () => (
 
 
 const bgColorsHash = hashColors(colors.background);
-storiesOf(`${base.replace('/stories/', '')}`, module).add('Background', () => (
+uikitStories.add('Background', () => (
   <div
     style={{
       display: 'flex',
       flexWrap: 'wrap',
-      flexDirection: 'row'
+      flexDirection: 'row',
     }}
   >
     {Object.keys(bgColorsHash).map(name => (
@@ -144,12 +122,12 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('Background', () => (
 
 
 const borderColorsHash = hashColors(colors.border);
-storiesOf(`${base.replace('/stories/', '')}`, module).add('Borders', () => (
+uikitStories.add('Borders', () => (
   <div
     style={{
       display: 'flex',
       flexWrap: 'wrap',
-      flexDirection: 'row'
+      flexDirection: 'row',
     }}
   >
     {Object.keys(borderColorsHash).map(name => (
@@ -162,19 +140,22 @@ storiesOf(`${base.replace('/stories/', '')}`, module).add('Borders', () => (
   </div>
 ));
 
-
-storiesOf(`${base.replace('/stories/', '')}`, module).add('Gradients', () => (
+uikitStories.add('Gradients', () => (
   <div
     style={{
       display: 'flex',
       flexWrap: 'wrap',
-      flexDirection: 'row'
+      flexDirection: 'row',
     }}
   >
-    {Object.keys(gradients).map(name => (
-<div>
-      <GradientSpecimen key={name} gradient={gradients[name]} name={name} />
-</div>
+    {Object.keys(colors.gradient).map(name => (
+      <div>
+        <GradientSpecimen
+          key={name}
+          gradient={colors.gradient[name]}
+          name={name}
+        />
+      </div>
     ))}
   </div>
 ));

@@ -1,5 +1,5 @@
 import { zipObject } from 'lodash';
-import colors, { gradients } from './Colors';
+import colors from './Colors';
 
 export const fonts = {
   default: 'Montserrat, Helvetica, sans-serif',
@@ -75,7 +75,7 @@ export const headings = {
     font-size: ${fontSizes['36']};
     font-weight: ${fontWeights.normal};
     letter-spacing: ${letterSpacings.heading};
-    background-image: ${gradients.research};
+    background-image: ${colors.gradient.research};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;`,
