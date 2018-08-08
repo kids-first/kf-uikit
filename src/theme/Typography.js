@@ -2,8 +2,8 @@ import { zipObject } from 'lodash';
 import colors from './Colors';
 
 export const fonts = {
-  default: 'Montserrat, Helvetica, sans-serif',
-  details: 'Open Sans',
+  headings: 'Montserrat, Helvetica, sans-serif',
+  body: 'Open Sans',
 };
 const baseFontSize = 16;
 
@@ -40,12 +40,12 @@ const typographyBase = `
 `;
 
 const headingsBase = `
-  font-family: ${fonts.default};
+  font-family: ${fonts.headings};
   ${typographyBase}
 `;
 
 export const paragraph = `
-  font-family: ${fonts.details};
+  font-family: ${fonts.body};
   color: ${colors.greyScale1};
   font-size: ${baseFontSize}px;
   line-height: ${lineHeights['1.25']};
@@ -81,7 +81,7 @@ export const headings = {
   `,
   h4: `
     ${headingsBase}
-    font-family: ${fonts.details};
+    font-family: ${fonts.body};
     font-size: ${fontSizes['16']};
     line-height: ${lineHeights['1.25']};
   `,
@@ -128,7 +128,7 @@ export const lists = {
         content: counter(li);
         font-size: ${fontSizes['14']};
         line-height: ${lineHeights['1.86']}; //26px
-        font-family: ${fonts.default};
+        font-family: ${fonts.headings};
         font-weight: ${fontWeights.bold};
         counter-increment: li;
         position: absolute;
