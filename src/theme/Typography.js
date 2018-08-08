@@ -9,27 +9,10 @@ const baseFontSize = 16;
 
 // typographic scale
 // px based
-export const fontSizesScale = [
-  14,
-  16,
-  18,
-  20,
-  22,
-  24,
-  30,
-  32,
-  36,
-  48,
-  64,
-  96,
-  128,
-];
+export const fontSizesScale = [14, 16, 18, 20, 22, 24, 30, 32, 36, 48, 64, 96, 128];
 // keyed object to make sizes more declarative
 // ex. fontSizes['32']
-export const fontSizes = zipObject(
-  fontSizesScale,
-  fontSizesScale.map(v => `${v}px`),
-);
+export const fontSizes = zipObject(fontSizesScale, fontSizesScale.map(v => `${v}px`));
 
 // for any scale, either array or objects will work
 // em based

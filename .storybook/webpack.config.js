@@ -8,7 +8,7 @@ module.exports = (baseConfig, env, defaultConfig) => {
     test: /\.(js|jsx)$/,
     loaders: ['eslint-loader'],
     exclude: [/node_modules/],
-    include: path.resolve(__dirname, '../')
+    include: path.resolve(__dirname, '../'),
   });
 
   return defaultConfig;

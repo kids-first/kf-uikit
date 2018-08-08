@@ -1,22 +1,22 @@
-import { withInfo as withAddonInfo } from "@storybook/addon-info";
-import { find } from "lodash";
+import { withInfo as withAddonInfo } from '@storybook/addon-info';
+import { find } from 'lodash';
 
 const mdListFromArr = arr =>
   arr
     .map(
       thing => `
     - ${thing}
-  `
+  `,
     )
-    .join(",")
-    .replace(/,/g, " ");
+    .join(',')
+    .replace(/,/g, ' ');
 
 export const componentShould = ({
-  preText = "",
+  preText = '',
   doThis = [],
   notThis = [],
-  guidelines = "",
-  postText = ""
+  guidelines = '',
+  postText = '',
 }) => `
   ${preText}
 
@@ -35,18 +35,18 @@ export const componentShould = ({
 
 export const withInfo = (options, component) => {
   const SRC = find(global.STORYBOOK_REACT_CLASSES, {
-    name: component().type.name
+    name: component().type.name,
   });
 
   return withAddonInfo(
     Object.assign(
       {},
       {
-        text: SRC ? SRC.docgenInfo.description : "",
+        text: SRC ? SRC.docgenInfo.description : '',
         inline: true,
-        header: false
+        header: false,
       },
-      options
-    )
+      options,
+    ),
   )(component);
 };

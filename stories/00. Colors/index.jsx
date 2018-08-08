@@ -7,11 +7,10 @@ import { H2 } from '../../src/components/Typography';
 import { Box } from '../../src/components/Layout';
 import { hashColors, processColor } from '../../src/utils/colors';
 import ColorSpecimen, { GradientSpecimen } from '../utils/Color';
+
 const uikitStories = storiesOf(`${base.replace('/stories/', '')}`, module);
 
-const brandColors = hashColors(
-  pick(colors, ['primary', 'secondary', 'tertiary', 'white']),
-);
+const brandColors = hashColors(pick(colors, ['primary', 'secondary', 'tertiary', 'white']));
 
 uikitStories.add('Brand', () => (
   <div
@@ -22,14 +21,10 @@ uikitStories.add('Brand', () => (
     }}
   >
     {Object.keys(brandColors).map(name => (
-      <ColorSpecimen
-        key={name}
-        color={brandColors[name].hex}
-        name={name} />
+      <ColorSpecimen key={name} color={brandColors[name].hex} name={name} />
     ))}
   </div>
 ));
-
 
 const greyScaleHash = colors.grey
   .map((hex, idx) => ({ [`grey${idx}`]: hex }))
@@ -46,24 +41,13 @@ uikitStories.add('GreyScale', () => (
     }}
   >
     {Object.keys(greyScaleHash).map(name => (
-      <ColorSpecimen
-        key={name}
-        color={greyScaleHash[name].hex}
-        name={name} />
+      <ColorSpecimen key={name} color={greyScaleHash[name].hex} name={name} />
     ))}
   </div>
 ));
 
-
 const stateColors = hashColors(
-  pick(colors, [
-    'highlight',
-    'active',
-    'inactive',
-    'optionSelected',
-    'hover',
-    'error',
-  ]),
+  pick(colors, ['highlight', 'active', 'inactive', 'optionSelected', 'hover', 'error']),
 );
 
 uikitStories.add('States', () => (
@@ -76,30 +60,25 @@ uikitStories.add('States', () => (
   >
     {Object.keys(stateColors).map(name => {
       if (stateColors[name].hex) {
-        return (<ColorSpecimen
-                  key={name}
-                  color={stateColors[name].hex}
-                  name={name} />);
-      } else {
-        let nestedColors = stateColors[name];
-        return (
-          <Box p={1} mb={4} width="100%"
-            border='1px solid'>
-            <H2 width="100%">{name}</H2>
-            {Object.keys(nestedColors).map(nestedName => (
-              <ColorSpecimen
-                  key={nestedName}
-                  color={stateColors[name][nestedName].hex}
-                  rgba={stateColors[name][nestedName].rgba}
-                  name={nestedName} />
-            ))}
-          </Box>
-        );
+        return <ColorSpecimen key={name} color={stateColors[name].hex} name={name} />;
       }
+      const nestedColors = stateColors[name];
+      return (
+        <Box p={1} mb={4} width="100%" border="1px solid">
+          <H2 width="100%">{name}</H2>
+          {Object.keys(nestedColors).map(nestedName => (
+            <ColorSpecimen
+              key={nestedName}
+              color={stateColors[name][nestedName].hex}
+              rgba={stateColors[name][nestedName].rgba}
+              name={nestedName}
+            />
+          ))}
+        </Box>
+      );
     })}
   </div>
 ));
-
 
 const bgColorsHash = hashColors(colors.background);
 uikitStories.add('Background', () => (
@@ -111,15 +90,15 @@ uikitStories.add('Background', () => (
     }}
   >
     {Object.keys(bgColorsHash).map(name => (
-        <ColorSpecimen
-          key={name}
-          color={bgColorsHash[name].hex}
-          rgba={bgColorsHash[name].rgba}
-          name={name} />
+      <ColorSpecimen
+        key={name}
+        color={bgColorsHash[name].hex}
+        rgba={bgColorsHash[name].rgba}
+        name={name}
+      />
     ))}
   </div>
 ));
-
 
 const borderColorsHash = hashColors(colors.border);
 uikitStories.add('Borders', () => (
@@ -135,7 +114,8 @@ uikitStories.add('Borders', () => (
         key={name}
         color={borderColorsHash[name].hex}
         rgba={borderColorsHash[name].rgba}
-        name={name} />
+        name={name}
+      />
     ))}
   </div>
 ));
@@ -150,11 +130,7 @@ uikitStories.add('Gradients', () => (
   >
     {Object.keys(colors.gradient).map(name => (
       <div>
-        <GradientSpecimen
-          key={name}
-          gradient={colors.gradient[name]}
-          name={name}
-        />
+        <GradientSpecimen key={name} gradient={colors.gradient[name]} name={name} />
       </div>
     ))}
   </div>

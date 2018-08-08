@@ -30,22 +30,21 @@ const state = {
 };
 
 const gradient = {
-  community: `linear-gradient(to right,${
-    brand.primary
-  }, #cc3399 35%, #be1e2d 66%, #f6921e)`,
-  research: `linear-gradient(to right, ${brand.secondary}, ${
-    brand.tertiary
-  } 51%, #02b0ed),
+  community: `linear-gradient(to right,${brand.primary}, #cc3399 35%, #be1e2d 66%, #f6921e)`,
+  research: `linear-gradient(to right, ${brand.secondary}, ${brand.tertiary} 51%, #02b0ed),
              linear-gradient(${brand.secondary}, ${brand.secondary})`,
-  health:
-    'linear-gradient(to right, rgb(10, 93, 108), rgb(25, 136, 149) 51%, rgb(28, 163, 158))',
+  health: 'linear-gradient(to right, rgb(10, 93, 108), rgb(25, 136, 149) 51%, rgb(28, 163, 158))',
 };
 
 const greyScale = {
   // B/W
   white: 'rgb(255,255,255)',
   black: 'rgb(0,0,0)',
-  grey: [...Array(12).keys()].map(i => chroma('rgb(0,0,0)').brighten(i / 2).css()),
+  grey: [...Array(12).keys()].map(i =>
+    chroma('rgb(0,0,0)')
+      .brighten(i / 2)
+      .css(),
+  ),
 };
 
 const background = {

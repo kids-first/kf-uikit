@@ -42,10 +42,11 @@ export function wcagGrade(fg, bg) {
   return 'Low Contrast';
 }
 
-export const hashColors = clrs => Object.keys(clrs).reduce((acc, name) => ({
-  ...acc,
-  [name]:
-    typeof clrs[name] === 'object'
-      ? hashColors(clrs[name])
-      : processColor(clrs[name]),
-}), {});
+export const hashColors = clrs =>
+  Object.keys(clrs).reduce(
+    (acc, name) => ({
+      ...acc,
+      [name]: typeof clrs[name] === 'object' ? hashColors(clrs[name]) : processColor(clrs[name]),
+    }),
+    {},
+  );
