@@ -42,6 +42,8 @@ export function wcagGrade(fg, bg) {
   return 'Low Contrast';
 }
 
+/* eslint-disable */
+
 export const hashColors = clrs => {
   return Object.keys(clrs).reduce((acc, name) => {
     return {

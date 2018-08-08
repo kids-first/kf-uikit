@@ -27,7 +27,7 @@ const buttonColor = {
       .css(),
   },
   warn: {
-    fg: palette.white,
+    fg: colors.white,
     bg: chroma(colors.primary).css(),
     hover: chroma(colors.primary)
       .brighten(0.5)
