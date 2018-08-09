@@ -7,6 +7,7 @@ import {
   space,
   fontSize,
   fontWeight,
+  fontFamily,
   textAlign,
   lineHeight,
   borders,
@@ -28,15 +29,6 @@ const textStyles = complexStyle({
 const Heading = styled('span')`
   font-family: ${({ theme }) => theme.fonts.headings};
   font-weight: ${({ theme }) => theme.fontWeights.normal};
-  ${color}
-  ${space}
-  ${textAlign}
-  ${borders}
-  ${lineHeight} // maybe remove to limit usage ?
-  ${fontSize} // maybe remove to limit usage ?
-  ${fontWeight} // maybe remove to limit usage ?
-  ${textStyles}
-  ${({ css }) => css}
 `;
 
 Heading.propTypes = {
@@ -64,6 +56,16 @@ const Headings = HTMLHeadings.map(el => {
   let component = el;
   component = styled(Heading.withComponent(el))`
     ${({ theme }) => theme[el]};
+    ${color}
+    ${space}
+    ${textAlign}
+    ${borders}
+    ${lineHeight} // maybe remove to limit usage ?
+    ${fontSize} // maybe remove to limit usage ?
+    ${fontWeight} // maybe remove to limit usage ?
+    ${fontFamily}// maybe remove to limit usage ?
+    ${textStyles} 
+    ${({ css }) => css}
   `;
   component.displayName = el.toUpperCase();
   component.defaultProps = { ...Heading.defaultProps };
