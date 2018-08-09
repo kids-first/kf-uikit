@@ -5,7 +5,7 @@ import { Paragraph, BlockQuote, TextList } from './Text';
 import { withInfo } from '../../../../stories/utils';
 import theme from '../../../theme/defaultTheme';
 
-const stories = storiesOf('Typography/Text', module);
+const stories = storiesOf('Typography/Body', module);
 stories.addDecorator(withKnobs);
 
 stories.add(
