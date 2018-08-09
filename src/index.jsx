@@ -5,18 +5,18 @@ import defaultTheme from './theme/defaultTheme';
 
 export { H1, H2, H3, H4, H5, P, BlockQuote, UL, OL } from './components/Typography';
 
-const KFThemeProvider = ({ children, theme }) => (
+const KFThemeProvider = ({ children, theme = defaultTheme }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
 
-KFThemeProvider.propTypes = {
-  theme: propTypes.shape,
-  children: propTypes.shape,
-};
+// KFThemeProvider.propTypes = {
+//   theme: propTypes.shape,
+//   children: propTypes.shape,
+// };
 
-KFThemeProvider.defaultProps = {
-  theme: defaultTheme,
-  children: {},
-};
+// KFThemeProvider.defaultProps = {
+//   theme: defaultTheme,
+//   children: {},
+// };
 
 export default KFThemeProvider;
