@@ -1,6 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable-next-line no-unused-vars */
-import React from 'react';
 import PropTypes from 'prop-types';
 import {
   color,
@@ -13,8 +10,8 @@ import {
   complexStyle,
 } from 'styled-system';
 import { reduce } from 'lodash';
-import styled from '../../kfFeels/kfReactEmotion';
-import { textUtils } from '../../theme/Typography';
+import styled from '../../../kfFeels/kfReactEmotion';
+import { textUtils } from '../../../theme/Typography';
 
 export const HTMLHeadings = ['h1', 'h2', 'h3', 'h4', 'h5'];
 
