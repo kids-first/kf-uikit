@@ -1,12 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import base from 'paths.macro';
-import theme from '../../src/theme/defaultTheme';
-import { Box } from '../../src/components/Layout';
-import { H2 } from '../../src/components/Typography';
+import theme from '../../theme/defaultTheme';
+import { Box } from './Layout';
+import { H2 } from '../Typography';
 
-storiesOf(`${base.replace('/stories/', '')}`, module).add(
+storiesOf('Layout', module).add(
   'Box',
   withInfo({
     inline: true,
