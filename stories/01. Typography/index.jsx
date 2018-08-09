@@ -2,7 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, array } from '@storybook/addon-knobs';
 import base from 'paths.macro';
-// import H1, H2, H3, H4, H5, P, BlockQuote, UL, OL  from '../../src/components/Typography';
 import {
   H1,
   H2,
@@ -14,6 +13,7 @@ import {
   TextList,
 } from '../../src/components/Typography';
 import { withInfo } from '../utils';
+import { css } from '../../src/kfFeels/kfEmotion';
 import theme from '../../src/theme/defaultTheme';
 
 const stories = storiesOf(`${base.replace('/stories/', '')}`, module);
@@ -42,7 +42,7 @@ stories.add(
     () => (
       <div>
         <H2 mb="0">Montserrat (headings)</H2>
-        <H2 my="0" small fontWeight="thin">
+        <H2 small fontWeight="thin">
           {' '}
           thin: 300
         </H2>
@@ -50,18 +50,18 @@ stories.add(
           {' '}
           regular: 400
         </H2>
-        <H2 mb="0" mt="10" fontFamily="body">
+        <H2 mb="0" mt="10" fontFamily="body" css="font-family: Open Sans;">
           Open Sans (body)
         </H2>
-        <H2 my="0" small fontWeight="thin" fontFamily="body">
+        <H2 small fontWeight="thin" css="font-family: Open Sans;">
           {' '}
           regular: 400
         </H2>
-        <H2 my="0" small fontWeight="normal" fontFamily="body">
+        <H2 small fontWeight="normal" css="font-family: Open Sans;">
           {' '}
           normal: 500
         </H2>
-        <H2 mt="0" small fontWeight="bold" fontFamily="body">
+        <H2 mt="0" small fontWeight="bold" css="font-family: Open Sans;">
           {' '}
           bold: 700
         </H2>
@@ -212,41 +212,3 @@ stories.add(
     </TextList.ordered>
   )),
 );
-
-// stories.add(
-//   'text utility props',
-//   withInfo(
-//     {
-//       text: 'these are specific shorthand props that can be passed to any Typography component',
-//       inline: true,
-//       header: false,
-//     },
-//     () => (
-//       <div style={{ maxWidth: '50%', border: '1px solid black', padding: '10px' }}>
-//         <H4>Alignment</H4>
-//         <P center>center </P>
-//         <P left>left </P>
-//         <P right>right </P>
-//         <hr />
-
-//         <H4>Decoration</H4>
-//         <P underline>underline </P>
-//         <P clean>clean (no-decoration) </P>
-//         <hr />
-
-//         <H4> Case</H4>
-//         <P caps>Capitalize </P>
-//         <P upper>Upper </P>
-//         <P lower>lower </P>
-//         <hr />
-
-//         <H4> Style</H4>
-//         <P italic>italics </P>
-//         <hr />
-
-//         <H4> Size</H4>
-//         <P small>Small 75% </P>
-//       </div>
-//     ),
-//   ),
-// );

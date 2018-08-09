@@ -7,7 +7,6 @@ import {
   space,
   fontSize,
   fontWeight,
-  fontFamily,
   textAlign,
   lineHeight,
   borders,
@@ -17,7 +16,6 @@ import { reduce } from 'lodash';
 import styled from '../../kfFeels/kfReactEmotion';
 import { textUtils } from '../../theme/Typography';
 
-export const HTMLElements = ['p', 'blockquote'];
 export const HTMLElementsMap = { p: 'Paragraph', blockquote: 'BlockQuote' };
 
 // textUtil props from theme typography settings
@@ -26,7 +24,6 @@ const textStyles = complexStyle({
   key: 'textStyles',
 });
 
-// TODO: review usage and specs
 const Text = styled('p')`
   font-family: ${({ theme }) => theme.fonts.body};
   font-weight: ${({ theme }) => theme.fontWeights.normal};
@@ -50,22 +47,18 @@ Text.defaultProps = {
   fontSize: 2,
   fontWeight: 'normal',
 };
-// TODO: move to utils
+
 const StyledText = el => styled(Text.withComponent(el))`
     ${({ theme }) => (theme[el] ? theme[el] : '')};
     ${color}
     ${space}
     ${textAlign}
     ${borders}
-    ${lineHeight} // maybe remove to limit usage ?
-    ${fontSize} // maybe remove to limit usage ?
-    ${fontWeight} // maybe remove to limit usage ?
-    ${fontFamily}// maybe remove to limit usage ?
     ${textStyles} 
     ${({ css }) => css}
   `;
 
-const TextElements = HTMLElements.map(el => {
+const TextElements = Object.keys(HTMLElementsMap).map(el => {
   let component = el;
   component = StyledText(el);
   // capitalize first letter

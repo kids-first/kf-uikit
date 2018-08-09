@@ -7,7 +7,6 @@ import {
   space,
   fontSize,
   fontWeight,
-  fontFamily,
   textAlign,
   lineHeight,
   borders,
@@ -46,10 +45,8 @@ Heading.propTypes = {
 };
 
 Heading.defaultProps = {
-  fontSize: 3,
   color: 'secondary',
   fontWeight: 'normal',
-  m: 0,
 };
 
 const Headings = HTMLHeadings.map(el => {
@@ -60,10 +57,8 @@ const Headings = HTMLHeadings.map(el => {
     ${space}
     ${textAlign}
     ${borders}
-    ${lineHeight} // maybe remove to limit usage ?
-    ${fontSize} // maybe remove to limit usage ?
-    ${fontWeight} // maybe remove to limit usage ?
-    ${fontFamily}// maybe remove to limit usage ?
+    ${lineHeight} 
+    ${fontWeight} 
     ${textStyles} 
     ${({ css }) => css}
   `;
