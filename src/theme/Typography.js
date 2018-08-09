@@ -44,9 +44,9 @@ const headingsBase = `
   ${typographyBase}
 `;
 
-export const paragraph = `
+export const p = `
   font-family: ${fonts.body};
-  color: ${colors.greyScale1};
+  color: ${colors.grey[1]};
   font-size: ${baseFontSize}px;
   line-height: ${lineHeights['1.25']};
   ${typographyBase}
@@ -61,7 +61,8 @@ export const headings = {
     background-image: ${colors.gradient.research};
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;`,
+    -webkit-text-fill-color: transparent;
+  `,
   h2: `
     ${headingsBase}
     color: ${colors.secondary};
@@ -87,7 +88,7 @@ export const headings = {
   `,
   h5: `
     ${headingsBase}
-    ${paragraph}
+    ${p}
     font-size: ${fontSizes['14']};
     font-weight: ${fontWeights.thin};
   `,
@@ -96,7 +97,7 @@ export const headings = {
 export const blockquote = `
   margin: 20px 0;
   padding: 5px 15px;
-  ${paragraph}
+  ${p}
   border-left: 5px solid ${colors.border.blue};
   color: ${colors.secondary};
   font-size: ${fontSizes['22']};
@@ -105,7 +106,7 @@ export const blockquote = `
 
 export const lists = {
   ul: `
-      ${paragraph}
+      ${p}
       margin-top: 0;
       margin-bottom: 11px;
       line-height: ${lineHeights['2']};
@@ -118,7 +119,7 @@ export const lists = {
     padding-left: 0;
     list-style: none;
     li {
-      ${paragraph}
+      ${p}
       position: relative;
       margin: 0 0 0 12px;
       padding: 0 28px 30px;
@@ -158,4 +159,9 @@ export const textUtils = {
   upper: { textTransform: 'uppercase' },
   lower: { textTransform: 'lowercase' },
   small: { fontSize: '75%' },
+  noGradientFill: {
+    backgroundImage: 'none',
+    backgroundClip: 'none',
+    backgroundTextFillColor: 'none',
+  },
 };

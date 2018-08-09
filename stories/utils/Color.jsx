@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import { space, color, fontSize } from 'styled-system';
 import chroma from 'chroma-js';
 import styled from '../../src/kfFeels/kfReactEmotion';
-import { H3, P } from '../../src/components/Typography';
+import { H3, Paragraph } from '../../src/components/Typography';
 import { Box } from '../../src/components/Layout';
 import { wcagGrade } from '../../src/utils/colors';
 
@@ -62,12 +62,12 @@ const ColorSpecimen = (
   <Box m={24} w={256} display="inline-block">
     <Swatch color={chroma(color).css()} />
     <H3 mb={1}>{name}</H3>
-    <P mt={0} mb={0} small>
+    <Paragraph mt={0} mb={0} small>
       hex: {chroma(color).hex()}
-    </P>
-    <P mt={0} small>
+    </Paragraph>
+    <Paragraph mt={0} small>
       rgb: {chroma(color).css()}
-    </P>
+    </Paragraph>
     <Badge color="black" bg={chroma(color).css()}>
       {wcagGrade('black', color)}
     </Badge>
@@ -94,9 +94,9 @@ export const GradientSpecimen = ({ gradient, name }) => (
   <Box m={24} w={256} display="inline-block">
     <GradientSwatch gradient={gradient} />
     <H3 mb={1}>{name}</H3>
-    <P mt={0} mb={0} small>
+    <Paragraph mt={0} mb={0} small>
       hex: {gradient}
-    </P>
+    </Paragraph>
   </Box>
 );
 
