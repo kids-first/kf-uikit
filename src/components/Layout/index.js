@@ -9,7 +9,7 @@ import {
   complexStyle,
 } from 'styled-system';
 import { applyDefaultStyles } from '../../utils/styling';
-import styled from '../../kfFeels/kfReactEmotion';
+import styled from '../../kfEmotion';
 
 const boxStyles = complexStyle({
   prop: 'boxStyle',

@@ -12,7 +12,7 @@ import {
   hover,
   complexStyle,
 } from 'styled-system';
-import styled from '../../kfFeels/kfReactEmotion';
+import { styled } from '../../kfEmotion';
 
 export const textStyles = complexStyle({
   prop: 'textStyle',

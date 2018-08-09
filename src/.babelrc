@@ -4,6 +4,6 @@
     "babel-plugin-react-docgen",
     "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-transform-template-literals",
-    "@emotion/core"
+    ["@emotion/core", {sourceMap: true, instances: ['emotion', 'react-emotion', 'preact-emotion', 'KF_EMOTION_INSTANCE'], primaryInstance: 'KF_EMOTION_INSTANCE'}]
   ]
 }
