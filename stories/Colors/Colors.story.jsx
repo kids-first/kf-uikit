@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { pick } from 'lodash';
 import colors from '../../src/theme/Colors';
-import { H2 } from '../../src/components/Typography';
+import { H2 } from '../../src/components/Typography/Typography';
 import { Box } from '../../src/components/Layout';
 import { hashColors, processColor } from '../../src/utils/colors';
 import ColorSpecimen, { GradientSpecimen } from './Colors';

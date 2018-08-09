@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, array } from '@storybook/addon-knobs';
-import base from 'paths.macro';
 import {
   H1,
   H2,
@@ -11,12 +10,12 @@ import {
   Paragraph,
   BlockQuote,
   TextList,
-} from '../../src/components/Typography';
-import { withInfo } from '../utils';
-import { css } from '../../src/kfFeels/kfEmotion';
-import theme from '../../src/theme/defaultTheme';
+} from './Typography';
+import { withInfo } from '../../../stories/utils';
+import { css } from '../../kfFeels/kfEmotion';
+import theme from '../../theme/defaultTheme';
 
-const stories = storiesOf(`${base.replace('/stories/', '')}`, module);
+const stories = storiesOf('Typography', module);
 stories.addDecorator(withKnobs);
 
 stories.add(
