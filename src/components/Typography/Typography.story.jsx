@@ -1,23 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, array } from '@storybook/addon-knobs';
-import base from 'paths.macro';
 import {
   H1,
   H2,
   H3,
   H4,
   H5,
-  Paragraph,
-  BlockQuote,
-  TextList,
-} from '../../src/components/Typography';
-import { withInfo } from '../utils';
-import { css } from '../../src/kfFeels/kfEmotion';
-import theme from '../../src/theme/defaultTheme';
+} from './Typography';
+import { Paragraph, BlockQuote, TextList } from './Text';
+import { withInfo } from '../../../stories/utils';
 
-const stories = storiesOf(`${base.replace('/stories/', '')}`, module);
-stories.addDecorator(withKnobs);
+const stories = storiesOf('Typography', module);
 
 stories.add(
   'Fonts',
@@ -145,74 +138,3 @@ stories.add(
   )),
 );
 
-stories.add('H1', withInfo({ text: theme.h1 }, () => <H1>{text('H1 text', 'Heading H1')}</H1>));
-stories.add('H2', withInfo({ text: theme.h2 }, () => <H2>{text('H2 text', 'Heading H2')}</H2>));
-stories.add('H3', withInfo({ text: theme.h3 }, () => <H3>{text('H3 text', 'Heading H3')}</H3>));
-stories.add('H4', withInfo({ text: theme.h4 }, () => <H4>{text('H4 text', 'Heading H4')}</H4>));
-stories.add('H5', withInfo({ text: theme.h5 }, () => <H5>{text('H5 text', 'Heading H5')}</H5>));
-
-stories.add(
-  'Paragraph',
-  withInfo({ text: theme.paragraph }, () => (
-    <Paragraph>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-      invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-      justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-      ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
-      et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-      sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-      elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-      gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    </Paragraph>
-  )),
-);
-
-stories.add(
-  'BlockQuote',
-  withInfo({ text: theme.blockquote }, () => (
-    <BlockQuote>
-      Contingent on available funds, the DRC award is expected to provide funding for five years of
-      up to a total of approximately $14.8 million.
-    </BlockQuote>
-  )),
-);
-
-stories.add(
-  'TextList.unordered',
-  withInfo({ text: theme.ul }, () => (
-    <TextList.unordered>
-      {array('List Items', [
-        'Adolescent Idiopathic Scoliosis',
-        'Cancer Susceptibility',
-        'Congenital Diaphragmatic Hernia',
-        'Craniofacial Microsomia',
-        'Disorders of Sex Development',
-      ]).map(item => (
-        <li>{item}</li>
-      ))}
-    </TextList.unordered>
-  )),
-);
-
-stories.add(
-  'TextList.ordered',
-  withInfo({ text: theme.ol }, () => (
-    <TextList.ordered>
-      <li>
-        Click edit underneath your name. This will bring up a box to edit your basic profile
-        information.
-      </li>
-      <li>
-        To add a profile picture, click on the button that says “Change Gravatar”. You will be
-        redirected to Wordpress &amp; Gravatar’s website to complete the profile picture set up the
-        process.
-      </li>
-      <li>
-        Once you have set up &amp; selected a profile picture within the Gravatar platform, navigate
-        back to your DRC Portal Profile and refresh the page to see your new profile picture.{' '}
-      </li>
-    </TextList.ordered>
-  )),
-);

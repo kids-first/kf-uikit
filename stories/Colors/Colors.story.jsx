@@ -1,14 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import base from 'paths.macro';
 import { pick } from 'lodash';
 import colors from '../../src/theme/Colors';
-import { H2 } from '../../src/components/Typography';
+import { H2 } from '../../src/components/Typography/Typography';
 import { Box } from '../../src/components/Layout';
 import { hashColors, processColor } from '../../src/utils/colors';
-import ColorSpecimen, { GradientSpecimen } from '../utils/Color';
+import ColorSpecimen, { GradientSpecimen } from './Colors';
 
-const uikitStories = storiesOf(`${base.replace('/stories/', '')}`, module);
+const uikitStories = storiesOf('Colors', module);
 
 const brandColors = hashColors(pick(colors, ['primary', 'secondary', 'tertiary', 'white']));
 

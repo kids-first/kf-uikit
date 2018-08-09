@@ -13,8 +13,8 @@ import {
   complexStyle,
 } from 'styled-system';
 import { reduce } from 'lodash';
-import styled from '../../kfFeels/kfReactEmotion';
-import { textUtils } from '../../theme/Typography';
+import styled from '../../../kfFeels/kfReactEmotion';
+import { textUtils } from '../../../theme/Typography';
 
 export const HTMLElementsMap = { p: 'Paragraph', blockquote: 'BlockQuote' };
 

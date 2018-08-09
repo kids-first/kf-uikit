@@ -9,10 +9,17 @@ const ThemeDecorator = storyFn => <ThemeProvider theme={theme}>{storyFn()}</Them
 addDecorator(ThemeDecorator);
 addDecorator(checkA11y);
 
-const req = require.context('../stories', true, /index\.(js|jsx)$/);
+let req = {
+  colors: './stories/Colors/Colors.story.jsx',
+  typography: './src/components/Typography/Typography.story.jsx',
+  typographyHeadings: './src/components/Typography/Headings/Headings.story.jsx',
+  typographyText: './src/components/Typography/Text/Text.story.jsx',
+  layout: './src/components/Layout/Layout.story.jsx',
+};
+const storyReqs = require.context('../', true, /^.*\.story\.jsx$/);
 
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  Object.values(req).forEach(filename => storyReqs(filename));
 }
 
 configure(loadStories, module);

@@ -3,7 +3,8 @@ import propTypes from 'prop-types';
 import { space, color, fontSize } from 'styled-system';
 import chroma from 'chroma-js';
 import styled from '../../src/kfFeels/kfReactEmotion';
-import { H3, Paragraph } from '../../src/components/Typography';
+import { H3 } from '../../src/components/Typography';
+import { Paragraph } from '../../src/components/Typography/Text';
 import { Box } from '../../src/components/Layout';
 import { wcagGrade } from '../../src/utils/colors';
 
