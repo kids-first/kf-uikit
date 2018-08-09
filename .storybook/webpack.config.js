@@ -6,7 +6,7 @@ module.exports = (baseConfig, env, defaultConfig) => {
   // For example, add typescript loader:
   defaultConfig.module.rules.push({
     test: /\.(js|jsx)$/,
-    loaders: ['eslint-loader'],
+    loaders: ['babel-loader', 'eslint-loader'],
     exclude: [/node_modules/],
     include: path.resolve(__dirname, '../'),
   });
