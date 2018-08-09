@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { space, color, fontSize } from 'styled-system';
 import chroma from 'chroma-js';
-import styled from '../../src/kfFeels/kfReactEmotion';
+import styled from '../../src/kfEmotion';
 import { H3, P } from '../../src/components/Typography';
 import { Box } from '../../src/components/Layout';
 import { wcagGrade } from '../../src/utils/colors';

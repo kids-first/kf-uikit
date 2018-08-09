@@ -14,7 +14,7 @@ import {
   hover,
   textAlign,
 } from 'styled-system';
-import styled from '../kfFeels/kfReactEmotion';
+import styled from '../kfEmotion';
 
 export const applyProp = (name, value) => (value ? `${name}: ${value};` : '');
 export const overflow = ({ ov }) => applyProp('overflow', ov);
