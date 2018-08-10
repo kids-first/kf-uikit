@@ -11,6 +11,7 @@ import {
 } from 'styled-system';
 import { reduce } from 'lodash';
 import styled from '../../../kfFeels/kfReactEmotion';
+import { css } from '../../../kfFeels/kfEmotion';
 import { textUtils } from '../../../theme/Typography';
 
 export const HTMLHeadings = ['h1', 'h2', 'h3', 'h4', 'h5'];
@@ -49,6 +50,7 @@ Heading.defaultProps = {
 const Headings = HTMLHeadings.map(el => {
   let component = el;
   component = styled(Heading.withComponent(el))`
+    ${css(`label: --${el};`)}
     ${({ theme }) => theme[el]};
     ${color}
     ${space}

@@ -1,1 +1,2 @@
-export * from './Typography';
+export * from './Headings';
+export * from './Text';
