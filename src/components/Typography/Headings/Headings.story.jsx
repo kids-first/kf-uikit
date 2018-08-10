@@ -1,13 +1,8 @@
+/* eslint-disable react/jsx-curly-brace-presence */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-} from './Headings';
+import { H1, H2, H3, H4, H5 } from './Headings';
 import { withInfo } from '../../../../stories/utils';
 import theme from '../../../theme/defaultTheme';
 
