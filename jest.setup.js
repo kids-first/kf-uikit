@@ -52,8 +52,8 @@ global.STORYBOOK = false;
 expect.addSnapshotSerializer(
   createSerializer(emotion, {
     classNameReplacer(className, index) {
-      console.log(className);
-      return `circuit-${index}`;
+      // TODO: clean emotion class names using lables
+      return `kfuikit-${index}`;
     },
   }),
 );

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders with correct styles 1`] = `
-.circuit-0 {
+exports[`H1 renders with correct styles 1`] = `
+.kfuikit-0 {
   font-family: Montserrat,Helvetica,sans-serif;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -19,14 +19,14 @@ exports[`renders with correct styles 1`] = `
 }
 
 <h1
-  className="circuit-0"
+  className="kfuikit-0"
 >
   hello world
 </h1>
 `;
 
-exports[`renders with correct styles for H2 1`] = `
-.circuit-0 {
+exports[`H2 renders with correct styles 1`] = `
+.kfuikit-0 {
   font-family: Montserrat,Helvetica,sans-serif;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -43,7 +43,7 @@ exports[`renders with correct styles for H2 1`] = `
 }
 
 <h2
-  className="circuit-0"
+  className="kfuikit-0"
 >
   hello world
 </h2>
