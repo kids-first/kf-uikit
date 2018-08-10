@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`H1 renders with correct styles 1`] = `
-.h1 {
-  font-family: Montserrat,Helvetica,sans-serif;
-  font-weight: 500;
+.kfuikit-0 {
   font-family: Montserrat,Helvetica,sans-serif;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -18,23 +16,17 @@ exports[`H1 renders with correct styles 1`] = `
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #2b388f;
-  font-weight: 500;
 }
 
 <h1
-  className="h1"
-  color="secondary"
-  fontWeight="normal"
+  className="kfuikit-0"
 >
   hello world
 </h1>
 `;
 
 exports[`H2 renders with correct styles 1`] = `
-.h2 {
-  font-family: Montserrat,Helvetica,sans-serif;
-  font-weight: 500;
+.kfuikit-0 {
   font-family: Montserrat,Helvetica,sans-serif;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -48,14 +40,10 @@ exports[`H2 renders with correct styles 1`] = `
   letter-spacing: 0.5px;
   color: #2b388f;
   font-weight: 500;
-  color: #2b388f;
-  font-weight: 500;
 }
 
 <h2
-  className="h2"
-  color="secondary"
-  fontWeight="normal"
+  className="kfuikit-0"
 >
   hello world
 </h2>
