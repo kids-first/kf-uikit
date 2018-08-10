@@ -1,9 +1,18 @@
 /* eslint-disable */
 import React from 'react';
-import { H1, H2 } from '.';
 import { createSerializer } from 'jest-emotion';
-import * as emotion from 'emotion';
-import styled from 'react-emotion';
+import * as emotion from '../../kfFeels/kfEmotion';
+import { H1, H2 } from '.';
+// Add a snapshot serializer that removes random hashes
+// from emotion class names.
+expect.addSnapshotSerializer(
+  createSerializer(emotion, {
+    classNameReplacer(className, index) {
+      let BEMclass = className.split('---').pop();
+      return `${BEMclass}`;
+    },
+  }),
+);
 
 test('H1 renders with correct styles', () => {
   const actual = create(<H1>hello world</H1>);
