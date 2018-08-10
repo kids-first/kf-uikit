@@ -7,7 +7,6 @@ import { createSerializer } from 'jest-emotion';
 // import { axe, toHaveNoViolations } from 'jest-axe';
 import { create } from 'react-test-renderer';
 import * as emotion from './src/kfFeels/kfEmotion';
-import { ThemeProvider } from 'emotion-theming';
 import KFThemeProvider from './src/index';
 
 import defaultTheme from './src/theme/defaultTheme';
@@ -49,11 +48,11 @@ global.STORYBOOK = false;
 // expect.extend(toHaveNoViolations);
 // Add a snapshot serializer that removes random hashes
 // from emotion class names.
-expect.addSnapshotSerializer(
-  createSerializer(emotion, {
-    classNameReplacer(className, index) {
-      // TODO: clean emotion class names using lables
-      return `kfuikit-${index}`;
-    },
-  }),
-);
+// expect.addSnapshotSerializer(
+//   createSerializer(emotion, {
+//     classNameReplacer(className, index) {
+//       let BEMclass = className.split('---').pop();
+//       return `${BEMclass}, ${BEMclass}`;
+//     },
+//   }),
+// );
