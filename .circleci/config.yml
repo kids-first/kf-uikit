@@ -1,24 +1,18 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:10.8
+
 jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:10.8
-
-    working_directory: ~/repo
-
+  test:
+    <<: *defaults
     steps:
       - checkout
 
-      # Download and cache dependencies
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
       - run: yarn install
@@ -28,7 +22,48 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
-      # run tests!
       - run: ./node_modules/.bin/eslint src/
 
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+  publish:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Add github to known hosts
+          command: mkdir ~/.ssh;ssh-keyscan github.com >> ~/.ssh/known_hosts
+      - run:
+          name: Reset git
+          command: git config user.email "dankolbman@gmail.com";git config user.name "Dan Kolbman";git reset --hard
+      - run:
+          name: Bump npm version
+          command: git config user.email "dankolbman@gmail.com";git config user.name "Dan Kolbman";npm version from-git
+      - run:
+          name: Push back to github
+          command: git config user.email "dankolbman@gmail.com";git config user.name "Dan Kolbman";git push -q https://${GITHUB_TOKEN}@github.com/kids-first/kf-uikit.git master
+      - run:
+          name: Publish package
+          command: npm publish
 
+workflows:
+  version: 2
+  test-publish:
+    jobs:
+      - test:
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+      - publish:
+          requires:
+            - test
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+            branches:
+              only: master
