@@ -1,3 +1,5 @@
+/* eslint-disable */
+import { appendFile } from 'fs';
 import * as css from 'css';
 import { replaceClassNames } from './replace-class-names';
 import { getClassNamesFromNodes, isReactElement, isDOMElement } from './utils';
@@ -33,7 +35,37 @@ export function createSerializer(emotion, { classNameReplacer, DOMElements = tru
     const classNames = getClassNamesFromNodes(nodes);
     const styles = getStylesFromClassNames(classNames);
     const printedVal = printer(val);
-    return replaceClassNames(classNames, styles, printedVal, emotion.caches.key, classNameReplacer);
+    const replacedClassnames = replaceClassNames(
+      classNames,
+      styles,
+      printedVal,
+      emotion.caches.key,
+      classNameReplacer,
+    );
+    var htmlTagRe = /(<([^>]+)>)/gi;
+
+    // console.log(replacedClassnames.split(htmlTagRe)[0]);
+    appendFile(
+      process.cwd() + '/src/css/kf-uikit.css',
+      replacedClassnames.split(htmlTagRe)[0],
+      function(err) {
+        if (err) throw err;
+        console.log('Saved!');
+      },
+    );
+
+    // writeFile(
+    //   process.cwd() + '/src/css/kf-uikit.css',
+    //   replacedClassnames.split(htmlTagRe)[0],
+    //   function(err) {
+    //     if (err) {
+    //       return console.log(err);
+    //     }
+
+    //     console.log('The file was saved!');
+    //   },
+    // );
+    return replacedClassnames;
   }
 
   function test(val) {
