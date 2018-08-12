@@ -40,6 +40,7 @@ global.render = renderWithTheme(render);
 global.create = renderWithTheme(create);
 global.mount = mountWithTheme;
 global.renderToHtml = renderWithTheme(renderToStaticMarkup);
+global.staticCssHash = {};
 // global.axe = axe;
 
 // This is defined by webpack in storybook builds using the DefinePlugin plugin.
