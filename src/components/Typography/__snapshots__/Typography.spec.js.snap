@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`H1 renders with correct styles 1`] = `
-.h1 {
+.h1, h1 {
   font-family: Montserrat,Helvetica,sans-serif;
   font-weight: 500;
   font-family: Montserrat,Helvetica,sans-serif;
@@ -23,7 +23,7 @@ exports[`H1 renders with correct styles 1`] = `
 }
 
 <h1
-  className="h1"
+  className="h1, h1"
   color="secondary"
   fontWeight="normal"
 >
@@ -32,7 +32,7 @@ exports[`H1 renders with correct styles 1`] = `
 `;
 
 exports[`H2 renders with correct styles 1`] = `
-.h2 {
+.h2, h2 {
   font-family: Montserrat,Helvetica,sans-serif;
   font-weight: 500;
   font-family: Montserrat,Helvetica,sans-serif;
@@ -53,10 +53,67 @@ exports[`H2 renders with correct styles 1`] = `
 }
 
 <h2
-  className="h2"
+  className="h2, h2"
   color="secondary"
   fontWeight="normal"
 >
   hello world
 </h2>
+`;
+
+exports[`H3 renders with correct styles 1`] = `
+.h1, h1 {
+  font-family: Montserrat,Helvetica,sans-serif;
+  font-weight: 500;
+  font-family: Montserrat,Helvetica,sans-serif;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  font-size: 36px;
+  font-weight: 500;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  background-image: linear-gradient(to right,#2b388f,#009bb8 51%,#02b0ed), linear-gradient(#2b388f,#2b388f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #2b388f;
+  font-weight: 500;
+}
+
+.h3, h3 {
+  font-family: Montserrat,Helvetica,sans-serif;
+  font-weight: 500;
+  font-family: Montserrat,Helvetica,sans-serif;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.44;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  color: #2b388f;
+  color: #2b388f;
+  font-weight: 500;
+}
+
+<h3
+  className="h3, h3"
+  color="secondary"
+  fontWeight="normal"
+>
+  hello world 
+  <h1
+    className="h1, h1"
+    color="secondary"
+    fontWeight="normal"
+  >
+    foobar
+  </h1>
+</h3>
 `;

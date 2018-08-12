@@ -17,7 +17,7 @@
   -webkit-text-fill-color: transparent;
   color: #2b388f;
   font-weight: 500;
-}
+} 
 
 .h2, h2 {
   font-family: Montserrat,Helvetica,sans-serif;
@@ -37,5 +37,23 @@
   font-weight: 500;
   color: #2b388f;
   font-weight: 500;
-}
+} 
 
+.h3, h3 {
+  font-family: Montserrat,Helvetica,sans-serif;
+  font-weight: 500;
+  font-family: Montserrat,Helvetica,sans-serif;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.44;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  color: #2b388f;
+  color: #2b388f;
+  font-weight: 500;
+}
