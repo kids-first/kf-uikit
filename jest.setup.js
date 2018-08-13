@@ -1,7 +1,9 @@
 /* eslint-disable */
 import React from 'react';
 import * as css from 'css';
-import { writeFile } from 'fs';
+import cssscss from 'css-scss';
+
+import { writeFileSync, readFileSync } from 'fs';
 import { invert, mapValues } from 'lodash';
 import { promisify } from 'util';
 import { renderToStaticMarkup } from 'react-dom/server';
@@ -9,15 +11,16 @@ import 'jest-enzyme';
 import Enzyme, { shallow, render, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { createSerializer, extractThemeVars } from './src/utils/kf-jest-serializer/src';
-import { replaceWithCssVars } from './src/utils/kf-jest-serializer/src/extract-static';
+import {
+  replaceWithCssVars,
+  writeStaticFile,
+} from './src/utils/kf-jest-serializer/src/extract-static';
 // import { axe, toHaveNoViolations } from 'jest-axe';
 import { create } from 'react-test-renderer';
 import * as emotion from './src/kfFeels/kfEmotion';
 import KFThemeProvider from './src/index';
 
 import defaultTheme from './src/theme/defaultTheme';
-
-// const cssVarsMap = ['colors', 'fonts'].reduce((acc, x) => ({ ...acc, [x]: defaultTheme[x] }), {});
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -56,7 +59,11 @@ global.cssAST = {
     parsingErrors: [],
   },
 };
-global.parsedCSSAST = {};
+global.filePaths = {
+  css: process.cwd() + '/src/css/kf-uikit.css',
+  cssStatic: process.cwd() + '/src/css/kf-uikit-static.min.css',
+  scss: process.cwd() + '/src/css/kf-uikit.scss',
+};
 // global.axe = axe;
 
 // This is defined by webpack in storybook builds using the DefinePlugin plugin.
@@ -76,40 +83,22 @@ expect.addSnapshotSerializer(
 );
 
 global.beforeAll(() => {
+  writeFileSync(global.filePaths.css, '');
   extractThemeVars(defaultTheme);
 });
 
 global.afterAll(() => {
-  console.log(global.parsedCSSAST);
-  // const {
-  //   stylesheet: { rules },
-  // } = global.cssAST;
-  // // remove extraneous spaces from values
-  // const cssVariableMap = mapValues(
-  //   global.cssVarsMap,
-  //   val =>
-  //     val.includes(',')
-  //       ? val
-  //           .split(',')
-  //           .map(x => x.trim())
-  //           .join(',')
-  //       : val,
-  // );
-  // global.cssAST.stylesheet.rules = rules.map(({ declarations: decls }) => {
-  //   return decls.map(_decl => {
-  //     // if css value is a list (contains ,) make it an array
-  //     let declVal = _decl.value.includes(',')
-  //       ? _decl.value
-  //           .split(',')
-  //           .map(x => x.trim())
-  //           .join(',')
-  //       : _decl.value;
-  //     let cssVar = invert(cssVariableMap)[declVal];
-  //     _decl.value = cssVar ? cssVar : _decl.value;
-  //     return _decl;
-  //   });
-  // });
-
-  // writeFile(process.cwd() + '/src/css/kf-css.css', ast);
-  // writeFile(process.cwd() + '/src/css/ast.json', JSON.stringify(global.cssAST), 'utf-8');
+  // static minified css. no vars
+  writeFileSync(global.filePaths.cssStatic, css.stringify(global.cssAST, { compress: true }));
+  // write static css file from AST w/ css vars
+  const AST_W_Vars = replaceWithCssVars(global.cssAST, global.cssVarsMap);
+  const staticCss = writeStaticFile(
+    global.filePaths.css,
+    css.stringify(AST_W_Vars, { compress: true }),
+  );
+  staticCss.then(() => {
+    // write scss from css w/ css vars file
+    const cssFile = readFileSync(global.filePaths.css);
+    writeFileSync(global.filePaths.scss, cssscss(cssFile));
+  });
 });

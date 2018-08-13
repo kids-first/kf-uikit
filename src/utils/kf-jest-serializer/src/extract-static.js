@@ -1,9 +1,9 @@
 /* eslint-disable */
-import { writeFile } from 'fs';
+import { writeFile, appendFile } from 'fs';
 import { promisify } from 'util';
 import { invert, uniqBy, mapValues, difference } from 'lodash';
 import { parse as parseCSS, stringify as stringifyCSS } from 'css';
-const fs_writeFile = promisify(writeFile);
+const fs_writeFile = promisify(appendFile);
 
 export const replaceWithCssVars = (cssAST, cssVarsMap) => {
   const stylesAST = global.cssAST;
@@ -42,7 +42,7 @@ export const replaceWithCssVars = (cssAST, cssVarsMap) => {
   return stylesAST;
 };
 
-const writeStaticFile = (file, content) => fs_writeFile(file, content, 'utf-8');
+export const writeStaticFile = (file, content) => fs_writeFile(file, content, 'utf-8');
 
 const extractStatic = classNames => {
   var htmlTagRe = /(<([^>]+)>)/gi;
@@ -77,10 +77,6 @@ const extractStatic = classNames => {
       },
     };
   });
-
-  const AST_W_Vars = replaceWithCssVars(global.cssAST, global.cssVarsMap);
-  const cssFile = writeStaticFile(process.cwd() + '/src/css/kf-css.css', stringifyCSS(AST_W_Vars));
-  cssFile.catch(err => console.log(err)).then(() => console.log('kf-css.css saved!'));
 };
 
 export default extractStatic;

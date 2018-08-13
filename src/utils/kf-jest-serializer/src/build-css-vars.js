@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { appendFile } from 'fs';
 import { isArray } from 'lodash';
-
+import { writeStaticFile } from 'extract-static';
 const createCssVarKey = (parent, prop, subProp = null) =>
   `--kf-${parent}--${prop}${subProp ? '-' + subProp : ''}`;
 
@@ -31,8 +31,10 @@ export const extractThemeVars = theme => {
         acc = acc + `${_cssVarKey}: ${_cssVarVal}; \n`;
       }
     }
-
     return acc;
   }, '');
+
+  writeStaticFile(global.filePaths.css, `:root{${cssVars}} \n\n`);
+
   return cssVars;
 };
