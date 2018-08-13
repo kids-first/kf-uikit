@@ -1,5 +1,13 @@
 /* eslint-disable */
 import { writeFileSync } from 'fs';
+import { invert, escapeRegExp } from 'lodash';
+
+const replaceWithCssVars = (str, mapObj) => {
+  var re = new RegExp(Object.keys(mapObj).join('|'), 'gim');
+  return str.replace(re, function(matched) {
+    return `var(${mapObj[matched]})`;
+  });
+};
 
 function writeStatic(classHash) {
   const classDeclarations = Object.values(classHash);
@@ -29,6 +37,9 @@ const extractStatic = classNames => {
       .trim();
     // add to global for deduplication
     if (!global.staticCssHash.hasOwnProperty(selector)) {
+      console.log(invert(global.cssVarsMap));
+      _slctr = replaceWithCssVars(_slctr, invert(global.cssVarsMap));
+
       global.staticCssHash[selector] = _slctr.replace('\n\n', '') + '}';
     }
     // TODO: definitely don't leave this in a loop,

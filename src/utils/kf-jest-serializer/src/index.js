@@ -5,7 +5,7 @@ import { replaceClassNames } from './replace-class-names';
 import { getClassNamesFromNodes, isReactElement, isDOMElement } from './utils';
 export { createMatchers } from './matchers';
 import extractStatic from './extract-static';
-export { extractThemeVars } from './build-css-vars';
+export { extractThemeVars, replaceWithCssVars } from './build-css-vars';
 
 function getNodes(node, nodes = []) {
   if (node.children) {
