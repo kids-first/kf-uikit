@@ -4,6 +4,8 @@ import * as css from 'css';
 import { replaceClassNames } from './replace-class-names';
 import { getClassNamesFromNodes, isReactElement, isDOMElement } from './utils';
 export { createMatchers } from './matchers';
+import extractStatic from './extract-static';
+export { extractThemeVars } from './build-css-vars';
 
 function getNodes(node, nodes = []) {
   if (node.children) {
@@ -28,42 +30,6 @@ export function getStyles(emotion) {
   }, '');
 }
 
-function writeStatic(classHash) {
-  const classDeclarations = Object.values(classHash);
-  // concat classes
-  const declrsString = classDeclarations.join(' \n\n');
-
-  writeFileSync(process.cwd() + '/src/css/kf-uikit.css', declrsString, function(err) {
-    if (err) throw err;
-    console.log(`Saved ${classDeclarations.length} css declarations!`);
-  });
-}
-
-function createStatic(classNames) {
-  var htmlTagRe = /(<([^>]+)>)/gi;
-  // split html tag
-  const classArr = classNames.split(htmlTagRe);
-  // grab just the css selectors
-  const selectorArr = classArr[0].split(/}/g);
-  // remove added line return
-  selectorArr.pop();
-  // iterate through selectors
-  selectorArr.forEach(_slctr => {
-    // clean up selector
-    const selector = _slctr
-      .trim()
-      .substr(0, classArr[0].indexOf('{'))
-      .trim();
-    // add to global for deduplication
-    if (!global.staticCssHash.hasOwnProperty(selector)) {
-      global.staticCssHash[selector] = _slctr.replace('\n\n', '') + '}';
-    }
-    // TODO: definitely don't leave this in a loop,
-    // only write when all has been added to the global.staticCssHash
-    writeStatic(global.staticCssHash);
-  });
-}
-
 export function createSerializer(emotion, { classNameReplacer, DOMElements = true } = {}) {
   function print(val, printer) {
     const nodes = getNodes(val);
@@ -78,8 +44,8 @@ export function createSerializer(emotion, { classNameReplacer, DOMElements = tru
       emotion.caches.key,
       classNameReplacer,
     );
-
-    createStatic(replacedClassnames);
+    console.log('createSerializer');
+    extractStatic(replacedClassnames);
 
     // console.log(replacedClassnames.split(htmlTagRe)[0]);
     // appendFile(
