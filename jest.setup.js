@@ -4,13 +4,15 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import 'jest-enzyme';
 import Enzyme, { shallow, render, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { createSerializer } from './src/utils/kf-jest-serializer/src';
+import { createSerializer, extractThemeVars } from './src/utils/kf-jest-serializer/src';
 // import { axe, toHaveNoViolations } from 'jest-axe';
 import { create } from 'react-test-renderer';
 import * as emotion from './src/kfFeels/kfEmotion';
 import KFThemeProvider from './src/index';
 
 import defaultTheme from './src/theme/defaultTheme';
+
+// const cssVarsMap = ['colors', 'fonts'].reduce((acc, x) => ({ ...acc, [x]: defaultTheme[x] }), {});
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -41,6 +43,7 @@ global.create = renderWithTheme(create);
 global.mount = mountWithTheme;
 global.renderToHtml = renderWithTheme(renderToStaticMarkup);
 global.staticCssHash = {};
+global.cssVarsMap = {};
 // global.axe = axe;
 
 // This is defined by webpack in storybook builds using the DefinePlugin plugin.
@@ -59,4 +62,11 @@ expect.addSnapshotSerializer(
   }),
 );
 
+global.beforeAll(() => {
+  extractThemeVars(defaultTheme);
+  console.log(global.cssVarsMap);
+});
 
+// global.afterAll(() => {
+//   console.log(global.staticCssHash);
+// });
