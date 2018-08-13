@@ -2,7 +2,7 @@ import { zipObject } from 'lodash';
 import colors from './Colors';
 
 export const fonts = {
-  headings: 'Montserrat, Helvetica, sans-serif',
+  headings: 'Montserrat,Helvetica,sans-serif',
   body: 'Open Sans',
 };
 const baseFontSize = 16;

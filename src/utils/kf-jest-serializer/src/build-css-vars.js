@@ -58,3 +58,4 @@ export const extractThemeVars = theme => {
   }, '');
   return cssVars;
 };
+
