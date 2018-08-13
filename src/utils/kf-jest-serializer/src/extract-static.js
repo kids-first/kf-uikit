@@ -1,13 +1,13 @@
 /* eslint-disable */
 import { writeFile } from 'fs';
 import { promisify } from 'util';
-import { invert, uniq, mapValues } from 'lodash';
+import { invert, uniqBy, mapValues, difference } from 'lodash';
 import { parse as parseCSS, stringify as stringifyCSS } from 'css';
 const fs_writeFile = promisify(writeFile);
 
 export const replaceWithCssVars = (cssAST, cssVarsMap) => {
-  const stylesAST = Object.assign({}, cssAST);
-  const cssVarsHash = Object.assign({}, cssVarsMap);
+  const stylesAST = global.cssAST;
+  const cssVarsHash = global.cssVarsMap;
   const {
     stylesheet: { rules },
   } = stylesAST;
@@ -42,7 +42,7 @@ export const replaceWithCssVars = (cssAST, cssVarsMap) => {
   return stylesAST;
 };
 
-const writeStatic = (file, content) => fs_writeFile(file, content, 'utf-8');
+const writeStaticFile = (file, content) => fs_writeFile(file, content, 'utf-8');
 
 const extractStatic = classNames => {
   var htmlTagRe = /(<([^>]+)>)/gi;
@@ -53,7 +53,7 @@ const extractStatic = classNames => {
   // remove added line return
   selectorArr.pop();
   // iterate through selectors
-  selectorArr.forEach(_slctr => {
+  selectorArr.forEach((_slctr, idx) => {
     const {
       stylesheet: { rules: _slctrRules, parsingErrors: _slctrErrors },
     } = parseCSS(_slctr + '}');
@@ -62,30 +62,25 @@ const extractStatic = classNames => {
       stylesheet: { rules: parsedRules, parsingErrors: parsedErrors },
     } = global.cssAST;
 
+    // de-dup rules based on selectors
+    const combinedRules = [...parsedRules, ..._slctrRules].filter(
+      (rule, index, self) =>
+        index ===
+        self.findIndex(t => JSON.stringify(t.selectors) === JSON.stringify(rule.selectors)),
+    );
+
     global.cssAST = {
       type: 'stylesheet',
       stylesheet: {
-        rules: uniq([...parsedRules, ..._slctrRules]),
+        rules: combinedRules,
         parsingErrors: [...parsedErrors, ..._slctrErrors],
       },
     };
-
-    // add to global for deduplication
-    // if (!global.staticCssHash.hasOwnProperty(selector)) {
-    //   console.log(invert(global.cssVarsMap));
-    //   _slctr = replaceWithCssVars(_slctr, invert(global.cssVarsMap));
-
-    //   global.staticCssHash[selector] = _slctr.replace('\n\n', '') + '}';
-    // }
-    // TODO: definitely don't leave this in a loop,
-    // only write when all has been added to the global.staticCssHash
-    // writeStatic(global.staticCssHash);
   });
 
-  const cssFile = writeStatic(
-    process.cwd() + '/src/css/kf-css.css',
-    stringifyCSS(replaceWithCssVars(global.cssAST, global.cssVarsMap)),
-  );
+  const AST_W_Vars = replaceWithCssVars(global.cssAST, global.cssVarsMap);
+  const cssFile = writeStaticFile(process.cwd() + '/src/css/kf-css.css', stringifyCSS(AST_W_Vars));
+  cssFile.catch(err => console.log(err)).then(() => console.log('kf-css.css saved!'));
 };
 
 export default extractStatic;
