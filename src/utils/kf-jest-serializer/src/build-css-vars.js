@@ -1,28 +1,6 @@
 /* eslint-disable */
 import { appendFile } from 'fs';
 import { isArray } from 'lodash';
-// const formatVars = (theme, hashKey) => {
-//   let acc = '';
-//   const themeVals = theme[hashKey];
-//   for (let prop in themeVals) {
-//     console.log('themeVals[prop]', themeVals[prop]);
-
-//     if (typeof themeVals[prop] == 'object') {
-//       cssVars += formatVars(themeVals[prop]);
-//       console.log('object', cssVars);
-//     } else if (Array.isArray(themeVals[prop])) {
-//       cssVars += themeVals[prop]
-//         .map((val, idx) => `--${hashKey}-${prop}-${idx}: ${themeVals[prop]}; \n`)
-//         .join('\n');
-//       console.log('array', cssVars);
-//     } else {
-//       console.log('string');
-//       cssVars += `--${hashKey}-${prop}: ${themeVals[prop]}; \n`;
-//     }
-//   }
-//   console.log(cssVars);
-//   return cssVars;
-// };
 
 const createCssVarKey = (parent, prop, subProp = null) =>
   `--kf-${parent}--${prop}${subProp ? '-' + subProp : ''}`;
@@ -58,4 +36,3 @@ export const extractThemeVars = theme => {
   }, '');
   return cssVars;
 };
-
