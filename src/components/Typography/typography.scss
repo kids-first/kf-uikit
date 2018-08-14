@@ -1,0 +1,25 @@
+$heading-family: Montserrat, Helvetica, sans-serif;
+$body-family: 'Open Sans';
+
+%base-type {
+    text-decoration: none;
+    border: none;
+    font-family: $heading-family;
+}
+
+%base-heading-type {
+	@extend %base-type;
+    font-family: $heading-family;
+    letter-spacing: 0.5px;
+    font-weight: normal;
+}
+
+h1 {
+	@extend %base-heading-type;
+    font-size: 36pt;
+}
+
+h2 {
+	@extend %base-heading-type;
+    font-size: 30pt;
+}
