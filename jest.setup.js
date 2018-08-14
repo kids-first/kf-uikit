@@ -49,17 +49,12 @@ global.renderToHtml = renderWithTheme(renderToStaticMarkup);
 
 global.cssVarsMap = {};
 global.cssVarsRoot = '';
-global.cssAST = {
-  type: 'stylesheet',
-  stylesheet: {
-    rules: [],
-    parsingErrors: [],
-  },
-};
+global.cssAST = JSON.parse(readFileSync(process.cwd() + '/src/css/AST.json', 'utf-8'));
 global.filePaths = {
   css: process.cwd() + '/src/css/kf-uikit.css',
   cssStatic: process.cwd() + '/src/css/kf-uikit-static.min.css',
   scss: process.cwd() + '/src/css/kf-uikit.scss',
+  cssAST: process.cwd() + '/src/css/AST.json',
 };
 // global.axe = axe;
 
@@ -80,12 +75,15 @@ expect.addSnapshotSerializer(
 );
 
 global.beforeAll(() => {
+  console.log('beforeAll');
   global.cssVarsRoot = extractThemeVars(defaultTheme);
   // clear files
   // Object.values(global.filePaths).forEach(path => fsWriteFile(path, ''));
 });
 
 global.afterAll(() => {
+  console.log('afterAll');
+
   // static minified css. no vars
   writeStaticFile(global.filePaths.cssStatic, css.stringify(global.cssAST))
     .then(data => {
@@ -95,7 +93,10 @@ global.afterAll(() => {
     .then(cssStaticData => {
       const ASTwithCSSvars = replaceWithCssVars(css.parse(cssStaticData), global.cssVarsMap);
       // css with vars
-      writeFileSync(global.filePaths.css, global.cssVarsRoot + css.stringify(ASTwithCSSvars));
+      writeFileSync(
+        global.filePaths.css,
+        `:root{${global.cssVarsRoot}} \n\n ${css.stringify(ASTwithCSSvars)}`,
+      );
       console.log(`WROTE ${global.filePaths.css}`);
       return css.stringify(ASTwithCSSvars);
     })

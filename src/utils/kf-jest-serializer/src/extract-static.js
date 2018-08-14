@@ -60,6 +60,7 @@ const extractStatic = classNames => {
   const classArr = classNames.split(htmlTagRe);
   // grab just the css selectors
   const selectorArr = classArr[0].split(/}/g);
+
   // remove added line return
   selectorArr.pop();
   // iterate through selectors
@@ -67,6 +68,7 @@ const extractStatic = classNames => {
     const {
       stylesheet: { rules: slctrRules, parsingErrors: slctrErrors },
     } = parseCSS(`${slctr}}`);
+    // const ASTfile = JSON.parse(readFileSync(global.filePaths.cssAST, 'utf-8'));
 
     const {
       stylesheet: { rules: parsedRules, parsingErrors: parsedErrors },
@@ -79,13 +81,14 @@ const extractStatic = classNames => {
         self.findIndex(t => JSON.stringify(t.selectors) === JSON.stringify(rule.selectors)),
     );
 
-    global.cssAST = {
+    const parsedAST = {
       type: 'stylesheet',
       stylesheet: {
         rules: combinedRules,
         parsingErrors: [...parsedErrors, ...slctrErrors],
       },
     };
+    writeFileSync(global.filePaths.cssAST, JSON.stringify(parsedAST, null, 2), 'utf-8');
   });
 };
 

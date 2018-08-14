@@ -44,7 +44,6 @@ export function createSerializer(emotion, { classNameReplacer, DOMElements = tru
       emotion.caches.key,
       classNameReplacer,
     );
-    console.log('createSerializer');
     extractStatic(replacedClassnames);
 
     return replacedClassnames;

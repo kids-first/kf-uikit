@@ -34,5 +34,5 @@ export const extractThemeVars = theme => {
     return acc;
   }, '');
 
-  return `:root{${cssVars}} \n\n`;
+  return cssVars;
 };
