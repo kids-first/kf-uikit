@@ -2,8 +2,7 @@
 import React from 'react';
 import * as css from 'css';
 import cssscss from 'css-scss';
-
-import { writeFileSync, readFileSync } from 'fs';
+import { writeFileSync, readFile, readFileSync } from 'fs';
 import { invert, mapValues } from 'lodash';
 import { promisify } from 'util';
 import { renderToStaticMarkup } from 'react-dom/server';
@@ -19,11 +18,8 @@ import {
 import { create } from 'react-test-renderer';
 import * as emotion from './src/kfFeels/kfEmotion';
 import KFThemeProvider from './src/index';
-
 import defaultTheme from './src/theme/defaultTheme';
-
-Enzyme.configure({ adapter: new Adapter() });
-
+const fsWriteFile = promisify(readFile);
 const renderWithTheme = renderFn => (component, ...rest) =>
   renderFn(<KFThemeProvider>{component}</KFThemeProvider>, rest);
 
@@ -50,8 +46,9 @@ global.render = renderWithTheme(render);
 global.create = renderWithTheme(create);
 global.mount = mountWithTheme;
 global.renderToHtml = renderWithTheme(renderToStaticMarkup);
-global.staticCssHash = {};
+
 global.cssVarsMap = {};
+global.cssVarsRoot = '';
 global.cssAST = {
   type: 'stylesheet',
   stylesheet: {
@@ -83,22 +80,30 @@ expect.addSnapshotSerializer(
 );
 
 global.beforeAll(() => {
-  writeFileSync(global.filePaths.css, '');
-  extractThemeVars(defaultTheme);
+  global.cssVarsRoot = extractThemeVars(defaultTheme);
+  // clear files
+  // Object.values(global.filePaths).forEach(path => fsWriteFile(path, ''));
 });
 
 global.afterAll(() => {
   // static minified css. no vars
-  writeFileSync(global.filePaths.cssStatic, css.stringify(global.cssAST, { compress: true }));
-  // write static css file from AST w/ css vars
-  const AST_W_Vars = replaceWithCssVars(global.cssAST, global.cssVarsMap);
-  const staticCss = writeStaticFile(
-    global.filePaths.css,
-    css.stringify(AST_W_Vars, { compress: true }),
-  );
-  staticCss.then(() => {
-    // write scss from css w/ css vars file
-    const cssFile = readFileSync(global.filePaths.css);
-    writeFileSync(global.filePaths.scss, cssscss(cssFile));
-  });
+  writeStaticFile(global.filePaths.cssStatic, css.stringify(global.cssAST))
+    .then(data => {
+      console.log(`WROTE ${data.file}`);
+      return data.data;
+    })
+    .then(cssStaticData => {
+      const ASTwithCSSvars = replaceWithCssVars(css.parse(cssStaticData), global.cssVarsMap);
+      // css with vars
+      writeFileSync(global.filePaths.css, global.cssVarsRoot + css.stringify(ASTwithCSSvars));
+      console.log(`WROTE ${global.filePaths.css}`);
+      return css.stringify(ASTwithCSSvars);
+    })
+    .then(cssWvars => {
+      const cssFile = readFileSync(global.filePaths.css, 'utf-8');
+      // scss from css vars
+      writeFileSync(global.filePaths.scss, cssscss(cssFile));
+      console.log(`WROTE ${global.filePaths.scss}`);
+    })
+    .catch(err => console.log(err));
 });

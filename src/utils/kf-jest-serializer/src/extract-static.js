@@ -1,13 +1,13 @@
-/* eslint-disable */
-import { writeFile, appendFile } from 'fs';
+import { appendFile, readFileSync, writeFileSync } from 'fs';
 import { promisify } from 'util';
-import { invert, uniqBy, mapValues, difference } from 'lodash';
-import { parse as parseCSS, stringify as stringifyCSS } from 'css';
-const fs_writeFile = promisify(appendFile);
+import { invert, mapValues } from 'lodash';
+import { parse as parseCSS } from 'css';
+
+const fsAppendFile = promisify(appendFile);
 
 export const replaceWithCssVars = (cssAST, cssVarsMap) => {
-  const stylesAST = global.cssAST;
-  const cssVarsHash = global.cssVarsMap;
+  const stylesAST = cssAST;
+  const cssVarsHash = cssVarsMap;
   const {
     stylesheet: { rules },
   } = stylesAST;
@@ -26,26 +26,36 @@ export const replaceWithCssVars = (cssAST, cssVarsMap) => {
 
   rules.map(({ declarations: decls }) => {
     return decls.map(_decl => {
-      let declVal = _decl.value.includes(',')
-        ? _decl.value
+      const declr = _decl;
+      const declVal = declr.value.includes(',')
+        ? declr.value
             .split(',')
             .map(x => x.trim())
             .join(',')
-        : _decl.value;
+        : declr.value;
 
-      let cssVar = invert(cssVariableMap)[declVal];
-      _decl.value = cssVar ? `var(${cssVar})` : _decl.value;
-      return _decl;
+      const cssVar = invert(cssVariableMap)[declVal];
+      declr.value = cssVar ? `var(${cssVar})` : declr.value;
+      return declr;
     });
   });
 
   return stylesAST;
 };
 
-export const writeStaticFile = (file, content) => fs_writeFile(file, content, 'utf-8');
+// export const writeStaticFile = (file, content) => fsAppendFile(file, content, 'utf-8');
+export const writeStaticFile = (file, content) => {
+  writeFileSync(file, '', 'utf-8');
+  return fsAppendFile(file, content, 'utf-8')
+    .then(() => {
+      const fileData = readFileSync(file, 'utf-8');
+      return { file, data: fileData };
+    })
+    .catch(err => console.log(err));
+};
 
 const extractStatic = classNames => {
-  var htmlTagRe = /(<([^>]+)>)/gi;
+  const htmlTagRe = /(<([^>]+)>)/gi;
   // split html tag
   const classArr = classNames.split(htmlTagRe);
   // grab just the css selectors
@@ -53,17 +63,17 @@ const extractStatic = classNames => {
   // remove added line return
   selectorArr.pop();
   // iterate through selectors
-  selectorArr.forEach((_slctr, idx) => {
+  selectorArr.forEach(slctr => {
     const {
-      stylesheet: { rules: _slctrRules, parsingErrors: _slctrErrors },
-    } = parseCSS(_slctr + '}');
+      stylesheet: { rules: slctrRules, parsingErrors: slctrErrors },
+    } = parseCSS(`${slctr}}`);
 
     const {
       stylesheet: { rules: parsedRules, parsingErrors: parsedErrors },
     } = global.cssAST;
 
     // de-dup rules based on selectors
-    const combinedRules = [...parsedRules, ..._slctrRules].filter(
+    const combinedRules = [...parsedRules, ...slctrRules].filter(
       (rule, index, self) =>
         index ===
         self.findIndex(t => JSON.stringify(t.selectors) === JSON.stringify(rule.selectors)),
@@ -73,7 +83,7 @@ const extractStatic = classNames => {
       type: 'stylesheet',
       stylesheet: {
         rules: combinedRules,
-        parsingErrors: [...parsedErrors, ..._slctrErrors],
+        parsingErrors: [...parsedErrors, ...slctrErrors],
       },
     };
   });

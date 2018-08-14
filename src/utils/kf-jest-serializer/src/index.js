@@ -1,11 +1,11 @@
 /* eslint-disable */
-import { writeFileSync } from 'fs';
 import * as css from 'css';
 import { replaceClassNames } from './replace-class-names';
 import { getClassNamesFromNodes, isReactElement, isDOMElement } from './utils';
-export { createMatchers } from './matchers';
 import extractStatic from './extract-static';
-export { extractThemeVars, replaceWithCssVars } from './build-css-vars';
+
+export { createMatchers } from './matchers';
+export { extractThemeVars } from './build-css-vars';
 
 function getNodes(node, nodes = []) {
   if (node.children) {
@@ -47,16 +47,6 @@ export function createSerializer(emotion, { classNameReplacer, DOMElements = tru
     console.log('createSerializer');
     extractStatic(replacedClassnames);
 
-    // console.log(replacedClassnames.split(htmlTagRe)[0]);
-    // appendFile(
-    //   process.cwd() + '/src/css/kf-uikit.css',
-    //   replacedClassnames.split(htmlTagRe)[0],
-    //   function(err) {
-    //     if (err) throw err;
-    //     console.log('Saved!');
-    //   },
-    // );
-
     return replacedClassnames;
   }
 
@@ -80,9 +70,11 @@ export function createSerializer(emotion, { classNameReplacer, DOMElements = tru
     // but it would be a breaking change to do so
     // because it would change the ordering of styles
     Object.keys(emotion.caches.registered).forEach(className => {
-      let indexOfClassName = classNames.indexOf(className);
+      const indexOfClassName = classNames.indexOf(className);
       if (indexOfClassName !== -1) {
-        let nameWithoutKey = classNames[indexOfClassName].substring(emotion.caches.key.length + 1);
+        const nameWithoutKey = classNames[indexOfClassName].substring(
+          emotion.caches.key.length + 1,
+        );
         // $FlowFixMe
         styles += emotion.caches.inserted[nameWithoutKey];
       }
