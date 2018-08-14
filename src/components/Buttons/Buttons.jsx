@@ -1,59 +1,24 @@
-import React from 'react';
-import propTypes from 'prop-types';
 import styled from 'react-emotion';
+import { variant } from 'styled-system';
 
-const BaseButton = styled('button')`
-  text-align: left;
-  cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  outline: none;
-`;
+const buttonStyle = variant({
+  prop: 'colors',
+  key: 'buttons',
+});
 
-const Button = styled(BaseButton)`
+export const Button = styled('button')`
+  ${buttonStyle}
   height: 30px;
   border-radius: 14px;
-  background-color: ${({ disabled }) => (disabled ? '#c5dee3' : '#009bb8')};
+  background-color: ${props => {const { colors: { bg } } = props; return ({bg})}};
+  cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
   color: #fff;
 `;
 
-export const LightButton = styled(BaseButton)`
-  ${({ theme }) => theme.hollowButton};
-  ${({ theme }) => theme.row};
-  ${({ theme }) => theme.center};
-  font-weight: bold;
-`;
+Button.defaultProps = {
+  variant: 'primary',
+};
 
-export const ActionButton = styled(Button)`
-  ${({ theme }) => theme.actionButton};
-`;
-
-export const HollowButton = styled(Button)`
-  ${({ theme }) => theme.hollowButton};
-`;
-
-const BigWhiteButtonContent = styled('span')`
-  ${({ theme }) => theme.row};
-`;
-const BigWhiteButtonBase = ({ children, ...x }) => (
-  <Button {...x}>
-    <BigWhiteButtonContent>
-      {children}
-    </BigWhiteButtonContent>
-  </Button>
-);
-BigWhiteButtonBase.propTypes = {
-  children: propTypes.element
-}
-export const BigWhiteButton = styled(BigWhiteButtonBase)`
-  background: ${({ theme }) => theme.white};
-  border: 1px solid ${({ theme }) => theme.greyScale8};
-  box-shadow: 0 0 1px 0.1px ${({ theme }) => theme.lightShadow};
-  border-radius: 25px;
-  height: auto;
-  padding-top: 0px;
-  padding-bottom: 0px;
-`;
+Button.displayName = 'Button';
 
 export default Button;

@@ -1,5 +1,5 @@
 import chroma from 'chroma-js';
-import * as colors from './Colors';
+import colors from './Colors';
 
 const buttonColor = {
   primary: {
@@ -39,6 +39,4 @@ const buttonColor = {
   },
 };
 
-export default {
-  buttonColor,
-};
+export default buttonColor;
