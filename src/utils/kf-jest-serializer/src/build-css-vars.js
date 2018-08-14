@@ -34,7 +34,5 @@ export const extractThemeVars = theme => {
     return acc;
   }, '');
 
-  writeStaticFile(global.filePaths.css, `:root{${cssVars}} \n\n`);
-
-  return cssVars;
+  return `:root{${cssVars}} \n\n`;
 };
