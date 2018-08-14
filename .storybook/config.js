@@ -15,6 +15,7 @@ let req = {
   typographyHeadings: './src/components/Typography/Headings/Headings.story.jsx',
   typographyText: './src/components/Typography/Text/Text.story.jsx',
   layout: './src/components/Layout/Layout.story.jsx',
+  buttons: './src/components/Buttons/Buttons.story.jsx',
 };
 const storyReqs = require.context('../', true, /^.*\.story\.jsx$/);
 
