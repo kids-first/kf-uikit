@@ -1,15 +1,13 @@
 import { withInfo as withAddonInfo } from '@storybook/addon-info';
 import { find } from 'lodash';
 
-const mdListFromArr = arr =>
-  arr
-    .map(
-      thing => `
+const mdListFromArr = arr => arr.map(
+  thing => `
     - ${thing}
   `,
-    )
-    .join(',')
-    .replace(/,/g, ' ');
+)
+  .join(',')
+  .replace(/,/g, ' ');
 
 export const componentShould = ({
   preText = '',
