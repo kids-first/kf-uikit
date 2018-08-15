@@ -39,6 +39,7 @@
   },
   "scripts": {
     "start": "webpack",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o ./storybook-static/"
   }
 }
