@@ -1,28 +1,24 @@
-/* eslint-disable */
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-// import { format } from 'prettier';
 import { flattenDeep, filter, mapValues } from 'lodash';
-import * as emotion from '../src/kfFeels';
 import requireContext from 'require-context';
-import { renderToStaticMarkup } from 'react-dom/server';
-import Enzyme, { shallow, render, mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import { create } from 'react-test-renderer';
+import { configure } from 'enzyme';
+import * as emotion from '../src/kfFeels';
 import KFThemeProvider from '../src/index';
 import { getNodes, markNodes, getStylesFromClassNames, importAll } from './lib/process-components';
 import { getClassNamesFromNodes } from './lib/utils';
 import { replaceClassNames } from './lib/replace-class-names';
-import { create } from 'react-test-renderer';
-import Adapter from 'enzyme-adapter-react-16';
 import writeStylesheets from './lib/write-stylesheets';
 import defaultTheme from '../src/theme/defaultTheme';
 
 configure({ adapter: new Adapter() });
-// import extractStyles from './lib/extract-styles';
 
-const componentGlob = 'src/components/*/index.js?(x)';
 // const componentGlob = 'src/components/Typography/Headings/Headings.jsx';
 const renderWithTheme = renderFn => (component, ...rest) =>
   renderFn(<KFThemeProvider>{component}</KFThemeProvider>, rest);
-const EnzymeRender = renderWithTheme(render);
+
 const EnzymeCreate = renderWithTheme(create);
 
 async function main() {
@@ -48,9 +44,12 @@ async function main() {
   const nodes = getNodes(Object.values(renderedComps));
   markNodes(nodes);
   const classNames = getClassNamesFromNodes(nodes[0]);
-  let styles = getStylesFromClassNames(classNames);
+  const styles = getStylesFromClassNames(classNames);
   const replacedClassnames = replaceClassNames(classNames, styles, '', emotion.caches.key);
-  writeStylesheets(defaultTheme, replacedClassnames);
+
+  writeStylesheets(defaultTheme, replacedClassnames).then(() => {
+    console.log('Finished Building Stylesheets');
+  });
 }
 
 // eslint-disable-next-line

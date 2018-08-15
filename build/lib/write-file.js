@@ -1,10 +1,9 @@
-/* eslint-disable */
 import { appendFile, readFileSync, writeFileSync } from 'fs';
 import { promisify } from 'util';
 
 const fsAppendFile = promisify(appendFile);
 
-export const writeStaticFile = (file, content) => {
+const writeStaticFile = (file, content) => {
   writeFileSync(file, '', 'utf-8');
   return fsAppendFile(file, content, 'utf-8')
     .then(() => {
@@ -13,3 +12,5 @@ export const writeStaticFile = (file, content) => {
     })
     .catch(err => console.log(err));
 };
+
+export default writeStaticFile;
