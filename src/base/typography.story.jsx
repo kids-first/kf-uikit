@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from '../../../stories/utils';
-import './typography.scss';
+import { withInfo } from '../../stories/utils';
+import './_typography.scss';
 
 
 const stories = storiesOf('Typography', module);
