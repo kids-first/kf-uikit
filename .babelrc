@@ -13,7 +13,15 @@
         "@babel/plugin-proposal-object-rest-spread",
         "@babel/plugin-transform-template-literals",
         "@emotion/core"
-      ],
+      ],},
+    "static": {
+      "presets": [["@babel/env", {"targets": { "node": "current"}}], "@babel/react" ],
+      "plugins": [ "@emotion/core", "dynamic-import-node-babel-7", [
+          "module-resolver",
+          {
+            "root": ".",
+          }
+        ]]
     }
   }
 }
