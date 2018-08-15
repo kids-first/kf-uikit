@@ -2,10 +2,10 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: path.join(__dirname, 'src', 'index.js'),
+  entry: [path.join(__dirname, 'src', 'index.js'),
+          path.join(__dirname, 'src', 'index.scss')],
   output: {
     path: path.join(__dirname, 'build'),
-    filename: 'bundle.js'
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -16,11 +16,31 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.(css|sass|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [
+                  require('autoprefixer')
+              ],
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
         ]
       }
     ]
