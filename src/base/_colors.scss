@@ -1,0 +1,26 @@
+// Base colors
+$white: #fff;
+$black: #000;
+
+// Brand colors
+$color-primary: #90278e;
+$color-secondary: #2b388f;
+$color-tertiary: #009bb8;
+
+$color-info: lighten($color-tertiary, 30%);
+$color-error: #d8202f;
+$color-warn: lighten($color-primary, 30%);
+$color-highlight: #e83a9c;
+$color-active: #00afed;
+$color-inactive: #dedfe4;
+
+$colors: (
+    white: $white,
+    black: $black,
+    primary: $color-primary,
+    secondary: $color-secondary,
+    tertiary: $color-tertiary,
+    info: $color-info,
+    error: $color-error,
+    warn: $color-warn
+);

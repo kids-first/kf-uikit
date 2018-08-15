@@ -1,0 +1,7 @@
+@import 'colors';
+
+@each $color, $hex in $colors {
+    .bg-#{$color}{
+        background-color: $hex;
+    }
+}

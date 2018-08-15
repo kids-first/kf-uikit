@@ -1,0 +1,7 @@
+@import 'colors';
+
+@each $color, $hex in $colors {
+    .text-#{$color}{
+        color: $hex;
+    }
+}

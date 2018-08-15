@@ -1,0 +1,57 @@
+@import '../../base/colors';
+@import '../../base/typography';
+
+%base-button {
+  border: none;
+  border-radius: 17px;
+  color: $white;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $body-family;
+  font-size: 16pt;
+  font-weight: thin;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px 17px;
+
+  &:focus,
+  &:hover {
+    background-color: rgba(black, 0.05);
+  }
+
+  &:active {
+    background-color: darken($color-tertiary, 10%);
+  }
+
+}
+
+
+.button {
+  @extend %base-button;
+
+  &.big {
+    font-size: 22pt;
+    border-radius: 19px;
+  }
+
+  &.small {
+    font-size: 12pt;
+    padding: 3px 14px;
+    border-radius: 15px;
+  }
+
+  &.disabled {
+    background-color: darken($white, 35%);
+    cursor: default;
+
+    &:focus,
+    &:hover {
+      background-color: darken($white, 35%);
+    }
+
+    &:active {
+      background-color: darken($white, 35%);
+    }
+  }
+}
