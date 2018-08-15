@@ -15,15 +15,16 @@ const filePaths = {
   scss: stylesheet`scss`,
 };
 
-const writeStylesheets = (theme, cssString) => {
+const writeStylesheets = (theme, cssString, compress = false) => {
   const { cssVarsMap, cssVars: cssRoot } = extractThemeVars(theme);
+  const cssCompiled = compress ? cssString.replace(/\n/gim, '') : cssString;
   // save our AST to a file just to have it
   writeStaticFile(
     `${process.cwd()}/src/styles/.kf-uikit-css-ast.json`,
-    JSON.stringify(css.parse(cssString), null, 2),
+    JSON.stringify(css.parse(cssCompiled), null, 2),
   );
   // static minified css. no vars
-  return writeStaticFile(filePaths.cssStatic, cssString)
+  return writeStaticFile(filePaths.cssStatic, cssCompiled)
     .then(data => {
       console.log(`WROTE ${data.file}`);
       return data.data;
@@ -32,12 +33,22 @@ const writeStylesheets = (theme, cssString) => {
       // CSS w/ variables AST
       const CSSVarsAST = replaceWithCssVars(css.parse(cssStaticData), cssVarsMap);
       // css with vars
-      return writeStaticFile(filePaths.css, `:root{${cssRoot}} \n\n ${css.stringify(CSSVarsAST)}`);
+      return writeStaticFile(
+        filePaths.css,
+        `:root{${
+          compress ? cssRoot.replace(/\/\/.*/g, '').replace(/\n/gim, '') : cssRoot
+        }} \n\n ${css.stringify(CSSVarsAST, {
+          compress,
+        })}`,
+      );
     })
     .then(data => {
       console.log(`WROTE ${data.file}`);
       // scss from css vars
-      return writeStaticFile(filePaths.scss, cssscss(data.data));
+      return writeStaticFile(
+        filePaths.scss,
+        cssscss(compress ? data.data.replace(/\n/gim, '') : data.data),
+      );
     })
     .then(data => {
       console.log(`WROTE ${data.file}`);
