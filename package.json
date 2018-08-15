@@ -10,7 +10,7 @@
         "storybook:build:serve": "build-storybook -c .storybook -o ./storybook-static/$npm_package_version && node versionBump.js && cd ./storybook-static && python -m SimpleHTTPServer",
         "test": "jest",
         "test:update": "jest --updateSnapshot",
-        "build": "BABEL_ENV=static node build"
+        "build": "BABEL_ENV=static nodemon build"
     },
     "repository": {
         "type": "git",
@@ -26,6 +26,7 @@
         "@babel/plugin-transform-template-literals": "^7.0.0-beta.53",
         "@babel/preset-env": "^7.0.0-beta.56",
         "@babel/preset-react": "^7.0.0-beta.56",
+        "@babel/register": "^7.0.0-rc.1",
         "@buildit/storybook-addon-versions": "^0.4.3",
         "@emotion/babel-plugin-core": "^0.6.6",
         "@storybook/addon-a11y": "^3.4.8",
@@ -60,12 +61,13 @@
         "prettier": "^1.14.0",
         "pretty-format": "^22.4.3",
         "react-docgen": "^2.21.0",
+        "react-docgen-annotation-resolver": "^1.1.0",
         "react-test-renderer": "^16.2.0",
         "regenerator-runtime": "^0.12.1",
-        "replace-in-file": "^3.4.0"
+        "replace-in-file": "^3.4.0",
+        "require-context": "^1.1.0"
     },
     "dependencies": {
-        "@babel/register": "^7.0.0-rc.1",
         "@storybook/addon-info": "^3.4.8",
         "@storybook/addon-knobs": "^3.4.8",
         "@storybook/react": "^3.4.8",
