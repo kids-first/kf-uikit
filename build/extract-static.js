@@ -2,15 +2,18 @@
 import React from 'react';
 // import { format } from 'prettier';
 import { flattenDeep, filter, mapValues } from 'lodash';
-import listFiles from './lib/list-files';
-import glob from 'glob';
+import * as emotion from '../src/kfFeels';
 import requireContext from 'require-context';
 import { renderToStaticMarkup } from 'react-dom/server';
 import Enzyme, { shallow, render, mount, configure } from 'enzyme';
 import KFThemeProvider from '../src/index';
+import { getNodes, markNodes, getStylesFromClassNames, importAll } from './lib/process-components';
+import { getClassNamesFromNodes } from './lib/utils';
+import { replaceClassNames } from './lib/replace-class-names';
 import { create } from 'react-test-renderer';
-import { H1 } from '../src/components/Typography';
 import Adapter from 'enzyme-adapter-react-16';
+import writeStylesheets from './lib/write-stylesheets';
+import defaultTheme from '../src/theme/defaultTheme';
 
 configure({ adapter: new Adapter() });
 // import extractStyles from './lib/extract-styles';
@@ -22,32 +25,10 @@ const renderWithTheme = renderFn => (component, ...rest) =>
 const EnzymeRender = renderWithTheme(render);
 const EnzymeCreate = renderWithTheme(create);
 
-const REGEX_BLACK_LIST = [/__snapshots__|\.story.jsx|\.spec.js/];
-const importAll = r => {
-  const filteredImportList = r
-    .keys()
-    .filter(
-      path => !REGEX_BLACK_LIST.some(regex => regex.test(path)) && path.split('/').length === 2,
-    );
-  return filteredImportList.map(r);
-};
-const { error } = console;
-// eslint-disable-next-line no-console
-console.error = (arg1, ...rest) => {
-  const isStringMsg = typeof arg1 === 'string';
-  const regex = /.*prop.+as required|Invalid prop/;
-  const isPropTypesRequiredError = isStringMsg && regex.test(arg1);
-  if (isPropTypesRequiredError) {
-    return;
-  }
-  error(arg1, ...rest);
-};
-
 async function main() {
-  // let componentPaths = await listFiles(componentGlob);
-
+  // get all components from top level index files
   const comps = importAll(requireContext('../../src/components', true, /index\.js/));
-
+  // filter imports for compoentns only
   const filterComps = c =>
     filter(c, 'contextTypes').reduce(
       (acc, comp) => ({
@@ -56,17 +37,20 @@ async function main() {
       }),
       {},
     );
-  const flatComps = flattenDeep(comps)
+  // render components with Enzyme
+  const enzymeComponents = flattenDeep(comps)
     .map(c => filterComps(c))
     .reduce((acc, compHash) => ({ ...acc, ...compHash }), {});
-  const renderedComps = mapValues(flatComps, c => EnzymeCreate(React.createElement(c)).toJSON());
-  console.log(renderedComps);
-  // console.log(EnzymeCreate(React.createElement(comps[0].H1)).toJSON());
-
-  // const componentData = await Promise.all(componentPaths.map(parseComponent));
-  // const allStyles = await Promise.all(componentData.map(extractStyles));
-
-  // console.log(format(allStyles.join('\n'), { parser: 'css' }));
+  // make a hash map of components
+  const renderedComps = mapValues(enzymeComponents, c =>
+    EnzymeCreate(React.createElement(c)).toJSON(),
+  );
+  const nodes = getNodes(Object.values(renderedComps));
+  markNodes(nodes);
+  const classNames = getClassNamesFromNodes(nodes[0]);
+  let styles = getStylesFromClassNames(classNames);
+  const replacedClassnames = replaceClassNames(classNames, styles, '', emotion.caches.key);
+  writeStylesheets(defaultTheme, replacedClassnames);
 }
 
 // eslint-disable-next-line
