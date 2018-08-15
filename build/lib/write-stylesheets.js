@@ -1,11 +1,9 @@
-/* eslint-disable */
-import { parse as parseCSS } from 'css';
 import * as css from 'css';
-import { writeStaticFile } from './write-file';
-import pkg from '../../package.json';
-import { extractThemeVars } from '../lib/build-css-vars';
-import { replaceWithCssVars } from '../lib/replace-class-names';
 import cssscss from 'css-scss';
+import writeStaticFile from './write-file';
+import pkg from '../../package.json';
+import { extractThemeVars } from './build-css-vars';
+import { replaceWithCssVars } from './replace-class-names';
 
 function stylesheet(strings) {
   // We can even return a string built using a template literal
@@ -19,8 +17,13 @@ const filePaths = {
 
 const writeStylesheets = (theme, cssString) => {
   const { cssVarsMap, cssVars: cssRoot } = extractThemeVars(theme);
+  // save our AST to a file just to have it
+  writeStaticFile(
+    `${process.cwd()}/src/styles/.kf-uikit-css-ast.json`,
+    JSON.stringify(css.parse(cssString), null, 2),
+  );
   // static minified css. no vars
-  writeStaticFile(filePaths.cssStatic, cssString)
+  return writeStaticFile(filePaths.cssStatic, cssString)
     .then(data => {
       console.log(`WROTE ${data.file}`);
       return data.data;

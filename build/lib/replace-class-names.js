@@ -1,7 +1,8 @@
-/* eslint-disable */
+/* eslint-disable no-plusplus */
 import { mapValues, invert } from 'lodash';
-function defaultClassNameReplacer(className, index) {
-  let BEMclass = className.split('---').pop();
+
+function defaultClassNameReplacer(className) {
+  const BEMclass = className.split('---').pop();
   return `${BEMclass}, ${BEMclass}`;
 }
 
@@ -44,6 +45,7 @@ export const replaceWithCssVars = (cssAST, cssVarsMap) => {
         : val,
   );
 
+  // replace css declaration values with vars
   rules.map(({ declarations: decls }) => {
     return decls.map(_decl => {
       const declr = _decl;
