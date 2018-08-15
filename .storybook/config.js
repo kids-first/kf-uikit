@@ -6,6 +6,7 @@ addDecorator(checkA11y);
 
 let req = {
   typography: './src/base/typography.story.jsx',
+  colors: './src/base/colors.story.jsx',
 };
 const storyReqs = require.context('../', true, /^.*\.story\.jsx$/);
 
