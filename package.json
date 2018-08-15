@@ -4,13 +4,13 @@
     "description": "Kids First Design System",
     "main": "dist/index.js",
     "scripts": {
-        "prepare": "rm -rf dist && mkdir dist && babel src --out-dir dist",
+        "prepare": "rm -rf dist && mkdir dist && babel src --out-dir dist && npm run build:styles && cp -R src/styles dist",
         "storybook": "start-storybook -p 9001 -c .storybook",
         "storybook:build": "build-storybook -c .storybook -o ./storybook-static/$npm_package_version && node versionBump.js",
         "storybook:build:serve": "build-storybook -c .storybook -o ./storybook-static/$npm_package_version && node versionBump.js && cd ./storybook-static && python -m SimpleHTTPServer",
         "test": "jest",
         "test:update": "jest --updateSnapshot",
-        "build": "BABEL_ENV=static nodemon build"
+        "build:styles": "BABEL_ENV=static node build"
     },
     "repository": {
         "type": "git",
