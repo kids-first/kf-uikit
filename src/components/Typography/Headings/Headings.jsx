@@ -15,7 +15,7 @@ import styled from '../../../kfFeels/kfReactEmotion';
 import { css } from '../../../kfFeels/kfEmotion';
 import { textUtils } from '../../../theme/Typography';
 
-export const HTMLHeadings = ['h1', 'h2', 'h3', 'h4', 'h5'];
+const HTMLHeadings = ['h1', 'h2', 'h3', 'h4', 'h5'];
 
 // textUtil props from theme typography settings
 const textStyles = complexStyle({

@@ -1,6 +1,6 @@
-/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable  */
 import React from 'react';
-import { flattenDeep, filter, mapValues } from 'lodash';
+import { flattenDeep, filter, mapValues, findKey, isUndefined } from 'lodash';
 import requireContext from 'require-context';
 import Adapter from 'enzyme-adapter-react-16';
 import { create } from 'react-test-renderer';
@@ -20,27 +20,43 @@ const renderWithTheme = renderFn => (component, ...rest) =>
   renderFn(<KFThemeProvider>{component}</KFThemeProvider>, rest);
 
 const EnzymeCreate = renderWithTheme(create);
+const EnzymeRender = comp => EnzymeCreate(React.createElement(comp)).toJSON();
 
 async function main() {
   // get all components from top level index files
   const comps = importAll(requireContext('../../src/components', true, /index\.js/));
-  // filter imports for compoentns only
-  const filterComps = c =>
-    filter(c, 'contextTypes').reduce(
-      (acc, comp) => ({
-        ...acc,
-        [comp.displayName]: comp,
-      }),
-      {},
-    );
+
   // render components with Enzyme
-  const enzymeComponents = flattenDeep(comps)
-    .map(c => filterComps(c))
-    .reduce((acc, compHash) => ({ ...acc, ...compHash }), {});
-  // make a hash map of components
-  const renderedComps = mapValues(enzymeComponents, c =>
-    EnzymeCreate(React.createElement(c)).toJSON(),
+  const enzymeComponents = flattenDeep(comps).reduce(
+    (acc, compHash) => ({ ...acc, ...compHash }),
+    {},
   );
+
+  // make a hash map of components
+  const renderedComps = mapValues(enzymeComponents, component => {
+    if (component.contextTypes) {
+      return EnzymeRender(component);
+    } else if (
+      typeof component === 'object' &&
+      Object.values(component).some(subComponent => subComponent.contextTypes)
+    ) {
+      return mapValues(component, x => EnzymeRender(x));
+    } else {
+      delete enzymeComponents[findKey(enzymeComponents, component)];
+    }
+  });
+  // TODO: make more efficient
+  // flatten nested components
+  for (const comp in renderedComps) {
+    let compDef = renderedComps[comp];
+    if (isUndefined(compDef.props)) {
+      Object.keys(compDef).forEach(x => {
+        renderedComps[`${comp}.${x}`] = compDef[x];
+      });
+      delete renderedComps[comp];
+    }
+  }
+
   const nodes = getNodes(Object.values(renderedComps));
   markNodes(nodes);
   const classNames = getClassNamesFromNodes(nodes[0]);

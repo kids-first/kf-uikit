@@ -17,7 +17,7 @@ import styled from '../../../kfFeels/kfReactEmotion';
 import { css as kfCSS } from '../../../kfFeels/kfEmotion';
 import { textUtils } from '../../../theme/Typography';
 
-export const HTMLElementsMap = { p: 'Paragraph', blockquote: 'BlockQuote' };
+const HTMLElementsMap = { p: 'Paragraph', blockquote: 'BlockQuote' };
 
 // textUtil props from theme typography settings
 const textStyles = complexStyle({
