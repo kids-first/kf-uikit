@@ -1,7 +1,3 @@
 {
-  "extends": ["airbnb", "prettier"],
-  "rules": {
-    "react/jsx-one-expression-per-line": "off",
-    "arrow-body-style": "off"
-  }
+  "extends": ["airbnb"]
 }
