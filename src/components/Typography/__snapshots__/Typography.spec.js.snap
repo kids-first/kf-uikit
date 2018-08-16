@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H1 renders with correct styles 1`] = `
+.h1, h1 {
+  font-family: Montserrat,Helvetica,sans-serif;
+  font-weight: 500;
+  font-family: Montserrat,Helvetica,sans-serif;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  font-size: 36px;
+  font-weight: 500;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  background-image: linear-gradient(to right,#2b388f,#009bb8 51%,#02b0ed), linear-gradient(#2b388f,#2b388f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #2b388f;
+  font-weight: 500;
+}
+
+<h1
+  className="h1, h1"
+  color="secondary"
+  fontWeight="normal"
+>
+  Heading H1
+</h1>
+`;
+
+exports[`H2 renders with correct styles 1`] = `
+.h2, h2 {
+  font-family: Montserrat,Helvetica,sans-serif;
+  font-weight: 500;
+  font-family: Montserrat,Helvetica,sans-serif;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  color: #2b388f;
+  font-size: 30px;
+  line-height: 0.95;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  color: #2b388f;
+  font-weight: 500;
+  color: #2b388f;
+  font-weight: 500;
+}
+
+<h2
+  className="h2, h2"
+  color="secondary"
+  fontWeight="normal"
+>
+  Heading H2
+</h2>
+`;
+
+exports[`H3 renders with correct styles 1`] = `
+.h3, h3 {
+  font-family: Montserrat,Helvetica,sans-serif;
+  font-weight: 500;
+  font-family: Montserrat,Helvetica,sans-serif;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.44;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  color: #2b388f;
+  color: #2b388f;
+  font-weight: 500;
+}
+
+<h3
+  className="h3, h3"
+  color="secondary"
+  fontWeight="normal"
+>
+  Heading H3
+</h3>
+`;
+
+exports[`Paragraph renders with correct styles 1`] = `
+.p, p {
+  font-family: Open Sans;
+  font-weight: 500;
+  font-family: Open Sans;
+  color: rgb(25,25,25);
+  font-size: 16px;
+  line-height: 1.25;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+}
+
+<p
+  className="p, p"
+  fontSize={2}
+  fontWeight="normal"
+>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
+`;

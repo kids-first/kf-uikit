@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Box renders with correct styles 1`] = `
+.Box, Box {
+  border: 1px solid black;
+}
+
+<div
+  className="Box, Box"
+/>
+`;
+
+exports[`Flex renders with correct styles 1`] = `
+.Box__flex, Box__flex {
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div
+  className="Box__flex, Box__flex"
+/>
+`;

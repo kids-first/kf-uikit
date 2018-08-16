@@ -2,7 +2,7 @@ import { zipObject } from 'lodash';
 import colors from './Colors';
 
 export const fonts = {
-  headings: 'Montserrat, Helvetica, sans-serif',
+  headings: 'Montserrat,Helvetica,sans-serif',
   body: 'Open Sans',
 };
 const baseFontSize = 16;
@@ -103,7 +103,12 @@ export const blockquote = `
   font-size: ${fontSizes['22']};
   font-style: italic;
 `;
-
+const li = `
+${p}
+      position: relative;
+      margin: 0 0 0 12px;
+      padding: 0 28px 30px;
+`;
 export const lists = {
   ul: `
       ${p}
@@ -112,6 +117,7 @@ export const lists = {
       line-height: ${lineHeights['2']};
       -webkit-margin-before: 1em;
       -webkit-margin-after: 1em;
+      li {${li}}
   `,
   ol: `
       counter-reset: li;
@@ -119,10 +125,7 @@ export const lists = {
     padding-left: 0;
     list-style: none;
     li {
-      ${p}
-      position: relative;
-      margin: 0 0 0 12px;
-      padding: 0 28px 30px;
+      ${li}
       border-left: 2px solid ${colors.grey[2]};
       line-height: ${lineHeights['1.5']};
       &:before {

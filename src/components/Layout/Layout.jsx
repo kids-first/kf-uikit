@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   alignItems,
   justifyContent,
@@ -10,6 +11,7 @@ import {
 } from 'styled-system';
 import { applyDefaultStyles } from '../../utils/styling';
 import styled from '../../kfFeels/kfReactEmotion';
+import { css } from '../../kfFeels';
 
 const boxStyles = complexStyle({
   prop: 'boxStyle',
@@ -17,9 +19,12 @@ const boxStyles = complexStyle({
 });
 
 export const Box = styled(applyDefaultStyles('div'))`
+  ${css(`label: --Box;`)} border: 1px solid black;
   ${boxStyles};
   ${display};
 `;
+
+Box.displayName = 'Box';
 
 const flexStyles = complexStyle({
   prop: 'flexStyle',
@@ -27,7 +32,7 @@ const flexStyles = complexStyle({
 });
 
 export const Flex = styled(Box)`
-  display: flex;
+  ${css(`label: --Box__flex;`)} display: flex;
   ${flexStyles};
   ${alignItems};
   ${justifyContent};
@@ -36,3 +41,4 @@ export const Flex = styled(Box)`
   ${flexDirection};
   ${flexGrow};
 `;
+Flex.displayName = 'Flex';

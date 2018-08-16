@@ -1,12 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import {
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-} from './Typography';
+import { H1, H2, H3, H4, H5 } from '.';
 import { Paragraph, BlockQuote, TextList } from './Text';
 import { withInfo } from '../../../stories/utils';
 
@@ -137,4 +131,3 @@ stories.add(
     </div>
   )),
 );
-
