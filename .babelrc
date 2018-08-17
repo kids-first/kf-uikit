@@ -1,0 +1,11 @@
+{
+ "presets": ["@babel/env", "@babel/react"],
+  "plugins": [
+    "babel-plugin-react-docgen",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-transform-template-literals",
+    "dynamic-import-node-babel-7",
+    "babel-plugin-transform-export-default"
+  ],
+  
+}

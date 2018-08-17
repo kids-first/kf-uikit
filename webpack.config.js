@@ -2,13 +2,11 @@ const tailwindcss = require('tailwindcss');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const pkg = require('./package.json');
+
 module.exports = {
-  entry: [
-    path.join(__dirname, 'src', 'index.js'),
-    path.join(__dirname, 'src', 'styles', 'index.css'),
-  ],
+  entry: [path.join(__dirname, 'src', 'styles', 'index.css')],
   output: {
-    path: path.join(__dirname, 'dist', pkg.version),
+    path: path.join(__dirname, 'dist', pkg.version, 'styles'),
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -19,7 +17,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(css|sass|scss)$/,
+        test: /\.(css)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -29,7 +27,7 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [tailwindcss('./tailwind.config.js'), require('autoprefixer')],
+              plugins: () => [tailwindcss('./.tmp/tailwind.babel.js'), require('autoprefixer')],
               sourceMap: true,
             },
           },

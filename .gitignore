@@ -1,3 +1,4 @@
+.tmp/*
 dist/
 storybook-static/
 *.swp
