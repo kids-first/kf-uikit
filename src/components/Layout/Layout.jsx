@@ -20,6 +20,7 @@ export const Box = styled(applyDefaultStyles('div'))`
   ${boxStyles};
   ${display};
 `;
+Box.displayName = 'Box';
 
 const flexStyles = complexStyle({
   prop: 'flexStyle',
@@ -36,3 +37,4 @@ export const Flex = styled(Box)`
   ${flexDirection};
   ${flexGrow};
 `;
+Flex.displayName = 'Flex';
