@@ -1,1 +1,2 @@
-export { colors as default } from './theme';
+export { colors } from './theme';
+
