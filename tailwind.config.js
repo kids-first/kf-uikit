@@ -1,6 +1,3 @@
-import 'babel-polyfill';
-import { colors as themeColors } from '../dist/0.0.0/index.js';
-
 /*
 
 Tailwind - The Utility-First CSS Framework
@@ -27,7 +24,7 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-// let defaultConfig = require('tailwindcss/defaultConfig')();
+// let defaultConfig = require('tailwindcss/defaultConfig')()
 
 /*
 |-------------------------------------------------------------------------------
@@ -129,7 +126,6 @@ let colors = {
   'pink-light': '#fa7ea8',
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
-  ...themeColors,
 };
 
 module.exports = {
@@ -146,7 +142,7 @@ module.exports = {
   |
   */
 
-  colors: Object.assign({}, colors, themeColors),
+  colors: colors,
 
   /*
   |-----------------------------------------------------------------------------
