@@ -6,6 +6,7 @@
     "@storybook/react": "^3.4.10",
     "chroma-js": "^1.3.7",
     "classnames": "^2.2.6",
+    "lodash": "^4.17.10",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -14,6 +15,7 @@
   "scripts": {
     "tailwind:css": "tailwind build src/css/tailwind.src.css -c  tailwind.js -o src/css/tailwind.css",
     "storybook": "yarn tailwind:css && start-storybook -p 9001 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o ./storybook-static/",
     "start": "yarn tailwind:css && react-scripts start",
     "build": "yarn tailwind:css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -31,6 +33,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
     "prettier": "^1.14.2",
+    "react-docgen": "^2.21.0",
     "tailwindcss": "^0.6.5"
   }
 }
