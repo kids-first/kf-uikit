@@ -6,7 +6,7 @@ const pkg = require('./package.json');
 module.exports = {
   entry: [path.join(__dirname, 'src', 'styles', 'index.css')],
   output: {
-    path: path.join(__dirname, 'dist', pkg.version, 'styles'),
+    path: path.join(__dirname, 'dist', 'styles'),
   },
   plugins: [
     new MiniCssExtractPlugin({

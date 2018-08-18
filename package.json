@@ -4,10 +4,10 @@
     "description": "Kids First Design System",
     "main": "dist/index.js",
     "scripts": {
-        "build:components": "babel src --out-dir dist/$npm_package_version",
+        "build:components": "rm -rf ./dist/* && babel src --out-dir ./dist",
         "compile:styles-config": "babel ./tailwind.config.js --out-file ./.tmp/tailwind.babel.js ",
-        "build:styles": "yarn compile:styles-config && webpack --progress --config=webpack.config.js",
-        "build": "yarn build:components && yarn build:styles && rm .tmp/tailwind.babel.js",
+        "build:styles": "yarn compile:styles-config && webpack --progress --config=webpack.config.js && rm -rf ./.tmp/*",
+        "build": "yarn build:components && yarn build:styles",
         "storybook": "start-storybook -p 9001 -c .storybook",
         "storybook:build": "build-storybook -c .storybook -o ./storybook-static/",
         "storybook:build:serve": "build-storybook -c .storybook -o ./storybook-static/$npm_package_version && node versionBump.js && cd ./storybook-static && python -m SimpleHTTPServer"
@@ -22,6 +22,7 @@
     "devDependencies": {
         "@babel/cli": "^7.0.0-rc.1",
         "@babel/core": "^7.0.0-rc.1",
+        "@babel/plugin-proposal-export-default-from": "^7.0.0-rc.1",
         "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.53",
         "@babel/plugin-transform-template-literals": "^7.0.0-beta.53",
         "@babel/preset-env": "^7.0.0-beta.56",
@@ -48,6 +49,7 @@
         "eslint-plugin-prettier": "^2.6.2",
         "eslint-plugin-react": "^7.10.0",
         "extract-text-webpack-plugin": "^3.0.2",
+        "flat": "^4.1.0",
         "mini-css-extract-plugin": "^0.4.1",
         "postcss": "^6.0.14",
         "postcss-loader": "^2.0.8",
@@ -69,7 +71,6 @@
         "npm": "^6.3.0",
         "prop-types": "^15.6.2",
         "react": "^16.4.1",
-        "react-dom": "^16.4.1",
-        "webpack-merge": "^4.1.4"
+        "react-dom": "^16.4.1"
     }
 }

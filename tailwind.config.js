@@ -1,5 +1,7 @@
+// this config is compiled into ./.tmp/ then loaded into webpack from there
 import 'babel-polyfill';
-import { colors as themeColors } from '../dist/0.0.0/index.js';
+import flat from 'flat';
+import * as theme from '../dist/index.js';
 
 /*
 
@@ -129,7 +131,8 @@ let colors = {
   'pink-light': '#fa7ea8',
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
-  ...themeColors,
+  ...flat(theme.colors.state, { delimiter: '-' }),
+  ...theme.colors.brand,
 };
 
 module.exports = {
@@ -146,7 +149,7 @@ module.exports = {
   |
   */
 
-  colors: Object.assign({}, colors, themeColors),
+  colors: colors,
 
   /*
   |-----------------------------------------------------------------------------
