@@ -48,6 +48,8 @@ View the full documentation at https://tailwindcss.com.
 */
 
 let colors = {
+  ...flat(theme.colors.state, { delimiter: '-' }),
+  ...theme.colors.brand,
   transparent: 'transparent',
 
   black: '#22292f',
@@ -131,8 +133,37 @@ let colors = {
   'pink-light': '#fa7ea8',
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
-  ...flat(theme.colors.state, { delimiter: '-' }),
-  ...theme.colors.brand,
+};
+
+const fonts = {
+  ...theme.fonts,
+  sans: [
+    'system-ui',
+    'BlinkMacSystemFont',
+    '-apple-system',
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    'sans-serif',
+  ],
+  serif: [
+    'Constantia',
+    'Lucida Bright',
+    'Lucidabright',
+    'Lucida Serif',
+    'Lucida',
+    'DejaVu Serif',
+    'Bitstream Vera Serif',
+    'Liberation Serif',
+    'Georgia',
+    'serif',
+  ],
+  mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
 };
 
 module.exports = {
@@ -149,7 +180,7 @@ module.exports = {
   |
   */
 
-  colors: colors,
+  colors,
 
   /*
   |-----------------------------------------------------------------------------
@@ -195,35 +226,7 @@ module.exports = {
   |
   */
 
-  fonts: {
-    sans: [
-      'system-ui',
-      'BlinkMacSystemFont',
-      '-apple-system',
-      'Segoe UI',
-      'Roboto',
-      'Oxygen',
-      'Ubuntu',
-      'Cantarell',
-      'Fira Sans',
-      'Droid Sans',
-      'Helvetica Neue',
-      'sans-serif',
-    ],
-    serif: [
-      'Constantia',
-      'Lucida Bright',
-      'Lucidabright',
-      'Lucida Serif',
-      'Lucida',
-      'DejaVu Serif',
-      'Bitstream Vera Serif',
-      'Liberation Serif',
-      'Georgia',
-      'serif',
-    ],
-    mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
-  },
+  fonts,
 
   /*
   |-----------------------------------------------------------------------------
