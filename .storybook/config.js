@@ -6,6 +6,7 @@ addDecorator(checkA11y);
 
 let req = {
   colors: './stories/Colors/Colors.story.jsx',
+  buttons: './src/components/Button/Button.story.jsx',
 };
 const storyReqs = require.context('../', true, /^.*\.story\.jsx$/);
 
