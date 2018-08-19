@@ -1,6 +1,10 @@
 // this config is compiled into ./.tmp/ then loaded into webpack from there
+/* eslint-disable */
 import 'babel-polyfill';
 import flat from 'flat';
+import { convertCSS } from 'css-to-cssinjs';
+import * as css from 'css';
+import { toPairs, mapValues } from 'lodash';
 import * as theme from '../dist/index.js';
 
 /*
@@ -136,7 +140,7 @@ let colors = {
 };
 
 const fonts = {
-  ...theme.fonts,
+  ...theme.Typography.fonts,
   sans: [
     'system-ui',
     'BlinkMacSystemFont',
@@ -257,6 +261,7 @@ module.exports = {
     '3xl': '1.875rem', // 30px
     '4xl': '2.25rem', // 36px
     '5xl': '3rem', // 48px
+    ...theme.Typography.settings.fontSizes,
   },
 
   /*
@@ -272,7 +277,7 @@ module.exports = {
   | Class name: .font-{weight}
   |
   */
-  fontWeights: theme.fontWeights,
+  fontWeights: theme.Typography.fontWeights,
 
   /*
   |-----------------------------------------------------------------------------
@@ -286,12 +291,7 @@ module.exports = {
   |
   */
 
-  leading: {
-    none: 1,
-    tight: 1.25,
-    normal: 1.5,
-    loose: 2,
-  },
+  leading: theme.Typography.leading,
 
   /*
   |-----------------------------------------------------------------------------
@@ -309,6 +309,7 @@ module.exports = {
     tight: '-0.05em',
     normal: '0',
     wide: '0.05em',
+    ...theme.Typography.letterSpacing,
   },
 
   /*
@@ -339,7 +340,7 @@ module.exports = {
   |
   */
 
-  backgroundColors: colors,
+  backgroundColors: Object.assign({}, colors, theme.colors.background),
 
   /*
   |-----------------------------------------------------------------------------
@@ -398,7 +399,11 @@ module.exports = {
   |
   */
 
-  borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
+  borderColors: global.Object.assign(
+    { default: colors['grey-light'] },
+    colors,
+    theme.colors.border,
+  ),
 
   /*
   |-----------------------------------------------------------------------------
@@ -888,6 +893,14 @@ module.exports = {
   */
 
   plugins: [
+    function({ addUtilities, addComponents, e, prefix, config }) {
+      let baseCSS = toPairs(theme.typographyBaseStyles).reduce((acc, declArr) => {
+        acc += `${declArr[0]} { ${declArr[1]} }\n\n`;
+        return acc;
+      }, '');
+      const typography = convertCSS(baseCSS, { format: 'object' });
+      addComponents(typography);
+    },
     require('tailwindcss/plugins/container')({
       // center: true,
       // padding: '1rem',

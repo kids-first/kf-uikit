@@ -7,6 +7,7 @@ export const fonts = {
 };
 const baseFontSize = 16;
 
+// TODO: review this for accuracy and consistency
 // typographic scale
 // px based
 export const fontSizesScale = [14, 16, 18, 20, 22, 24, 30, 32, 36, 48, 64, 96, 128];
@@ -14,10 +15,12 @@ export const fontSizesScale = [14, 16, 18, 20, 22, 24, 30, 32, 36, 48, 64, 96, 1
 // ex. fontSizes['32']
 export const fontSizes = zipObject(fontSizesScale, fontSizesScale.map(v => `${v}px`));
 
-// for any scale, either array or objects will work
-// em based
-export const lineHeightsScale = [0.95, 1, 1.125, 1.25, 1.44, 1.5, 1.86, 2];
-export const lineHeights = zipObject(lineHeightsScale, lineHeightsScale);
+export const leading = {
+  none: 1,
+  tight: 1.25,
+  normal: 1.5,
+  loose: 2,
+};
 
 // based on imported fonts in index.css
 export const fontWeights = {
@@ -40,15 +43,15 @@ const typographyBase = `
 `;
 
 const headingsBase = `
-  font-family: ${fonts.headings};
+  font-family: ${fonts.montserrat};
   ${typographyBase}
 `;
 
 export const p = `
-  font-family: ${fonts.body};
+  font-family: ${fonts.openSans};
   color: ${colors.greyScale[1]};
   font-size: ${baseFontSize}px;
-  line-height: ${lineHeights['1.25']};
+  line-height: ${leading.tight};
   ${typographyBase}
 `;
 
@@ -67,7 +70,7 @@ export const headings = {
     ${headingsBase}
     color: ${colors.secondary};
     font-size: ${fontSizes['30']};
-    line-height: ${lineHeights['0.95']};
+    line-height: ${leading.none};
     letter-spacing: ${letterSpacings.heading};
     color: ${colors.secondary};
     font-weight: ${fontWeights.normal};
@@ -76,7 +79,7 @@ export const headings = {
     ${headingsBase}
     font-weight: ${fontWeights.normal};
     font-size: ${fontSizes['18']};
-    line-height: ${lineHeights['1.44']};
+    line-height: ${leading.normal};
     letter-spacing: ${letterSpacings.heading};
     color: ${colors.secondary};
   `,
@@ -84,13 +87,14 @@ export const headings = {
     ${headingsBase}
     font-family: ${fonts.body};
     font-size: ${fontSizes['16']};
-    line-height: ${lineHeights['1.25']};
+    line-height: ${leading.tight};
   `,
   h5: `
     ${headingsBase}
     ${p}
     font-size: ${fontSizes['14']};
     font-weight: ${fontWeights.thin};
+    line-height: ${leading.normal};
   `,
 };
 
@@ -114,25 +118,22 @@ export const lists = {
       ${p}
       margin-top: 0;
       margin-bottom: 11px;
-      line-height: ${lineHeights['2']};
+      line-height: ${leading.loose};
       -webkit-margin-before: 1em;
       -webkit-margin-after: 1em;
-      li {${li}}
   `,
+  'ul li': li,
   ol: `
-      counter-reset: li;
+    counter-reset: li;
     margin-left: 0;
     padding-left: 0;
     list-style: none;
-    li {
-      ${li}
-      border-left: 2px solid ${colors.greyScale[2]};
-      line-height: ${lineHeights['1.5']};
-      &:before {
-        content: counter(li);
+  `,
+  'ol li': `${li} border-left: 2px solid ${colors.greyScale[2]}; line-height: ${leading.normal};`,
+  'ol li:before': `content: counter(li);
         font-size: ${fontSizes['14']};
-        line-height: ${lineHeights['1.86']}; //26px
-        font-family: ${fonts.headings};
+        line-height: ${leading.loose};
+        font-family: ${fonts.montserrat};
         font-weight: ${fontWeights.bold};
         counter-increment: li;
         position: absolute;
@@ -142,29 +143,27 @@ export const lists = {
         box-sizing: border-box;
         width: 26px;
         padding: 0;
-        color: #fff;
+        color: ${colors.white};
         background: ${colors.border.blue};
         border-radius: 50%;
         text-align: center;
-      }
-    }
-  `,
+      `,
 };
 
-export const textUtils = {
-  center: { textAlign: 'center' },
-  left: { textAlign: 'left' },
-  right: { textAlign: 'right' },
-  underline: { textDecoration: 'underline' },
-  clean: { textDecoration: 'none' },
-  italic: { fontStyle: 'italic' },
-  caps: { textTransform: 'capitalize' },
-  upper: { textTransform: 'uppercase' },
-  lower: { textTransform: 'lowercase' },
-  small: { fontSize: '75%' },
-  noGradientFill: {
-    backgroundImage: 'none',
-    backgroundClip: 'none',
-    backgroundTextFillColor: 'none',
+const Typography = {
+  baseStyles: {
+    ...headings,
+    p,
+    blockquote,
+    ...lists,
+  },
+  settings: {
+    fonts,
+    baseFontSize,
+    fontSizes,
+    leading,
+    fontWeights,
+    letterSpacings,
   },
 };
+export default Typography;
