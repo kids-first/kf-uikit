@@ -69,6 +69,8 @@
         "lodash": "^4.17.10",
         "n": "^2.1.12",
         "npm": "^6.3.0",
+        "postcss-easy-import": "^3.0.0",
+        "postcss-nested": "^3.0.0",
         "prop-types": "^15.6.2",
         "react": "^16.4.1",
         "react-dom": "^16.4.1"

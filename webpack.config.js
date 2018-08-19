@@ -27,7 +27,12 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [tailwindcss('./.tmp/tailwind.babel.js'), require('autoprefixer')],
+              plugins: () => [
+                require('postcss-easy-import'),
+                require('postcss-nested'),
+                require('autoprefixer'),
+                tailwindcss('./.tmp/tailwind.babel.js'),
+              ],
               sourceMap: true,
             },
           },
