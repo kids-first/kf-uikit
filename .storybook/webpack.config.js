@@ -11,6 +11,17 @@ module.exports = {
           { loader: 'css-loader', options: { importLoaders: 1 } },
           'postcss-loader'
         ]
+      },
+      {
+        test: /\.(js|jsx)$/,
+        loaders: [ {
+          loader: 'eslint-loader',
+           options: {
+            emitError: true,
+            failOnError: true
+          },
+        }],
+        include: path.resolve(__dirname, '../src')
       }
     ]
   }
