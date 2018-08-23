@@ -50,29 +50,32 @@ let brand = {
   'tertiary': '#009bb8',
 }
 
+shades = function(name, color) {
+  return {
+    [`${name}-lightest`]: chroma(color).brighten(2.5).css(),
+    [`${name}-lighter`]: chroma(color).brighten(2.0).css(),
+    [`${name}-light`]: chroma(color).brighten(1.5).css(),
+    [`${name}`]: chroma(color).brighten().css(),
+    [`${name}-dark`]: chroma(color).darken(0.5).css(),
+    [`${name}-darker`]: chroma(color).darken(1.0).css(),
+    [`${name}-darkest`]: chroma(color).darken(1.5).css(),
+  }
+}
+
 let colors = {
   'transparent': 'transparent',
 
   'black': '#22292f',
-  'grey-darkest': '#3d4852',
-  'grey-darker': '#606f7b',
-  'grey-dark': '#8795a1',
-  'grey': '#b8c2cc',
-  'grey-light': '#dae1e7',
-  'grey-lighter': '#f1f5f8',
-  'grey-lightest': '#f8fafc',
+  ...shades('grey', '#888888'),
   'white': '#ffffff',
 
-  ...brand,
+  ...shades('primary', brand.primary),
+  ...shades('secondary', brand.secondary),
+  ...shades('tertiary', brand.tertiary),
 
-  'info': chroma(brand.tertiary).brighten(1).css(),
-  'error-dark':'#d8202f',
-  'error-light': '#fadfe1',
-  'warn': chroma(brand.primary).brighten(1).css(),
-  'highlight': '#e83a9c',
-  'active': '#00afed',
-  'inactive': '#dedfe4',
-  'optionSelected': '#e5f6fd'
+  ...shades('info', chroma(brand.tertiary).brighten(1).css()),
+  ...shades('error', '#d8202f'),
+  ...shades('warn', chroma(brand.primary).brighten(1).css()),
 }
 
 module.exports = {
