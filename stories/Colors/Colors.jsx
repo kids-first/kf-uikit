@@ -14,7 +14,7 @@ function Swatch(props) {
     <div className="container w-32 m-3 text-center">
       {shades}
       <p>
-        <h3>{color}</h3>
+        <h3 className="font-title">{color}</h3>
         {children}
       </p>
     </div>
