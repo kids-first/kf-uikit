@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Swatch from './Colors';
-import '../../src/css/tailwind.src.css';
+import '../../src/tailwind.src.css';
 
 const stories = storiesOf('Colors', module);
 
