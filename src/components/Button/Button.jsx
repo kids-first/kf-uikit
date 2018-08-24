@@ -1,7 +1,8 @@
-/* eslint-disable */
 import React from 'react';
 import propTypes from 'prop-types';
 import className from 'classnames';
+import './Button.css';
+import '../../tailwind.src.css';
 
 /**
  * A Simple rounded button
@@ -10,9 +11,8 @@ function Button(props) {
   const { color, disabled, children, outline } = props;
 
   const normalStyle = [
-    'border-transparent',
-    'text-white',
     `bg-${color}`,
+    `hover:bg-${color}-dark`,
   ];
 
   const outlineStlye = [
@@ -21,21 +21,13 @@ function Button(props) {
     [`text-${color} hover:text-white`],
   ];
 
-  const disabledStyle = [
-    'cursor-not-allowed',
-    'opacity-50',
-  ];
 
   const buttonClass = className(
     (outline ? outlineStlye : normalStyle),
-    (disabled ? disabledStyle : []),
-    'font-medium',
-    'm-2',
-    'p-2',
-    'rounded-full',
+    'button',
   );
   return (
-    <button type='button' className={buttonClass}>
+    <button type='button' className={buttonClass} disabled={disabled}>
       {children}
     </button>
   );

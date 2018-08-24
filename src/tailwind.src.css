@@ -2,4 +2,7 @@
 
 @tailwind preflight;
 @tailwind components;
+
+@import './components/Button/Button.css';
+
 @tailwind utilities;
