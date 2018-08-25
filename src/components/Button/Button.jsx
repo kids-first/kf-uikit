@@ -23,7 +23,7 @@ function Button(props) {
 
   const buttonClass = className(
     (outline ? outlineStlye : normalStyle),
-    'button',
+    'Button',
   );
   return (
     <button type='button' className={buttonClass} disabled={disabled}>

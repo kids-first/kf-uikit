@@ -12,7 +12,9 @@ export default [
           'react-proptypes'
         ],
         plugins: [
-          resolve(),
+          resolve({
+            extensions: [ '.mjs', '.js', '.jsx', '.json' ],
+          }),
           postcss({
             plugins: [],
             getExportNamed: false,
