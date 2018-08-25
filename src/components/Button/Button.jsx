@@ -2,7 +2,6 @@ import React from 'react';
 import propTypes from 'prop-types';
 import className from 'classnames';
 import './Button.css';
-import '../../tailwind.src.css';
 
 /**
  * A Simple rounded button
