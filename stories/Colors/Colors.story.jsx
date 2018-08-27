@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Swatch from './Colors';
-import '../../src/css/tailwind.css';
+import '../../src/tailwind.src.css';
 
 const stories = storiesOf('Colors', module);
 
@@ -14,7 +14,7 @@ stories.add('Brand', () => (
 ));
 
 
-const state = ['info', 'warn', 'highlight'];
+const state = ['info', 'warn', 'error'];
 const stateSwatches = state.map(color => <Swatch color={color} />);
 stories.add('State', () => (
   <div className="flex">
@@ -23,8 +23,7 @@ stories.add('State', () => (
 ));
 
 
-const greys = ['black', 'grey-darkest', 'grey-darker', 'grey-dark',
-  'grey', 'grey-light', 'grey-lighter', 'grey-lightest', 'white'];
+const greys = ['black', 'grey', 'white'];
 const greySwatches = greys.map(color => <Swatch color={color} />);
 
 stories.add('Greyscale', () => (

@@ -6,11 +6,15 @@ import propTypes from 'prop-types';
  */
 function Swatch(props) {
   const { color, children } = props;
+  const shades = ['-darkest', '-darker', '-dark', '',
+                  '-light', '-lighter', '-lightest'].map((shade) => (
+    <div className={`bg-${color}${shade} w-4 h-32 inline-block`} />
+  ));
   return (
     <div className="container w-32 m-3 text-center">
-      <div className={`bg-${color} w-32 h-32`} />
+      {shades}
       <p>
-        <h3>{color}</h3>
+        <h3 className="font-title">{color}</h3>
         {children}
       </p>
     </div>
