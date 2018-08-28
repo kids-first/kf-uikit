@@ -1,0 +1,13 @@
+.Navigation {
+    @apply
+        flex
+        bg-white
+        h-24
+        border-b-2
+        p-4;
+}
+
+.Navigation .Button {
+    @apply
+        mx-2
+}
