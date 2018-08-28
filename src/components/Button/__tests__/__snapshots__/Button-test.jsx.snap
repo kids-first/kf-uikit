@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<button
+  className="bg-primary hover:bg-primary-dark Button"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
