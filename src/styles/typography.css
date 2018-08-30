@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:400,500,700');
+
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+  -ms-word-break: break-all;
+  -ms-word-wrap: break-all;
+  word-break: break-word;
+  word-break: break-word;
+  // cleaning up the ragged lines and breaks
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  // enabling fancy ligatures when available
+  -webkit-font-feature-settings: 'liga', 'dlig';
+  -moz-font-feature-settings: 'liga=1, dlig=1';
+  -ms-font-feature-settings: 'liga', 'dlig';
+  -o-font-feature-settings: 'liga', 'dlig';
+  font-feature-settings: 'liga', 'dlig';
+
+  @apply font-body;
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-rendering: optimizelegibility;
+  @apply font-medium font-title;
+
+  /*
+  if you're going to use webfonts, be sure to check your weights
+  http://css-tricks.com/watch-your-font-weight/
+  */
+
+  /* removing text decoration from all headline links */
+  a {
+    text-decoration: none;
+  }
+}
+
+/*h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}*/
+
+/* Grouping content
+   ========================================================================== */
+/*hr {
+  box-sizing: content-box; 
+  height: 0; 
+  overflow: visible; 
+}
+
+pre {
+  font-family: monospace, monospace; 
+  font-size: 1em; 
+}*/
+
+/* Text-level semantics
+   ========================================================================== */
+/*a {
+  background-color: var(--KF-textColors-transparent, transparent); 
+  -webkit-text-decoration-skip: objects; 
+}
+
+
+abbr[title] {
+  border-bottom: var(--KF-shadows-none, none);
+  text-decoration: underline; 
+  text-decoration: underline dotted;  
+}
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; 
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size:  80%;
+}
+
+sub,
+sup {
+  font-size:  75%;
+  line-height:  0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+*/
