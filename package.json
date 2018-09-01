@@ -25,7 +25,9 @@
     "test": "yarn run jest"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.0.0",
     "@storybook/addon-a11y": "^3.4.10",
+    "@storybook/addon-info": "v4.0.0-alpha.18",
     "@storybook/addon-knobs": "^3.4.10",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",

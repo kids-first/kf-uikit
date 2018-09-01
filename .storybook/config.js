@@ -1,9 +1,15 @@
 import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
+import { withInfo } from '@storybook/addon-info';
 import '../src/tailwind.src.css';
 
+addDecorator(withInfo({
+	inline: true,
+}));
 addDecorator(checkA11y);
+addDecorator(withKnobs);
 
 let req = {
   colors: './stories/Colors/Colors.story.jsx',
