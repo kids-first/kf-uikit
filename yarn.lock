@@ -782,6 +782,12 @@
     prop-types "^15.6.2"
     react-emotion "^9.2.6"
 
+"@storybook/addon-centered@v4.0.0-alpha.18":
+  version "4.0.0-alpha.18"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-centered/-/addon-centered-4.0.0-alpha.18.tgz#dd7a8dbe704fb4ca4b97ed6ee6d7a82cfaa3474c"
+  dependencies:
+    global "^4.3.2"
+
 "@storybook/addon-info@v4.0.0-alpha.18":
   version "4.0.0-alpha.18"
   resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-4.0.0-alpha.18.tgz#ba1beec2c013ac2ea5b42aaa9e09f2d554aaec4b"

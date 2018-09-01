@@ -25,10 +25,11 @@
   },
   "devDependencies": {
     "@babel/runtime": "^7.0.0",
-    "@storybook/react": "v4.0.0-alpha.18",
     "@storybook/addon-a11y": "v4.0.0-alpha.18",
+    "@storybook/addon-centered": "v4.0.0-alpha.18",
     "@storybook/addon-info": "v4.0.0-alpha.18",
     "@storybook/addon-knobs": "v4.0.0-alpha.18",
+    "@storybook/react": "v4.0.0-alpha.18",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

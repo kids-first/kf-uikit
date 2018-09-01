@@ -3,6 +3,7 @@ import { configure, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
+import centered from '@storybook/addon-centered';
 import '../src/tailwind.src.css';
 
 addDecorator(withInfo({
@@ -10,6 +11,7 @@ addDecorator(withInfo({
 }));
 addDecorator(checkA11y);
 addDecorator(withKnobs);
+addDecorator(centered);
 
 let req = {
   colors: './stories/Colors/Colors.story.jsx',
