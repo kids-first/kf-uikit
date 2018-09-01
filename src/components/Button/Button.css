@@ -5,6 +5,3 @@
 .Button[disabled] {
     @apply cursor-not-allowed opacity-50;
 }
-
-/* We need to import utilities whenever we want to use @apply in a component */
-@tailwind utilities
