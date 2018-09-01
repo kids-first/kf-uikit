@@ -1,5 +1,8 @@
 module.exports = {
   plugins: [
+    require('postcss-easy-import'),
+    require('postcss-nested'),
+    require('postcss-nested-props'),
     require('tailwindcss')('./tailwind.js'),
     require('postcss-to-css-vars')({
       theme: './tailwind.js',

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:400,500,700');
-
+html {
+  @apply text-base;
+}
 /*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
@@ -24,7 +26,74 @@ p {
   -o-font-feature-settings: 'liga', 'dlig';
   font-feature-settings: 'liga', 'dlig';
 
-  @apply font-body;
+  @apply font-body leading-loose font-normal my-5;
+}
+ol,
+ul {
+  @apply list-reset;
+}
+ol {
+  counter-reset: li;
+  @apply ml-0 
+    pl-0;
+
+  & > li {
+    /*position: relative;
+    margin: 0 0 0 12px;
+    padding: 0 28px 30px;
+    border-left: 2px solid #a9adc0;
+    list-style: none;
+    font-style: 'Open Sans';
+    font-size: 16px;
+    line-height: 2;*/
+    @apply relative 
+      ml-12
+      mt-0 
+      pt-0
+      pr-3
+      pl-6 
+      pb-6
+      border-l-2 
+      border-solid 
+      border-secondary
+      font-body 
+      font-normal 
+      leading-normal;
+    &:last-child {
+      @apply border-transparent pb-0;
+    }
+    &:before {
+      content: counter(li);
+      /*font-size: 14px;
+      line-height: 26px;*/
+      /*font-family: 'Montserrat', sans-serif;*/
+      /*font-weight: 600;*/
+      counter-increment: li;
+      /*position: absolute;*/
+      left: -14px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      /*width: 26px;*/
+      /*padding: 0;*/
+      /*color: #fff;*/
+      /*background: #00adee;*/
+      /*border-radius: 50%;*/
+      /*text-align: center;*/
+      @apply absolute 
+        w-6
+        h-6
+        p-0 
+        bg-tertiary
+        rounded-full 
+        text-sm
+        text-center 
+        text-white
+        leading-normal 
+        font-title 
+        font-semibold;
+    }
+  }
 }
 
 /******************************************************************
@@ -50,23 +119,33 @@ h5 {
   }
 }
 
-/*h1 {}
-h2 {}
-h3 {}
-h4 {}
-h5 {}*/
+h1 {
+  @apply leading-tight;
+}
+h2 {
+  @apply leading-normal text-2xl;
+}
+h3 {
+  @apply leading-tight text-xl;
+}
+h4 {
+  @apply text-base leading-loose;
+}
+h5 {
+}
 
 /* Grouping content
    ========================================================================== */
-/*hr {
-  box-sizing: content-box; 
-  height: 0; 
-  overflow: visible; 
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  @apply border-dotted w-full border-t-2 border-dotted border-grey-light;
 }
 
-pre {
-  font-family: monospace, monospace; 
-  font-size: 1em; 
+/*pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
 }*/
 
 /* Text-level semantics
