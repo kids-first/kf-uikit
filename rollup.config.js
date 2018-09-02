@@ -1,6 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import postcss from 'rollup-plugin-postcss'
+import svg from 'rollup-plugin-svg';
 import babel from 'rollup-plugin-babel';
 import pkg from './package.json';
 
@@ -12,6 +13,7 @@ export default [
           'react-proptypes'
         ],
         plugins: [
+          svg(),
           resolve({
             extensions: [ '.mjs', '.js', '.jsx', '.json' ],
           }),
