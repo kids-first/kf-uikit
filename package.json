@@ -63,6 +63,7 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-svg": "^1.0.1",
     "tailwindcss": "^0.6.5",
+    "url-loader": "^1.1.1",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0"
   },

@@ -170,6 +170,18 @@ hr {
     border-dotted 
     border-grey-light;
 }
+/* Accessability
+   ========================================================================== */
+/* Text meant only for screen readers */
+.text-screen-reader {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  text-indent: -99999px;
+}
+
 /*pre {
   font-family: monospace, monospace ;  font-size: 1em ;}*/
 

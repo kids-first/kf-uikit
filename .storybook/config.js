@@ -19,6 +19,7 @@ let req = {
   colors: './stories/Colors/Colors.story.jsx',
   typography: './stories/Typography/Typography.story.jsx',
   buttons: './src/components/Button/Button.story.jsx',
+  logo: './src/components/Logo/Logo.story.jsx',
 };
 const storyReqs = require.context('../', true, /^.*\.story\.jsx$/);
 
