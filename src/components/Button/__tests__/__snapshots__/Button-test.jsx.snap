@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <button
-  className="bg-primary hover:bg-primary-dark Button"
+  className="Button Button-primary"
   disabled={false}
   type="button"
 >
