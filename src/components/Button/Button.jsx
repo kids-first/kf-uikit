@@ -6,8 +6,7 @@ import './Button.css';
 /**
  * A Simple rounded button
  */
-function Button(props) {
-  const { size, color, outline, disabled, children } = props;
+const Button = ({ size, color, outline, disabled, children }) => {
 
   const buttonClass = className(
     'Button',
