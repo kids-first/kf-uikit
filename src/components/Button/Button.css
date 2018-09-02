@@ -1,7 +1,0 @@
-.Button {
-    @apply border-transparent text-white font-medium m-2 p-2 rounded-full;
-}
-
-.Button[disabled] {
-    @apply cursor-not-allowed opacity-50;
-}

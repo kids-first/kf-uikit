@@ -861,6 +861,26 @@ module.exports = {
       // center: true,
       // padding: '1rem',
     }),
+    require('./src/components/Button/Button.plugin')({
+      colors: {
+        primary: {
+          background: colors['primary'],
+          text: colors['white'],
+        },
+        secondary: {
+          background: colors['secondary'],
+          text: colors['white'],
+        },
+        tertiary: {
+          background: colors['tertiary'],
+          text: colors['white'],
+        },
+        info: {
+          background: colors['info'],
+          text: colors['grey-darkest'],
+        },
+      },
+		}),
   ],
 
 

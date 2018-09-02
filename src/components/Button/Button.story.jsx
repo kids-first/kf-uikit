@@ -8,10 +8,20 @@ const stories = storiesOf('Buttons', module);
 
 stories.add('Simple Button', () => (
   <Button
+    size={select('Size', ['small', 'default', 'large'], 'default')}
+    color={select('Color', ['primary', 'secondary', 'tertiary', 'info'], 'primary')}
     outline={boolean('Outline', false)}
     disabled={boolean('Disabled', false)}
-    color={select('Color', ['primary', 'secondary', 'tertiary', 'info'], 'primary')}
   >
     Click Me
   </Button>
-));
+  ),
+  {
+		info: {
+      text: `
+          Button presence should be alterered by modifying, in decreasing
+          order, \`size\`, \`color\`, and \`outline\` properties.
+        `
+    },
+  }
+)
