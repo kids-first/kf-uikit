@@ -6,15 +6,18 @@ import { withInfo } from '@storybook/addon-info';
 import centered from '@storybook/addon-centered';
 import '../src/tailwind.src.css';
 
-addDecorator(withInfo({
-	inline: true,
-}));
+addDecorator(
+  withInfo({
+    inline: true,
+  }),
+);
 addDecorator(checkA11y);
 addDecorator(withKnobs);
 addDecorator(centered);
 
 let req = {
   colors: './stories/Colors/Colors.story.jsx',
+  typography: './stories/Typography/Typography.story.jsx',
   buttons: './src/components/Button/Button.story.jsx',
 };
 const storyReqs = require.context('../', true, /^.*\.story\.jsx$/);
