@@ -78,6 +78,63 @@ let colors = {
   ...shades('warn', chroma(brand.primary).brighten(1).css()),
 }
 
+let textSizes = {
+  'xs': '.75rem',     // 12px
+  'sm': '.875rem',    // 14px
+  'base': '1rem',     // 16px
+  'lg': '1.125rem',   // 18px
+  'xl': '1.25rem',    // 20px
+  '2xl': '1.5rem',    // 24px
+  '3xl': '1.875rem',  // 30px
+  '4xl': '2.25rem',   // 36px
+  '5xl': '3rem',      // 48px
+}
+
+let padding = {
+  'px': '1px',
+  '0': '0',
+  '1': '0.25rem',
+  '2': '0.5rem',
+  '3': '0.75rem',
+  '4': '1rem',
+  '5': '1.25rem',
+  '6': '1.5rem',
+  '8': '2rem',
+  '10': '2.5rem',
+  '12': '3rem',
+  '16': '4rem',
+  '20': '5rem',
+  '24': '6rem',
+  '32': '8rem',
+}
+
+let leading = {
+  'none': 1,
+  'tight': 1.25,
+  'normal': 1.5,
+  'loose': 2,
+}
+
+let fontWeights = {
+  'hairline': 100,
+  'thin': 200,
+  'light': 300,
+  'normal': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+  'extrabold': 800,
+  'black': 900,
+}
+
+let borderRadius = {
+  'none': '0',
+  'sm': '.75rem',
+  default: '.1.0rem',
+  'lg': '1.5rem',
+  'full': '9999px',
+}
+
 module.exports = {
 
   /*
@@ -180,18 +237,7 @@ module.exports = {
   |
   */
 
-  textSizes: {
-    'xs': '.75rem',     // 12px
-    'sm': '.875rem',    // 14px
-    'base': '1rem',     // 16px
-    'lg': '1.125rem',   // 18px
-    'xl': '1.25rem',    // 20px
-    '2xl': '1.5rem',    // 24px
-    '3xl': '1.875rem',  // 30px
-    '4xl': '2.25rem',   // 36px
-    '5xl': '3rem',      // 48px
-  },
-
+  textSizes,
 
   /*
   |-----------------------------------------------------------------------------
@@ -207,18 +253,7 @@ module.exports = {
   |
   */
 
-  fontWeights: {
-    'hairline': 100,
-    'thin': 200,
-    'light': 300,
-    'normal': 400,
-    'medium': 500,
-    'semibold': 600,
-    'bold': 700,
-    'extrabold': 800,
-    'black': 900,
-  },
-
+  fontWeights,
 
   /*
   |-----------------------------------------------------------------------------
@@ -232,13 +267,7 @@ module.exports = {
   |
   */
 
-  leading: {
-    'none': 1,
-    'tight': 1.25,
-    'normal': 1.5,
-    'loose': 2,
-  },
-
+  leading,
 
   /*
   |-----------------------------------------------------------------------------
@@ -369,14 +398,7 @@ module.exports = {
   |
   */
 
-  borderRadius: {
-    'none': '0',
-    'sm': '.125rem',
-    default: '.25rem',
-    'lg': '.5rem',
-    'full': '9999px',
-  },
-
+  borderRadius,
 
   /*
   |-----------------------------------------------------------------------------
@@ -573,24 +595,7 @@ module.exports = {
   |
   */
 
-  padding: {
-    'px': '1px',
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '2rem',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '20': '5rem',
-    '24': '6rem',
-    '32': '8rem',
-  },
-
+  padding,
 
   /*
   |-----------------------------------------------------------------------------
@@ -862,22 +867,47 @@ module.exports = {
       // padding: '1rem',
     }),
     require('./src/components/Button/Button.plugin')({
+      borderRadius: borderRadius['lg'],
+      fontWeight: fontWeights['semibold'],
+      lineHeight: leading['tight'],
+      fontSize: textSizes['base'],
+      padding: `${padding['2']} ${padding['4']}`,
       colors: {
         primary: {
           background: colors['primary'],
+          hoverBackground: colors['primary-dark'],
+          activeBackground: colors['primary-dark'],
           text: colors['white'],
         },
         secondary: {
           background: colors['secondary'],
+          hoverBackground: colors['secondary-dark'],
+          activeBackground: colors['secondary-dark'],
           text: colors['white'],
         },
         tertiary: {
           background: colors['tertiary'],
+          hoverBackground: colors['tertiary-dark'],
+          activeBackground: colors['tertiary-dark'],
           text: colors['white'],
         },
         info: {
           background: colors['info'],
+          hoverBackground: colors['info-dark'],
+          activeBackground: colors['info-dark'],
           text: colors['grey-darkest'],
+        },
+      },
+      sizes: {
+        small: {
+          fontSize: textSizes['xs'],
+          padding: `${padding['1']} ${padding['3']}`,
+          borderRadius: borderRadius['lg'],
+        },
+        large: {
+          fontSize: textSizes['xl'],
+          padding: `${padding['3']} ${padding['6']}`,
+          borderRadius: borderRadius['full'],
         },
       },
 		}),

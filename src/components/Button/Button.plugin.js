@@ -87,7 +87,7 @@ module.exports = (opts) => {
         }
       })),
       ..._.map(options.colors, (colorOptions, name) => ({
-        [`.Button--outline-${e(name)}`]: {
+        [`.Button--outline--${e(name)}`]: {
           border: `2px solid ${colorOptions.background}`,
           color: colorOptions.background,
           '&:focus': {
@@ -95,11 +95,11 @@ module.exports = (opts) => {
             boxShadow: `0 0 0 .2em ${chroma(colorOptions.background).alpha(.5).css()}`,
           },
           '&:hover': {
-            backgroundColor: _.get(colorOptions, 'hoverBackground', chroma(colorOptions.background).darken(0.2).css()),
+            backgroundColor: colorOptions.background,
             color: _.get(colorOptions, 'hoverText', colorOptions.text),
           },
           '&:active': {
-            backgroundColor: _.get(colorOptions, 'activeBackground', chroma(colorOptions.background).darken(0.2).css()),
+            backgroundColor: colorOptions.background,
             color: _.get(colorOptions, 'activeText', colorOptions.text),
           }
         }

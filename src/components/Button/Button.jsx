@@ -10,8 +10,8 @@ const Button = ({ size, color, outline, disabled, children }) => {
 
   const buttonClass = className(
     'Button',
-    {[`Button-${size}`]: ['small', 'large'].includes(size)},
-    `Button${outline ? '-outline' : ''}-${color}`,
+    {[`Button--${size}`]: ['small', 'large'].includes(size)},
+    `Button${outline ? '--outline' : ''}--${color}`,
   );
   return (
     <button type='button' className={buttonClass} disabled={disabled}>
