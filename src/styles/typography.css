@@ -1,51 +1,95 @@
+/* =======================================================================
+  Typography 
+========================================================================== */
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:400,500,700');
+
 html {
-  @apply text-base;
+  @apply text-base !important;
 }
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-rendering: optimizelegibility !important;
+  @apply font-medium font-title !important;
+  /*
+  if you're going to use webfonts, be sure to check your weights
+  http://css-tricks.com/watch-your-font-weight/
+  */
+
+  /* removing text decoration from all headline links */
+  a {
+    text-decoration: none !important;
+  }
+}
+
+h1 {
+  @apply leading-tight !important;
+}
+h2 {
+  @apply leading-normal text-2xl !important;
+}
+h3 {
+  @apply leading-tight text-xl !important;
+}
+h4 {
+  @apply text-base leading-loose !important;
+}
+/*h5 {}*/
+
 /*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
 p {
-  -ms-word-break: break-all;
-  -ms-word-wrap: break-all;
-  word-break: break-word;
-  word-break: break-word;
-  // cleaning up the ragged lines and breaks
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-  // sets a minimum number of characters before and after the break
-  -webkit-hyphenate-before: 2;
-  -webkit-hyphenate-after: 3;
-  hyphenate-lines: 3;
-  // enabling fancy ligatures when available
-  -webkit-font-feature-settings: 'liga', 'dlig';
-  -moz-font-feature-settings: 'liga=1, dlig=1';
-  -ms-font-feature-settings: 'liga', 'dlig';
-  -o-font-feature-settings: 'liga', 'dlig';
-  font-feature-settings: 'liga', 'dlig';
+  -ms-word-break: break-all !important;
+  -ms-word-wrap: break-all !important;
+  word-break: break-word !important;
+  word-break: break-word !important; // cleaning up the ragged lines and breaks
+  -webkit-hyphens: auto !important;
+  -moz-hyphens: auto !important;
+  hyphens: auto !important; // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 2 !important;
+  -webkit-hyphenate-after: 3 !important;
+  hyphenate-lines: 3 !important; // enabling fancy ligatures when available
+  -webkit-font-feature-settings: 'liga', 'dlig' !important;
+  -moz-font-feature-settings: 'liga=1, dlig=1' !important;
+  -ms-font-feature-settings: 'liga', 'dlig' !important;
+  -o-font-feature-settings: 'liga', 'dlig' !important;
+  font-feature-settings: 'liga', 'dlig' !important;
 
-  @apply font-body leading-loose font-normal my-5;
+  max-width: 34rem;
+  @apply font-body leading-normal font-normal my-5 !important;
 }
+
 ol,
 ul {
-  @apply list-reset;
+  li > p {
+    @apply m-0 p-0 !important;
+  }
 }
-ol {
-  counter-reset: li;
-  @apply ml-0 
-    pl-0;
 
+ul {
+  @apply pl-10;
+  list-style-type: disc;
+  li {
+    @apply p-2 !important;
+  }
+}
+
+ol {
+  counter-reset: li !important;
+  @apply list-reset
+    ml-0 
+    pl-0 !important;
   & > li {
-    /*position: relative;
-    margin: 0 0 0 12px;
-    padding: 0 28px 30px;
-    border-left: 2px solid #a9adc0;
-    list-style: none;
-    font-style: 'Open Sans';
-    font-size: 16px;
-    line-height: 2;*/
     @apply relative 
       ml-12
       mt-0 
@@ -58,28 +102,18 @@ ol {
       border-secondary
       font-body 
       font-normal 
-      leading-normal;
+      leading-normal !important;
     &:last-child {
-      @apply border-transparent pb-0;
+      @apply border-transparent pb-0 !important;
     }
+
     &:before {
-      content: counter(li);
-      /*font-size: 14px;
-      line-height: 26px;*/
-      /*font-family: 'Montserrat', sans-serif;*/
-      /*font-weight: 600;*/
-      counter-increment: li;
-      /*position: absolute;*/
-      left: -14px;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      /*width: 26px;*/
-      /*padding: 0;*/
-      /*color: #fff;*/
-      /*background: #00adee;*/
-      /*border-radius: 50%;*/
-      /*text-align: center;*/
+      content: counter(li) !important;
+      counter-increment: li !important;
+      left: -14px !important;
+      -moz-box-sizing: border-box !important;
+      -webkit-box-sizing: border-box !important;
+      box-sizing: border-box !important;
       @apply absolute 
         w-6
         h-6
@@ -91,62 +125,35 @@ ol {
         text-white
         leading-normal 
         font-title 
-        font-semibold;
+        font-semibold !important;
     }
   }
 }
 
-/******************************************************************
-H1, H2, H3, H4, H5 STYLES
-******************************************************************/
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  text-rendering: optimizelegibility;
-  @apply font-medium font-title;
-
-  /*
-  if you're going to use webfonts, be sure to check your weights
-  http://css-tricks.com/watch-your-font-weight/
-  */
-
-  /* removing text decoration from all headline links */
-  a {
-    text-decoration: none;
-  }
-}
-
-h1 {
-  @apply leading-tight;
-}
-h2 {
-  @apply leading-normal text-2xl;
-}
-h3 {
-  @apply leading-tight text-xl;
-}
-h4 {
-  @apply text-base leading-loose;
-}
-h5 {
+blockquote {
+  @apply relative
+    ml-0
+    p-3
+    border-l-5
+    border-tertiary
+    text-xl
+    font-title
+    italic
+    text-secondary
+    leading-normal !important;
 }
 
 /* Grouping content
    ========================================================================== */
 hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-  @apply border-dotted w-full border-t-2 border-dotted border-grey-light;
+  box-sizing: content-box !important;
+  height: 0 !important;
+  overflow: visible !important;
+  @apply border-dotted w-full border-t-2 border-dotted border-grey-light !important;
 }
 
 /*pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}*/
+  font-family: monospace, monospace !important;  font-size: 1em !important;}*/
 
 /* Text-level semantics
    ========================================================================== */
@@ -157,50 +164,37 @@ hr {
 
 
 abbr[title] {
-  border-bottom: var(--KF-shadows-none, none);
-  text-decoration: underline; 
+  border-bottom: var(--KF-shadows-none, none) !important;  text-decoration: underline; 
   text-decoration: underline dotted;  
 }
 
 b,
 strong {
-  font-weight: inherit;
-}
+  font-weight: inherit !important;}
 
 code,
 kbd,
 samp {
   font-family: monospace, monospace; 
-  font-size: 1em;
-}
+  font-size: 1em !important;}
 
 dfn {
-  font-style: italic;
-}
+  font-style: italic !important;}
 
 
 mark {
-  background-color: #ff0;
-  color: #000;
-}
+  background-color: #ff0 !important;  color: #000 !important;}
 
 small {
-  font-size:  80%;
-}
+  font-size:  80% !important;}
 
 sub,
 sup {
-  font-size:  75%;
-  line-height:  0;
-  position: relative;
-  vertical-align: baseline;
-}
+  font-size:  75% !important;  line-height:  0 !important;  position: relative !important;  vertical-align: baseline !important;}
 
 sub {
-  bottom: -0.25em;
-}
+  bottom: -0.25em !important;}
 
 sup {
-  top: -0.5em;
-}
+  top: -0.5em !important;}
 */

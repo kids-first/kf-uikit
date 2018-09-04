@@ -10,18 +10,18 @@ stories.addDecorator(withKnobs);
 stories.add('Fonts', () => (
   <div>
     <h1>Montserrat</h1>
-    <h5 class="font-title font-light">light: 300</h5>
-    <h5 class="font-title font-normal mb-10">normal: 400</h5>
+    <h5 className="font-title font-light">light: 300</h5>
+    <h5 className="font-title font-normal mb-10">normal: 400</h5>
 
-    <h1 class="font-body pb-2">OpenSans</h1>
-    <h5 class="font-body font-normal">normal: 400</h5>
-    <h5 class="font-body font-medium">medium: 500</h5>
-    <h5 class="font-body font-bold">bold: 700</h5>
+    <h1 className="font-body pb-2">OpenSans</h1>
+    <h5 className="font-body font-normal">normal: 400</h5>
+    <h5 className="font-body font-medium">medium: 500</h5>
+    <h5 className="font-body font-bold">bold: 700</h5>
   </div>
 ));
 
 stories.add('Type Specimen', () => (
-  <div class="p-10">
+  <div className="p-10">
     <h1>Heading h1</h1>
     <h2>Heading H2</h2>
     <h3>Heading H3</h3>
@@ -34,8 +34,8 @@ stories.add('Type Specimen', () => (
       ipsum dolor sit amet.
     </p>
     <hr />
-    <h2 class="mb-0">Main Headline Goes Here</h2>
-    <h5 class="mt-0">subhead goes here</h5>
+    <h2 className="mb-0">Main Headline Goes Here</h2>
+    <h5 className="mt-0">subhead goes here</h5>
     <p>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
       invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
