@@ -1,11 +1,32 @@
 /* =======================================================================
   Typography 
 ========================================================================== */
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:400,500,700');
 
+/* =======================================================================
+  Molten leading
+  https://css-tricks.com/molten-leading-css/
+========================================================================== */
 html {
-  @apply text-base !important;
+  font-size: 14px;
+}
+body {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+@media screen and (min-width: 20em) {
+  body {
+    font-size: calc(14px + (1.1428571429 - 1) * ((100vw - 20em) / (80 - 20)));
+    line-height: calc(1.5em + (1.8 - 1.5) * ((100vw - 20em) / (80 - 20)));
+  }
+}
+
+@media (min-width: 80em) {
+  body {
+    font-size: 1.1428571429em;
+    line-height: 1.5;
+  }
 }
 
 /******************************************************************
@@ -17,8 +38,8 @@ h2,
 h3,
 h4,
 h5 {
-  text-rendering: optimizelegibility !important;
-  @apply font-medium font-title !important;
+  text-rendering: optimizelegibility;
+  @apply font-medium font-title mt-8;
   /*
   if you're going to use webfonts, be sure to check your weights
   http://css-tricks.com/watch-your-font-weight/
@@ -26,69 +47,65 @@ h5 {
 
   /* removing text decoration from all headline links */
   a {
-    text-decoration: none !important;
+    text-decoration: none;
   }
 }
-
 h1 {
-  @apply leading-tight !important;
 }
 h2 {
-  @apply leading-normal text-2xl !important;
+  @apply text-2xl leading-normal;
 }
 h3 {
-  @apply leading-tight text-xl !important;
+  @apply text-xl leading-tight;
 }
 h4 {
-  @apply text-base leading-loose !important;
+  @apply text-base leading-loose;
 }
-/*h5 {}*/
 
+/*h5 {}*/
 /*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
 p {
-  -ms-word-break: break-all !important;
-  -ms-word-wrap: break-all !important;
-  word-break: break-word !important;
-  word-break: break-word !important; // cleaning up the ragged lines and breaks
-  -webkit-hyphens: auto !important;
-  -moz-hyphens: auto !important;
-  hyphens: auto !important; // sets a minimum number of characters before and after the break
-  -webkit-hyphenate-before: 2 !important;
-  -webkit-hyphenate-after: 3 !important;
-  hyphenate-lines: 3 !important; // enabling fancy ligatures when available
-  -webkit-font-feature-settings: 'liga', 'dlig' !important;
-  -moz-font-feature-settings: 'liga=1, dlig=1' !important;
-  -ms-font-feature-settings: 'liga', 'dlig' !important;
-  -o-font-feature-settings: 'liga', 'dlig' !important;
-  font-feature-settings: 'liga', 'dlig' !important;
-
+  -ms-word-break: break-all;
+  -ms-word-wrap: break-all;
+  word-break: break-word;
+  word-break: break-word; // cleaning up the ragged lines and breaks
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3; // enabling fancy ligatures when available
+  -webkit-font-feature-settings: 'liga', 'dlig';
+  -moz-font-feature-settings: 'liga=1, dlig=1';
+  -ms-font-feature-settings: 'liga', 'dlig';
+  -o-font-feature-settings: 'liga', 'dlig';
+  font-feature-settings: 'liga', 'dlig';
   max-width: 34rem;
-  @apply font-body leading-normal font-normal my-5 !important;
+  @apply font-body font-normal mt-4;
 }
-
 ol,
 ul {
+  max-width: 34rem;
+  @apply mt-4;
   li > p {
-    @apply m-0 p-0 !important;
+    @apply m-0 p-0;
   }
 }
-
 ul {
   @apply pl-10;
   list-style-type: disc;
   li {
-    @apply p-2 !important;
+    @apply p-2;
   }
 }
-
 ol {
-  counter-reset: li !important;
+  counter-reset: li;
   @apply list-reset
     ml-0 
-    pl-0 !important;
+    pl-0;
   & > li {
     @apply relative 
       ml-12
@@ -102,18 +119,17 @@ ol {
       border-secondary
       font-body 
       font-normal 
-      leading-normal !important;
+      leading-normal;
     &:last-child {
-      @apply border-transparent pb-0 !important;
+      @apply border-transparent pb-0;
     }
-
     &:before {
-      content: counter(li) !important;
-      counter-increment: li !important;
-      left: -14px !important;
-      -moz-box-sizing: border-box !important;
-      -webkit-box-sizing: border-box !important;
-      box-sizing: border-box !important;
+      content: counter(li);
+      counter-increment: li;
+      left: -14px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
       @apply absolute 
         w-6
         h-6
@@ -125,12 +141,12 @@ ol {
         text-white
         leading-normal 
         font-title 
-        font-semibold !important;
+        font-semibold;
     }
   }
 }
-
 blockquote {
+  max-width: 34rem;
   @apply relative
     ml-0
     p-3
@@ -140,21 +156,18 @@ blockquote {
     font-title
     italic
     text-secondary
-    leading-normal !important;
+    leading-normal;
 }
-
 /* Grouping content
    ========================================================================== */
 hr {
-  box-sizing: content-box !important;
-  height: 0 !important;
-  overflow: visible !important;
-  @apply border-dotted w-full border-t-2 border-dotted border-grey-light !important;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  @apply border-dotted w-full border-t-2 border-dotted border-grey-light;
 }
-
 /*pre {
-  font-family: monospace, monospace !important;  font-size: 1em !important;}*/
-
+  font-family: monospace, monospace ;  font-size: 1em ;}*/
 /* Text-level semantics
    ========================================================================== */
 /*a {
@@ -164,37 +177,37 @@ hr {
 
 
 abbr[title] {
-  border-bottom: var(--KF-shadows-none, none) !important;  text-decoration: underline; 
+  border-bottom: var(--KF-shadows-none, none) ;  text-decoration: underline; 
   text-decoration: underline dotted;  
 }
 
 b,
 strong {
-  font-weight: inherit !important;}
+  font-weight: inherit ;}
 
 code,
 kbd,
 samp {
   font-family: monospace, monospace; 
-  font-size: 1em !important;}
+  font-size: 1em ;}
 
 dfn {
-  font-style: italic !important;}
+  font-style: italic ;}
 
 
 mark {
-  background-color: #ff0 !important;  color: #000 !important;}
+  background-color: #ff0 ;  color: #000 ;}
 
 small {
-  font-size:  80% !important;}
+  font-size:  80% ;}
 
 sub,
 sup {
-  font-size:  75% !important;  line-height:  0 !important;  position: relative !important;  vertical-align: baseline !important;}
+  font-size:  75% ;  line-height:  0 ;  position: relative ;  vertical-align: baseline ;}
 
 sub {
-  bottom: -0.25em !important;}
+  bottom: -0.25em ;}
 
 sup {
-  top: -0.5em !important;}
+  top: -0.5em ;}
 */
