@@ -1,17 +1,18 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import className from 'classnames';
+import classes from 'classnames';
 import './Button.css';
 
 /**
  * A Simple rounded button
  */
-const Button = ({ size, color, outline, disabled, children }) => {
+const Button = ({ size, color, outline, disabled, className, children }) => {
 
-  const buttonClass = className(
+  const buttonClass = classes(
     'Button',
     {[`Button--${size}`]: ['small', 'large'].includes(size)},
     `Button${outline ? '--outline' : ''}--${color}`,
+    className
   );
   return (
     <button type='button' className={buttonClass} disabled={disabled}>
@@ -29,6 +30,8 @@ Button.propTypes = {
   outline: propTypes.bool,
   /** Whether the button is disabled */
   disabled: propTypes.bool,
+  /** Any additional classes to be applied to the button */
+  className: propTypes.string,
   /** Children elements. */
   children: propTypes.string,
 };
@@ -38,6 +41,7 @@ Button.defaultProps = {
   color: 'primary',
   outline: false,
   disabled: false,
+  className: null,
   children: null,
 };
 
