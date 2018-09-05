@@ -116,30 +116,30 @@ ol {
       pb-6
       border-l-2 
       border-solid 
-      border-secondary
+      border-grey
       font-body 
-      font-normal 
-      leading-normal;
+      font-normal;
+
     &:last-child {
       @apply border-transparent pb-0;
     }
+
     &:before {
       content: counter(li);
       counter-increment: li;
-      left: -14px;
+      left: -13px;
+      padding: 2px 0 0 0;
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       @apply absolute 
         w-6
         h-6
-        p-0 
         bg-tertiary
         rounded-full 
         text-sm
         text-center 
         text-white
-        leading-normal 
         font-title 
         font-semibold;
     }

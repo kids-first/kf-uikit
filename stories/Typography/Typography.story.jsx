@@ -96,116 +96,71 @@ stories.add('Type Specimen', () => (
   </div>
 ));
 
-// stories.add('h1', withInfo({ text: theme.h1 }, () => <h1>{text('h1 text', 'Heading h1')}</h1>));
+stories.add('h1', () => <h1>{text('h1 text', 'Heading h1')}</h1>);
+stories.add('h2', () => <h2>{text('h2 text', 'Heading h2')}</h2>);
+stories.add('h3', () => <h3>{text('h3 text', 'Heading h3')}</h3>);
+stories.add('h4', () => <h4>{text('h4 text', 'Heading h4')}</h4>);
+stories.add('h5', () => <h5>{text('h5 text', 'Heading h5')}</h5>);
+let loremIpsum = `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+      invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+      justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+      ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+      et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+      sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+      elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+      diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+      gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.`;
 
-// stories.add('H2', withInfo({ text: theme.h2 }, () => <H2>Heading H2</H2>));
+stories.add('Paragraph', () => <p class="pl-10">{text('paragraph text', loremIpsum)}</p>, {
+  info: {
+    text: `In order to preserve optimal readability paragraph line length is capped at around 45-75 characters (30em) including spaces and punctuation.
+    This spacing is set to be fluid and adjust according to viewport width calculations based on recommendations from https://css-tricks.com/molten-leading-css/`,
+  },
+});
 
-// stories.add('H3', withInfo({ text: theme.h3 }, () => <H3>Heading H2</H3>));
+stories.add('Blockquote', () => (
+  <blockquote>
+    {text(
+      'quote',
+      `Contingent on available funds, the DRC award is expected to provide funding for five years of up
+    to a total of approximately $14.8 million.`,
+    )}
+  </blockquote>
+));
 
-// stories.add('H4', withInfo({ text: theme.h4 }, () => <H4>Heading H4</H4>));
+stories.add('un-ordered list', () => (
+  <ul>
+    {array('List Items', [
+      'Adolescent Idiopathic Scoliosis',
+      'Cancer Susceptibility',
+      'Congenital Diaphragmatic Hernia',
+      'Craniofacial Microsomia',
+      'Disorders of Sex Development',
+    ]).map(item => (
+      <li>{item}</li>
+    ))}
+  </ul>
+));
 
-// stories.add('H5', withInfo({ text: theme.h5 }, () => <H5>Heading H5</H5>));
+stories.add('ordered list', () => (
+  <ol>
+    {array('List Items', [
+      'Click edit underneath your name. This will bring up a box to edit your basic profile information.',
+      'To add a profile picture, click on the button that says “Change Gravatar”. You will be redirected to Wordpress &amp; Gravatar’s website to complete the profile picture set up the process.',
+      'Once you have set up &amp; selected a profile picture within the Gravatar platform, navigate back to your DRC Portal Profile and refresh the page to see your new profile picture.',
+    ]).map(item => (
+      <li>{item}</li>
+    ))}
+  </ol>
+));
 
-// stories.add(
-//   'Paragraph',
-//   withInfo({ text: theme.paragraph }, () => (
-//     <P>
-//       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-//       invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-//       justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-//       ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-//       eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
-//       et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-//       sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-//       elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-//       diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-//       gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-//     </P>
-//   )),
-// );
-
-// stories.add(
-//   'BlockQuote',
-//   withInfo({ text: theme.blockquote }, () => (
-//     <BlockQuote>
-//       Contingent on available funds, the DRC award is expected to provide funding for five years of
-//       up to a total of approximately $14.8 million.
-//     </BlockQuote>
-//   )),
-// );
-
-// stories.add(
-//   'UL',
-//   withInfo({ text: theme.ul }, () => (
-//     <UL>
-//       {array('List Items', [
-//         'Adolescent Idiopathic Scoliosis',
-//         'Cancer Susceptibility',
-//         'Congenital Diaphragmatic Hernia',
-//         'Craniofacial Microsomia',
-//         'Disorders of Sex Development',
-//       ]).map(item => (
-//         <li>{item}</li>
-//       ))}
-//     </UL>
-//   )),
-// );
-
-// stories.add(
-//   'OL',
-//   withInfo({ text: theme.ol }, () => (
-//     <OL>
-//       <li>
-//         Click edit underneath your name. This will bring up a box to edit your basic profile
-//         information.
-//       </li>
-//       <li>
-//         To add a profile picture, click on the button that says “Change Gravatar”. You will be
-//         redirected to Wordpress &amp; Gravatar’s website to complete the profile picture set up the
-//         process.
-//       </li>
-//       <li>
-//         Once you have set up &amp; selected a profile picture within the Gravatar platform, navigate
-//         back to your DRC Portal Profile and refresh the page to see your new profile picture.{' '}
-//       </li>
-//     </OL>
-//   )),
-// );
-
-// stories.add(
-//   'text utility props',
-//   withInfo(
-//     {
-//       text: 'these are specific shorthand props that can be passed to any Typography component',
-//       inline: true,
-//       header: false,
-//     },
-//     () => (
-//       <div style={{ maxWidth: '50%', border: '1px solid black', padding: '10px' }}>
-//         <H4>Alignment</H4>
-//         <P center>center </P>
-//         <P left>left </P>
-//         <P right>right </P>
-//         <hr />
-
-//         <H4>Decoration</H4>
-//         <P underline>underline </P>
-//         <P clean>clean (no-decoration) </P>
-//         <hr />
-
-//         <H4> Case</H4>
-//         <P caps>Capitalize </P>
-//         <P upper>Upper </P>
-//         <P lower>lower </P>
-//         <hr />
-
-//         <H4> Style</H4>
-//         <P italic>italics </P>
-//         <hr />
-
-//         <H4> Size</H4>
-//         <P small>Small 75% </P>
-//       </div>
-//     ),
-//   ),
-// );
+stories.add('horizontal rule', () => (
+  <div>
+    <p>{loremIpsum.slice(0, 200)}</p>
+    <hr />
+    <p>{loremIpsum.slice(0, 250)}</p>
+    <hr />
+    <p>{loremIpsum}</p>
+  </div>
+));
