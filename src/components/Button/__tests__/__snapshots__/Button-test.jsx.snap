@@ -1,0 +1,361 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default primary button renders correctly 1`] = `
+<button
+  className="Button Button--primary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`default primary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--outline--primary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`default secondary button renders correctly 1`] = `
+<button
+  className="Button Button--secondary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`default secondary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--outline--secondary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`default tertiary button renders correctly 1`] = `
+<button
+  className="Button Button--tertiary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`default tertiary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--outline--tertiary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default primary button renders correctly 1`] = `
+<button
+  className="Button Button--primary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default primary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--outline--primary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default secondary button renders correctly 1`] = `
+<button
+  className="Button Button--secondary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default secondary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--outline--secondary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default tertiary button renders correctly 1`] = `
+<button
+  className="Button Button--tertiary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default tertiary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--outline--tertiary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large primary button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--primary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large primary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--outline--primary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large secondary button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--secondary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large secondary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--outline--secondary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large tertiary button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--tertiary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large tertiary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--outline--tertiary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled small primary button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--primary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled small primary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--outline--primary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled small secondary button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--secondary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled small secondary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--outline--secondary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled small tertiary button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--tertiary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled small tertiary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--outline--tertiary"
+  disabled={true}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`large primary button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--primary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`large primary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--outline--primary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`large secondary button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--secondary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`large secondary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--outline--secondary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`large tertiary button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--tertiary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`large tertiary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--outline--tertiary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`small primary button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--primary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`small primary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--outline--primary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`small secondary button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--secondary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`small secondary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--outline--secondary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`small tertiary button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--tertiary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`small tertiary outlined button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--outline--tertiary"
+  disabled={false}
+  type="button"
+>
+  Hello
+</button>
+`;

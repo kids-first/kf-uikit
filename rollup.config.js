@@ -6,13 +6,15 @@ import pkg from './package.json';
 
 export default [
     {
-        input: 'src/index.js',
+        input: 'src/index.jsx',
         external: [
           'react', 
           'react-proptypes'
         ],
         plugins: [
-          resolve(),
+          resolve({
+            extensions: [ '.mjs', '.js', '.jsx', '.json' ],
+          }),
           postcss({
             plugins: [],
             getExportNamed: false,
