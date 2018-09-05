@@ -4,7 +4,7 @@
 <p align="center">
   <a herf="https://github.com/kids-first/kf-uikit/blob/master/LICENSE"><img src="https://img.shields.io/github/license/kids-first/kf-uikit.svg?style=for-the-badge"></a>
   <a href="https://kf-uikit.netlify.com"><img src="https://img.shields.io/badge/storybook-master-ff69b4.svg?style=for-the-badge"></a>
-  <a href="https://circleci.com/gh/kids-first/kf-uikit/tree/master"><img src="https://img.shields.io/circleci/project/kids-first/kf-uikit.svg?style=for-the-badge"></a>
+  <a href="https://circleci.com/gh/kids-first/kf-uikit/tree/master"><img src="https://img.shields.io/circleci/project/github/kids-first/kf-uikit/master.svg?style=for-the-badge"></a>
 </p>
 
 
