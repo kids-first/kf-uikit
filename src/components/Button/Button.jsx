@@ -1,7 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import classes from 'classnames';
-import './Button.css';
 
 /**
  * A Simple rounded button
