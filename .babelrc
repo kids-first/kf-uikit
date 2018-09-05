@@ -2,7 +2,7 @@
   "env": {
     "testing": {
       "presets": ["react", "env"],
-      "plugins": ["transform-runtime"]
+      "plugins": ["transform-runtime","transform-object-rest-spread"]
     },
     "production": {
       "presets": [

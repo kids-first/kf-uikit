@@ -7,11 +7,12 @@ const minimums = {
   aaaLarge: 4.5,
 };
 
-export function processColor(hex) {
+export function processColor(key, hex) {
   const hexc = chroma(hex).hex();
   const rgba = chroma(hex).rgba();
   const contrast = chroma.contrast(hexc, 'white');
   return {
+    key,
     hex: hexc,
     rgba,
     contrast,
