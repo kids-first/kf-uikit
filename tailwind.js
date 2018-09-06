@@ -90,14 +90,14 @@ let colors = {
     'info',
     chroma(brand.tertiary)
       .brighten(1)
-      .css(),
+      .hex(),
   ),
   ...shades('error', '#d8202f'),
   ...shades(
     'warn',
     chroma(brand.primary)
       .brighten(1)
-      .css(),
+      .hex(),
   ),
 };
 
@@ -796,7 +796,7 @@ module.exports = {
     borderStyle: ['responsive'],
     borderWidths: ['responsive'],
     cursor: ['responsive'],
-    display: ['responsive'],
+    display: ['responsive', 'hover', 'group-hover'],
     flexbox: ['responsive'],
     float: ['responsive'],
     fonts: ['responsive'],
@@ -810,7 +810,7 @@ module.exports = {
     minHeight: ['responsive'],
     minWidth: ['responsive'],
     negativeMargin: ['responsive'],
-    opacity: ['responsive'],
+    opacity: ['responsive', 'hover', 'group-hover'],
     outline: ['focus'],
     overflow: ['responsive'],
     padding: ['responsive'],
