@@ -36,7 +36,7 @@ h3,
 h4,
 h5 {
   text-rendering: optimizelegibility;
-  @apply font-medium font-title mt-8;
+  @apply mt-8 font-medium font-title;
   /*
   if you're going to use webfonts, be sure to check your weights
   http://css-tricks.com/watch-your-font-weight/
@@ -48,18 +48,20 @@ h5 {
   }
 }
 h1 {
+  @apply text-3xl leading-normal;
 }
 h2 {
   @apply text-2xl leading-normal;
 }
 h3 {
-  @apply text-xl leading-tight;
+  @apply text-xl leading-normal;
 }
 h4 {
-  @apply text-base leading-loose;
+  @apply text-base leading-normal;
 }
-
-/*h5 {}*/
+h5 {
+  @apply text-sm leading-normal;
+}
 /*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
@@ -81,7 +83,7 @@ p {
   -o-font-feature-settings: 'liga', 'dlig';
   font-feature-settings: 'liga', 'dlig';
   max-width: 34rem;
-  @apply font-body font-normal mt-4;
+  @apply mt-4 font-body font-normal;
 }
 ol,
 ul {
@@ -138,7 +140,8 @@ ol {
         text-center 
         text-white
         font-title 
-        font-semibold;
+        font-semibold
+        leading-normal;
     }
   }
 }
@@ -161,7 +164,11 @@ hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
-  @apply border-dotted w-full border-t-2 border-dotted border-grey-light;
+  @apply w-full 
+    border-dotted 
+    border-t-2 
+    border-dotted 
+    border-grey-light;
 }
 /*pre {
   font-family: monospace, monospace ;  font-size: 1em ;}*/
