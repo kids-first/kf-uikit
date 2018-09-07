@@ -4,13 +4,15 @@
   "description": "Kids First Design System",
   "main": "dist/main.js",
   "module": "dist/main.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "dependencies": {
     "chroma-js": "^1.3.7",
     "classnames": "^2.2.6",
     "lodash": "^4.17.10",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-nested": "^3.0.0",
+    "postcss-nested-props": "^2.0.0",
+    "postcss-to-css-vars": "https://github.com/kids-first/postcss-to-css-vars-plugin.git",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -18,8 +20,8 @@
   },
   "scripts": {
     "tailwind:css": "tailwind build src/css/tailwind.src.css -c  tailwind.js -o src/css/tailwind.css",
-    "storybook": "NODE_ENV=testing start-storybook -p 9001 -c .storybook",
-    "storybook:build": "NODE_ENV=testing build-storybook -c .storybook -o ./storybook-static/",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o ./storybook-static/",
     "build": "NODE_ENV=production yarn run rollup -c",
     "test": "yarn run jest"
   },
@@ -50,6 +52,7 @@
     "moment": "2.18.1",
     "moment-timezone": "^0.5.13",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "postcss-critical-split": "^2.5.2",
     "prettier": "^1.14.2",
     "react-docgen": "^2.21.0",
     "react-test-renderer": "^16.4.2",

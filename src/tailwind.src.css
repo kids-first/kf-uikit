@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:400,500,700');
-
-@tailwind preflight;
-@tailwind components;
-
-@tailwind utilities;
+@import 'tailwindcss/preflight';
+@import 'tailwindcss/components';
+@import './styles/*.css';
+@import 'tailwindcss/utilities';
