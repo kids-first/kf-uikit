@@ -23,11 +23,19 @@ Anything that could be helpful to the reviewer. Especially if it not obvious fro
 
 ### Rendering and Storybook location
 
-In order to keep design and development in-sync each component must have a `react-sketchapp` counterpart as well as a story inside storybook. Please inlcude the location of these for easy reference.
+In order to keep design and development in-sync each component must new component must follow the folder structure below
 
-**Story** `./stories/02. Layout:line XXX`
-
-**Sketch Component** `./sketch/`
+```
+src/
+└── components
+    ├── Button
+    │   ├── __tests__/
+    │   ├── Button.jsx
+    │   ├── Button.story.jsx
+    |   ├── Button.sketch.jsx
+    │   └── Button.css
+    └── index.js
+```
 
 ### Functional Tests
 
