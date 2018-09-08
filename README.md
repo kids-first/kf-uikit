@@ -7,15 +7,11 @@
   <a href="https://circleci.com/gh/kids-first/kf-uikit/tree/master"><img src="https://img.shields.io/circleci/project/github/kids-first/kf-uikit/master.svg?style=for-the-badge"></a>
 </p>
 
-
-Kids First UI Kit
-=================
+# Kids First UI Kit
 
 A design system and component library for Kids First projects.
 
-
-Getting Started
----------------
+## Getting Started
 
 ### Create React App
 
@@ -55,11 +51,10 @@ Include the stylesheet in your head to get started started styling any webpage.
 <link href="https://kf-uikit.kids-first.io/1.0.0/main.css" rel="stylesheet">
 ```
 
-
-Development
------------
+## Development
 
 Use the storybook for development of new components and styles:
+
 ```
 yarn storybook
 // -> open localhost:9001 in the browser
@@ -78,4 +73,41 @@ src/
     │   ├── Button.story.jsx
     │   └── Button.css
     └── index.js
-``` 
+```
+
+#### Using Tailwind `@apply` helper
+
+When composing utility classes to bulid a component the following order should be followed when declaring properites
+
+- layout/box styles
+  - position (z-index)
+  - display
+  - dimension (width, height)
+  - margin/padding
+  - background styles
+  - border styles
+- typography styles
+  - font family
+  - font-size
+  - font style (italic, bold, etc)
+  - font color
+  - font alignment
+- pseudo selectors
+- child selectors
+
+example:
+
+```
+ @apply
+  block
+  w-1/2
+  h-3
+  m-3
+  p-4
+  bg-primary
+  border-grey
+  border-2
+  rounded
+  font-heading
+  text-2xl;
+```
