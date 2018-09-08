@@ -1,0 +1,28 @@
+.Card {
+    @apply 
+        inline-block
+        overflow-hidden 
+        max-w-sm
+        w-full
+        m-2 
+        p-4
+        bg-white
+        rounded-sm
+        border
+        border-grey-lighter
+        text-base
+        font-normal;
+
+    hr {
+        border-style: solid;
+        @apply
+            border
+            border-grey-lighter;
+    }
+}
+
+.Card--title {
+    @apply
+        m-0
+        text-secondary;
+}
