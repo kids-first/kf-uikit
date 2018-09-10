@@ -8243,6 +8243,14 @@ postcss-modules@^1.1.0:
     postcss "^7.0.1"
     string-hash "^1.1.1"
 
+postcss-nested-props@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-nested-props/-/postcss-nested-props-2.0.0.tgz#91ad31b05cbfbf0ff8a38b6c22ef46efbdb0b03a"
+  dependencies:
+    postcss "^6.0.14"
+    pseudo-classes "^1.0.0"
+    pseudo-elements "^1.1.0"
+
 postcss-nested@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/postcss-nested/-/postcss-nested-3.0.0.tgz#cde40bd07a078565f3df72e2dc2665871c724852"
@@ -8590,6 +8598,14 @@ proxy-addr@~2.0.3:
 prr@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/prr/-/prr-1.0.1.tgz#d3fc114ba06995a45ec6893f484ceb1d78f5f476"
+
+pseudo-classes@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/pseudo-classes/-/pseudo-classes-1.0.0.tgz#60a69b67395c36ff119c4d1c86e1981785206b96"
+
+pseudo-elements@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/pseudo-elements/-/pseudo-elements-1.1.0.tgz#9ba6dd8ac3ce1f3d7d36d4355aa3e28d08391f28"
 
 pseudomap@^1.0.2:
   version "1.0.2"
