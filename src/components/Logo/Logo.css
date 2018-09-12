@@ -1,0 +1,15 @@
+.Logo {
+    @apply
+        relative
+        h-full;
+}
+
+.Logo--img {
+    @apply
+        max-w-sm
+        max-h-full
+        inline-block;
+}
+
+.Logo--text {
+}

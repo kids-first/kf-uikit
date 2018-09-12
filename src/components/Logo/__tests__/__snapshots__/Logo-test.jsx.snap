@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`large full logo renders correctly 1`] = `
+<div
+  className="Logo"
+>
+  <img
+    alt="Kids First Data Resource Center logo"
+    className="Logo--img"
+    src="test-file-stub"
+  />
+  <h1
+    className="Logo--text text-screen-reader"
+  >
+    Kids First Data Resource Center logo
+  </h1>
+</div>
+`;
+
+exports[`large logo mark logo renders correctly 1`] = `
+<div
+  className="Logo"
+>
+  <img
+    alt="Kids First Data Resource Center logo"
+    className="Logo--img"
+    src="test-file-stub"
+  />
+  <h1
+    className="Logo--text text-screen-reader"
+  >
+    Kids First Data Resource Center logo
+  </h1>
+</div>
+`;
+
+exports[`medium full logo renders correctly 1`] = `
+<div
+  className="Logo"
+>
+  <img
+    alt="Kids First Data Resource Center logo"
+    className="Logo--img"
+    src="test-file-stub"
+  />
+  <h1
+    className="Logo--text text-screen-reader"
+  >
+    Kids First Data Resource Center logo
+  </h1>
+</div>
+`;
+
+exports[`medium logo mark logo renders correctly 1`] = `
+<div
+  className="Logo"
+>
+  <img
+    alt="Kids First Data Resource Center logo"
+    className="Logo--img"
+    src="test-file-stub"
+  />
+  <h1
+    className="Logo--text text-screen-reader"
+  >
+    Kids First Data Resource Center logo
+  </h1>
+</div>
+`;
+
+exports[`small full logo renders correctly 1`] = `
+<div
+  className="Logo"
+>
+  <img
+    alt="Kids First Data Resource Center logo"
+    className="Logo--img"
+    src="test-file-stub"
+  />
+  <h1
+    className="Logo--text text-screen-reader"
+  >
+    Kids First Data Resource Center logo
+  </h1>
+</div>
+`;
+
+exports[`small logo mark logo renders correctly 1`] = `
+<div
+  className="Logo"
+>
+  <img
+    alt="Kids First Data Resource Center logo"
+    className="Logo--img"
+    src="test-file-stub"
+  />
+  <h1
+    className="Logo--text text-screen-reader"
+  >
+    Kids First Data Resource Center logo
+  </h1>
+</div>
+`;
