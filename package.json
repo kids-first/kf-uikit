@@ -4,10 +4,9 @@
   "description": "Kids First Design System",
   "main": "dist/main.js",
   "module": "dist/main.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "dependencies": {
+    "@storybook/root": "kids-first/storybook#master",
     "chroma-js": "^1.3.7",
     "classnames": "^2.2.6",
     "lodash": "^4.17.10",
@@ -17,17 +16,19 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "tailwind:css": "tailwind build src/css/tailwind.src.css -c  tailwind.js -o src/css/tailwind.css",
+    "tailwind:css":
+      "tailwind build src/css/tailwind.src.css -c  tailwind.js -o src/css/tailwind.css",
     "storybook": "NODE_ENV=testing start-storybook -p 9001 -c .storybook",
     "storybook:build": "NODE_ENV=testing build-storybook -c .storybook -o ./storybook-static/",
     "build": "NODE_ENV=production yarn run rollup -c",
-    "test": "yarn run jest"
+    "test": "yarn run jest",
+    "postinstall": "cd ./node_modules/@storybook/addon-info && tar -xvzf addon-info.tar "
   },
   "devDependencies": {
     "@babel/runtime": "^7.0.0",
     "@storybook/addon-a11y": "v4.0.0-alpha.18",
     "@storybook/addon-centered": "v4.0.0-alpha.18",
-    "@storybook/addon-info": "v4.0.0-alpha.18",
+    "@storybook/addon-info": "kids-first/storybook#addon-info-tar",
     "@storybook/addon-knobs": "v4.0.0-alpha.18",
     "@storybook/react": "v4.0.0-alpha.18",
     "babel-cli": "^6.26.0",
@@ -70,7 +71,8 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+        "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "identity-obj-proxy"
     }
   }
