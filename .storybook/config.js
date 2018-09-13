@@ -2,7 +2,7 @@ import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
-import { withInfo } from '@storybook/addon-info';
+import { withInfo } from '@storybook/addon-info/info/dist';
 import centered from '@storybook/addon-centered';
 import '../src/tailwind.src.css';
 
