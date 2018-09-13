@@ -16,13 +16,12 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "tailwind:css":
-      "tailwind build src/css/tailwind.src.css -c  tailwind.js -o src/css/tailwind.css",
+    "tailwind:css": "tailwind build src/css/tailwind.src.css -c  tailwind.js -o src/css/tailwind.css",
     "storybook": "NODE_ENV=testing start-storybook -p 9001 -c .storybook",
     "storybook:build": "NODE_ENV=testing build-storybook -c .storybook -o ./storybook-static/",
     "build": "NODE_ENV=production yarn run rollup -c",
     "test": "yarn run jest",
-    "postinstall": "cd ./node_modules/@storybook/addon-info && tar -xvzf addon-info.tar "
+    "postinstall": "cd ./node_modules/@storybook/addon-info &&  tar -xzf addon-info-1f2789.tar && cd info && yarn --ignore-scripts "
   },
   "devDependencies": {
     "@babel/runtime": "^7.0.0",
@@ -71,8 +70,7 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-        "<rootDir>/__mocks__/fileMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "identity-obj-proxy"
     }
   }
