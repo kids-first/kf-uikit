@@ -12,6 +12,7 @@ stories.add('Simple Button', () => (
     color={select('Color', ['primary', 'secondary', 'tertiary', 'info'], 'primary')}
     outline={boolean('Outline', false)}
     disabled={boolean('Disabled', false)}
+    type='button'
   >
     Click Me
   </Button>
