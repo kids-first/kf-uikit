@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`default primary button renders correctly 1`] = `
+exports[`default primary button button renders correctly 1`] = `
 <button
   className="Button Button--primary"
   disabled={false}
@@ -10,7 +10,7 @@ exports[`default primary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`default primary outlined button renders correctly 1`] = `
+exports[`default primary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--outline--primary"
   disabled={false}
@@ -20,7 +20,27 @@ exports[`default primary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`default secondary button renders correctly 1`] = `
+exports[`default primary submit button renders correctly 1`] = `
+<button
+  className="Button Button--primary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`default primary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--outline--primary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`default secondary button button renders correctly 1`] = `
 <button
   className="Button Button--secondary"
   disabled={false}
@@ -30,7 +50,7 @@ exports[`default secondary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`default secondary outlined button renders correctly 1`] = `
+exports[`default secondary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--outline--secondary"
   disabled={false}
@@ -40,7 +60,27 @@ exports[`default secondary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`default tertiary button renders correctly 1`] = `
+exports[`default secondary submit button renders correctly 1`] = `
+<button
+  className="Button Button--secondary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`default secondary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--outline--secondary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`default tertiary button button renders correctly 1`] = `
 <button
   className="Button Button--tertiary"
   disabled={false}
@@ -50,7 +90,7 @@ exports[`default tertiary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`default tertiary outlined button renders correctly 1`] = `
+exports[`default tertiary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--outline--tertiary"
   disabled={false}
@@ -60,7 +100,27 @@ exports[`default tertiary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled default primary button renders correctly 1`] = `
+exports[`default tertiary submit button renders correctly 1`] = `
+<button
+  className="Button Button--tertiary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`default tertiary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--outline--tertiary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default primary button button renders correctly 1`] = `
 <button
   className="Button Button--primary"
   disabled={true}
@@ -70,7 +130,7 @@ exports[`disabled default primary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled default primary outlined button renders correctly 1`] = `
+exports[`disabled default primary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--outline--primary"
   disabled={true}
@@ -80,7 +140,27 @@ exports[`disabled default primary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled default secondary button renders correctly 1`] = `
+exports[`disabled default primary submit button renders correctly 1`] = `
+<button
+  className="Button Button--primary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default primary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--outline--primary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default secondary button button renders correctly 1`] = `
 <button
   className="Button Button--secondary"
   disabled={true}
@@ -90,7 +170,7 @@ exports[`disabled default secondary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled default secondary outlined button renders correctly 1`] = `
+exports[`disabled default secondary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--outline--secondary"
   disabled={true}
@@ -100,7 +180,27 @@ exports[`disabled default secondary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled default tertiary button renders correctly 1`] = `
+exports[`disabled default secondary submit button renders correctly 1`] = `
+<button
+  className="Button Button--secondary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default secondary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--outline--secondary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default tertiary button button renders correctly 1`] = `
 <button
   className="Button Button--tertiary"
   disabled={true}
@@ -110,7 +210,7 @@ exports[`disabled default tertiary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled default tertiary outlined button renders correctly 1`] = `
+exports[`disabled default tertiary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--outline--tertiary"
   disabled={true}
@@ -120,7 +220,27 @@ exports[`disabled default tertiary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled large primary button renders correctly 1`] = `
+exports[`disabled default tertiary submit button renders correctly 1`] = `
+<button
+  className="Button Button--tertiary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default tertiary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--outline--tertiary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large primary button button renders correctly 1`] = `
 <button
   className="Button Button--large Button--primary"
   disabled={true}
@@ -130,7 +250,7 @@ exports[`disabled large primary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled large primary outlined button renders correctly 1`] = `
+exports[`disabled large primary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--primary"
   disabled={true}
@@ -140,7 +260,27 @@ exports[`disabled large primary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled large secondary button renders correctly 1`] = `
+exports[`disabled large primary submit button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--primary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large primary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--outline--primary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large secondary button button renders correctly 1`] = `
 <button
   className="Button Button--large Button--secondary"
   disabled={true}
@@ -150,7 +290,7 @@ exports[`disabled large secondary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled large secondary outlined button renders correctly 1`] = `
+exports[`disabled large secondary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--secondary"
   disabled={true}
@@ -160,7 +300,27 @@ exports[`disabled large secondary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled large tertiary button renders correctly 1`] = `
+exports[`disabled large secondary submit button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--secondary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large secondary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--outline--secondary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large tertiary button button renders correctly 1`] = `
 <button
   className="Button Button--large Button--tertiary"
   disabled={true}
@@ -170,7 +330,7 @@ exports[`disabled large tertiary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled large tertiary outlined button renders correctly 1`] = `
+exports[`disabled large tertiary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--tertiary"
   disabled={true}
@@ -180,7 +340,27 @@ exports[`disabled large tertiary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled small primary button renders correctly 1`] = `
+exports[`disabled large tertiary submit button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--tertiary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large tertiary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--outline--tertiary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled small primary button button renders correctly 1`] = `
 <button
   className="Button Button--small Button--primary"
   disabled={true}
@@ -190,7 +370,7 @@ exports[`disabled small primary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled small primary outlined button renders correctly 1`] = `
+exports[`disabled small primary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--primary"
   disabled={true}
@@ -200,7 +380,27 @@ exports[`disabled small primary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled small secondary button renders correctly 1`] = `
+exports[`disabled small primary submit button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--primary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled small primary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--outline--primary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled small secondary button button renders correctly 1`] = `
 <button
   className="Button Button--small Button--secondary"
   disabled={true}
@@ -210,7 +410,7 @@ exports[`disabled small secondary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled small secondary outlined button renders correctly 1`] = `
+exports[`disabled small secondary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--secondary"
   disabled={true}
@@ -220,7 +420,27 @@ exports[`disabled small secondary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled small tertiary button renders correctly 1`] = `
+exports[`disabled small secondary submit button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--secondary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled small secondary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--outline--secondary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled small tertiary button button renders correctly 1`] = `
 <button
   className="Button Button--small Button--tertiary"
   disabled={true}
@@ -230,7 +450,7 @@ exports[`disabled small tertiary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled small tertiary outlined button renders correctly 1`] = `
+exports[`disabled small tertiary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--tertiary"
   disabled={true}
@@ -240,7 +460,27 @@ exports[`disabled small tertiary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`large primary button renders correctly 1`] = `
+exports[`disabled small tertiary submit button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--tertiary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled small tertiary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--outline--tertiary"
+  disabled={true}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`large primary button button renders correctly 1`] = `
 <button
   className="Button Button--large Button--primary"
   disabled={false}
@@ -250,7 +490,7 @@ exports[`large primary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`large primary outlined button renders correctly 1`] = `
+exports[`large primary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--primary"
   disabled={false}
@@ -260,7 +500,27 @@ exports[`large primary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`large secondary button renders correctly 1`] = `
+exports[`large primary submit button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--primary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`large primary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--outline--primary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`large secondary button button renders correctly 1`] = `
 <button
   className="Button Button--large Button--secondary"
   disabled={false}
@@ -270,7 +530,7 @@ exports[`large secondary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`large secondary outlined button renders correctly 1`] = `
+exports[`large secondary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--secondary"
   disabled={false}
@@ -280,7 +540,27 @@ exports[`large secondary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`large tertiary button renders correctly 1`] = `
+exports[`large secondary submit button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--secondary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`large secondary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--outline--secondary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`large tertiary button button renders correctly 1`] = `
 <button
   className="Button Button--large Button--tertiary"
   disabled={false}
@@ -290,7 +570,7 @@ exports[`large tertiary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`large tertiary outlined button renders correctly 1`] = `
+exports[`large tertiary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--tertiary"
   disabled={false}
@@ -300,7 +580,27 @@ exports[`large tertiary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`small primary button renders correctly 1`] = `
+exports[`large tertiary submit button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--tertiary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`large tertiary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--outline--tertiary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`small primary button button renders correctly 1`] = `
 <button
   className="Button Button--small Button--primary"
   disabled={false}
@@ -310,7 +610,7 @@ exports[`small primary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`small primary outlined button renders correctly 1`] = `
+exports[`small primary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--primary"
   disabled={false}
@@ -320,7 +620,27 @@ exports[`small primary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`small secondary button renders correctly 1`] = `
+exports[`small primary submit button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--primary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`small primary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--outline--primary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`small secondary button button renders correctly 1`] = `
 <button
   className="Button Button--small Button--secondary"
   disabled={false}
@@ -330,7 +650,7 @@ exports[`small secondary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`small secondary outlined button renders correctly 1`] = `
+exports[`small secondary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--secondary"
   disabled={false}
@@ -340,7 +660,27 @@ exports[`small secondary outlined button renders correctly 1`] = `
 </button>
 `;
 
-exports[`small tertiary button renders correctly 1`] = `
+exports[`small secondary submit button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--secondary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`small secondary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--outline--secondary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`small tertiary button button renders correctly 1`] = `
 <button
   className="Button Button--small Button--tertiary"
   disabled={false}
@@ -350,11 +690,31 @@ exports[`small tertiary button renders correctly 1`] = `
 </button>
 `;
 
-exports[`small tertiary outlined button renders correctly 1`] = `
+exports[`small tertiary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--tertiary"
   disabled={false}
   type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`small tertiary submit button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--tertiary"
+  disabled={false}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`small tertiary submit outlined button renders correctly 1`] = `
+<button
+  className="Button Button--small Button--outline--tertiary"
+  disabled={false}
+  type="submit"
 >
   Hello
 </button>
