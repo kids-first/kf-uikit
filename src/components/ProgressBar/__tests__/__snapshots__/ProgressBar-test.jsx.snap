@@ -1,0 +1,838 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`0/10 primary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    0
+    /
+    10
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-primary"
+      style={
+        Object {
+          "width": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`0/10 secondary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    0
+    /
+    10
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-secondary"
+      style={
+        Object {
+          "width": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`0/10 tertiary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    0
+    /
+    10
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-tertiary"
+      style={
+        Object {
+          "width": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`0/100 primary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    0
+    /
+    100
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-primary"
+      style={
+        Object {
+          "width": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`0/100 secondary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    0
+    /
+    100
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-secondary"
+      style={
+        Object {
+          "width": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`0/100 tertiary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    0
+    /
+    100
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-tertiary"
+      style={
+        Object {
+          "width": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`0/100000 primary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    0
+    /
+    100000
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-primary"
+      style={
+        Object {
+          "width": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`0/100000 secondary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    0
+    /
+    100000
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-secondary"
+      style={
+        Object {
+          "width": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`0/100000 tertiary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    0
+    /
+    100000
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-tertiary"
+      style={
+        Object {
+          "width": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10/10 primary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10
+    /
+    10
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-primary"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10/10 secondary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10
+    /
+    10
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-secondary"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10/10 tertiary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10
+    /
+    10
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-tertiary"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10/100 primary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10
+    /
+    100
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-primary"
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10/100 secondary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10
+    /
+    100
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-secondary"
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10/100 tertiary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10
+    /
+    100
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-tertiary"
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10/100000 primary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10
+    /
+    100000
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-primary"
+      style={
+        Object {
+          "width": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10/100000 secondary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10
+    /
+    100000
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-secondary"
+      style={
+        Object {
+          "width": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10/100000 tertiary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10
+    /
+    100000
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-tertiary"
+      style={
+        Object {
+          "width": "1%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10000/10 primary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10000
+    /
+    10
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-primary"
+      style={
+        Object {
+          "width": "100000%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10000/10 secondary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10000
+    /
+    10
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-secondary"
+      style={
+        Object {
+          "width": "100000%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10000/10 tertiary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10000
+    /
+    10
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-tertiary"
+      style={
+        Object {
+          "width": "100000%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10000/100 primary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10000
+    /
+    100
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-primary"
+      style={
+        Object {
+          "width": "10000%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10000/100 secondary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10000
+    /
+    100
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-secondary"
+      style={
+        Object {
+          "width": "10000%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10000/100 tertiary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10000
+    /
+    100
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-tertiary"
+      style={
+        Object {
+          "width": "10000%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10000/100000 primary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10000
+    /
+    100000
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-primary"
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10000/100000 secondary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10000
+    /
+    100000
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-secondary"
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`10000/100000 tertiary progress bar renders correctly 1`] = `
+<div
+  className="ProgressBar"
+>
+  <span
+    className="ProgressBar--title"
+  >
+    Number of Files
+  </span>
+  <span
+    className="ProgressBar--stat"
+  >
+    10000
+    /
+    100000
+  </span>
+  <div
+    className="ProgressBar--bar ProgressBar--bar-well"
+  >
+    <span
+      className="ProgressBar--bar ProgressBar--bar-tertiary"
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    />
+  </div>
+</div>
+`;

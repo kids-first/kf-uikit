@@ -898,6 +898,23 @@ module.exports = {
         },
       },
     }),
+    require('./src/components/ProgressBar/ProgressBar.plugin')({
+      borderRadius: borderRadius['lg'],
+      colors: {
+        primary: {
+          background: colors['primary'],
+        },
+        secondary: {
+          background: colors['secondary'],
+        },
+        tertiary: {
+          background: colors['tertiary'],
+        },
+        info: {
+          background: colors['info'],
+        },
+      },
+    }),
   ],
 
   /*

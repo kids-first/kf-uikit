@@ -20,6 +20,7 @@ let req = {
   typography: './stories/Typography/Typography.story.jsx',
   buttons: './src/components/Button/Button.story.jsx',
   logo: './src/components/Logo/Logo.story.jsx',
+  progressbar: './src/components/ProgressBar/ProgressBar.story.jsx',
 };
 const storyReqs = require.context('../', true, /^.*\.story\.jsx$/);
 
