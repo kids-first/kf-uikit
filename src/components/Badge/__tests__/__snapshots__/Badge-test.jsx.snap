@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default error badge renders correctly 1`] = `
+<span
+  className="Badge Badge--error"
+>
+  Hello
+</span>
+`;
+
+exports[`default error badge renders correctly 2`] = `
+<span
+  className="Badge Badge--error"
+>
+  Hello
+</span>
+`;
+
+exports[`default grey badge renders correctly 1`] = `
+<span
+  className="Badge Badge--grey"
+>
+  Hello
+</span>
+`;
+
+exports[`default grey badge renders correctly 2`] = `
+<span
+  className="Badge Badge--grey"
+>
+  Hello
+</span>
+`;
+
+exports[`default primary badge renders correctly 1`] = `
+<span
+  className="Badge Badge--primary"
+>
+  Hello
+</span>
+`;
+
+exports[`default primary badge renders correctly 2`] = `
+<span
+  className="Badge Badge--primary"
+>
+  Hello
+</span>
+`;
+
+exports[`default secondary badge renders correctly 1`] = `
+<span
+  className="Badge Badge--secondary"
+>
+  Hello
+</span>
+`;
+
+exports[`default secondary badge renders correctly 2`] = `
+<span
+  className="Badge Badge--secondary"
+>
+  Hello
+</span>
+`;
+
+exports[`default tertiary badge renders correctly 1`] = `
+<span
+  className="Badge Badge--tertiary"
+>
+  Hello
+</span>
+`;
+
+exports[`default tertiary badge renders correctly 2`] = `
+<span
+  className="Badge Badge--tertiary"
+>
+  Hello
+</span>
+`;
+
+exports[`large error badge renders correctly 1`] = `
+<span
+  className="Badge Badge--large Badge--error"
+>
+  Hello
+</span>
+`;
+
+exports[`large error badge renders correctly 2`] = `
+<span
+  className="Badge Badge--large Badge--error"
+>
+  Hello
+</span>
+`;
+
+exports[`large grey badge renders correctly 1`] = `
+<span
+  className="Badge Badge--large Badge--grey"
+>
+  Hello
+</span>
+`;
+
+exports[`large grey badge renders correctly 2`] = `
+<span
+  className="Badge Badge--large Badge--grey"
+>
+  Hello
+</span>
+`;
+
+exports[`large primary badge renders correctly 1`] = `
+<span
+  className="Badge Badge--large Badge--primary"
+>
+  Hello
+</span>
+`;
+
+exports[`large primary badge renders correctly 2`] = `
+<span
+  className="Badge Badge--large Badge--primary"
+>
+  Hello
+</span>
+`;
+
+exports[`large secondary badge renders correctly 1`] = `
+<span
+  className="Badge Badge--large Badge--secondary"
+>
+  Hello
+</span>
+`;
+
+exports[`large secondary badge renders correctly 2`] = `
+<span
+  className="Badge Badge--large Badge--secondary"
+>
+  Hello
+</span>
+`;
+
+exports[`large tertiary badge renders correctly 1`] = `
+<span
+  className="Badge Badge--large Badge--tertiary"
+>
+  Hello
+</span>
+`;
+
+exports[`large tertiary badge renders correctly 2`] = `
+<span
+  className="Badge Badge--large Badge--tertiary"
+>
+  Hello
+</span>
+`;
+
+exports[`small error badge renders correctly 1`] = `
+<span
+  className="Badge Badge--small Badge--error"
+>
+  Hello
+</span>
+`;
+
+exports[`small error badge renders correctly 2`] = `
+<span
+  className="Badge Badge--small Badge--error"
+>
+  Hello
+</span>
+`;
+
+exports[`small grey badge renders correctly 1`] = `
+<span
+  className="Badge Badge--small Badge--grey"
+>
+  Hello
+</span>
+`;
+
+exports[`small grey badge renders correctly 2`] = `
+<span
+  className="Badge Badge--small Badge--grey"
+>
+  Hello
+</span>
+`;
+
+exports[`small primary badge renders correctly 1`] = `
+<span
+  className="Badge Badge--small Badge--primary"
+>
+  Hello
+</span>
+`;
+
+exports[`small primary badge renders correctly 2`] = `
+<span
+  className="Badge Badge--small Badge--primary"
+>
+  Hello
+</span>
+`;
+
+exports[`small secondary badge renders correctly 1`] = `
+<span
+  className="Badge Badge--small Badge--secondary"
+>
+  Hello
+</span>
+`;
+
+exports[`small secondary badge renders correctly 2`] = `
+<span
+  className="Badge Badge--small Badge--secondary"
+>
+  Hello
+</span>
+`;
+
+exports[`small tertiary badge renders correctly 1`] = `
+<span
+  className="Badge Badge--small Badge--tertiary"
+>
+  Hello
+</span>
+`;
+
+exports[`small tertiary badge renders correctly 2`] = `
+<span
+  className="Badge Badge--small Badge--tertiary"
+>
+  Hello
+</span>
+`;
