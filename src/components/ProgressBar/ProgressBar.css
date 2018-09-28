@@ -1,0 +1,25 @@
+.ProgressBar {
+    @apply
+        w-full
+        font-light;
+}
+
+.ProgressBar--stat {
+    @apply
+        float-right;
+}
+
+.ProgressBar--bar {
+    @apply
+        inline-block
+        max-w-full
+        h-4
+        rounded-lg
+        leading-none;
+}
+
+.ProgressBar--bar-well {
+    @apply
+        w-full
+        bg-grey-light;
+}
