@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[object Object] Card renders correctly 1`] = `
+<div
+  className="Card"
+>
+  <span
+    className="Card--title"
+  >
+    <em>
+      Test
+    </em>
+  </span>
+  <hr />
+  Hello
+</div>
+`;
+
+exports[`Testing Card renders correctly 1`] = `
+<div
+  className="Card"
+>
+  <h2
+    className="Card--title text-truncate"
+    title="Testing"
+  >
+    Testing
+  </h2>
+  <hr />
+  Hello
+</div>
+`;
