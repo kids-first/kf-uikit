@@ -8,13 +8,12 @@ import './Header.css';
  * The common Kids First navigation.
  *
  * Must pass an array of buttons for the navigation bar.
- * Providing alertMessage will include an alert at the top of the header.
  *
  * The header should be included at the top of every Kids First application.
  * It contains common functionality for all of Kids-First that should remain
  * consistent, such as the user drop down and application navigation.
  */
-const Header = ({ buttons, alertMessage, children }) => {
+const Header = ({ buttons, children }) => {
 
   const navClass = className(
     'Header--navigation',
@@ -22,11 +21,6 @@ const Header = ({ buttons, alertMessage, children }) => {
 
   return (
     <header className='Header'>
-      {alertMessage && (
-        <div className='Header--alert'>
-          {alertMessage}
-        </div>
-      )}
       <nav className={navClass}>
         <Logo />
         <div className='Navigation--buttons'>
@@ -41,15 +35,12 @@ const Header = ({ buttons, alertMessage, children }) => {
 Header.propTypes = {
   /** Buttons to display on the navbar */
   buttons: propTypes.node,
-  /** Alert message to be displayed on top of the page */
-  alertMessage: propTypes.string,
   /** Child elements to display on the navbar */
   children: propTypes.node,
 };
 
 Header.defaultProps = {
   buttons: null,
-  alertMessage: null,
   children: null,
 };
 
