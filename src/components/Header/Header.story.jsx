@@ -3,14 +3,14 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import Button from '../Button/Button';
-import Navigation from './Navigation';
+import Header from './Header';
 
-const stories = storiesOf('Navigation', module);
+const stories = storiesOf('Header', module);
 
 stories.addDecorator(withKnobs);
 
-stories.add('Header Navigation', () => (
-  <Navigation
+stories.add('Header', () => (
+  <Header
     buttons={[
       <Button>Dashboard</Button>,
       <Button outline>File Repository</Button>]}

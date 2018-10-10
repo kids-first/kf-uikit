@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Navigation from '../Navigation';
+import Header from '../Header';
 
 it(`navigation renders correctly`, () => {
     const tree = renderer.create(
-      <Navigation />
+      <Header />
     ).toJSON();
     expect(tree).toMatchSnapshot();
 });

@@ -7,6 +7,15 @@
         p-4;
 }
 
+.Navigation--buttons {
+    @apply
+      flex
+      items-center
+      justify-end
+      w-full;
+}
+
+
 .Navigation .Button {
     @apply
         mx-2
