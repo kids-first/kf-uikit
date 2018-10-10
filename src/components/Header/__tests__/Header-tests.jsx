@@ -8,3 +8,12 @@ it(`navigation renders correctly`, () => {
     ).toJSON();
     expect(tree).toMatchSnapshot();
 });
+
+it(`header with alert renders correctly`, () => {
+    const tree = renderer.create(
+      <Header
+        alertMessage='Testing'
+      />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+});

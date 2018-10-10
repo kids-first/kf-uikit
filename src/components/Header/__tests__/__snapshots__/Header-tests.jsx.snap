@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header with alert renders correctly 1`] = `
+<header
+  className="Header"
+>
+  <div
+    className="Header--alert"
+  >
+    Testing
+  </div>
+  <nav
+    className="Header--navigation"
+  >
+    <div
+      className="Logo"
+    >
+      <img
+        alt="Kids First Data Resource Center logo"
+        className="Logo--img"
+        src="test-file-stub"
+      />
+      <h1
+        className="Logo--text text-screen-reader"
+      >
+        Kids First Data Resource Center logo
+      </h1>
+    </div>
+    <div
+      className="Navigation--buttons"
+    />
+  </nav>
+</header>
+`;
+
+exports[`navigation renders correctly 1`] = `
+<header
+  className="Header"
+>
+  <nav
+    className="Header--navigation"
+  >
+    <div
+      className="Logo"
+    >
+      <img
+        alt="Kids First Data Resource Center logo"
+        className="Logo--img"
+        src="test-file-stub"
+      />
+      <h1
+        className="Logo--text text-screen-reader"
+      >
+        Kids First Data Resource Center logo
+      </h1>
+    </div>
+    <div
+      className="Navigation--buttons"
+    />
+  </nav>
+</header>
+`;

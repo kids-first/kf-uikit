@@ -1,10 +1,32 @@
-.Navigation {
+.Header {
     @apply
-        flex
-        bg-white
-        h-24
-        border-b-2
-        p-4;
+      w-full
+      bg-white;
+}
+
+.Header--alert {
+    @apply
+      px-2
+      py-0
+      bg-primary
+      border-b-2
+      border-primary-dark
+      text-white
+      font-light;
+}
+
+@screen md {
+  .Header--alert {
+    @apply text-center;
+  }
+}
+
+.Header--navigation {
+    @apply
+      flex
+      h-24
+      p-4
+      border-b-2;
 }
 
 .Navigation--buttons {
@@ -16,7 +38,7 @@
 }
 
 
-.Navigation .Button {
+.Header--navigation .Button {
     @apply
-        mx-2
+        mx-2;
 }
