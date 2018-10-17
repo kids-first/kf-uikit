@@ -4,6 +4,7 @@ exports[`default primary button button renders correctly 1`] = `
 <button
   className="Button Button--primary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -14,6 +15,7 @@ exports[`default primary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--outline--primary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -24,6 +26,7 @@ exports[`default primary submit button renders correctly 1`] = `
 <button
   className="Button Button--primary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -34,6 +37,7 @@ exports[`default primary submit outlined button renders correctly 1`] = `
 <button
   className="Button Button--outline--primary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -44,6 +48,7 @@ exports[`default secondary button button renders correctly 1`] = `
 <button
   className="Button Button--secondary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -54,6 +59,7 @@ exports[`default secondary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--outline--secondary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -64,6 +70,7 @@ exports[`default secondary submit button renders correctly 1`] = `
 <button
   className="Button Button--secondary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -74,6 +81,7 @@ exports[`default secondary submit outlined button renders correctly 1`] = `
 <button
   className="Button Button--outline--secondary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -84,6 +92,7 @@ exports[`default tertiary button button renders correctly 1`] = `
 <button
   className="Button Button--tertiary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -94,6 +103,7 @@ exports[`default tertiary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--outline--tertiary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -104,6 +114,7 @@ exports[`default tertiary submit button renders correctly 1`] = `
 <button
   className="Button Button--tertiary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -114,6 +125,7 @@ exports[`default tertiary submit outlined button renders correctly 1`] = `
 <button
   className="Button Button--outline--tertiary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -124,6 +136,7 @@ exports[`disabled default primary button button renders correctly 1`] = `
 <button
   className="Button Button--primary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -134,6 +147,7 @@ exports[`disabled default primary button outlined button renders correctly 1`] =
 <button
   className="Button Button--outline--primary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -144,6 +158,7 @@ exports[`disabled default primary submit button renders correctly 1`] = `
 <button
   className="Button Button--primary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -154,6 +169,7 @@ exports[`disabled default primary submit outlined button renders correctly 1`] =
 <button
   className="Button Button--outline--primary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -164,6 +180,7 @@ exports[`disabled default secondary button button renders correctly 1`] = `
 <button
   className="Button Button--secondary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -174,6 +191,7 @@ exports[`disabled default secondary button outlined button renders correctly 1`]
 <button
   className="Button Button--outline--secondary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -184,6 +202,7 @@ exports[`disabled default secondary submit button renders correctly 1`] = `
 <button
   className="Button Button--secondary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -194,6 +213,7 @@ exports[`disabled default secondary submit outlined button renders correctly 1`]
 <button
   className="Button Button--outline--secondary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -204,6 +224,7 @@ exports[`disabled default tertiary button button renders correctly 1`] = `
 <button
   className="Button Button--tertiary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -214,6 +235,7 @@ exports[`disabled default tertiary button outlined button renders correctly 1`] 
 <button
   className="Button Button--outline--tertiary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -224,6 +246,7 @@ exports[`disabled default tertiary submit button renders correctly 1`] = `
 <button
   className="Button Button--tertiary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -234,6 +257,7 @@ exports[`disabled default tertiary submit outlined button renders correctly 1`] 
 <button
   className="Button Button--outline--tertiary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -244,6 +268,7 @@ exports[`disabled large primary button button renders correctly 1`] = `
 <button
   className="Button Button--large Button--primary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -254,6 +279,7 @@ exports[`disabled large primary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--primary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -264,6 +290,7 @@ exports[`disabled large primary submit button renders correctly 1`] = `
 <button
   className="Button Button--large Button--primary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -274,6 +301,7 @@ exports[`disabled large primary submit outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--primary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -284,6 +312,7 @@ exports[`disabled large secondary button button renders correctly 1`] = `
 <button
   className="Button Button--large Button--secondary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -294,6 +323,7 @@ exports[`disabled large secondary button outlined button renders correctly 1`] =
 <button
   className="Button Button--large Button--outline--secondary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -304,6 +334,7 @@ exports[`disabled large secondary submit button renders correctly 1`] = `
 <button
   className="Button Button--large Button--secondary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -314,6 +345,7 @@ exports[`disabled large secondary submit outlined button renders correctly 1`] =
 <button
   className="Button Button--large Button--outline--secondary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -324,6 +356,7 @@ exports[`disabled large tertiary button button renders correctly 1`] = `
 <button
   className="Button Button--large Button--tertiary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -334,6 +367,7 @@ exports[`disabled large tertiary button outlined button renders correctly 1`] = 
 <button
   className="Button Button--large Button--outline--tertiary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -344,6 +378,7 @@ exports[`disabled large tertiary submit button renders correctly 1`] = `
 <button
   className="Button Button--large Button--tertiary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -354,6 +389,7 @@ exports[`disabled large tertiary submit outlined button renders correctly 1`] = 
 <button
   className="Button Button--large Button--outline--tertiary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -364,6 +400,7 @@ exports[`disabled small primary button button renders correctly 1`] = `
 <button
   className="Button Button--small Button--primary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -374,6 +411,7 @@ exports[`disabled small primary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--primary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -384,6 +422,7 @@ exports[`disabled small primary submit button renders correctly 1`] = `
 <button
   className="Button Button--small Button--primary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -394,6 +433,7 @@ exports[`disabled small primary submit outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--primary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -404,6 +444,7 @@ exports[`disabled small secondary button button renders correctly 1`] = `
 <button
   className="Button Button--small Button--secondary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -414,6 +455,7 @@ exports[`disabled small secondary button outlined button renders correctly 1`] =
 <button
   className="Button Button--small Button--outline--secondary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -424,6 +466,7 @@ exports[`disabled small secondary submit button renders correctly 1`] = `
 <button
   className="Button Button--small Button--secondary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -434,6 +477,7 @@ exports[`disabled small secondary submit outlined button renders correctly 1`] =
 <button
   className="Button Button--small Button--outline--secondary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -444,6 +488,7 @@ exports[`disabled small tertiary button button renders correctly 1`] = `
 <button
   className="Button Button--small Button--tertiary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -454,6 +499,7 @@ exports[`disabled small tertiary button outlined button renders correctly 1`] = 
 <button
   className="Button Button--small Button--outline--tertiary"
   disabled={true}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -464,6 +510,7 @@ exports[`disabled small tertiary submit button renders correctly 1`] = `
 <button
   className="Button Button--small Button--tertiary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -474,6 +521,7 @@ exports[`disabled small tertiary submit outlined button renders correctly 1`] = 
 <button
   className="Button Button--small Button--outline--tertiary"
   disabled={true}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -484,6 +532,7 @@ exports[`large primary button button renders correctly 1`] = `
 <button
   className="Button Button--large Button--primary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -494,6 +543,7 @@ exports[`large primary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--primary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -504,6 +554,7 @@ exports[`large primary submit button renders correctly 1`] = `
 <button
   className="Button Button--large Button--primary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -514,6 +565,7 @@ exports[`large primary submit outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--primary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -524,6 +576,7 @@ exports[`large secondary button button renders correctly 1`] = `
 <button
   className="Button Button--large Button--secondary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -534,6 +587,7 @@ exports[`large secondary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--secondary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -544,6 +598,7 @@ exports[`large secondary submit button renders correctly 1`] = `
 <button
   className="Button Button--large Button--secondary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -554,6 +609,7 @@ exports[`large secondary submit outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--secondary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -564,6 +620,7 @@ exports[`large tertiary button button renders correctly 1`] = `
 <button
   className="Button Button--large Button--tertiary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -574,6 +631,7 @@ exports[`large tertiary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--tertiary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -584,6 +642,7 @@ exports[`large tertiary submit button renders correctly 1`] = `
 <button
   className="Button Button--large Button--tertiary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -594,6 +653,7 @@ exports[`large tertiary submit outlined button renders correctly 1`] = `
 <button
   className="Button Button--large Button--outline--tertiary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -604,6 +664,7 @@ exports[`small primary button button renders correctly 1`] = `
 <button
   className="Button Button--small Button--primary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -614,6 +675,7 @@ exports[`small primary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--primary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -624,6 +686,7 @@ exports[`small primary submit button renders correctly 1`] = `
 <button
   className="Button Button--small Button--primary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -634,6 +697,7 @@ exports[`small primary submit outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--primary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -644,6 +708,7 @@ exports[`small secondary button button renders correctly 1`] = `
 <button
   className="Button Button--small Button--secondary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -654,6 +719,7 @@ exports[`small secondary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--secondary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -664,6 +730,7 @@ exports[`small secondary submit button renders correctly 1`] = `
 <button
   className="Button Button--small Button--secondary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -674,6 +741,7 @@ exports[`small secondary submit outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--secondary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -684,6 +752,7 @@ exports[`small tertiary button button renders correctly 1`] = `
 <button
   className="Button Button--small Button--tertiary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -694,6 +763,7 @@ exports[`small tertiary button outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--tertiary"
   disabled={false}
+  onClick={[Function]}
   type="button"
 >
   Hello
@@ -704,6 +774,7 @@ exports[`small tertiary submit button renders correctly 1`] = `
 <button
   className="Button Button--small Button--tertiary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
@@ -714,6 +785,7 @@ exports[`small tertiary submit outlined button renders correctly 1`] = `
 <button
   className="Button Button--small Button--outline--tertiary"
   disabled={false}
+  onClick={[Function]}
   type="submit"
 >
   Hello
