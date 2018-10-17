@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default error badge renders correctly 1`] = `
+<span
+  className="Tag Tag--error"
+>
+  Hello
+</span>
+`;
+
+exports[`default error badge renders correctly 2`] = `
+<span
+  className="Tag Tag--error"
+>
+  Hello
+</span>
+`;
+
+exports[`default grey badge renders correctly 1`] = `
+<span
+  className="Tag Tag--grey"
+>
+  Hello
+</span>
+`;
+
+exports[`default grey badge renders correctly 2`] = `
+<span
+  className="Tag Tag--grey"
+>
+  Hello
+</span>
+`;
+
+exports[`default primary badge renders correctly 1`] = `
+<span
+  className="Tag Tag--primary"
+>
+  Hello
+</span>
+`;
+
+exports[`default primary badge renders correctly 2`] = `
+<span
+  className="Tag Tag--primary"
+>
+  Hello
+</span>
+`;
+
+exports[`default secondary badge renders correctly 1`] = `
+<span
+  className="Tag Tag--secondary"
+>
+  Hello
+</span>
+`;
+
+exports[`default secondary badge renders correctly 2`] = `
+<span
+  className="Tag Tag--secondary"
+>
+  Hello
+</span>
+`;
+
+exports[`default tertiary badge renders correctly 1`] = `
+<span
+  className="Tag Tag--tertiary"
+>
+  Hello
+</span>
+`;
+
+exports[`default tertiary badge renders correctly 2`] = `
+<span
+  className="Tag Tag--tertiary"
+>
+  Hello
+</span>
+`;
+
+exports[`large error badge renders correctly 1`] = `
+<span
+  className="Tag Tag--large Tag--error"
+>
+  Hello
+</span>
+`;
+
+exports[`large error badge renders correctly 2`] = `
+<span
+  className="Tag Tag--large Tag--error"
+>
+  Hello
+</span>
+`;
+
+exports[`large grey badge renders correctly 1`] = `
+<span
+  className="Tag Tag--large Tag--grey"
+>
+  Hello
+</span>
+`;
+
+exports[`large grey badge renders correctly 2`] = `
+<span
+  className="Tag Tag--large Tag--grey"
+>
+  Hello
+</span>
+`;
+
+exports[`large primary badge renders correctly 1`] = `
+<span
+  className="Tag Tag--large Tag--primary"
+>
+  Hello
+</span>
+`;
+
+exports[`large primary badge renders correctly 2`] = `
+<span
+  className="Tag Tag--large Tag--primary"
+>
+  Hello
+</span>
+`;
+
+exports[`large secondary badge renders correctly 1`] = `
+<span
+  className="Tag Tag--large Tag--secondary"
+>
+  Hello
+</span>
+`;
+
+exports[`large secondary badge renders correctly 2`] = `
+<span
+  className="Tag Tag--large Tag--secondary"
+>
+  Hello
+</span>
+`;
+
+exports[`large tertiary badge renders correctly 1`] = `
+<span
+  className="Tag Tag--large Tag--tertiary"
+>
+  Hello
+</span>
+`;
+
+exports[`large tertiary badge renders correctly 2`] = `
+<span
+  className="Tag Tag--large Tag--tertiary"
+>
+  Hello
+</span>
+`;
+
+exports[`small error badge renders correctly 1`] = `
+<span
+  className="Tag Tag--small Tag--error"
+>
+  Hello
+</span>
+`;
+
+exports[`small error badge renders correctly 2`] = `
+<span
+  className="Tag Tag--small Tag--error"
+>
+  Hello
+</span>
+`;
+
+exports[`small grey badge renders correctly 1`] = `
+<span
+  className="Tag Tag--small Tag--grey"
+>
+  Hello
+</span>
+`;
+
+exports[`small grey badge renders correctly 2`] = `
+<span
+  className="Tag Tag--small Tag--grey"
+>
+  Hello
+</span>
+`;
+
+exports[`small primary badge renders correctly 1`] = `
+<span
+  className="Tag Tag--small Tag--primary"
+>
+  Hello
+</span>
+`;
+
+exports[`small primary badge renders correctly 2`] = `
+<span
+  className="Tag Tag--small Tag--primary"
+>
+  Hello
+</span>
+`;
+
+exports[`small secondary badge renders correctly 1`] = `
+<span
+  className="Tag Tag--small Tag--secondary"
+>
+  Hello
+</span>
+`;
+
+exports[`small secondary badge renders correctly 2`] = `
+<span
+  className="Tag Tag--small Tag--secondary"
+>
+  Hello
+</span>
+`;
+
+exports[`small tertiary badge renders correctly 1`] = `
+<span
+  className="Tag Tag--small Tag--tertiary"
+>
+  Hello
+</span>
+`;
+
+exports[`small tertiary badge renders correctly 2`] = `
+<span
+  className="Tag Tag--small Tag--tertiary"
+>
+  Hello
+</span>
+`;

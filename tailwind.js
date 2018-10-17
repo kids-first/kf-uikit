@@ -898,6 +898,47 @@ module.exports = {
         },
       },
     }),
+    require('./src/components/Tag/Tag.plugin')({
+      borderRadius: borderRadius['lg'],
+      fontWeight: fontWeights['normal'],
+      lineHeight: leading['tight'],
+      fontSize: textSizes['base'],
+      padding: `${padding['1']} ${padding['2']}`,
+      colors: {
+        primary: {
+          background: colors['primary-light'],
+          text: colors['white'],
+        },
+        secondary: {
+          background: colors['secondary-light'],
+          text: colors['white'],
+        },
+        tertiary: {
+          background: colors['tertiary-light'],
+          text: colors['white'],
+        },
+        error: {
+          background: colors['error-dark'],
+          text: colors['white'],
+        },
+        grey: {
+          background: colors['grey-light'],
+          text: colors['black'],
+        },
+      },
+      sizes: {
+        small: {
+          fontSize: textSizes['xs'],
+          padding: `${padding['1']} ${padding['2']}`,
+          borderRadius: borderRadius['lg'],
+        },
+        large: {
+          fontSize: textSizes['xl'],
+          padding: `${padding['2']} ${padding['3']}`,
+          borderRadius: borderRadius['full'],
+        },
+      },
+    }),
   ],
 
   /*
