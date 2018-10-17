@@ -5,7 +5,8 @@ import classes from 'classnames';
 /**
  * A Simple rounded button
  */
-const Button = ({ size, color, outline, disabled, type, className, children }) => {
+const Button = ({ size, color, outline, disabled, onClick, type, className,
+  children }) => {
 
   const buttonClass = classes(
     'Button',
@@ -15,7 +16,12 @@ const Button = ({ size, color, outline, disabled, type, className, children }) =
   );
   return (
     /* eslint-disable react/button-has-type */
-    <button type={type} className={buttonClass} disabled={disabled}>
+    <button
+      type={type}
+      className={buttonClass}
+      disabled={disabled}
+      onClick={onClick}
+    >
       {children}
     </button>
     /* eslint-enable react/button-has-type */
@@ -31,6 +37,8 @@ Button.propTypes = {
   outline: propTypes.bool,
   /** Whether the button is disabled */
   disabled: propTypes.bool,
+  /** A function to perform onClick */
+  onClick: propTypes.func,
   /** The html type of button */
   type: propTypes.oneOf(['button', 'submit', 'reset']),
   /** Any additional classes to be applied to the button */
@@ -44,6 +52,7 @@ Button.defaultProps = {
   color: 'primary',
   outline: false,
   disabled: false,
+  onClick: () => {},
   type: 'button',
   className: null,
   children: null,
