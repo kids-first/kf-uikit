@@ -44,24 +44,23 @@ View the full documentation at https://tailwindcss.com.
 const chroma = require('chroma-js');
 
 let brand = {
-  primary: '#90278e',
-  secondary: '#2b388f',
-  tertiary: '#009bb8',
+  primary: '#0d99b7',
+  secondary: '#90278e',
+  tertiary: '#00adee',
 };
 
 let shades = function(name, color) {
   return {
     [`${name}-lightest`]: chroma(color)
-      .brighten(2.5)
-      .hex(),
-    [`${name}-lighter`]: chroma(color)
-      .brighten(2.0)
-      .hex(),
-    [`${name}-light`]: chroma(color)
       .brighten(1.5)
       .hex(),
+    [`${name}-lighter`]: chroma(color)
+      .brighten(1.0)
+      .hex(),
+    [`${name}-light`]: chroma(color)
+      .brighten(0.5)
+      .hex(),
     [`${name}`]: chroma(color)
-      .brighten()
       .hex(),
     [`${name}-dark`]: chroma(color)
       .darken(0.5)
@@ -70,7 +69,7 @@ let shades = function(name, color) {
       .darken(1.0)
       .hex(),
     [`${name}-darkest`]: chroma(color)
-      .darken(1.5)
+      .darken(1.3)
       .hex(),
   };
 };
@@ -81,6 +80,8 @@ let colors = {
   black: '#22292f',
   ...shades('grey', '#888888'),
   white: '#ffffff',
+
+  ...shades('bluegrey', '#f4f5f8'),
 
   ...shades('primary', brand.primary),
   ...shades('secondary', brand.secondary),
@@ -852,51 +853,6 @@ module.exports = {
     require('tailwindcss/plugins/container')({
       // center: true,
       // padding: '1rem',
-    }),
-    require('./src/components/Button/Button.plugin')({
-      borderRadius: borderRadius['lg'],
-      fontWeight: fontWeights['semibold'],
-      lineHeight: leading['tight'],
-      fontSize: textSizes['base'],
-      padding: `${padding['2']} ${padding['4']}`,
-      colors: {
-        primary: {
-          background: colors['primary'],
-          hoverBackground: colors['primary-dark'],
-          activeBackground: colors['primary-dark'],
-          text: colors['white'],
-        },
-        secondary: {
-          background: colors['secondary'],
-          hoverBackground: colors['secondary-dark'],
-          activeBackground: colors['secondary-dark'],
-          text: colors['white'],
-        },
-        tertiary: {
-          background: colors['tertiary'],
-          hoverBackground: colors['tertiary-dark'],
-          activeBackground: colors['tertiary-dark'],
-          text: colors['white'],
-        },
-        info: {
-          background: colors['info'],
-          hoverBackground: colors['info-dark'],
-          activeBackground: colors['info-dark'],
-          text: colors['grey-darkest'],
-        },
-      },
-      sizes: {
-        small: {
-          fontSize: textSizes['xs'],
-          padding: `${padding['1']} ${padding['3']}`,
-          borderRadius: borderRadius['lg'],
-        },
-        large: {
-          fontSize: textSizes['xl'],
-          padding: `${padding['3']} ${padding['6']}`,
-          borderRadius: borderRadius['full'],
-        },
-      },
     }),
   ],
 
