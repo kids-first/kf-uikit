@@ -43,10 +43,28 @@ View the full documentation at https://tailwindcss.com.
 */
 const chroma = require('chroma-js');
 
-let brand = {
-  primary: '#0d99b7',
-  secondary: '#90278e',
-  tertiary: '#00adee',
+let primary = {
+  blue: '#2b388f',
+
+  purple: '#a6278f',
+  purpleHover: '#c03299',
+
+  teal: '#009bba',
+  tealA11y: '#008299',
+  tealHover: '#19a9c4',
+
+  lightBlue: '#00aceb',
+
+  lightGrey: '#f4f5f8',
+
+  darkGrey: '#343434',
+};
+
+let secondary = {
+  pink: '#e53a95',
+  red: '#dd1f2a',
+  orange: '#f79122',
+  mediumGrey: '#a9adc0',
 };
 
 let shades = function(name, color) {
@@ -81,25 +99,13 @@ let colors = {
   ...shades('grey', '#888888'),
   white: '#ffffff',
 
+  greyBorder: '#cacbcf',
+
   ...shades('bluegrey', '#f4f5f8'),
 
-  ...shades('primary', brand.primary),
-  ...shades('secondary', brand.secondary),
-  ...shades('tertiary', brand.tertiary),
+  ...primary,
+  ...secondary,
 
-  ...shades(
-    'info',
-    chroma(brand.tertiary)
-      .brighten(1)
-      .hex(),
-  ),
-  ...shades('error', '#d8202f'),
-  ...shades(
-    'warn',
-    chroma(brand.primary)
-      .brighten(1)
-      .hex(),
-  ),
 };
 
 let textSizes = {

@@ -11,9 +11,8 @@
         font-title
         text-xs
         text-tealA11y
+        uppercase
         leading-tight;
-
-    text-transform: uppercase;
 
     &:disabled {
         @apply

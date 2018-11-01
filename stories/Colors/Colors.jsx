@@ -4,12 +4,12 @@ import * as theme from '../../tailwind.js';
 import { processColor, wcagGrade } from '../../src/utils/colors';
 import { compact, toPairs, omit } from 'lodash';
 const ColorValues = ({ color }) => (
-  <small className="group inline-block float-right text-right">
-    <span className="group-hover:hidden">{color.hex}</span>
-    <span className="hidden group-hover:inline-block">
+  <small className="group inline-block h-full float-right text-right">
+    <p className='leading-tight'>{color.hex}</p>
+    <p className='leading-tight mt-0'>
       rgb(
       {color.rgba.slice(0, 3).join(',')})
-    </span>
+    </p>
   </small>
 );
 
@@ -19,9 +19,8 @@ const ColorValues = ({ color }) => (
 function Swatch(props) {
   const { color, children } = props;
   let colorData = processColor(color, theme.colors[color]);
-  const shadesData = ['-darkest', '-darker', '-dark', '', '-light', '-lighter', '-lightest'].map(
-    shade => processColor(`${color}${shade}`, theme.colors[`${color}${shade}`]),
-  );
+  let processedColor = processColor(`${color}`, theme.colors[`${color}`]);
+
   const textColors = toPairs(omit(theme.textColors, 'transparent'))
     .map(colorArr => [`${colorArr[0]}`, wcagGrade(colorArr[1], colorData.hex)])
     .filter(arr => arr[1] !== 'Low Contrast');
@@ -30,44 +29,23 @@ function Swatch(props) {
     ? TextColor[0]
     : textColors.filter(arr => arr[1] === 'AA Large')[0];
 
-  const hasShades = compact(shadesData).length > 1;
-  let shades = () => <div>no shades</div>;
-  if (hasShades) {
-    shades = shadesData.map((shade, idx) => (
-      <div
-        className={`block w-full h-${idx == 3 ? 16 : 8}  bg-${
-          shade.key
-        } font-body align-middle text-white p-2 ${idx === 3 ? 'pt-6' : ''}`}
-      >
-        {shade.key.includes('-') ? (
-          <small className="inline-block float-left">{shade.key.split('-')[1]}</small>
-        ) : (
-          <small className="inline-block float-left font-bold tracking-wide">
-            {color.toUpperCase()}
-          </small>
-        )}
-
-        <ColorValues color={shade} />
-      </div>
-    ));
-  } else {
-    shades = (
-      <div
-        className={`block w-full h-16  bg-${color} font-body align-middle text-${
-          color == 'white' ? 'black' : 'white'
-        } p-2 pt-6`}
-      >
-        <small className="inline-block float-left font-bold tracking-wide">
-          {color.toUpperCase()}
-        </small>
-        <ColorValues color={colorData} />
-      </div>
-    );
-  }
+  let shades = (
+    <div
+      className={`block w-full h-16  bg-${color} font-body align-middle text-${
+        color == 'white' ? 'black' : 'white'
+      } px-2`}
+      style={{lineHeight: '4rem'}}
+    >
+      <small className="inline-block float-left font-bold tracking-wide">
+        {color.toUpperCase()}
+      </small>
+      <ColorValues color={colorData} />
+    </div>
+  );
 
   return (
-    <div className="container overflow-hidden w-1/3 m-3">
-      <h3 className="text-center pb-2">{color}</h3>
+    <div className="container overflow-hidden w-1/3 p-3">
+      <h3 className="text-center">{color}</h3>
       <div className="w-full overflow-hidden rounded-sm">{shades}</div>
 
       {children}

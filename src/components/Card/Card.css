@@ -23,5 +23,5 @@
 .Card--title {
     @apply
         m-0
-        text-secondary;
+        text-tealA11y;
 }
