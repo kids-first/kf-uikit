@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`secondary navigation renders correctly 1`] = `
+<nav
+  className="SecondaryNav--navigation"
+>
+  <ul>
+    <li
+      className="SecondaryNav--link"
+    >
+      <a
+        href="/"
+      >
+        Testing
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

@@ -1,0 +1,65 @@
+.SecondaryNav {
+    @apply
+      w-full
+      h-64
+      bg-white;
+}
+
+.SecondaryNav--navigation {
+    @apply
+      relative
+      bg-white
+      overflow-hidden
+      border-mediumGrey
+      border;
+}
+
+.SecondaryNav--navigation ul {
+    @apply
+      p-0
+      m-0
+      relative
+      inline-block
+      h-full
+      align-middle;
+}
+
+.SecondaryNav--link {
+    @apply
+      p-0
+      m-0
+      relative
+      inline-block
+      h-full
+      border-mediumGrey
+      border-r
+      align-middle;
+
+    a {
+        @apply
+          block
+          border-transparent
+          border-b-2
+          h-full
+          w-full
+          px-5
+          py-4
+          text-center
+          font-title
+          font-semibold
+          no-underline
+          text-sm
+          text-purple;
+    }
+
+    a:hover {
+        @apply
+          text-purpleHover;
+    }
+}
+
+.SecondaryNav--link-active {
+    a {
+        @apply border-purpleHover;
+    }
+}
