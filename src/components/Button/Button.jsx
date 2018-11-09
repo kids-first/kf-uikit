@@ -5,13 +5,13 @@ import classes from 'classnames';
 /**
  * A Simple rounded button
  */
-const Button = ({ size, color, outline, disabled, onClick, type, className,
+const Button = ({ size, color, disabled, onClick, type, className,
   children }) => {
 
   const buttonClass = classes(
     'Button',
-    {[`Button--${size}`]: ['small', 'large'].includes(size)},
-    `Button${outline ? '--outline' : ''}--${color}`,
+    `Button--${size}`,
+    {[`Button--${color}`]: ['primary', 'secondary'].includes(color)},
     className
   );
   return (
@@ -30,11 +30,9 @@ const Button = ({ size, color, outline, disabled, onClick, type, className,
 
 Button.propTypes = {
   /** The size of the button */
-  size: propTypes.string,
+  size: propTypes.oneOf(['default', 'large']),
   /** The color of the button. */
-  color: propTypes.string,
-  /** Whether the button is an outline only, or solid. */
-  outline: propTypes.bool,
+  color: propTypes.oneOf(['default', 'primary', 'secondary']),
   /** Whether the button is disabled */
   disabled: propTypes.bool,
   /** A function to perform onClick */
@@ -49,8 +47,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   size: 'default',
-  color: 'primary',
-  outline: false,
+  color: 'default',
   disabled: false,
   onClick: () => {},
   type: 'button',

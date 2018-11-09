@@ -10,38 +10,25 @@ const storyInfo = {
   },
 };
 
-const brand = ['primary', 'secondary', 'tertiary'];
+const brand = ['blue', 'purple', 'teal', 'lightBlue', 'lightGrey', 'darkGrey'];
 const brandSwatches = brand.map(color => <Swatch color={color} />);
 stories.add(
-  'Brand',
+  'Primary',
   () => (
-    <div className="flex" style={{ width: 700 }}>
+    <div className="flex flex-wrap">
       {brandSwatches}
     </div>
   ),
   storyInfo,
 );
 
-const state = ['info', 'warn', 'error'];
-const stateSwatches = state.map(color => <Swatch color={color} />);
+const secondary = ['pink', 'red', 'orange', 'mediumGrey'];
+const secondarySwatches = secondary.map(color => <Swatch color={color} />);
 stories.add(
-  'State',
+  'Secondary',
   () => (
-    <div className="flex" style={{ width: 700 }}>
-      {stateSwatches}
-    </div>
-  ),
-  storyInfo,
-);
-
-const greys = ['black', 'grey', 'white'];
-const greySwatches = greys.map(color => <Swatch color={color} />);
-
-stories.add(
-  'Greyscale',
-  () => (
-    <div className="flex" style={{ width: 700 }}>
-      {greySwatches}
+    <div className="flex flex-wrap">
+      {secondarySwatches}
     </div>
   ),
   storyInfo,

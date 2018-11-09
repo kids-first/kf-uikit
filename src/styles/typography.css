@@ -134,7 +134,7 @@ ol {
       @apply absolute 
         w-6
         h-6
-        bg-tertiary
+        bg-lightBlue
         rounded-full 
         text-sm
         text-center 
@@ -151,11 +151,11 @@ blockquote {
     ml-0
     p-3
     border-l-5
-    border-tertiary
+    border-lightBlue
     text-xl
     font-title
     italic
-    text-secondary
+    text-purple
     leading-normal;
 }
 /* Grouping content
