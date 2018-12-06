@@ -32,7 +32,6 @@ src/
     │   ├── __tests__/
     │   ├── Button.jsx
     │   ├── Button.story.jsx
-    |   ├── Button.sketch.jsx
     │   └── Button.css
     └── index.js
 ```
