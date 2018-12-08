@@ -1,0 +1,51 @@
+/* Stats Bar */
+.Stats-container {
+  @apply flex
+    items-center
+    bg-white
+    p-3
+    border
+    border-solid 
+    border-grey-lightest;
+}
+
+.Stats-container.transparent {
+  border: none;
+  background: transparent;
+}
+
+.Stats-container-divider {
+  width: 1px;
+  height: 35px;
+  background-color: #d4d6dd;
+}
+
+.Stat.Stat-container {
+  @apply flex
+    flex-1
+    justify-center
+    items-center;
+}
+
+.Stat-icon {
+  @apply mr-1;
+}
+.Stat-metric {
+  @apply mr-1 
+    font-bold 
+    text-xl
+    text-grey-dark;
+  letter-spacing: 0.3px;
+}
+/*TODO: make text trucate when it gets small*/
+.Stat-label {
+  @apply pt-1 font-light text-sm  text-grey-light;
+  letter-spacing: 0.2px;
+}
+.Stats-container.small .Stat-container .Stat-metric {
+  font-size: 14px;
+}
+.Stats-container.small .Stat-container .Stat-label {
+  display: none;
+  /*font-size: 10px;*/
+}
