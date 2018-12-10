@@ -23,6 +23,7 @@ let req = {
   cards: './src/components/Card/Card.story.jsx',
   header: './src/components/Header/Header.story.jsx',
   icons: './src/components/Icon/Icon.story.jsx',
+  stats: './src/components/Stats/Stats.story.jsx',
 };
 const storyReqs = require.context('../', true, /^.*\.story\.jsx$/);
 
