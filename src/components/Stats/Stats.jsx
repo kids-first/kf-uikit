@@ -4,10 +4,10 @@ import propTypes from 'prop-types';
 import classes from 'classnames';
 import Stat from './Stat';
 
-const Stats = ({ stats, className, small, transparent, ...props }) => {
+const Stats = ({ stats, className, small, transparent }) => {
   const StatsClasses = classes(
     ['Stats--container', 'flex', 'items-center'],
-    { small: small ? true : false, transparent: transparent ? true : false },
+    { small: small, transparent: transparent },
     className,
   );
   return (
@@ -15,7 +15,11 @@ const Stats = ({ stats, className, small, transparent, ...props }) => {
       {stats.map((stat, i) => (
         <Fragment key={stat.label}>
           {i > 0 && <div key={i} className="Stats--container-divider" />}
-          <Stat {...props} {...stat} />
+          <Stat
+            icon={stat.icon}
+            label={stat.label}
+            metric={stat.metric}
+          />
         </Fragment>
       ))}
     </div>
@@ -24,11 +28,23 @@ const Stats = ({ stats, className, small, transparent, ...props }) => {
 
 Stats.propTypes = {
   /** Array of Stat/Metrics objects to display   */
-  stats: propTypes.array,
+  stats: propTypes.arrayOf(propTypes.shape({
+    /** The icon used for the stat */
+    icon: propTypes.string.isRequired,
+    /** The label to describe the stat */
+    label: propTypes.string,
+    /** The actual stat metric */
+    metric: propTypes.number.isRequired,
+  })),
   /** if set, displays only the icon and metric */
   small: propTypes.bool,
   /** if set, hides the border and background of the Stats-container */
   transparent: propTypes.bool,
 };
 
+Stats.defaultProps = {
+  stats: [],
+  small: false,
+  transparent: false,
+}
 export default Stats;

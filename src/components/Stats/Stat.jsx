@@ -4,19 +4,21 @@ import propTypes from 'prop-types';
 import classes from 'classnames';
 import Icon from '../Icon/Icon';
 
-const Stat = ({ icon = '', label = '', metric = 0, metricFormatter, LoadingSpinnerComponent }) => {
+const Stat = ({ icon, label, metric, metricFormatter }) => {
   return (
     <div className="Stat Stat--container">
       <Icon className="Stat--icon" {...label} kind={icon} />
       <div className="Stat--metric">{metricFormatter ? metricFormatter(metric) : metric}</div>
-      <div className="Stat--label">{label}</div>
+      {label &&
+        <div className="Stat--label">{label}</div>
+      }
     </div>
   );
 };
 
 Stat.propTypes = {
   /** Name of Entity  */
-  label: propTypes.string.isRequired,
+  label: propTypes.string,
   /** 'kind' prop for Icon compoennt */
   icon: propTypes.string.isRequired,
   /** number to display */
@@ -26,9 +28,8 @@ Stat.propTypes = {
 };
 
 Stat.defaultProps = {
-  label: 'Default',
-  icon: 'graph',
-  metric: 0,
+  label: null,
+  metricFormatter: null,
 };
 
 export default Stat;
