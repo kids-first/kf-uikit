@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`  stats bar with 0 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center"
+/>
+`;
+
+exports[`  stats bar with 1 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center"
+/>
+`;
+
+exports[`  stats bar with 2 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center"
+/>
+`;
+
+exports[`  stats bar with 3 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center"
+/>
+`;
+
+exports[` transparent stats bar with 0 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center transparent"
+/>
+`;
+
+exports[` transparent stats bar with 1 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center transparent"
+/>
+`;
+
+exports[` transparent stats bar with 2 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center transparent"
+/>
+`;
+
+exports[` transparent stats bar with 3 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center transparent"
+/>
+`;
+
+exports[`small  stats bar with 0 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center small"
+/>
+`;
+
+exports[`small  stats bar with 1 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center small"
+/>
+`;
+
+exports[`small  stats bar with 2 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center small"
+/>
+`;
+
+exports[`small  stats bar with 3 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center small"
+/>
+`;
+
+exports[`small transparent stats bar with 0 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center small transparent"
+/>
+`;
+
+exports[`small transparent stats bar with 1 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center small transparent"
+/>
+`;
+
+exports[`small transparent stats bar with 2 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center small transparent"
+/>
+`;
+
+exports[`small transparent stats bar with 3 metrics renders correctly 1`] = `
+<div
+  className="Stats--container flex items-center small transparent"
+/>
+`;
