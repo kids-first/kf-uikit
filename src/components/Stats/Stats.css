@@ -1,5 +1,5 @@
 /* Stats Bar */
-.Stats-container {
+.Stats--container {
   @apply flex
     items-center
     bg-white
@@ -9,28 +9,28 @@
     border-grey-lightest;
 }
 
-.Stats-container.transparent {
+.Stats--container.transparent {
   border: none;
   background: transparent;
 }
 
-.Stats-container-divider {
+.Stats--container-divider {
   width: 1px;
   height: 35px;
   background-color: #d4d6dd;
 }
 
-.Stat.Stat-container {
+.Stat.Stat--container {
   @apply flex
     flex-1
     justify-center
     items-center;
 }
 
-.Stat-icon {
+.Stat--icon {
   @apply mr-1;
 }
-.Stat-metric {
+.Stat--metric {
   @apply mr-1 
     font-bold 
     text-xl
@@ -38,14 +38,14 @@
   letter-spacing: 0.3px;
 }
 /*TODO: make text trucate when it gets small*/
-.Stat-label {
+.Stat--label {
   @apply pt-1 font-light text-sm  text-grey-light;
   letter-spacing: 0.2px;
 }
-.Stats-container.small .Stat-container .Stat-metric {
+.Stats--container.small .Stat--container .Stat--metric {
   font-size: 14px;
 }
-.Stats-container.small .Stat-container .Stat-label {
+.Stats--container.small .Stat--container .Stat--label {
   display: none;
   /*font-size: 10px;*/
 }

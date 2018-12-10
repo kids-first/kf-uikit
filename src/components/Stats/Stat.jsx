@@ -6,15 +6,14 @@ import Icon from '../Icon/Icon';
 
 const Stat = ({ icon = '', label = '', metric = 0, metricFormatter, LoadingSpinnerComponent }) => {
   return (
-    <div className="Stat Stat-container">
-      <Icon className="Stat-icon" {...label} kind={icon} />
-      <div className="Stat-metric">{metricFormatter ? metricFormatter(metric) : metric}</div>
-      <div className="Stat-label">{label}</div>
+    <div className="Stat Stat--container">
+      <Icon className="Stat--icon" {...label} kind={icon} />
+      <div className="Stat--metric">{metricFormatter ? metricFormatter(metric) : metric}</div>
+      <div className="Stat--label">{label}</div>
     </div>
   );
 };
 
-Stat.displayName = 'Stat';
 Stat.propTypes = {
   /** Name of Entity  */
   label: propTypes.string.isRequired,

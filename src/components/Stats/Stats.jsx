@@ -6,7 +6,7 @@ import Stat from './Stat';
 
 const Stats = ({ stats, className, small, transparent, ...props }) => {
   const StatsClasses = classes(
-    ['Stats-container', 'flex', 'items-center'],
+    ['Stats--container', 'flex', 'items-center'],
     { small: small ? true : false, transparent: transparent ? true : false },
     className,
   );
@@ -14,15 +14,13 @@ const Stats = ({ stats, className, small, transparent, ...props }) => {
     <div className={StatsClasses}>
       {stats.map((stat, i) => (
         <Fragment key={stat.label}>
-          {i > 0 && <div key={i} className="Stats-container-divider" />}
+          {i > 0 && <div key={i} className="Stats--container-divider" />}
           <Stat {...props} {...stat} />
         </Fragment>
       ))}
     </div>
   );
 };
-
-Stats.displayName = 'Stats';
 
 Stats.propTypes = {
   /** Array of Stat/Metrics objects to display   */
