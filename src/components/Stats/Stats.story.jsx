@@ -19,10 +19,10 @@ stories.add(
       stats={array(
         'stats',
         [
+          { icon: 'file', label: 'Files', metric: 1000 },
           { icon: 'participant', label: 'Participants', metric: 1000 },
-          { icon: 'participant', label: 'Participants', metric: 1000 },
-          { icon: 'participant', label: 'Participants', metric: 1000 },
-          { icon: 'participant', label: 'Participants', metric: 1000 },
+          { icon: 'family', label: 'Families', metric: 1000 },
+          { icon: 'file-size', label: 'Size', metric: 1000 },
         ],
         ',',
       )}
