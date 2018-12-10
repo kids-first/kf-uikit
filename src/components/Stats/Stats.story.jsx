@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { array, boolean, text, number, select } from '@storybook/addon-knobs';
+import { object, boolean, text, number, select } from '@storybook/addon-knobs';
 import Stats from './Stats';
 import Stat from './Stat';
 import iconNames from '../Icon/Icons';
@@ -16,7 +16,7 @@ stories.add(
     <Stats
       small={boolean('small', false)}
       transparent={boolean('transparent', false)}
-      stats={array(
+      stats={object(
         'stats',
         [
           { icon: 'file', label: 'Files', metric: 1000 },
@@ -24,7 +24,6 @@ stories.add(
           { icon: 'family', label: 'Families', metric: 1000 },
           { icon: 'file-size', label: 'Size', metric: 1000 },
         ],
-        ',',
       )}
     />
   ),
