@@ -48,7 +48,7 @@ export default App;
 Include the stylesheet in your head to get started started styling any webpage.
 
 ```
-<link href="https://kf-uikit.kids-first.io/1.0.0/main.css" rel="stylesheet">
+<link href="https://kf-uikit.kids-first.io/styles.css" rel="stylesheet">
 ```
 
 ## Development
@@ -61,6 +61,8 @@ yarn storybook
 ```
 
 ### Adding new components
+
+Start by reading the [Design Process Docs](https://github.com/kids-first/kf-uikit/tree/master/docs/process)
 
 New components should have a layout as seen below:
 
