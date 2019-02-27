@@ -1,20 +1,34 @@
-import React from "react";
-import { configure, addDecorator } from "@storybook/react";
-import { ThemeProvider } from "emotion-theming";
-import { checkA11y } from "@storybook/addon-a11y";
-import theme from "../src/theme/defaultTheme";
+import React from 'react';
+import { configure, addDecorator } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs';
+import { checkA11y } from '@storybook/addon-a11y';
+import { withInfo } from '@storybook/addon-info';
+import centered from '@storybook/addon-centered';
+import '../src/tailwind.src.css';
 
-const ThemeDecorator = storyFn => (
-  <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
+addDecorator(
+  withInfo({
+    inline: true,
+  }),
 );
-
-addDecorator(ThemeDecorator);
 addDecorator(checkA11y);
+addDecorator(withKnobs);
+addDecorator(centered);
 
-const req = require.context("../stories", true, /index\.js$/);
+let req = {
+  colors: './stories/Colors/Colors.story.jsx',
+  typography: './stories/Typography/Typography.story.jsx',
+  buttons: './src/components/Button/Button.story.jsx',
+  logo: './src/components/Logo/Logo.story.jsx',
+  cards: './src/components/Card/Card.story.jsx',
+  header: './src/components/Header/Header.story.jsx',
+  icons: './src/components/Icon/Icon.story.jsx',
+  stats: './src/components/Stats/Stats.story.jsx',
+};
+const storyReqs = require.context('../', true, /^.*\.story\.jsx$/);
 
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  Object.values(req).forEach(filename => storyReqs(filename));
 }
 
 configure(loadStories, module);

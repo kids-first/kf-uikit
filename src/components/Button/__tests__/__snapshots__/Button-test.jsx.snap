@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default default button}button renders correctly 1`] = `
+<button
+  className="Button Button--default"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`default default submit}button renders correctly 1`] = `
+<button
+  className="Button Button--default"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`default primary button}button renders correctly 1`] = `
+<button
+  className="Button Button--default Button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`default primary submit}button renders correctly 1`] = `
+<button
+  className="Button Button--default Button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`default secondary button}button renders correctly 1`] = `
+<button
+  className="Button Button--default Button--secondary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`default secondary submit}button renders correctly 1`] = `
+<button
+  className="Button Button--default Button--secondary"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default default button}button renders correctly 1`] = `
+<button
+  className="Button Button--default"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default default submit}button renders correctly 1`] = `
+<button
+  className="Button Button--default"
+  disabled={true}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default primary button}button renders correctly 1`] = `
+<button
+  className="Button Button--default Button--primary"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default primary submit}button renders correctly 1`] = `
+<button
+  className="Button Button--default Button--primary"
+  disabled={true}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default secondary button}button renders correctly 1`] = `
+<button
+  className="Button Button--default Button--secondary"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled default secondary submit}button renders correctly 1`] = `
+<button
+  className="Button Button--default Button--secondary"
+  disabled={true}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large default button}button renders correctly 1`] = `
+<button
+  className="Button Button--large"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large default submit}button renders correctly 1`] = `
+<button
+  className="Button Button--large"
+  disabled={true}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large primary button}button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--primary"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large primary submit}button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--primary"
+  disabled={true}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large secondary button}button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--secondary"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`disabled large secondary submit}button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--secondary"
+  disabled={true}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`large default button}button renders correctly 1`] = `
+<button
+  className="Button Button--large"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`large default submit}button renders correctly 1`] = `
+<button
+  className="Button Button--large"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`large primary button}button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`large primary submit}button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`large secondary button}button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--secondary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`large secondary submit}button renders correctly 1`] = `
+<button
+  className="Button Button--large Button--secondary"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;

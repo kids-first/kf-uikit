@@ -1,0 +1,27 @@
+.Header {
+    @apply
+      w-full
+      bg-white;
+}
+
+.Header--navigation {
+    @apply
+      flex
+      h-24
+      p-4
+      border-b-2;
+}
+
+.Navigation--buttons {
+    @apply
+      flex
+      items-center
+      justify-end
+      w-full;
+}
+
+
+.Header--navigation .Button {
+    @apply
+        mx-2;
+}
