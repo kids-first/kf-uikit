@@ -1,3 +1,29 @@
+# Kids First UI Kit Release 0.3.0
+
+## Features
+
+### Summary
+
+Feature Emojis: ✨x1
+Feature Labels: [component](https://api.github.com/repos/kids-first/kf-uikit/labels/component) x1 [feature](https://api.github.com/repos/kids-first/kf-uikit/labels/feature) x1
+
+### New features and changes
+
+- (#81) ✨ Add Stats Bar - @dankolbman
+
+# Kids First UI Kit Release 0.2.0
+
+## Features
+
+### Summary
+
+Feature Emojis: 🎨x1
+Feature Labels: [component](https://api.github.com/repos/kids-first/kf-uikit/labels/component) x1 [feature](https://api.github.com/repos/kids-first/kf-uikit/labels/feature) x1
+
+### New features and changes
+
+- (#79) 🎨 Add Icon component with essential icons - @dankolbman
+
 # Kids First UI Kit Release 0.1.0
 
 ## Features
