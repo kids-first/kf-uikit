@@ -52,6 +52,11 @@ module.exports = function(plop) {
         path: './src/components/{{reactCase name}}/{{reactCase name}}.story.jsx',
         templateFile: '.plop-templates/story.hbs',
       },
+      {
+        type: 'add',
+        path: './src/components/{{reactCase name}}/{{reactCase name}}.css',
+        templateFile: '.plop-templates/component-styles.hbs',
+      },
     ],
   });
 };
