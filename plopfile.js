@@ -35,6 +35,44 @@ module.exports = function(plop) {
         name: 'component_desc',
         message: 'Describe your component',
       },
+      {
+        type: 'confirm',
+        name: 'has_props',
+        message: 'Do you want to add custom props?',
+      },
+      {
+        when: function(r) {
+          return r.has_props;
+        },
+        type: 'input',
+        name: 'custom_prop_name',
+        message: "What's your props name?",
+      },
+      {
+        when: function(r) {
+          return r.custom_prop_name;
+        },
+        type: 'input',
+        name: 'custom_prop_desc',
+        message: "What's this prop for?",
+      },
+      {
+        when: function(r) {
+          return r.custom_prop_desc;
+        },
+        type: 'list',
+        name: 'custom_prop_type',
+        message: 'What type of prop is this?',
+        choices: ['string', 'bool', 'number', 'func', 'oneOf([])'],
+      },
+      {
+        when: function(r) {
+          return r.custom_prop_type;
+        },
+        type: 'input',
+        name: 'custom_prop_default',
+        message: "What's the default value for this prop?",
+      },
     ],
     actions: [
       {

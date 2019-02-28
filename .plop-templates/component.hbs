@@ -5,10 +5,12 @@ import classes from 'classnames';
 /**
  * {{component_desc}}
  */
-const {{reactCase name}} = ({modifierProp, className, children}) => {
+const {{reactCase name}} = ({ {{#if custom_prop_name}} {{~custom_prop_name~}}, {{/if}} className, children}) => {
  const {{toLowerCase name}}Class = classes(
     '{{reactCase name}}',
-    `{{reactCase name}}--${modifierProp}`,
+    {{#if custom_prop_name}}
+    `{{reactCase name}}--${ {{~custom_prop_name~}} }`,
+    {{/if}}
     className
   );  
   return (
@@ -17,10 +19,10 @@ const {{reactCase name}} = ({modifierProp, className, children}) => {
 };
 
 {{reactCase name}}.propTypes = {
-  /**
-   * A consice description of the example prop.
-   */
-  modifierProp: PropTypes.string,
+  {{#if custom_prop_name}} 
+  /** {{custom_prop_desc}} */
+  {{custom_prop_name~}}: PropTypes.{{custom_prop_type}},
+  {{/if}}
   /** Any additional classes to be applied to the button */
   className: PropTypes.string,
   /** Children elements. */
@@ -28,7 +30,9 @@ const {{reactCase name}} = ({modifierProp, className, children}) => {
 };
 
 {{reactCase name}}.defaultProps = {
-  modifierProp: 'default',
+{{#if custom_prop_name}} 
+  {{custom_prop_name~}}: {{custom_prop_default}},
+{{/if}}
   className: null,
   children: null,
 };
