@@ -1,0 +1,13 @@
+import React from 'react';
+import renderer from 'react-test-renderer';
+import {{reactCase name}} from '../{{reactCase name}}';
+
+
+it(`${ {{reactCase name}} } renders correctly`, () => {
+      const tree = renderer.create(
+              <{{reactCase name}} >
+                Testing
+              </{{reactCase name}}>
+              ).toJSON();
+        expect(tree).toMatchSnapshot();
+});

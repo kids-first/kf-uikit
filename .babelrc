@@ -1,6 +1,6 @@
 {
   "env": {
-    "testing": {
+    "test": {
       "presets": ["react", "env"],
       "plugins": ["transform-runtime","transform-object-rest-spread", "add-react-displayname"]
     },

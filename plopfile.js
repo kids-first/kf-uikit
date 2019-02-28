@@ -1,37 +1,57 @@
-const promptDirectory = require("inquirer-directory");
+/* eslint-disable */
+const promptDirectory = require('inquirer-directory');
 
 module.exports = function(plop) {
-  plop.setHelper("reactCase", txt =>
+  plop.setHelper('reactCase', txt =>
     txt
       .split(/ /g)
       .map(_t => _t.charAt(0).toUpperCase() + _t.slice(1))
-      .join("")
-      .trim()
+      .join('')
+      .trim(),
   );
-  plop.setPrompt("directory", promptDirectory);
+
+  plop.setHelper('toLowerCase', txt =>
+    txt
+      .split(/ /g)
+      .map(_t => _t.charAt(0).toUpperCase() + _t.slice(1))
+      .join('')
+      .trim()
+      .toLowerCase(),
+  );
+
+  plop.setPrompt('directory', promptDirectory);
 
   // react component generator
-  plop.setGenerator("controller", {
-    description: "kf-uikit component scaffolding",
+  plop.setGenerator('component', {
+    description: 'kf-uikit component scaffolding',
     prompts: [
       {
-        type: "directory",
-        name: "folder",
-        message: "what type of component is this?",
-        basePath: "./src/components"
+        type: 'input',
+        name: 'name',
+        message: 'Component name please',
       },
       {
-        type: "input",
-        name: "name",
-        message: "component name please"
-      }
+        type: 'input',
+        name: 'component_desc',
+        message: 'Describe your component',
+      },
     ],
     actions: [
       {
-        type: "add",
-        path: "./src/components/{{folder}}/{{reactCase name}}.js",
-        templateFile: ".plop-templates/component.hbs"
-      }
-    ]
+        type: 'add',
+        path: './src/components/{{reactCase name}}/{{reactCase name}}.jsx',
+        templateFile: '.plop-templates/component.hbs',
+      },
+      {
+        type: 'add',
+        path: './src/components/{{reactCase name}}/__tests__/{{reactCase name}}-test.jsx',
+        templateFile: '.plop-templates/snapshot-test.hbs',
+      },
+      {
+        type: 'add',
+        path: './src/components/{{reactCase name}}/{{reactCase name}}.story.jsx',
+        templateFile: '.plop-templates/story.hbs',
+      },
+    ],
   });
 };
