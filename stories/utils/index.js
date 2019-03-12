@@ -50,3 +50,5 @@ export const withInfo = (options, component) => {
     ),
   )(component);
 };
+
+
