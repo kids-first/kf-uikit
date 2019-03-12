@@ -43,6 +43,10 @@ View the full documentation at https://tailwindcss.com.
 */
 const chroma = require('chroma-js');
 
+const BASE_FONT_SIZE_PX = 14;
+
+const calcREM = px => `${(px/BASE_FONT_SIZE_PX)}rem`
+
 const primary = {
   blue: '#2b388f',
 
@@ -108,35 +112,27 @@ const colors = {
 
 };
 
-let textSizes = {
-  xs: '.75rem', // 12px
-  sm: '.875rem', // 14px
-  base: '1rem', // 16px
-  lg: '1.125rem', // 18px
-  xl: '1.25rem', // 20px
-  '2xl': '1.5rem', // 24px
-  '3xl': '1.875rem', // 30px
-  '4xl': '2.25rem', // 36px
-  '5xl': '3rem', // 48px
+
+const textSizes = {
+  xs: '.75rem', 
+  sm: '.875rem', 
+  base: '1rem', 
+  lg: '1.125rem', 
+  xl: '1.25rem', 
+  '2xl': '1.5rem', 
+  '3xl': '1.875rem', 
+  '4xl': '2.25rem', 
+  '5xl': '3rem', 
 };
 
-let padding = {
-  px: '1px',
-  '0': '0',
-  '1': '0.25rem',
-  '2': '0.5rem',
-  '3': '0.75rem',
-  '4': '1rem',
-  '5': '1.25rem',
-  '6': '1.5rem',
-  '8': '2rem',
-  '10': '2.5rem',
-  '12': '3rem',
-  '16': '4rem',
-  '20': '5rem',
-  '24': '6rem',
-  '32': '8rem',
-};
+// base all of our spacing on values that are divisible by 4 
+// reference: https://designsystem.quickbooks.com/foundations/spacial-units/
+// reference: https://polaris.shopify.com/design/spacing#section-the-spacing-system
+const spacingValues = [4, 8, 12, 16, 20, 32, 40, 60].reduce((acc, curr)=>({
+  [`${curr}`]: calcREM(curr, BASE_FONT_SIZE_PX),
+  ...acc
+}),{'auto':'auto','0':'0'})
+
 
 const leading = {
   none: 1,
@@ -614,24 +610,7 @@ module.exports = {
   |
   */
 
-  margin: {
-    auto: 'auto',
-    px: '1px',
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '2rem',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '20': '5rem',
-    '24': '6rem',
-    '32': '8rem',
-  },
+  margin: spacingValues,
 
   /*
   |-----------------------------------------------------------------------------
