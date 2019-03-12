@@ -43,7 +43,7 @@ View the full documentation at https://tailwindcss.com.
 */
 const chroma = require('chroma-js');
 
-const BASE_FONT_SIZE_PX = 14;
+const BASE_FONT_SIZE_PX = 16;
 
 const calcREM = px => `${(px/BASE_FONT_SIZE_PX)}rem`
 
