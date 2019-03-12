@@ -1,6 +1,5 @@
 .Card {
-    @apply 
-        inline-block
+  @apply inline-block
         overflow-hidden 
         w-full
         m-2 
@@ -12,16 +11,14 @@
         text-base
         font-normal;
 
-    hr {
-        border-style: solid;
-        @apply
+  hr {
+    @apply my-20 
             border
             border-grey-lighter;
     }
 }
 
 .Card--title {
-    @apply
-        m-0
+  @apply m-0
         text-tealA11y;
 }
