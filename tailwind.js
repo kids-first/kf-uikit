@@ -43,7 +43,7 @@ View the full documentation at https://tailwindcss.com.
 */
 const chroma = require('chroma-js');
 
-let primary = {
+const primary = {
   blue: '#2b388f',
 
   purple: '#a6278f',
@@ -60,14 +60,14 @@ let primary = {
   darkGrey: '#343434',
 };
 
-let secondary = {
+const secondary = {
   pink: '#e53a95',
   red: '#dd1f2a',
   orange: '#f79122',
   mediumGrey: '#a9adc0',
 };
 
-let shades = function(name, color) {
+const shades = function(name, color) {
   return {
     [`${name}-lightest`]: chroma(color)
       .brighten(1.5)
@@ -92,7 +92,7 @@ let shades = function(name, color) {
   };
 };
 
-let colors = {
+const colors = {
   transparent: 'transparent',
 
   black: '#22292f',
@@ -138,14 +138,14 @@ let padding = {
   '32': '8rem',
 };
 
-let leading = {
+const leading = {
   none: 1,
   tight: 1.25,
   normal: 1.5,
   loose: 2,
 };
 
-let fontWeights = {
+const fontWeights = {
   hairline: 100,
   thin: 200,
   light: 300,
@@ -157,7 +157,7 @@ let fontWeights = {
   black: 900,
 };
 
-let borderRadius = {
+const borderRadius = {
   none: '0',
   sm: '.75rem',
   default: '.1.0rem',
@@ -179,7 +179,7 @@ module.exports = {
   |
   */
 
-  colors: colors,
+  colors,
 
   /*
   |-----------------------------------------------------------------------------
@@ -597,7 +597,7 @@ module.exports = {
   |
   */
 
-  padding,
+  padding: spacingValues,
 
   /*
   |-----------------------------------------------------------------------------
