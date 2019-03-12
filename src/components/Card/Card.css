@@ -1,9 +1,9 @@
 .Card {
+  margin: 10px;
   @apply inline-block
         overflow-hidden 
         w-full
-        m-2 
-        p-4
+        p-20
         bg-white
         rounded-sm
         border
@@ -14,8 +14,14 @@
   hr {
     @apply my-20 
             border
-            border-grey-lighter;
-    }
+            border-solid
+            border-lightGrey;
+  }
+  /* TODO: add in once layout components are settled  */
+  /* This style ensures equal vertical spacing for stacked cards */
+  /*+ .Card {
+    @apply mt-20;
+  }*/
 }
 
 .Card--title {

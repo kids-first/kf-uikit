@@ -39,7 +39,7 @@
 }
 /*TODO: make text trucate when it gets small*/
 .Stat--label {
-  @apply pt-1
+  @apply pt-4
     font-light
     text-sm
     text-grey-light;

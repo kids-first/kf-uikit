@@ -1,8 +1,8 @@
 .Button {
   @apply inline-block
         bg-white
-        px-4
-        py-2
+        p-4
+        px-12
         border
         border-greyBorder
         rounded-lg

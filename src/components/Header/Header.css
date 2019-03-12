@@ -1,11 +1,13 @@
 .Header {
   @apply w-full
-      bg-white;
+      bg-white
+      py-20
+      px-12
+      border-b-2
+      border-lightGrey;
 }
 
 .Header--navigation {
-      h-24
-      p-4
   @apply flex h-24;
 }
 
@@ -17,5 +19,5 @@
 }
 
 .Header--navigation .Button {
-  @apply mx-2;
+  @apply mx-8;
 }
