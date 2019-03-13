@@ -4,36 +4,29 @@
 
 /* Molten leading -  https://css-tricks.com/molten-leading-css/
    ========================================================================== */
-
-:root {
-  --base-font-size: 14px;
-  // These values are the minimum and maximum viewport sizes to apply the font scaling
-  --min-width: 400;
-  --max-width: 400;
-  // These values represent the range of fon-tsize to apply
-  // These values effect the base font-size, headings and other elements will scale proportionally
-  --min-font: 12;
-  --max-font: 26;
-}
-
 html {
-  font-size: var(--base-font-size);
+  font-size: 14px;
+  line-height: 1.5em;
 }
 body {
-  font-size: 1em;
+  font-size: inherit;
   line-height: 1.5em;
 }
 
 @media screen and (min-width: 20em) {
-  body {
-    font-size: calc(var(--base-font-size) + (1.1428571429 - 1) * ((100vw - 20em) / (80 - 20)));
+  /* 
+    1em = 14px
+    16px max font-size = 16/1em =  1.1428571429em
+  */
+  html {
+    font-size: calc(14px + (1.1428571429 - 1) * ((100vw - 20em) / (80 - 20)));
     line-height: calc(1.5em + (1.8 - 1.5) * ((100vw - 20em) / (80 - 20)));
   }
 }
 
 @media (min-width: 80em) {
-  body {
-    font-size: 1.1428571429em;
+  html {
+    font-size: 16px;
     line-height: 1.5;
   }
 }
