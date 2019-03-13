@@ -103,7 +103,7 @@ p {
   -ms-font-feature-settings: 'liga', 'dlig';
   -o-font-feature-settings: 'liga', 'dlig';
   font-feature-settings: 'liga', 'dlig';
-  max-width: 34rem;
+
   @apply my-8 font-body font-normal;
 }
 ol,
