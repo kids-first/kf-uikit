@@ -1,9 +1,8 @@
 .Button {
-    @apply
-        inline-block
+  @apply inline-block
         bg-white
-        px-4
-        py-2
+        p-4
+        px-12
         border
         border-greyBorder
         rounded-lg
@@ -14,62 +13,53 @@
         uppercase
         leading-tight;
 
-    &:disabled {
-        @apply
-            bg-bluegrey
+  &:disabled {
+    @apply bg-bluegrey
             border
             border-greyBorder
             text-bluegrey-darkest;
-        cursor: not-allowed;
+    cursor: not-allowed;
 
-        &:hover {
-            @apply
-                bg-bluegrey
+    &:hover {
+      @apply bg-bluegrey
                 border
                 border-greyBorder
                 text-bluegrey-darkest;
-        }
     }
+  }
 
-    &:hover {
-        @apply
-            bg-lightGrey
+  &:hover {
+    @apply bg-lightGrey
             text-tealHover;
-    }
+  }
 }
 
 .Button--large {
-    @apply
-        px-5
-        py-3
+  @apply px-20
+        py-8
         text-base;
 }
 
-
 .Button--primary {
-    @apply
-        bg-tealA11y
+  @apply bg-tealA11y
         border-tealA11y
         text-white;
 
-    &:hover {
-        @apply
-            bg-tealHover
+  &:hover {
+    @apply bg-tealHover
             border-tealHover
             text-white;
-    }
+  }
 }
 
 .Button--secondary {
-    @apply
-        bg-purple
+  @apply bg-purple
         border-purple
         text-white;
 
-    &:hover {
-        @apply
-            bg-purpleHover
+  &:hover {
+    @apply bg-purpleHover
             border-purpleHover
             text-white;
-    }
+  }
 }

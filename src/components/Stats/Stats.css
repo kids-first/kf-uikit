@@ -1,42 +1,37 @@
 /* Stats Bar */
 .Stats--container {
-  @apply
-    flex
+  @apply flex
     items-center
     bg-white
-    p-3
+    py-20
     border
     border-solid 
     border-grey-lightest;
 }
 
 .Stats--container.transparent {
-  @apply
-    bg-transparent
+  @apply bg-transparent
     border-0;
 }
 
 .Stats--container-divider {
-  @apply
-    border-l
+  @apply border-l
     border-grey-lightest
     h-8;
 }
 
 .Stat.Stat--container {
-  @apply
-    flex
+  @apply flex
     flex-1
     justify-center
     items-center;
 }
 
 .Stat--icon {
-  @apply mr-1;
+  @apply mr-4;
 }
 .Stat--metric {
-  @apply
-    mr-1 
+  @apply mr-4
     font-bold 
     text-xl
     text-grey-dark
@@ -44,8 +39,7 @@
 }
 /*TODO: make text trucate when it gets small*/
 .Stat--label {
-  @apply
-    pt-1
+  @apply pt-4
     font-light
     text-sm
     text-grey-light;

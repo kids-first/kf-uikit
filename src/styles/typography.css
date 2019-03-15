@@ -5,8 +5,19 @@
 /* Molten leading -  https://css-tricks.com/molten-leading-css/
    ========================================================================== */
 
+:root {
+  --base-font-size: 14px;
+  // These values are the minimum and maximum viewport sizes to apply the font scaling
+  --min-width: 400;
+  --max-width: 400;
+  // These values represent the range of fon-tsize to apply
+  // These values effect the base font-size, headings and other elements will scale proportionally
+  --min-font: 12;
+  --max-font: 26;
+}
+
 html {
-  font-size: 14px;
+  font-size: var(--base-font-size);
 }
 body {
   font-size: 1em;
@@ -15,7 +26,7 @@ body {
 
 @media screen and (min-width: 20em) {
   body {
-    font-size: calc(14px + (1.1428571429 - 1) * ((100vw - 20em) / (80 - 20)));
+    font-size: calc(var(--base-font-size) + (1.1428571429 - 1) * ((100vw - 20em) / (80 - 20)));
     line-height: calc(1.5em + (1.8 - 1.5) * ((100vw - 20em) / (80 - 20)));
   }
 }
@@ -36,7 +47,7 @@ h3,
 h4,
 h5 {
   text-rendering: optimizelegibility;
-  @apply mt-8 font-medium font-title;
+  @apply mt-8 font-medium font-title leading-normal;
   /*
   if you're going to use webfonts, be sure to check your weights
   http://css-tricks.com/watch-your-font-weight/
@@ -48,19 +59,19 @@ h5 {
   }
 }
 h1 {
-  @apply text-3xl leading-normal;
+  @apply text-3xl;
 }
 h2 {
-  @apply text-2xl leading-normal;
+  @apply text-2xl;
 }
 h3 {
-  @apply text-xl leading-normal;
+  @apply text-xl;
 }
 h4 {
-  @apply text-base leading-normal;
+  @apply text-base;
 }
 h5 {
-  @apply text-sm leading-normal;
+  @apply text-sm;
 }
 /*
 some nice typographical defaults
@@ -70,20 +81,20 @@ p {
   -ms-word-break: break-all;
   -ms-word-wrap: break-all;
   word-break: break-word;
-  word-break: break-word; // cleaning up the ragged lines and breaks
+  word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
-  hyphens: auto; // sets a minimum number of characters before and after the break
+  hyphens: auto;
   -webkit-hyphenate-before: 2;
   -webkit-hyphenate-after: 3;
-  hyphenate-lines: 3; // enabling fancy ligatures when available
+  hyphenate-lines: 3;
   -webkit-font-feature-settings: 'liga', 'dlig';
   -moz-font-feature-settings: 'liga=1, dlig=1';
   -ms-font-feature-settings: 'liga', 'dlig';
   -o-font-feature-settings: 'liga', 'dlig';
   font-feature-settings: 'liga', 'dlig';
   max-width: 34rem;
-  @apply mt-4 font-body font-normal;
+  @apply my-8 font-body font-normal;
 }
 ol,
 ul {
@@ -94,25 +105,26 @@ ul {
   }
 }
 ul {
-  @apply pl-10;
+  @apply pl-16 ml-16;
   list-style-type: disc;
   li {
-    @apply p-2;
+    @apply p-4;
   }
 }
 ol {
   counter-reset: li;
   @apply list-reset
     ml-0 
-    pl-0;
+    pl-12
+    pt-12;
   & > li {
     @apply relative 
       ml-12
       mt-0 
       pt-0
-      pr-3
-      pl-6 
-      pb-6
+      pr-4
+      pl-16 
+      pb-20
       border-l-2 
       border-solid 
       border-grey
@@ -120,7 +132,7 @@ ol {
       font-normal;
 
     &:last-child {
-      @apply border-transparent pb-0;
+      @apply border-transparent pb-12;
     }
 
     &:before {
@@ -149,7 +161,7 @@ blockquote {
   max-width: 34rem;
   @apply relative
     ml-0
-    p-3
+    p-12
     border-l-5
     border-lightBlue
     text-xl
@@ -183,9 +195,9 @@ hr {
 }
 
 .text-truncate {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /*pre {

@@ -21,7 +21,7 @@ stories.add('Fonts', () => (
 ));
 
 stories.add('Type Specimen', () => (
-  <div className="p-10">
+  <div className="p-12">
     <h1>Heading h1</h1>
     <h2>Heading H2</h2>
     <h3>Heading H3</h3>
@@ -34,8 +34,8 @@ stories.add('Type Specimen', () => (
       ipsum dolor sit amet.
     </p>
     <hr />
-    <h2 className="mb-0">Main Headline Goes Here</h2>
-    <h5 className="mt-0">subhead goes here</h5>
+    <h2 className="mb-0 pb-4">Main Headline Goes Here</h2>
+    <h5 className="mt-0 pb-8">subhead goes here</h5>
     <p>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
       invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
