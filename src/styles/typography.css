@@ -7,42 +7,30 @@
   This fluidly scales our font-size and line-height/leading as the viewport and line-width 
   decreases to maximize readablity. 
 
-  Set our base font-size to a minimum of 14px and a max 16px:
-  < 320px (min-width: 20em): 1rem = 14px 
-  320 to 544 px wide: 1rem is calculated as a range between 14px and 16px
-  > 544px (min-widht: 80em): 1rem = 16px
+  Set our base font-size to a minimum of 14px and a max 16px 
+  using tailwind defined mobile first breakpoints of 576px and 768px:;
+  < 576px: 1rem = 14px 
+  576 to 768px wide: 1rem is calculated as a range between 14px and 16px
+  > 768px: 1rem = 16px
 
   Since we are scaling the font-size of the html value all other rem values, think heading sizes, margins, padding 
   will fluidy scale accordingly.  
   ========================================================================== */
 
-html {
+:root {
   font-size: 14px;
-  line-height: 1.5em;
+  line-height: 1.55;
 }
 
-body {
-  font-size: inherit;
-  line-height: 1.5em;
-}
-
-/* we use em as a min-width so that it is tied to the line width of typogrpahy 
-and not discrete viewport size. This helps to ensure we only add breakpoints that 
-are related to design decisions we can control and not browser sizes we cannot control */
-@media screen and (min-width: 20em) {
-  /* 
-    1em = 1rem = 14px 
-    thus
-    16px max font-size = 16/1em = 1.1428571429
-  */
-  html {
-    font-size: calc(14px + (1.1428571429 - 1) * ((100vw - 20em) / (80 - 20)));
-    line-height: calc(1.5em + (1.8 - 1.5) * ((100vw - 20em) / (80 - 20)));
+@media (min-width: 576px) and (max-width: 768px) {
+  :root {
+    font-size: calc(14px + (16 - 14) * ((100vw - 576px) / (768 - 576)));
+    line-height: calc(1.5em + (1.5 - 1.25) * ((100vw - 48em) / (36 - 48)));
   }
 }
 
-@media (min-width: 80em) {
-  html {
+@media (min-width: 768px) {
+  :root {
     font-size: 16px;
     line-height: 1.5;
   }
