@@ -20,7 +20,7 @@ let req = {
   typography: './stories/Typography/Typography.story.jsx',
   colors: './stories/Colors/Colors.story.jsx',
   spacing: './stories/Spacing/Spacing.story.jsx',
-  // layout: './src/components/Grid/Grid.story.jsx',
+  layout: './src/components/Grid/Grid.story.jsx',
   icons: './src/components/Icon/Icon.story.jsx',
   buttons: './src/components/Button/Button.story.jsx',
   cards: './src/components/Card/Card.story.jsx',
