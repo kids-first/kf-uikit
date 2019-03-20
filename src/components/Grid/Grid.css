@@ -1,0 +1,218 @@
+/* =======================================================================
+  Responsive 12 column grid using css grid.
+
+  column = 60px;
+  gutters = 30px;
+  rows = auto;
+
+  By default the grid is 960px wide and centered with margin: 0 auto;
+  as it scales down the column width get's smaller. 
+========================================================================== */
+
+.grid-container {
+  max-width: 960px;
+  padding: 0 1.25em;
+  display: grid;
+  align-items: center;
+  flex-wrap: wrap;
+
+  /* 12 equal colums each taking up the available space 1fr (fraction unit) */
+  grid-template-columns: repeat(12, 1fr);
+
+  /* 20px grid gap */
+  grid-gap: 1.25rem;
+
+  /* collapse all gutters */
+  &--collapsed {
+    grid-gap: 0rem;
+    padding: 0;
+
+    /* collapse vertical guttes only */
+    &-cells {
+      padding: 0;
+      grid-row-gap: 1.25rem;
+      grid-column-gap: 0rem;
+    }
+
+    /* collapse horizontal guttes only */
+    &-rows {
+      grid-row-gap: 0rem;
+      grid-column-gap: 1.25rem;
+    }
+  }
+
+  /* make full width of container */
+  &--fullWidth {
+    max-width: 100%;
+  }
+
+  /* nested grid containers */
+  & .grid-container {
+    @inherit .mx-0, .px-0;
+  }
+}
+
+/* 
+ * Rows .row-N - unlimited number
+ * 
+ * Rows have an implicit height but you can use the row class to 
+ * change the presentation order of cells 
+   ========================================================================== */
+@for $i from 1 to 12 {
+  .row-$i {
+    grid-row: $(i);
+  }
+}
+
+[class*='row-'] {
+  /* nested grid containers */
+  & > .grid-container {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* 
+ * Cells (columns) .cell-N - 12 in total
+ * 
+ * Use the .cell-N class to set the width of individual cells.
+ * Multi-cell elements span across gutters, so cell-2 spans the first cell
+ * first gutter and second cell stopping at before second gutter
+ *
+ * RESPONSIVE: .sm:cell-N .md:cell-N .lg:cell-N 
+ * corresponding css breakpoint classes (.sm:, .md:, .lg:) are available
+ * to change the cell width at specified breakpoints giving you tons of flexibilit
+   ========================================================================== */
+@for $i from 1 to 12 {
+  .cell-$i {
+    grid-column: span $(i);
+    /* 
+     * An initial setting on grid items is min-width: auto. 
+     * This means that an item cannot be shorter than its content. 
+     * You can override this default with min-width: 0 
+     */
+    min-width: 0;
+  }
+}
+
+[class*='cell-'] {
+  /* nested grid containers */
+  & > .grid-container {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* 
+ * Cell offset/start .cell-start-N - 12 in total
+ * 
+ * This specifies what column a cell should start at. 
+ * For example you can start a cell at column 6 (.cell-start-N) and have 
+ * it span 6 columns (.cell-6) making it go from the middle to the right 
+ * edge of the grid. 
+ *
+ * SHORTHAND: .cell-<start>-<span>
+ * ex. .cell-3-6 = start at cell 3 and span 6 cells 
+ *
+ * RESPONSIVE: .sm:cell-N-N .sm:cell-start-N
+ * corresponding css breakpoint classes (.sm:, .md:, .lg:) are available
+ * to change the cell width at specified breakpoints giving you tons of flexibilit
+   ========================================================================== */
+@for $i from 1 to 12 {
+  @for $x from 11 to 1 {
+    .cell-$i.cell-start-$x {
+      grid-column: $(x) / span $(i);
+      min-width: 0;
+    }
+    /* shorthand cell-<start>-<span> */
+    .cell-$(x)-$(i) {
+      grid-column: $(x) / span $(i);
+      min-width: 0;
+    }
+  }
+}
+
+/* Tablet
+  ========================================================================== */
+
+@media (min-width: 576px) {
+  /* cell and row */
+  @for $i from 1 to 12 {
+    .sm:cell-$i {
+      grid-column: span $i;
+      min-width: 0;
+    }
+
+    .sm:row-$i {
+      grid-row: $i;
+    }
+  }
+
+  /* cell offset */
+  @for $i from 1 to 12 {
+    @for $x from 11 to 1 {
+      .sm:cell-$(x)-$(i),
+      .sm:cell-$i.cell-start-$x,
+      .cell-$i.sm:cell-start-$x,
+      .sm:cell-$i.sm:cell-start-$x {
+        grid-column: $(x) / span $(i);
+        min-width: 0;
+      }
+    }
+  }
+}
+
+/* Desktop
+  ========================================================================== */
+@media (min-width: 768px) {
+  /* cell and row */
+  @for $i from 1 to 12 {
+    .md:cell-$i {
+      grid-column: span $i;
+      min-width: 0;
+    }
+    .md:row-$i {
+      grid-row: $i;
+    }
+  }
+  /* cell offset */
+  @for $i from 1 to 12 {
+    @for $x from 11 to 1 {
+      .md:cell-$(x)-$(i),
+      .md:cell-$i.cell-start-$x,
+      .cell-$i.md:cell-start-$x,
+      .md:cell-$i.md:cell-start-$x {
+        min-width: 0;
+        grid-column: $(x) / span $(i);
+      }
+    }
+  }
+}
+
+/* Large Desktop/Monitor
+  ========================================================================== */
+@media (min-width: 992px) {
+  /* cell and row */
+  @for $i from 1 to 12 {
+    .lg:cell-$i {
+      grid-column: span $i;
+      min-width: 0;
+    }
+
+    .lg:row-$i {
+      grid-row: $i;
+    }
+  }
+  /* cell offset */
+  @for $i from 1 to 12 {
+    @for $x from 11 to 1 {
+      .lg:cell-$(x)-$(i),
+      .lg:cell-$i.cell-start-$x,
+      .cell-$i.lg:cell-start-$x,
+      .lg:cell-$i.lg:cell-start-$x {
+        grid-column: $(x) / span $(i);
+        min-width: 0;
+      }
+    }
+  }
+}
