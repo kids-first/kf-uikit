@@ -1,6 +1,7 @@
 module.exports = {
     plugins: [
         require('postcss-easy-import'),
+        require('postcss-for'),
         require('postcss-nested'),
         require('postcss-nested-props'),
         require('tailwindcss')('./tailwind.js'),
