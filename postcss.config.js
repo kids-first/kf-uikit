@@ -5,6 +5,7 @@ module.exports = {
         require('postcss-nested'),
         require('postcss-nested-props'),
         require('tailwindcss')('./tailwind.js'),
+        require('autoprefixer')({grid: 'autplace'}),
         // require('postcss-to-css-vars')({
         //   theme: './tailwind.js',
         //   exclude: ['options', 'modules', 'plugins'],
