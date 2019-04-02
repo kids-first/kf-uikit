@@ -14,13 +14,15 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "watch": "^1.0.2"
   },
   "scripts": {
     "tailwind:css": "tailwind build src/css/tailwind.src.css -c  tailwind.js -o src/css/tailwind.css",
     "storybook": "NODE_ENV=testing start-storybook -p 9001 -c .storybook",
     "storybook:build": "NODE_ENV=testing build-storybook -c .storybook -o ./storybook-static/",
     "build": "NODE_ENV=production yarn run rollup -c",
+    "watch:build": "watch 'NODE_ENV=production rollup -c' src/components/",
     "test": "yarn run jest"
   },
   "devDependencies": {
@@ -52,8 +54,11 @@
     "moment": "2.18.1",
     "moment-timezone": "^0.5.13",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "postcss-calc": "^7.0.1",
     "postcss-easy-import": "^3.0.0",
     "postcss-for": "^2.1.1",
+    "postcss-for-var": "^1.0.3",
+    "postcss-gap-properties": "^2.0.0",
     "postcss-nested-props": "^2.0.0",
     "prettier": "^1.14.2",
     "react-docgen": "^2.21.0",

@@ -1,4 +1,3 @@
-
 /* =======================================================================
   Responsive 12 column grid using css grid.
 
@@ -11,7 +10,6 @@
 ========================================================================== */
 
 .grid-container {
-  /* autoprefixer grid: autoplace */
   max-width: 960px;
   padding: 0 1.25em;
   display: grid;
@@ -22,7 +20,7 @@
   grid-template-columns: repeat(12, 1fr);
 
   /* 20px grid gap */
-  grid-gap: 1.25rem;
+  gap: 1.25rem;
 
   /* collapse all gutters */
   &--collapsed {
@@ -87,9 +85,8 @@
    ========================================================================== */
 @for $i from 1 to 12 {
   .cell-$i {
-    /* autoprefixer grid: off */
-    -ms-grid-column-span: $(i);
     grid-column: span $(i);
+    -ms-grid-column-span: $(i);
     /* 
      * An initial setting on grid items is min-width: auto. 
      * This means that an item cannot be shorter than its content. 
@@ -126,6 +123,7 @@
   @for $x from 11 to 1 {
     .cell-$i.cell-start-$x {
       grid-column: $(x) / span $(i);
+
       min-width: 0;
     }
     /* shorthand cell-<start>-<span> */
@@ -215,6 +213,67 @@
       .cell-$i.lg:cell-start-$x,
       .lg:cell-$i.lg:cell-start-$x {
         grid-column: $(x) / span $(i);
+        min-width: 0;
+      }
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* =======================================================================
+  IE 11 css grid fallback
+======================================================================= */
+  .grid-container {
+    /* autoprefixer grid: autoplace */
+    max-width: 960px;
+    padding: 0 0 0 20px;
+    display: grid;
+    align-items: center;
+    flex-wrap: wrap;
+
+    /* 12 equal colums each taking up the available space 1fr (fraction unit) */
+    grid-template-columns: repeat(12, 1fr 20px);
+
+    /* 20px grid gap */
+    gap: 1.25rem;
+
+    border: 1px solid blue;
+  }
+
+  @for $i from 1 to 12 {
+    .row-$i {
+      grid-row: $(i);
+      margin: 0.625rem 0;
+    }
+  }
+
+  @for $i from 1 to 12 {
+    .cell-$i {
+      -ms-grid-column-span: calc($i + ($i - 1));
+      /* 
+     * An initial setting on grid items is min-width: auto. 
+     * This means that an item cannot be shorter than its content. 
+     * You can override this default with min-width: 0 
+     */
+      min-width: 0;
+      border: 1px solid red !important;
+    }
+  }
+
+  @for $i from 1 to 12 {
+    @for $x from 12 to 1 {
+      .cell-$i.cell-start-$x {
+        -ms-grid-column: calc($x * 2 - 1);
+        -ms-grid-column-span: calc($i + ($i - 1));
+        border: 1px solid red !important;
+        min-width: 0;
+      }
+      /* shorthand cell-<start>-<span> */
+      .cell-$(x)-$(i) {
+        -ms-grid-column: calc($x * 2 - 1);
+        -ms-grid-column-span: calc($i + ($i - 1));
+        grid-column: $(x) / span $(i);
+        border: 1px solid red !important;
         min-width: 0;
       }
     }

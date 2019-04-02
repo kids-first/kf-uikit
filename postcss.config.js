@@ -1,11 +1,13 @@
 module.exports = {
     plugins: [
         require('postcss-easy-import'),
-        require('postcss-for'),
         require('postcss-nested'),
         require('postcss-nested-props'),
+        require('postcss-gap-properties'),
+        require('postcss-for'),
+        require('postcss-calc'),
         require('tailwindcss')('./tailwind.js'),
-        require('autoprefixer')({grid: 'autplace'}),
+        require('autoprefixer')({grid: 'autoplace'}),
         // require('postcss-to-css-vars')({
         //   theme: './tailwind.js',
         //   exclude: ['options', 'modules', 'plugins'],
