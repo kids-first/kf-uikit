@@ -27,14 +27,14 @@
     grid-gap: 0rem;
     padding: 0;
 
-    /* collapse vertical guttes only */
+    /* collapse horizontal guttes only */
     &-cells {
       padding: 0;
       grid-row-gap: 1.25rem;
       grid-column-gap: 0rem;
     }
 
-    /* collapse horizontal guttes only */
+    /* collapse vertical guttes only */
     &-rows {
       grid-row-gap: 0rem;
       grid-column-gap: 1.25rem;
@@ -238,6 +238,26 @@
     gap: 1.25rem;
 
     border: 1px solid blue;
+    &--collapsed {
+      padding: 0;
+      grid-template-columns: repeat(12, 1fr 0px);
+      [class*='row-'] {
+        margin: 0;
+      }
+      /* collapse horizontal guttes only */
+      &-cells {
+        padding: 0;
+        /*collapse our margin columns so the offset math still works*/
+        grid-template-columns: repeat(12, 1fr 0px);
+      }
+
+      /* collapse vertical guttes only */
+      &-rows {
+        [class*='row-'] {
+          margin: 0;
+        }
+      }
+    }
   }
 
   @for $i from 1 to 12 {
