@@ -1,3 +1,4 @@
+
 /* =======================================================================
   Responsive 12 column grid using css grid.
 
@@ -10,6 +11,7 @@
 ========================================================================== */
 
 .grid-container {
+  /* autoprefixer grid: autoplace */
   max-width: 960px;
   padding: 0 1.25em;
   display: grid;
@@ -85,6 +87,8 @@
    ========================================================================== */
 @for $i from 1 to 12 {
   .cell-$i {
+    /* autoprefixer grid: off */
+    -ms-grid-column-span: $(i);
     grid-column: span $(i);
     /* 
      * An initial setting on grid items is min-width: auto. 
