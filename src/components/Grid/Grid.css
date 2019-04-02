@@ -41,14 +41,15 @@
     }
   }
 
+  /* make full width of container */
+  &--fullWidth {
+    max-width: 100%;
+  }
+
   /* nested grid containers */
   & .grid-container {
     @inherit .mx-0, .px-0;
   }
-}
-
-.grid-container..grid-container--full-width {
-  max-width: 100%;
 }
 
 /* 
@@ -80,7 +81,7 @@
  *
  * RESPONSIVE: .sm:cell-N .md:cell-N .lg:cell-N 
  * corresponding css breakpoint classes (.sm:, .md:, .lg:) are available
- * to change the cell width at specified breakpoints giving you tons of flexibilit
+ * to change the cell width at specified breakpoints giving you tons of flexibility
    ========================================================================== */
 @for $i from 1 to 12 {
   .cell-$i {
@@ -218,27 +219,37 @@
   }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* =======================================================================
+/* =======================================================================
   IE 11 css grid fallback
+
+  This media query is hack to only target IE11 properties.
+  Sine IE 11 does NOT support grid gap property we create a 24 column 
+  grid with alternating "gap" columns
 ======================================================================= */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .grid-container {
     /* autoprefixer grid: autoplace */
     max-width: 960px;
+
     padding: 0 0 0 20px;
     display: grid;
     align-items: center;
     flex-wrap: wrap;
 
-    /* 12 equal colums each taking up the available space 1fr (fraction unit) */
+    /* 
+    * 24 columns (2 columns repeated 12 times):
+    * odd numbered columns each taking up the available space 1fr (fraction unit) 
+    * even numbered columns are "gap" columns which are 20px wide
+    * */
+
     grid-template-columns: repeat(12, 1fr 20px);
 
-    /* 20px grid gap */
-    gap: 1.25rem;
-
-    border: 1px solid blue;
-
     &--collapsed {
+      /*
+       * collpase our container padding and the width of the even columns
+       * so we keep the gap columns and the .cell-N propery math still works
+       */
       padding: 0;
       grid-template-columns: repeat(12, 1fr 0px);
       [class*='row-'] {
@@ -247,7 +258,6 @@
       /* collapse horizontal guttes only */
       &-cells {
         padding: 0;
-        /*collapse our margin columns so the offset math still works*/
         grid-template-columns: repeat(12, 1fr 0px);
       }
 
@@ -264,6 +274,15 @@
       max-width: 100%;
     }
   }
+  .grid-container.grid-container--full-width {
+    max-width: 100%;
+  }
+
+  /* 
+ * Rows .row-N - unlimited number
+ * 
+ * add margin to fake the grid gap
+========================================================================== */
 
   @for $i from 1 to 12 {
     .row-$i {
@@ -271,6 +290,21 @@
       margin: 0.625rem 0;
     }
   }
+
+  /* 
+ * Cells (columns) .cell-N - 12 in total
+ *
+ * since we now have 24 columns total we have to adjust our math to offset
+ * each span so it goes across the approporiate number of columns and "gap" columns
+ *
+ * example
+ * .cell-3 = Span 3 cell columns + 2 "gap" columns = calc(3 + (3 - 1))
+ * 
+ * |--------|   |----------|   |----------|
+ * |  cell  |gap|   cell   |gap|   cell   | 
+ * |--------|   |----------|   |----------|
+ * 
+========================================================================== */
 
   @for $i from 1 to 12 {
     .cell-$i {
