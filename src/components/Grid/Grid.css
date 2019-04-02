@@ -41,15 +41,14 @@
     }
   }
 
-  /* make full width of container */
-  &--fullWidth {
-    max-width: 100%;
-  }
-
   /* nested grid containers */
   & .grid-container {
     @inherit .mx-0, .px-0;
   }
+}
+
+.grid-container..grid-container--full-width {
+  max-width: 100%;
 }
 
 /* 
@@ -238,6 +237,7 @@
     gap: 1.25rem;
 
     border: 1px solid blue;
+
     &--collapsed {
       padding: 0;
       grid-template-columns: repeat(12, 1fr 0px);
@@ -257,6 +257,11 @@
           margin: 0;
         }
       }
+    }
+
+    /* make full width of container */
+    &--fullWidth {
+      max-width: 100%;
     }
   }
 
