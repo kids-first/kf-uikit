@@ -1,10 +1,15 @@
 import React from 'react';
-import { configure, addDecorator } from '@storybook/react';
+import { configure, getStorybook, setAddon, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { checkA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
 import centered from '@storybook/addon-centered';
+import createPercyAddon from '@percy-io/percy-storybook';
 import '../src/tailwind.src.css';
+
+const { percyAddon, serializeStories } = createPercyAddon();
+setAddon(percyAddon);
+
 
 addDecorator(
   withInfo({
@@ -34,3 +39,7 @@ function loadStories() {
 }
 
 configure(loadStories, module);
+
+serializeStories(getStorybook);
+
+
