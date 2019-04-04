@@ -230,6 +230,7 @@
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .grid-container {
+    border: 1px solid red !important;
     /* autoprefixer grid: autoplace */
     max-width: 960px;
 
@@ -316,7 +317,7 @@
      * You can override this default with min-width: 0 
      */
       min-width: 0;
-      border: 1px solid red !important;
+      /*border: 1px solid red !important;*/
     }
   }
 
@@ -325,7 +326,7 @@
       .cell-$i.cell-start-$x {
         -ms-grid-column: calc($x * 2 - 1);
         -ms-grid-column-span: calc($i + ($i - 1));
-        border: 1px solid red !important;
+        /*border: 1px solid red !important;*/
         min-width: 0;
       }
       /* shorthand cell-<start>-<span> */
@@ -333,7 +334,7 @@
         -ms-grid-column: calc($x * 2 - 1);
         -ms-grid-column-span: calc($i + ($i - 1));
         grid-column: $(x) / span $(i);
-        border: 1px solid red !important;
+        /*border: 1px solid red !important;*/
         min-width: 0;
       }
     }
