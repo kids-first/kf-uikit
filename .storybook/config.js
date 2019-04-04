@@ -10,7 +10,6 @@ import '../src/tailwind.src.css';
 const { percyAddon, serializeStories } = createPercyAddon();
 setAddon(percyAddon);
 
-
 addDecorator(
   withInfo({
     inline: true,
