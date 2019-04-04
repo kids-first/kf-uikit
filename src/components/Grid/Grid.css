@@ -13,6 +13,7 @@
   max-width: 960px;
   padding: 0 1.25em;
   display: grid;
+  grid-auto-flow: row;
   align-items: center;
   flex-wrap: wrap;
 
@@ -298,7 +299,7 @@
  * each span so it goes across the approporiate number of columns and "gap" columns
  *
  * example
- * .cell-3 = Span 3 cell columns + 2 "gap" columns = calc(3 + (3 - 1))
+ * .cell-3 = Span 3 cell columns + 2 "gap" columns =  calc(3 + (3 - 1))
  * 
  * |--------|   |----------|   |----------|
  * |  cell  |gap|   cell   |gap|   cell   | 
