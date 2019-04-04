@@ -6,6 +6,7 @@
   <a href="https://kf-uikit.netlify.com"><img src="https://img.shields.io/badge/storybook-master-ff69b4.svg?style=for-the-badge"></a>
   <a href="https://circleci.com/gh/kids-first/kf-uikit/tree/master"><img src="https://img.shields.io/circleci/project/github/kids-first/kf-uikit/master.svg?style=for-the-badge"></a>
 </p>
+[![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io)
 
 # Kids First UI Kit
 
