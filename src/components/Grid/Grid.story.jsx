@@ -323,7 +323,15 @@ stories.add('gutters', () => (
       ))}
     </GridContainer>
   </section>
-));
+),{
+  info: {
+    text:`
+     ## Collapsable gutters
+
+     Our grid gaps or gutters are set to 20px both vertically and horizontally to maintain an elegant horizontal and veritcal rhythm to our layouts. However sometimes we may come across use cases where the gutters are not desireable so we can collapse them using the GridContainer **collapse** prop.
+    `
+  }
+});
 
 stories.add('nested Grids', () => {
   const collapsed = boolean('collapse gutters', false);
@@ -409,4 +417,12 @@ stories.add('nested Grids', () => {
       </GridContainer>
     </section>
   );
+}, {
+  info: {
+    text: `
+      ## Grid Nesting
+
+      To make our grid system even more powerful we can nest GridContianer(s) inside of our cells adding a great deal verstatiliy to our layouts. Nested grids have their outter margins collpased and take the full-width of their containing cells elements.
+    `
+  }
 });
