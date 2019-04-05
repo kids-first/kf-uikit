@@ -16,7 +16,7 @@ exports[`navigation renders correctly 1`] = `
       >
         <img
           alt="Kids First Data Resource Center logo"
-          className="Header--logo Logo--img"
+          className="Header--logo cursor-pointer Logo--img"
           src="test-file-stub"
         />
         <h1
