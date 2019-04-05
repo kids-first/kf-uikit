@@ -19,12 +19,12 @@ const Header = ({ buttons, logo, children }) => {
   const navClass = className(
     'Header--navigation',
   );
-
+  const logoClass = className('Header--logo', { 'cursor-pointer': logoHref || onLogoClick });
   return (
     <header className='Header'>
       <nav className={navClass}>
         <a href={logoHref} onClick={() => onLogoClick()}>
-          <Logo className='Header--logo' />
+          <Logo className={logoClass} />
         </a>
         <div className='Navigation--buttons'>
           {buttons ? buttons.map(button => button) : null}
