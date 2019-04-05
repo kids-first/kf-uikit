@@ -121,8 +121,28 @@ stories.add(
         ~~~
         
         ---
+
+          ##### 😰 GOTCHAS
+         **Row Wrapping**
+
+         If **.cell-** elements add up to more than **12** and NOT have **.row-** declared the excess elements will wrap inside the container creating a new row.
+
+         ~~~
+         WRAPS: 
+         <section class="grid-container">
+           <div class="cell-12" ></div>
+           <div class="cell-3" ></div>
+         </section>
+          
+         OVERLAPS: 
+         <section class="grid-container">
+           <div class="row-1 cell-12" ></div>
+           <div class="row-1 cell-3" ></div>
+         </section>
+         ~~~
+         ___
         ##### ❗️IE support
-        In IE11 we create a 24 cell grid and all .cell- classes are adjusted to compensate for the offest.
+        In IE11 we create a 24 cell grid and all .cell- classes are adjusted to compensate for the offset.
       `,
     },
   },
@@ -194,7 +214,36 @@ stories.add(
   },
   {
     info: {
-      text: ``,
+      text: `
+        
+       ## Cell offset/start
+
+       ~~~css
+       .cell-start-(N)
+
+       Shorthand:  .cell-<start>-<span>
+       ~~~
+
+       This specifies what column a cell should start at. For example you can start a cell at column 6 (.cell-start-6) and have it span 6 columns (.cell-6) making it go from the middle to the right edge of the grid. 
+
+      ---
+
+      ##### 😰 GOTCHAS
+       **Overlapping/overloading Cells**
+
+       If  **.cell-start-** or **.cell-<start>-<span>** elements of **the same .row-(N)**. intersect they will overlap inside that row without wrapping. 
+       ~~~
+       OVERLAPS: 
+       8 + 5 = 13 cells in same row
+       <section class="grid-container">
+         <div class="row-1 cell-1-8" ></div>
+         <div class="row-1 cell-1-5" ></div>
+       </section>
+       ~~~
+
+
+
+      `,
     },
   },
 );
