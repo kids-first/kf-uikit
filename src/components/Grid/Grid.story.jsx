@@ -33,11 +33,11 @@ stories.add(
   {
     info: {
       text: `
-      ## The GridContainer creates the foundation of a fluidly responsive 960px wide 12 cell grid system. 
+       ## The GridContainer creates the foundation of a fluidly responsive 960px wide 12 column grid system. 
 
-      > It’s built with [css grid](https://css-tricks.com/snippets/css/complete-guide-grid/), the most powerful layout system available in CSS.
+       > It’s built with [css grid](https://css-tricks.com/snippets/css/complete-guide-grid/), the most powerful layout system available in CSS.
 
-      The GridContainer is the layout wrapper upon which all application designs and layouts are contained establishing style rules for grid cells and rows. It allows designers to rapdily compose complex layouts using simple mathematical rules to determine the relationships within interfaces, often necessary to manage complex systems and information hierarchies.      
+      The GridContainer is the layout wrapper upon which all application designs and layouts are contained establishing style rules for grid columns, cells, and rows. It allows designers to rapdily compose complex layouts using simple mathematical rules to determine the relationships within interfaces, often necessary to manage complex systems and information hierarchies.      
 
       ---
 
@@ -68,22 +68,34 @@ stories.add(
 
 stories.add(
   'cells',
-  () => (
-    <section>
-      <GridContainer>
-        {range(1, 13).map(i => (
-          <div className={`cell-${i} row-${i} h-12 text-white text-center border bg-grey`}>
-            <p className="mt-0 pt-12 text-xs">.cell-{i}</p>
+  () => {
+    const cSpan = number(
+      'span',
+      1,
+      { range: true, min: 1, max: 12, step: 1 },
+      '.cell-<span>',
+    );
+
+    return (
+      <section>
+        <GridContainer>
+          {range(1, 13).map(i => (
+            <div className={`cell-${i} row-${i} h-12 text-white text-center border bg-grey`}>
+              <p className="mt-0 pt-12 text-xs">.cell-{i}</p>
+            </div>
+          ))}
+          <div className={`cell-${cSpan} row-13 h-12 text-white text-center border bg-purple`}>
+            <p className="mt-0 pt-12 text-xs">.cell-{cSpan}</p>
           </div>
-        ))}
-      </GridContainer>
-    </section>
-  ),
+        </GridContainer>
+      </section>
+    )
+  },
   {
     info: {
       text: `
-        ## Cells (columns)
-        Use the .cell-N class to set the width of individual cells. Multi-cell elements span across gutters, so .cell-2 spans the first cell first gap and second cell stopping at before second gap
+        ## Cells 
+        Use the .cell-N class to set the width of individual cells. Multi-cell elements span across gutters, so .cell-2 spans the first cell first gap and second cell stopping at before second gap. To see it in action use the knob to adjust the purple cell.
 
         ~~~css
           .cell-(N){
