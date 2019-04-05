@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classes from 'classnames';
 
 /**
- * Container for a 12 column css grid
+ *  Fluidly responsive 960px, 12 cell grid system container based on the css grid spec.
  */
 const GridContainer = ({ className, children, collapsed, centered, fullWidth }) => {
   const GridContainerClass = classes(

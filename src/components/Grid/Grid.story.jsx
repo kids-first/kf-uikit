@@ -21,13 +21,47 @@ stories.add(
               <p className="mt-0 pt-12 text-xs">60px</p>
             </div>
           ))}
+          {range(1, 13).map(() => (
+            <div className="cell-1 row-2 h-12 text-black text-center border bg-white">
+              <p className="mt-0 pt-12 text-xs">60px</p>
+            </div>
+          ))}
         </GridContainer>
       </section>
     );
   },
   {
     info: {
-      text: ``,
+      text: `
+      ## The GridContainer creates the foundation of a fluidly responsive 960px wide 12 cell grid system. 
+
+      > It’s built with [css grid](https://css-tricks.com/snippets/css/complete-guide-grid/), the most powerful layout system available in CSS.
+
+      The GridContainer is the layout wrapper upon which all application designs and layouts are contained establishing style rules for grid cells and rows. It allows designers to rapdily compose complex layouts using simple mathematical rules to determine the relationships within interfaces, often necessary to manage complex systems and information hierarchies.      
+
+      ---
+
+      #### Grid Element Sizes
+      *_As the grid scales the cells and gutters decrease in width while maintaing their relative proportions._
+      
+       ~~~
+       |   Element     |   MaxWidth   |   Height   | Total (N)
+       | ------------- |------------- | ---------- | ---------
+       |   .cell-(N)   |    60px      |    auto    |    12
+       |   gutter      |    20px      |    20px    |    13 (vertical and horizontal)  
+       |   .row-(N)    |    100%      |    auto    |    12 (more rows will be auto added if thew .row- is not declared on .cell- elements)
+
+       ~~~
+       
+      ---
+      
+      ##### ❗️IE support
+      **The grid system is supported down to Internet Explorer 11 only!!**
+
+      Since IE 11 does **NOT** support grid **gap** property we create a 24 column grid with alternating "gap" columns. For further info on css grid support in IE see [CSS Tricks: CSS Grid in IE](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/) and the styles in **src/components/Grid/Grid.css**
+
+      ---
+      `,
     },
   },
 );
