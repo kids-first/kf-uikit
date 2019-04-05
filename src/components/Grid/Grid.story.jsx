@@ -73,11 +73,7 @@ stories.add(
       <GridContainer>
         {range(1, 13).map(i => (
           <div className={`cell-${i} row-${i} h-12 text-white text-center border bg-grey`}>
-            <p className="mt-0 pt-12 text-xs">
-              .row-
-              {i} .cell-
-              {i}
-            </p>
+            <p className="mt-0 pt-12 text-xs">.cell-{i}</p>
           </div>
         ))}
       </GridContainer>
@@ -85,7 +81,49 @@ stories.add(
   ),
   {
     info: {
-      text: ``,
+      text: `
+        ## Cells (columns)
+        Use the .cell-N class to set the width of individual cells. Multi-cell elements span across gutters, so .cell-2 spans the first cell first gap and second cell stopping at before second gap
+
+        ~~~css
+          .cell-(N){
+            grid-column: span (N);
+          }
+        
+        Example: .cell-2
+          |--------|---|----------|   |----------|
+          | cell 1 |gap|  cell 2  |gap|  cell 3  |
+          |--------|---|----------|   |----------|
+        ~~~
+        ---
+        #### 📱 Responsive Design
+        The grid system is mobile-first and utilizes the [TailwindCSS responsive class system](https://tailwindcss.com/docs/responsive-design) to adjust cells at 
+        specifc breakpoints.
+
+        ~~~css
+        .cell-(N)    = 0 to 576px 
+        .sm:cell-(N) = 576px to 768px
+        .md:cell-(N) = 768px to 992px
+        .lg:cell-(N) = 992px to 1200px
+        .xl:cell-(N) = 1200px and beyyyyonnddd
+        
+        ~~~
+        **Example:**
+        ~~~HTML
+        <div class="cell-12 md:cell-6 lg:cell-4"></div>
+
+        | prefix |  Device Example    |   Viewport Width     |   Cell Span  |
+        |--------|--------------------|--------------------- |--------------|
+        |  none  | mobile             |     0 to 576px       |       12     |
+        |   md:  | tablet & desktop   |     768px to 992px   |       6      |      
+        |   lg:  | desktop & monitor  |     992px and up     |       4      |      
+        
+        ~~~
+        
+        ---
+        ##### ❗️IE support
+        In IE11 we create a 24 cell grid and all .cell- classes are adjusted to compensate for the offest.
+      `,
     },
   },
 );
