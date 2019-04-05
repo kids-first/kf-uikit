@@ -27,71 +27,114 @@ stories.add(
     <div>
       <section className="container mx-auto">
         <p>
-          The aim of the uikit's typographic system is to maximize readability across all viewport
-          sizes while maintaining size and relationship heirarchies to preserve infomation
-          structures. Therefore, all font sizing for the uikit is based on{' '}
+          The aim of the uikit's typographic system is to prioritize and optimize readability across
+          viewport sizes while maintaining relationships and heirarchies to preserve infomation
+          structures. Therefore, all <code className="bg-lightGrey text-sm p-4">font-size</code>{' '}
+          values are set to{' '}
           <a href="https://www.sitepoint.com/understanding-and-using-rem-units-in-css/">rem </a>{' '}
-          values instead of discrete pixel sizes.
+          values instead of discrete pixel sizes. The corresponding rem to pixel values can be found
+          in the table below.
         </p>
+        <h3>rem to px values table</h3>
+        <table className="table-fixed text-center bg-lightGrey" style={{ width: 600 }}>
+          <thead>
+            <th>viewport width</th>
+            <th>media query</th>
+            <th>value of 1rem</th>
+          </thead>
+          <tbody>
+            <tr className="border-b">
+              <td> &lt; 576px</td>
+              <td />
+              <td>14px</td>
+            </tr>
+            <tr className="border-b">
+              {' '}
+              <td> &lt; 768px and &gt; 576px </td>
+              <td>@media (min-width: 576px) and (max-width: 768px) </td>
+              <td>between 14 and 16px</td>{' '}
+            </tr>
+            <tr className="border-b">
+              {' '}
+              <td>&gt; 768px </td>
+              <td>@media (min-width: 768px)</td>
+              <td>16px</td>{' '}
+            </tr>
+          </tbody>
+        </table>
+        <hr />
         <h3 className="mt-16">The Perils of Pixels</h3>
         <p>
-          When font-sizing is set to discrete and rigid pixel values{' '}
-          <code className="bg-lightGrey text-sm p-4">font-size: 16px;</code> 
-          it forces us take an
-          adaptive approach where we must then set the font-size to a discrete value at each
+          When <code className="bg-lightGrey text-sm p-4">font-size</code> is set to explicit values{' '}
+          (ex. <code className="bg-lightGrey text-sm p-4">font-size: 16px;</code> ) it forces us
+          take an adaptive approach where we must then set the font-size to a explicit value at each
           responsive breakpoint. This method renders a sub-optimal user experience as it causes
-          jumps/quick snaps between font sizes at the different font-sizes as seen below.
-          <figure>
-            <img src={mediaQueryOpt} alt="" />
-            <caption className="block w-full text-xs text-left">
-              source:{' '}
-              <a href="https://www.smashingmagazine.com/2017/05/fluid-responsive-typography-css-poly-fluid-sizing/">
-                Smashing Magazine
-              </a>{' '}
-            </caption>
-          </figure>
+          jumps/quick snaps in font-size between breakpoints, as seen below.
         </p>
-        <h3 className="mt-16">Molten Leading Technique</h3>
+        <figure>
+          <img src={mediaQueryOpt} alt="" />
+          <caption className="block w-full text-xs text-left">
+            source:{' '}
+            <a href="https://www.smashingmagazine.com/2017/05/fluid-responsive-typography-css-poly-fluid-sizing/">
+              Smashing Magazine
+            </a>{' '}
+          </caption>
+        </figure>
+
+        <h3 className="mt-16">Rescued by rem</h3>
         <p>
-          When using the 
-          <code className="bg-lightGrey text-sm p-4">rem</code> 
-          as our basic unit for
-          font sizing and breakpoints we are able to take a truly fluid responsive approach to font
-          and spacing values using the{' '}
+          Using the root-em, <code className="bg-lightGrey text-sm p-4">rem</code>, as our basic
+          unit of measure for font-size we are able to take a truly fluid and responsive approach to
+          font and spacing values. This allows us to set values in terms of percentages of 1 rem
+          (ex. <code className="bg-lightGrey text-sm p-4">1rem = 14px; 0.5rem = 1/2rem = 7px;</code>
+          ). By setting the rem value in our css{' '}
+          <code
+            className="bg-lightGrey text-sm p-4"
+            dangerouslySetInnerHTML={{ __html: `:root{ }` }}
+          />
+          , which the top-most parent in the css cascade, we are able to leverage css'{' '}
+          <code className="bg-lightGrey text-sm p-4">calc()</code>, which executes upon each browser
+          resize, to fluidly adjust the rem size based on viewport width and thus proportionately
+          scale all rem based values throughout our design system.
+        </p>
+
+        <h3 className="pt-16">Molten Leading Technique</h3>
+        <p>
+          This clever fluid scaling effect is accomplished using the css calc formula proposed by
+          the
           <a
             href="https://www.madebymike.com.au/writing/precise-control-responsive-typography/"
             target="_blank"
           >
             Molten Leading technique
           </a>
-          . This technique uses a combination of{' '}
-          <code className="bg-lightGrey text-sm p-4">vw</code> 
-          (
+          . This technique utilizes a combination of{' '}
+          <code className="bg-lightGrey text-sm p-4">vw</code>(
           <a
             href="https://css-tricks.com/viewport-sized-typography/#article-header-id-1"
             target="_blank"
           >
             viewport units
           </a>
-          ) and rem in relation to line-width and line-height/leading to calculate the appropriate
-          rem size to viewport size relationship. This results in the rem value scaling
-          appropriately with the viewport size as seen below.
-          <figure>
-            <img src={viewportOpt} alt="" />
-            <caption className="block w-full text-xs text-left">
-              source:{' '}
-              <a href="https://www.smashingmagazine.com/2017/05/fluid-responsive-typography-css-poly-fluid-sizing/">
-                Smashing Magazine
-              </a>{' '}
-            </caption>
-          </figure>
+          ) range and font-size range to calculate a scaling factor for our :root rem value. This
+          results in all rem defined values scaling proportionately with the viewport/browser size
+          as seen below.
         </p>
-        <h4>Precise control over rem size</h4>
+        <figure>
+          <img src={viewportOpt} alt="" />
+          <caption className="block w-full text-xs text-left">
+            source:{' '}
+            <a href="https://www.smashingmagazine.com/2017/05/fluid-responsive-typography-css-poly-fluid-sizing/">
+              Smashing Magazine
+            </a>{' '}
+          </caption>
+        </figure>
+
+        <h4 className="mt-20">Precise control over rem size</h4>
         <p>
           We don't want our font size to infinitely scale as it would then become unreasonably large
-          or small. Therefore we use media queries to limit the font scaling with a combination of
-          css 
-          <code className="bg-lightGrey text-sm p-4">calc()</code> 
+          or small. Therefore to limit the font scaling we use a combination of css
+          <code className="bg-lightGrey text-sm p-4">calc()</code>
           and media queries. <br />
           <code
             className="w-full block bg-lightGrey text-sm p-4 my-12"
@@ -109,9 +152,9 @@ stories.add(
           />
         </p>
         <p>
-          Using this techinque we can cap our rem value to a maximum and minimum pixel value at
-          specific viewport widths using this formula.
-          <code className="w-full block bg-lightGrey font-bold p-4">
+          By combining media queries and vw units we are able to get a triadic formula by which
+          scale the rem value between a specific range of viewport sizes.
+          <code className="w-full block bg-lightGrey font-bold p-4 text-sm">
             {' '}
             font-size: calc($min_font_px + ($max_font - $min_font) * ( (100vw - $min_width_px) / (
             $max_width - $min_width)));
@@ -122,11 +165,11 @@ stories.add(
               CSS Tricks: Molten Leading article
             </a>
           </small>{' '}
-          <br />
+        </p>
+        <p className="bg-lightGrey border p-12">
           To experiment with this technique in order to get a better grasp of the concepts at play
           please checkout this{' '}
-          <a href="https://codepen.io/MadeByMike/pen/YPJJYv" 
-          target="_blank">
+          <a href="https://codepen.io/MadeByMike/pen/YPJJYv" target="_blank">
             codepen example
           </a>{' '}
           by the creator of the molten leading formula.
@@ -138,34 +181,6 @@ stories.add(
           set other values such as margin and padding using rem values so that they are in proper
           porportion to our typography giving our UIs consistent vertical and horizontal rhythm.
         </p>
-        <h2 className="mt-16">uikit values</h2>
-        <table className="table-fixed text-center bg-lightGrey" style={{ width: 600 }}>
-          <thead>
-            <th>viewport width</th>
-            <th>media query</th>
-            <th>value of 1rem</th>
-          </thead>
-          <tbody>
-            <tr className="border-b">
-              <td> &lt; 320px</td> 
-              <td>none</td> 
-              <td>14px</td>
-            </tr>
-            <tr className="border-b">
-              {' '}
-              <td> &gt; 320px &lt; 544px</td> 
-              <td>min-width: 20em</td> 
-              <td>&gt; 14px &lt; 16px </td>{' '}
-            </tr>
-            <tr className="border-b">
-              {' '}
-              <td>&gt; 544px </td> 
-              <td>min-width: 80em</td> 
-              <td>16px</td>
-              {' '}
-            </tr>
-          </tbody>
-        </table>
 
         <h5 className="mt-20">further reading:</h5>
         <ul>
@@ -291,8 +306,7 @@ stories.add('Type Specimen', () => (
         Push your dbGaP authorized genomic files to Cavatica (or download) to begin your analysis on
         the data.
       </li>
-    </oL>
-    {' '}
+    </oL>{' '}
     <p>
       Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
       dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
