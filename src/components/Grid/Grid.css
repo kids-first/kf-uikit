@@ -77,25 +77,27 @@
  * Cells (columns) .cell-N - 12 in total
  * 
  * Use the .cell-N class to set the width of individual cells.
- * Multi-cell elements span across gutters, so cell-2 spans the first cell
+ * Multi-cell elements span across gutters, so .cell-2 spans the first cell
  * first gutter and second cell stopping at before second gutter
  *
  * RESPONSIVE: .sm:cell-N .md:cell-N .lg:cell-N 
  * corresponding css breakpoint classes (.sm:, .md:, .lg:) are available
  * to change the cell width at specified breakpoints giving you tons of flexibility
    ========================================================================== */
-@for $i from 1 to 12 {
-  .cell-$i {
-    grid-column: span $(i);
-    -ms-grid-column-span: $(i);
-    /* 
-     * An initial setting on grid items is min-width: auto. 
-     * This means that an item cannot be shorter than its content. 
-     * You can override this default with min-width: 0 
-     */
-    min-width: 0;
+   @variants responsive {
+      @for $i from 1 to 12 {
+        .cell-$i {
+          grid-column: span $(i);
+          -ms-grid-column-span: $(i);
+          /* 
+           * An initial setting on grid items is min-width: auto. 
+           * This means that an item cannot be shorter than its content. 
+           * You can override this default with min-width: 0 
+           */
+          min-width: 0;
+        }
+      }
   }
-}
 
 [class*='cell-'] {
   /* nested grid containers */
@@ -120,105 +122,29 @@
  * corresponding css breakpoint classes (.sm:, .md:, .lg:) are available
  * to change the cell width at specified breakpoints giving you tons of flexibilit
    ========================================================================== */
-@for $i from 1 to 12 {
-  @for $x from 11 to 1 {
-    .cell-$i.cell-start-$x {
-      grid-column: $(x) / span $(i);
+   @variants responsive {
 
-      min-width: 0;
+    @for $i from 1 to 12 {
+      @for $x from 11 to 1 {
+        .cell-$i.cell-start-$x {
+          grid-column: $(x) / span $(i);
+    
+          min-width: 0;
+        }
+        /* shorthand cell-<start>-<span> */
+        .cell-$(x)-$(i) {
+          grid-column: $(x) / span $(i);
+          min-width: 0;
+        }
+      }
     }
-    /* shorthand cell-<start>-<span> */
-    .cell-$(x)-$(i) {
-      grid-column: $(x) / span $(i);
-      min-width: 0;
-    }
+    
   }
-}
 
 /* Tablet
   ========================================================================== */
 
-@media (min-width: 576px) {
-  /* cell and row */
-  @for $i from 1 to 12 {
-    .sm:cell-$i {
-      grid-column: span $i;
-      min-width: 0;
-    }
 
-    .sm:row-$i {
-      grid-row: $i;
-    }
-  }
-
-  /* cell offset */
-  @for $i from 1 to 12 {
-    @for $x from 11 to 1 {
-      .sm:cell-$(x)-$(i),
-      .sm:cell-$i.cell-start-$x,
-      .cell-$i.sm:cell-start-$x,
-      .sm:cell-$i.sm:cell-start-$x {
-        grid-column: $(x) / span $(i);
-        min-width: 0;
-      }
-    }
-  }
-}
-
-/* Desktop
-  ========================================================================== */
-@media (min-width: 768px) {
-  /* cell and row */
-  @for $i from 1 to 12 {
-    .md:cell-$i {
-      grid-column: span $i;
-      min-width: 0;
-    }
-    .md:row-$i {
-      grid-row: $i;
-    }
-  }
-  /* cell offset */
-  @for $i from 1 to 12 {
-    @for $x from 11 to 1 {
-      .md:cell-$(x)-$(i),
-      .md:cell-$i.cell-start-$x,
-      .cell-$i.md:cell-start-$x,
-      .md:cell-$i.md:cell-start-$x {
-        min-width: 0;
-        grid-column: $(x) / span $(i);
-      }
-    }
-  }
-}
-
-/* Large Desktop/Monitor
-  ========================================================================== */
-@media (min-width: 992px) {
-  /* cell and row */
-  @for $i from 1 to 12 {
-    .lg:cell-$i {
-      grid-column: span $i;
-      min-width: 0;
-    }
-
-    .lg:row-$i {
-      grid-row: $i;
-    }
-  }
-  /* cell offset */
-  @for $i from 1 to 12 {
-    @for $x from 11 to 1 {
-      .lg:cell-$(x)-$(i),
-      .lg:cell-$i.cell-start-$x,
-      .cell-$i.lg:cell-start-$x,
-      .lg:cell-$i.lg:cell-start-$x {
-        grid-column: $(x) / span $(i);
-        min-width: 0;
-      }
-    }
-  }
-}
 
 /* =======================================================================
   IE 11 css grid fallback
