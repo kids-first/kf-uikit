@@ -59,9 +59,11 @@
  * Rows have an implicit height but you can use the row class to 
  * change the presentation order of cells 
    ========================================================================== */
-@for $i from 1 to 12 {
-  .row-$i {
-    grid-row: $(i);
+@variants responsive {
+  @for $i from 1 to 100 {
+    .row-$i {
+      grid-row: $(i);
+    }
   }
 }
 
