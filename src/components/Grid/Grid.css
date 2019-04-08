@@ -86,20 +86,20 @@
  * corresponding css breakpoint classes (.sm:, .md:, .lg:) are available
  * to change the cell width at specified breakpoints giving you tons of flexibility
    ========================================================================== */
-   @variants responsive {
-      @for $i from 1 to 12 {
-        .cell-$i {
-          grid-column: span $(i);
-          -ms-grid-column-span: $(i);
-          /* 
-           * An initial setting on grid items is min-width: auto. 
-           * This means that an item cannot be shorter than its content. 
-           * You can override this default with min-width: 0 
-           */
-          min-width: 0;
-        }
-      }
-  }
+  @variants responsive {
+     @for $i from 1 to 12 {
+       .cell-$i {
+         grid-column: span $(i);
+         -ms-grid-column-span: $(i);
+         /* 
+          * An initial setting on grid items is min-width: auto. 
+          * This means that an item cannot be shorter than its content. 
+          * You can override this default with min-width: 0 
+          */
+         min-width: 0;
+       }
+     }
+}
 
 [class*='cell-'] {
   /* nested grid containers */
@@ -124,27 +124,24 @@
  * corresponding css breakpoint classes (.sm:, .md:, .lg:) are available
  * to change the cell width at specified breakpoints giving you tons of flexibilit
    ========================================================================== */
-   @variants responsive {
+@variants responsive {
 
-    @for $i from 1 to 12 {
-      @for $x from 11 to 1 {
-        .cell-$i.cell-start-$x {
-          grid-column: $(x) / span $(i);
-    
-          min-width: 0;
-        }
-        /* shorthand cell-<start>-<span> */
-        .cell-$(x)-$(i) {
-          grid-column: $(x) / span $(i);
-          min-width: 0;
-        }
+  @for $i from 1 to 12 {
+    @for $x from 11 to 1 {
+      .cell-$i.cell-start-$x {
+        grid-column: $(x) / span $(i);
+  
+        min-width: 0;
+      }
+      /* shorthand cell-<start>-<span> */
+      .cell-$(x)-$(i) {
+        grid-column: $(x) / span $(i);
+        min-width: 0;
       }
     }
-    
   }
-
-/* Tablet
-  ========================================================================== */
+    
+}
 
 
 
