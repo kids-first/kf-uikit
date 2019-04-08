@@ -53,6 +53,7 @@
     "moment-timezone": "^0.5.13",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
     "postcss-easy-import": "^3.0.0",
+    "postcss-for": "^2.1.1",
     "postcss-nested-props": "^2.0.0",
     "prettier": "^1.14.2",
     "react-docgen": "^4.1.0",
