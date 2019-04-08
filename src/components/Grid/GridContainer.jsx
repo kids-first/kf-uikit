@@ -22,7 +22,7 @@ const GridContainer = ({ className, children, collapsed, centered, fullWidth }) 
 };
 
 GridContainer.propTypes = {
-  /** Any additional classes to be applied to the button */
+  /** Any additional classes to be applied to the gridContainer*/
   className: PropTypes.string,
   /** Children elements. */
   children: PropTypes.node,
@@ -42,7 +42,5 @@ GridContainer.defaultProps = {
   fullWidth: false,
 };
 
-/**
- * @component
- */
+
 export default GridContainer;

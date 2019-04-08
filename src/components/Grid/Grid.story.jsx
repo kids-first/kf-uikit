@@ -49,7 +49,7 @@ stories.add(
        | ------------- |------------- | ---------- | ---------
        |   .cell-(N)   |    60px      |    auto    |    12
        |   gutter      |    20px      |    20px    |    13 (vertical and horizontal)  
-       |   .row-(N)    |    100%      |    auto    |    100 (more rows will be auto added if thew .row- is not declared on .cell- elements)
+       |   .row-(N)    |    100%      |    auto    |    100 (more rows will be auto added if the .row- is not declared on .cell- elements)
 
        ~~~
        
@@ -298,7 +298,7 @@ stories.add(
       .row-(N)
       ~~~
 
-      Rows have an implicit height and will take on the height of their contents unless styled otherwise. If **.cell-** elements do not explicity declare a row clas, rows will be auto 
+      Rows have an implicit height and will take on the height of their contents unless styled otherwise. If **.cell-** elements do not explicity declare a row class, rows will be auto 
       created. 
 
       The row is expecially useful for accessiblity purposes as it allows you to maintain a semantically meaningful source order to your HTML documents while having granular control over the display order. To see this in action use the knobs to move the purple row and notice in the Story Source how the order of elements does not change.
