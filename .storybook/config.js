@@ -1,9 +1,9 @@
 import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { checkA11y } from '@storybook/addon-a11y';
+import { withA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
-import centered from '@storybook/addon-centered';
+import centered from '@storybook/addon-centered/react';
 import '../src/tailwind.src.css';
 
 addDecorator(
@@ -11,7 +11,7 @@ addDecorator(
     inline: true,
   }),
 );
-addDecorator(checkA11y);
+addDecorator(withA11y);
 addDecorator(withKnobs);
 addDecorator(centered);
 
