@@ -1,4 +1,14 @@
-
-
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:400,500,700"
   rel="stylesheet">
+
+
+<style>
+@media only percy {
+  /* hide addon-info header, props table, and description from Percy test */
+  #root > div > div > div > div:first-child
+  #root > div > div > div > div:last-child,{
+    display: none;
+  }
+}
+
+</style>
