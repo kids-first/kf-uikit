@@ -153,7 +153,6 @@
 ======================================================================= */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .grid-container {
-    border: 1px solid red !important;
     /* autoprefixer grid: autoplace */
     max-width: 960px;
 
@@ -208,7 +207,7 @@
  * 
  * add margin to fake the grid gap
 ========================================================================== */
-  @for $i from 1 to 12 {
+  @for $i from 1 to 100 {
     .row-$i {
       grid-row: $(i);
       margin: 0.625rem 0;
