@@ -8,7 +8,6 @@
   By default the grid is 960px wide and centered with margin: 0 auto;
   as it scales down the column width get's smaller. 
 ========================================================================== */
-
 .grid-container {
   max-width: 960px;
   padding: 0 1.25em;
@@ -152,7 +151,6 @@
   Sine IE 11 does NOT support grid gap property we create a 24 column 
   grid with alternating "gap" columns
 ======================================================================= */
-
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .grid-container {
     border: 1px solid red !important;
@@ -210,7 +208,6 @@
  * 
  * add margin to fake the grid gap
 ========================================================================== */
-
   @for $i from 1 to 12 {
     .row-$i {
       grid-row: $(i);
@@ -232,7 +229,6 @@
  * |--------|   |----------|   |----------|
  * 
 ========================================================================== */
-
   @for $i from 1 to 12 {
     .cell-$i {
       -ms-grid-column-span: calc($i + ($i - 1));
