@@ -26,7 +26,10 @@ export default [
             extract: 'dist/styles.css',
           }),
           babel({
-            exclude: 'node_modules/**'
+            babelrc:false,
+            exclude: 'node_modules/**',
+            presets: [['@babel/preset-env', { modules: false }],"@babel/react"],
+            plugins: ["@babel/plugin-proposal-export-default-from"],
           }),
           commonjs(),
         ],
