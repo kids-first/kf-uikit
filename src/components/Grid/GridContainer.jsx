@@ -22,7 +22,7 @@ const GridContainer = ({ className, children, collapsed, centered, fullWidth }) 
 };
 
 GridContainer.propTypes = {
-  /** Any additional classes to be applied to the gridContainer*/
+  /** Any additional classes to be applied to the gridContainer */
   className: PropTypes.string,
   /** Children elements. */
   children: PropTypes.node,
