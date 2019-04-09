@@ -11,7 +11,7 @@ const storyInfo = {
 };
 
 const brand = ['blue', 'purple', 'teal', 'lightBlue', 'lightGrey', 'darkGrey'];
-const brandSwatches = brand.map(color => <Swatch color={color} />);
+const brandSwatches = brand.map(color => <Swatch key={color} color={color} />);
 stories.add(
   'Primary',
   () => (
@@ -23,7 +23,7 @@ stories.add(
 );
 
 const secondary = ['pink', 'red', 'orange', 'mediumGrey'];
-const secondarySwatches = secondary.map(color => <Swatch color={color} />);
+const secondarySwatches = secondary.map(color => <Swatch key={color} color={color} />);
 stories.add(
   'Secondary',
   () => (

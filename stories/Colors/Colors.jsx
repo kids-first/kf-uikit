@@ -61,6 +61,7 @@ function Swatch(props) {
         <div className="hidden group-hover:block">
           {textColors.map(colorArr => (
             <small
+              key={colorArr[0]}
               className={`block w-full h-8  p-4 bg-${colorData.key} text-black text-${colorArr[0]}`}
             >
               <span className="inline-block leading-normal float-left">
