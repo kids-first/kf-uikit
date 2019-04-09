@@ -38,9 +38,11 @@ stories.add(
         <h3>rem to px values table</h3>
         <table className="table-fixed text-center bg-lightGrey" style={{ width: 600 }}>
           <thead>
-            <th>viewport width</th>
-            <th>media query</th>
-            <th>value of 1rem</th>
+            <tr>
+              <th>viewport width</th>
+              <th>media query</th>
+              <th>value of 1rem</th>  
+            </tr>
           </thead>
           <tbody>
             <tr className="border-b">
@@ -49,16 +51,14 @@ stories.add(
               <td>14px</td>
             </tr>
             <tr className="border-b">
-              {' '}
               <td> &lt; 768px and &gt; 576px </td>
               <td>@media (min-width: 576px) and (max-width: 768px) </td>
-              <td>between 14 and 16px</td>{' '}
+              <td>between 14 and 16px</td>
             </tr>
             <tr className="border-b">
-              {' '}
               <td>&gt; 768px </td>
               <td>@media (min-width: 768px)</td>
-              <td>16px</td>{' '}
+              <td>16px</td>
             </tr>
           </tbody>
         </table>
@@ -73,12 +73,12 @@ stories.add(
         </p>
         <figure>
           <img src={mediaQueryOpt} alt="" />
-          <caption className="block w-full text-xs text-left">
+          <figcaption className="block w-full text-xs text-left">
             source:{' '}
             <a href="https://www.smashingmagazine.com/2017/05/fluid-responsive-typography-css-poly-fluid-sizing/">
               Smashing Magazine
             </a>{' '}
-          </caption>
+          </figcaption>
         </figure>
 
         <h3 className="mt-16">Rescued by rem</h3>
@@ -122,12 +122,12 @@ stories.add(
         </p>
         <figure>
           <img src={viewportOpt} alt="" />
-          <caption className="block w-full text-xs text-left">
+          <figcaption className="block w-full text-xs text-left">
             source:{' '}
             <a href="https://www.smashingmagazine.com/2017/05/fluid-responsive-typography-css-poly-fluid-sizing/">
               Smashing Magazine
             </a>{' '}
-          </caption>
+          </figcaption>
         </figure>
 
         <h4 className="mt-20">Precise control over rem size</h4>
@@ -266,7 +266,7 @@ stories.add('Type Specimen', () => (
       et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
       sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
     </p>
-    <uL>
+    <ul>
       <li>Adolescent Idiopathic Scoliosis </li>
       <li>Cancer Susceptibility </li>
       <li>Congenital Diaphragmatic Hernia </li>
@@ -276,7 +276,7 @@ stories.add('Type Specimen', () => (
       <li>Ewing Sarcoma </li>
       <li>Familial Leukemia </li>
       <li>Hearing Loss </li>
-    </uL>{' '}
+    </ul>
     <p>
       consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
       aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
@@ -296,7 +296,7 @@ stories.add('Type Specimen', () => (
       eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
       et accusam et justo duo dolores et ea rebum.
     </p>
-    <oL>
+    <ol>
       <li>Register for the Kids First DRC Data Portal and complete your online profile.</li>
       <li>
         Browse and search through clinical &amp; phenotypic data in the File Repository to build a
@@ -306,7 +306,7 @@ stories.add('Type Specimen', () => (
         Push your dbGaP authorized genomic files to Cavatica (or download) to begin your analysis on
         the data.
       </li>
-    </oL>{' '}
+    </ol>{' '}
     <p>
       Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
       dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
@@ -359,7 +359,7 @@ stories.add('un-ordered list', () => (
       'Craniofacial Microsomia',
       'Disorders of Sex Development',
     ]).map(item => (
-      <li>{item}</li>
+      <li key={item}>{item}</li>
     ))}
   </ul>
 ));
@@ -371,7 +371,7 @@ stories.add('ordered list', () => (
       'To add a profile picture, click on the button that says “Change Gravatar”. You will be redirected to Wordpress &amp; Gravatar’s website to complete the profile picture set up the process.',
       'Once you have set up &amp; selected a profile picture within the Gravatar platform, navigate back to your DRC Portal Profile and refresh the page to see your new profile picture.',
     ]).map(item => (
-      <li>{item}</li>
+      <li key={item}>{item}</li>
     ))}
   </ol>
 ));
