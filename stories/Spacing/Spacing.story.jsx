@@ -35,17 +35,19 @@ stories.add(
         <h4 className="text-center pb-8">Spacing Class Values</h4>
         <table className="table-fixed m-auto text-center bg-lightGrey" style={{ width: 400 }}>
           <thead>
-            <th>value (N)</th>
-            <th>rem</th>
-            <th>px</th>
+            <tr>
+              <th>value (N)</th>
+              <th>rem</th>
+              <th>px</th>
+            </tr>
           </thead>
           <tbody>
             {toPairs(tailwind.margin).map((spacing) => (
-              <tr className="border-b">
+              <tr key={spacing[0]} className="border-b">
                 <td>{spacing[0]}</td> 
-                <td className="text-xs">{spacing[1].replace('rem', '')}</td>
+                <td className="text-xs">{spacing[1] ? spacing[1].replace('rem', '') : 'auto'}</td>
                 <td> 
-                  {+spacing[1].replace('rem', '') * 16} 
+                  { spacing[1] === 'auto' ? 'auto' : +spacing[1].replace('rem', '') * 16 } 
                  </td>
               </tr>
             ))}
@@ -79,6 +81,7 @@ stories.add(
         <section className="w-full relative flex flex-wrap" style={{ height: 275 }}>
           {[4, 8, 12, 16, 20, 32, 40, 60].map((i) => (
             <div
+              key={i}
               className={`flex items-center content-center text-center relative z-10 mr-${i} p-${i} ${
                 i === 4 ? 'ml-12' : null
               } my-12 border border-lightBlue bg-red opacity-75`}
@@ -106,6 +109,7 @@ stories.add(
         <section className="w-full relative flex flex-wrap">
           {[4, 8, 12, 16, 20, 32, 40, 60].map((i) => (
             <div
+              key={i}
               className={`flex items-center content-center text-center relative z-10 mr-${i} ${
                 i === 4 ? 'ml-12' : null
               } my-12 border border-lightBlue`}
