@@ -1,10 +1,19 @@
 import React from 'react';
-import { configure, addDecorator } from '@storybook/react';
+// import theme from './kf-theme';
+import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
 import centered from '@storybook/addon-centered/react';
 import '../src/tailwind.src.css';
+import gridImg from '../assets/spacing_grid__4px_cells.png'
+
+addParameters({
+  backgrounds: [
+    { name: 'default', value: '#fff', default: true },
+    { name: '4px grid', value: `url(${gridImg}) repeat`},
+  ],
+})
 
 addDecorator(
   withInfo({
