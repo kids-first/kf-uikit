@@ -2,18 +2,8 @@ import { toPairs } from 'lodash';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import * as tailwind from '../../tailwind.js';
-import spacingGridPNG from '../../assets/spacing_grid__4px_cells.png';
-
+import bgsIcon from './assets/bgs_icon.png';
 const stories = storiesOf('Spacing', module);
-
-const FourPxGrid = ({ className = '' }) => (
-  <img
-    src={spacingGridPNG}
-    className={`bg-grid block absolute z-0 top-0 left-0 ${className}`}
-    style={{ maxWidth: 840, width: 840, height: 270 }}
-    alt=""
-  />
-);
 
 stories.add(
   'spacing values',
@@ -38,6 +28,7 @@ stories.add(
           determined, elements are designed, how components interact with each other. The success of
           a digital design system lies in the intelligence of its math.
         </p>
+        
       </header>
 
       <div className="w-2/3 ml-32">
@@ -64,7 +55,9 @@ stories.add(
 
       <div className="relative overflow-hidden w-full  mb-16" style={{ height: 375 }}>
         <h2 className="mt-32 pb-16">Examples</h2>
-
+        <p className="italic font-bold">
+          To see the grid in action change the background by using the <img src={bgsIcon} style={{width: 30, marginBottom: -15}} alt=""/> icon in the top bar 
+        </p>
         <h3 className="z-20">
           <a target="_blank" href="https://tailwindcss.com/docs/spacing/#app">
             padding values (.p-N)
@@ -97,7 +90,6 @@ stories.add(
               </span>
             </div>
           ))}
-          <FourPxGrid />
         </section>
       </div>
 
@@ -124,7 +116,6 @@ stories.add(
               </span>
             </div>
           ))}
-          <FourPxGrid />
         </section>
       </div>
 
@@ -139,7 +130,6 @@ stories.add(
           <button className="Button Button--large Button--secondary m-20">
             Large Button HERE
           </button>
-          <FourPxGrid  />
         </section>
       </div>
     </section>
