@@ -19,8 +19,8 @@
   "scripts": {
     "tailwind:css": "tailwind build src/css/tailwind.src.css -c  tailwind.js -o src/css/tailwind.css",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook:build": "NODE_ENV=testing build-storybook -c .storybook -o ./storybook-static/",
     "snapshot": "yarn storybook:build && percy-storybook --widths=320,1280 --minimum_height=2000",
+    "storybook:build": "NODE_ENV=production build-storybook -c .storybook -o ./storybook-static/",
     "build": "NODE_ENV=production yarn run rollup -c",
     "test": "yarn run jest"
   },
