@@ -3,7 +3,13 @@
 
 
 <style>
+
 @media only percy {
+  /* set min-width for our stories so that components that are fill their container don't collapse */
+  .percy-min-width{
+    min-width: 960px;
+  }
+
   /* hide addon-info header, props table, and description from Percy test */
   #root > div > div > div > div:first-child,
   #root > div > div > div > div:last-child,
@@ -11,9 +17,9 @@
     display: none !important;
   }
   
-  .show-in-tests{
-    display: inline-block !important;
-  }
+  .show-in-tests{display: inline-block !important;}
+  /* show our color swatches a11y table to check for changes */
+  .ColorSwatch--a11y.hidden{display: block !important;}
 }
 
 
