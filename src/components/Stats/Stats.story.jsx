@@ -13,19 +13,18 @@ const stories = storiesOf('Stats', module);
 stories.add(
   'Stats Bar',
   () => (
-    <Stats
-      small={boolean('small', false)}
-      transparent={boolean('transparent', false)}
-      stats={object(
-        'stats',
-        [
+    <div className="percy-min-width">
+      <Stats
+        small={boolean('small', false)}
+        transparent={boolean('transparent', false)}
+        stats={object('stats', [
           { icon: 'file', label: 'Files', metric: 1000 },
           { icon: 'participant', label: 'Participants', metric: 1000 },
           { icon: 'family', label: 'Families', metric: 1000 },
           { icon: 'file-size', label: 'Size', metric: 1000 },
-        ],
-      )}
-    />
+        ])}
+      />
+    </div>
   ),
   {
     info: {

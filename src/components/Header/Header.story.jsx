@@ -10,9 +10,7 @@ const stories = storiesOf('Header', module);
 stories.addDecorator(withKnobs);
 
 stories.add('Header', () => (
-  <Header
-    buttons={[
-      <Button>Dashboard</Button>,
-      <Button outline>File Repository</Button>]}
-  />
+  <div className="percy-min-width">
+    <Header buttons={[<Button>Dashboard</Button>, <Button outline>File Repository</Button>]} />
+  </div>
 ));

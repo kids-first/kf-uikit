@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`default default button}button renders correctly 1`] = `
+exports[`Button size:default, ,color:default, ,disabled:false, ,type:button,  renders correctly 1`] = `
 <button
   className="Button Button--default"
   disabled={false}
@@ -11,7 +11,7 @@ exports[`default default button}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`default default submit}button renders correctly 1`] = `
+exports[`Button size:default, ,color:default, ,disabled:false, ,type:submit,  renders correctly 1`] = `
 <button
   className="Button Button--default"
   disabled={false}
@@ -22,51 +22,7 @@ exports[`default default submit}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`default primary button}button renders correctly 1`] = `
-<button
-  className="Button Button--default Button--primary"
-  disabled={false}
-  onClick={[Function]}
-  type="button"
->
-  Hello
-</button>
-`;
-
-exports[`default primary submit}button renders correctly 1`] = `
-<button
-  className="Button Button--default Button--primary"
-  disabled={false}
-  onClick={[Function]}
-  type="submit"
->
-  Hello
-</button>
-`;
-
-exports[`default secondary button}button renders correctly 1`] = `
-<button
-  className="Button Button--default Button--secondary"
-  disabled={false}
-  onClick={[Function]}
-  type="button"
->
-  Hello
-</button>
-`;
-
-exports[`default secondary submit}button renders correctly 1`] = `
-<button
-  className="Button Button--default Button--secondary"
-  disabled={false}
-  onClick={[Function]}
-  type="submit"
->
-  Hello
-</button>
-`;
-
-exports[`disabled default default button}button renders correctly 1`] = `
+exports[`Button size:default, ,color:default, ,disabled:true, ,type:button,  renders correctly 1`] = `
 <button
   className="Button Button--default"
   disabled={true}
@@ -77,7 +33,7 @@ exports[`disabled default default button}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled default default submit}button renders correctly 1`] = `
+exports[`Button size:default, ,color:default, ,disabled:true, ,type:submit,  renders correctly 1`] = `
 <button
   className="Button Button--default"
   disabled={true}
@@ -88,7 +44,29 @@ exports[`disabled default default submit}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled default primary button}button renders correctly 1`] = `
+exports[`Button size:default, ,color:primary, ,disabled:false, ,type:button,  renders correctly 1`] = `
+<button
+  className="Button Button--default Button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`Button size:default, ,color:primary, ,disabled:false, ,type:submit,  renders correctly 1`] = `
+<button
+  className="Button Button--default Button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`Button size:default, ,color:primary, ,disabled:true, ,type:button,  renders correctly 1`] = `
 <button
   className="Button Button--default Button--primary"
   disabled={true}
@@ -99,7 +77,7 @@ exports[`disabled default primary button}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled default primary submit}button renders correctly 1`] = `
+exports[`Button size:default, ,color:primary, ,disabled:true, ,type:submit,  renders correctly 1`] = `
 <button
   className="Button Button--default Button--primary"
   disabled={true}
@@ -110,7 +88,29 @@ exports[`disabled default primary submit}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled default secondary button}button renders correctly 1`] = `
+exports[`Button size:default, ,color:secondary, ,disabled:false, ,type:button,  renders correctly 1`] = `
+<button
+  className="Button Button--default Button--secondary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`Button size:default, ,color:secondary, ,disabled:false, ,type:submit,  renders correctly 1`] = `
+<button
+  className="Button Button--default Button--secondary"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`Button size:default, ,color:secondary, ,disabled:true, ,type:button,  renders correctly 1`] = `
 <button
   className="Button Button--default Button--secondary"
   disabled={true}
@@ -121,7 +121,7 @@ exports[`disabled default secondary button}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled default secondary submit}button renders correctly 1`] = `
+exports[`Button size:default, ,color:secondary, ,disabled:true, ,type:submit,  renders correctly 1`] = `
 <button
   className="Button Button--default Button--secondary"
   disabled={true}
@@ -132,73 +132,7 @@ exports[`disabled default secondary submit}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`disabled large default button}button renders correctly 1`] = `
-<button
-  className="Button Button--large"
-  disabled={true}
-  onClick={[Function]}
-  type="button"
->
-  Hello
-</button>
-`;
-
-exports[`disabled large default submit}button renders correctly 1`] = `
-<button
-  className="Button Button--large"
-  disabled={true}
-  onClick={[Function]}
-  type="submit"
->
-  Hello
-</button>
-`;
-
-exports[`disabled large primary button}button renders correctly 1`] = `
-<button
-  className="Button Button--large Button--primary"
-  disabled={true}
-  onClick={[Function]}
-  type="button"
->
-  Hello
-</button>
-`;
-
-exports[`disabled large primary submit}button renders correctly 1`] = `
-<button
-  className="Button Button--large Button--primary"
-  disabled={true}
-  onClick={[Function]}
-  type="submit"
->
-  Hello
-</button>
-`;
-
-exports[`disabled large secondary button}button renders correctly 1`] = `
-<button
-  className="Button Button--large Button--secondary"
-  disabled={true}
-  onClick={[Function]}
-  type="button"
->
-  Hello
-</button>
-`;
-
-exports[`disabled large secondary submit}button renders correctly 1`] = `
-<button
-  className="Button Button--large Button--secondary"
-  disabled={true}
-  onClick={[Function]}
-  type="submit"
->
-  Hello
-</button>
-`;
-
-exports[`large default button}button renders correctly 1`] = `
+exports[`Button size:large, ,color:default, ,disabled:false, ,type:button,  renders correctly 1`] = `
 <button
   className="Button Button--large"
   disabled={false}
@@ -209,7 +143,7 @@ exports[`large default button}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`large default submit}button renders correctly 1`] = `
+exports[`Button size:large, ,color:default, ,disabled:false, ,type:submit,  renders correctly 1`] = `
 <button
   className="Button Button--large"
   disabled={false}
@@ -220,7 +154,29 @@ exports[`large default submit}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`large primary button}button renders correctly 1`] = `
+exports[`Button size:large, ,color:default, ,disabled:true, ,type:button,  renders correctly 1`] = `
+<button
+  className="Button Button--large"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`Button size:large, ,color:default, ,disabled:true, ,type:submit,  renders correctly 1`] = `
+<button
+  className="Button Button--large"
+  disabled={true}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`Button size:large, ,color:primary, ,disabled:false, ,type:button,  renders correctly 1`] = `
 <button
   className="Button Button--large Button--primary"
   disabled={false}
@@ -231,7 +187,7 @@ exports[`large primary button}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`large primary submit}button renders correctly 1`] = `
+exports[`Button size:large, ,color:primary, ,disabled:false, ,type:submit,  renders correctly 1`] = `
 <button
   className="Button Button--large Button--primary"
   disabled={false}
@@ -242,7 +198,29 @@ exports[`large primary submit}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`large secondary button}button renders correctly 1`] = `
+exports[`Button size:large, ,color:primary, ,disabled:true, ,type:button,  renders correctly 1`] = `
+<button
+  className="Button Button--large Button--primary"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`Button size:large, ,color:primary, ,disabled:true, ,type:submit,  renders correctly 1`] = `
+<button
+  className="Button Button--large Button--primary"
+  disabled={true}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`Button size:large, ,color:secondary, ,disabled:false, ,type:button,  renders correctly 1`] = `
 <button
   className="Button Button--large Button--secondary"
   disabled={false}
@@ -253,10 +231,32 @@ exports[`large secondary button}button renders correctly 1`] = `
 </button>
 `;
 
-exports[`large secondary submit}button renders correctly 1`] = `
+exports[`Button size:large, ,color:secondary, ,disabled:false, ,type:submit,  renders correctly 1`] = `
 <button
   className="Button Button--large Button--secondary"
   disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  Hello
+</button>
+`;
+
+exports[`Button size:large, ,color:secondary, ,disabled:true, ,type:button,  renders correctly 1`] = `
+<button
+  className="Button Button--large Button--secondary"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`Button size:large, ,color:secondary, ,disabled:true, ,type:submit,  renders correctly 1`] = `
+<button
+  className="Button Button--large Button--secondary"
+  disabled={true}
   onClick={[Function]}
   type="submit"
 >
