@@ -2,7 +2,6 @@
 
 This document outlines the process for work on the Kids First Design system.
 
-
 ## Motivation
 
 It is important to maintain tight coupling of the artistic vision with the
@@ -13,18 +12,17 @@ brand, and heightened development costs to maintain.
 
 ## Process
 
-  1) A new component or change is designed using standard design tools
-  2) Feedback is given on the design and returned for modification
-  3) The design is accepted as final and interpreted as a spec for dev work
-  4) The spec is implemented into the design system by a developer
-  5) Developers and the designer provide feedback on its imlpementation
-  6) The imlpementation of the design is accepted and merged into the design system
-  7) Products that consume the design system may immediatly utilize the change
-
+1. A new component or change is designed using standard design tools
+2. Feedback is given on the design and returned for modification
+3. The design is accepted as final and interpreted as a spec for dev work
+4. The spec is implemented into the design system by a developer
+5. Developers and the designer provide feedback on its imlpementation
+6. The imlpementation of the design is accepted and merged into the design system
+7. Products that consume the design system may immediatly utilize the change
 
 ## An Example
 
-The default button style needs to be updated. 
+The default button style needs to be updated.
 
 ### Proposing a Change or New Component
 
@@ -64,11 +62,11 @@ It is thus vital that the presentation of the story be adequet for developer use
 
 The pull request will be reviewed based on:
 
-  - The implementation's consistency with the original design in the issue
-  - Sufficient documentation of the component in the storybook
-  - Conflict with other components and styles
-  - Code quality
-
+- The implementation's consistency with the original design in the issue
+- Sufficient documentation of the component in the storybook
+- Conflict with other components and styles
+  - visual diff checks in Percy.io to ensure there are no unintened side-affects to other components
+- Code quality
 
 ### Iteration on the Implementation
 
