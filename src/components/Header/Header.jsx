@@ -2,7 +2,6 @@ import React from 'react';
 import propTypes from 'prop-types';
 import className from 'classnames';
 import Logo from '../Logo/Logo';
-import './Header.css';
 
 /**
  * The common Kids First navigation.

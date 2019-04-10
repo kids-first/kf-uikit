@@ -17,7 +17,7 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "tailwind:css": "tailwind build src/css/tailwind.src.css -c  tailwind.js -o src/css/tailwind.css",
+    "tailwind:css": "tailwind build src/tailwind.src.css -c  tailwind.js -o src/tailwind.css",
     "storybook": "NODE_ENV=testing start-storybook -p 9001 -c .storybook",
     "storybook:build": "NODE_ENV=testing build-storybook -c .storybook -o ./storybook-static/",
     "snapshot": "yarn storybook:build && percy-storybook --widths=320,1280 --minimum_height=2000",
