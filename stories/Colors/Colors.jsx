@@ -6,8 +6,8 @@ import { compact, toPairs, omit } from 'lodash';
 
 const ColorValues = ({ color }) => (
   <small className="group inline-block h-full self-end text-right">
-    <p className='leading-tight'>{color.hex}</p>
-    <p className='leading-tight mt-0'>
+    <p className="leading-tight">{color.hex}</p>
+    <p className="leading-tight mt-0">
       rgb(
       {color.rgba.slice(0, 3).join(',')})
     </p>
@@ -36,15 +36,13 @@ function Swatch(props) {
         color == 'white' || color == 'lightGrey' ? 'black' : 'white'
       } px-12 leading-loose `}
     >
-      <small className="inline-block font-bold tracking-wide pb-4">
-        {color.toUpperCase()}
-      </small>
+      <small className="inline-block font-bold tracking-wide pb-4">{color.toUpperCase()}</small>
       <ColorValues color={colorData} />
     </div>
   );
 
   return (
-    <div className="container overflow-hidden w-1/3 p-20">
+    <div className="ColorSwatch container overflow-hidden w-1/3 p-20">
       <h3 className="text-center">{color}</h3>
       <div className="w-full overflow-hidden rounded-sm">{shades}</div>
 
@@ -58,7 +56,7 @@ function Swatch(props) {
           </span>
           <span className="inline-block leading-normal float-right">{idealTextColor[1]}</span>
         </small>
-        <div className="hidden group-hover:block">
+        <div className="ColorSwatch--a11y hidden group-hover:block">
           {textColors.map(colorArr => (
             <small
               className={`block w-full h-8  p-4 bg-${colorData.key} text-black text-${colorArr[0]}`}

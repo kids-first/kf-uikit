@@ -12,13 +12,17 @@ stories.add('Simple Card', () => (
   </Card>
 ));
 
-stories.add('Many Cards', () => (
-  <div className="flex">
-    <Card className="flex-1" title="Card 1">
-      <p> Lorem ipsum </p>
-    </Card>
-    <Card className="flex-1" title="Card 2">
-      <p> Lorem ipsum </p>
-    </Card>
-  </div>
-));
+stories.add(
+  'Many Cards',
+  () => (
+    <div className="flex percy-min-width">
+      <Card className="flex-1" title="Card 1">
+        <p> Lorem ipsum </p>
+      </Card>
+      <Card className="flex-1" title="Card 2">
+        <p> Lorem ipsum </p>
+      </Card>
+    </div>
+  ),
+  { percy: { skip: true } },
+);
