@@ -9,7 +9,7 @@ stories.add(
   'spacing values',
   () => (
     <section className="container relative w-full mx-32 flex flex-wrap">
-      <header className="w-2/3 inline-block float-left">
+      <header className="w-2/3 inline-block float-left hide-in-tests">
         <h2 className="pb-8">
           All Spacing (margin, padding) css classes utilize the{' '}
           <a taget="_blank" href="https://tailwindcss.com/docs/spacing/#app">
