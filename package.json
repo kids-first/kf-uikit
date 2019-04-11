@@ -25,11 +25,11 @@
     "test": "yarn run jest"
   },
   "devDependencies": {
-    "@percy-io/percy-storybook": "^2.1.0",
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/plugin-transform-modules-commonjs": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
+    "@percy/storybook": "^3.0.2",
     "@storybook/addon-a11y": "5.0.6",
     "@storybook/addon-backgrounds": "^5.0.6",
     "@storybook/addon-centered": "5.0.6",
