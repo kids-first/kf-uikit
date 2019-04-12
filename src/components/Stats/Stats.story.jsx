@@ -13,6 +13,8 @@ const stories = storiesOf('Stats', module);
 stories.add(
   'Stats Bar',
   () => (
+  <div className="percy-min-width">
+
     <Stats
       small={boolean('small', false)}
       transparent={boolean('transparent', false)}
@@ -26,6 +28,7 @@ stories.add(
         ],
       )}
     />
+    </div>
   ),
   {
     info: {

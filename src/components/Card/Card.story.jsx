@@ -13,7 +13,7 @@ stories.add('Simple Card', () => (
 ));
 
 stories.add('Many Cards', () => (
-  <div className="flex">
+  <div className="flex percy-min-width">
     <Card className="flex-1" title="Card 1">
       <p> Lorem ipsum </p>
     </Card>
