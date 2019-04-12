@@ -11,10 +11,10 @@ stories.addDecorator(withKnobs);
 
 stories.add('Header', () => (
   <div className="percy-min-width">
-  <Header
-    buttons={[
-      <Button>Dashboard</Button>,
-      <Button outline>File Repository</Button>]}
-  />
+    <Header
+      buttons={[
+        <Button>Dashboard</Button>,
+        <Button outline>File Repository</Button>]}
+    />
   </div>
 ));
