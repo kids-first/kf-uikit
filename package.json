@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@babel/runtime": "^7.0.0",
+    "@percy-io/percy-storybook": "^2.1.0",
     "@storybook/addon-a11y": "v4.0.0-alpha.18",
     "@storybook/addon-centered": "v4.0.0-alpha.18",
     "@storybook/addon-info": "v4.0.0-alpha.18",
