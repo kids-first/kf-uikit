@@ -10,12 +10,13 @@ const stories = storiesOf('Icons', module);
 stories.add('Icons', () => (
   <ul className="w-full max-w-full">
     {Object.keys(paths).map((icon) => (
-      <li className="inline-block text-center w-1/4">
+      <li key={icon} className="inline-block text-center w-1/4">
         <div className="w-full">
           <Icon
             width={number('Size', 24)}
             height={number('Size', 24)}
             key={icon}
+            metricFormatter={x =>x}
             kind={icon}
           />
         </div>

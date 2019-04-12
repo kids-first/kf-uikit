@@ -1,17 +1,4 @@
 {
-  "env": {
-    "testing": {
-      "presets": ["react", "env"],
-      "plugins": ["transform-runtime","transform-object-rest-spread", "add-react-displayname"]
-    },
-    "production": {
-      "presets": [
-        "react",
-        ["env", {
-          "modules": false
-        }]
-      ],
-      "plugins": ["external-helpers", "transform-export-default","transform-object-rest-spread"]
-    }
-  }
+  "presets": ["@babel/react", "@babel/preset-env"],
+  "plugins": ["@babel/plugin-proposal-export-default-from", "@babel/plugin-transform-modules-commonjs"],
 }
