@@ -5,7 +5,19 @@
 }
 
 .Header--navigation {
-  @apply flex h-24 p-4 border-b-2;
+  @apply 
+    flex 
+    p-12
+    border-b-2;
+
+  .Header--logo{     
+     height: 65px;
+  }
+
+  .Button {
+    @apply mx-4;
+  }
+
 }
 
 .Navigation--buttons {
@@ -15,6 +27,3 @@
       w-full;
 }
 
-.Header--navigation .Button {
-  @apply mx-4;
-}
