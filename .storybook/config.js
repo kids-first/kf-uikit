@@ -5,7 +5,7 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
 import centered from '@storybook/addon-centered';
 import '../src/tailwind.src.css';
-import gridImg from '../assets/spacing_grid__4px_cells.png'
+import gridImg from '../static/spacing_grid__4px_cells.png'
 
 addParameters({
   backgrounds: [
