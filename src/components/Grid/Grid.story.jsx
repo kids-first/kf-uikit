@@ -73,7 +73,7 @@ stories.add(
       'span',
       1,
       { range: true, min: 1, max: 12, step: 1 },
-      '.cell-<span>',
+      'cell-<span>',
     );
 
     return (
@@ -164,22 +164,22 @@ stories.add(
   'cell offsets',
   () => {
     const startN = number(
-      '.cell-start-',
+      'cell-start-',
       1,
       { range: true, min: 1, max: 12, step: 1 },
-      '.cell-<start>',
+      'cell-<start>',
     );
     const cStart = number(
       'start',
       1,
       { range: true, min: 1, max: 12, step: 1 },
-      '.cell-<start>-<span>',
+      'cell-<start>-<span>',
     );
     const cSpan = number(
       'span',
       1,
       { range: true, min: 1, max: 12, step: 1 },
-      '.cell-<start>-<span>',
+      'cell-<start>-<span>',
     );
     return (
       <section>
@@ -263,7 +263,7 @@ stories.add(
 stories.add(
   'rows/order',
   () => {
-    const rowN = number('.row-', 1, { range: true, min: 1, max: 12, step: 1 }, '.row-N');
+    const rowN = number('row-', 1, { range: true, min: 1, max: 12, step: 1 }, 'row-N');
 
     return (
       <section>
