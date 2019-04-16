@@ -1,19 +1,16 @@
 .Card {
-  margin: 10px;
   @apply inline-block
         overflow-hidden 
         w-full
-        p-20
+        p-12
         bg-white
         rounded-sm
-        border
-        border-grey-lighter
+        shadow
         text-base
         font-normal;
 
   hr {
-    @apply my-20 
-            border
+    @apply border
             border-solid
             border-lightGrey;
   }

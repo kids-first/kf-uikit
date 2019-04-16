@@ -1,36 +1,29 @@
-const path = require('path')
+const path = require('path');
 
-module.exports = {
-  module: {
-    rules: [
+// Export a function. Accept the base config as the only param.
+module.exports = async ({ config, mode }) => {
+ 
+  /* PostCSS Support */
+  config.module.rules.push({
+    test: /.css$/,
+    include: path.resolve(__dirname, '../src'),
+    use: [{ loader: 'postcss-loader', options: { config: { path: './' } } }],
+  });
+
+  config.module.rules.push({
+    test: /\.(js|jsx)$/,
+    loaders: [
       {
-        test: /\.css$/,
-        include: path.resolve(__dirname, '../src/'),
-        use: [
-          'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
-          'postcss-loader'
-        ]
+        loader: 'eslint-loader',
+        options: {
+          emitError: true,
+          failOnError: true,
+        },
       },
-      {
-        test: /\.(js|jsx)$/,
-        loaders: [ {
-          loader: 'eslint-loader',
-           options: {
-            emitError: true,
-            failOnError: true
-          },
-        }],
-        include: path.resolve(__dirname, '../src')
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        use: [
-          {
-            loader: 'url-loader',
-          },
-        ]
-      },
-    ]
-  }
-}
+    ],
+    include: path.resolve(__dirname, '../src'),
+  });
+
+  // Return the altered config
+  return config;
+};
