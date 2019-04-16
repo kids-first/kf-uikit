@@ -14,20 +14,22 @@ stories.add(
     const fullWidth = boolean('fullWidth', false);
     const centered = boolean('centered', true);
     return (
-      <section className="bg-grey p-12" style={{ width: 2000 }}>
-        <GridContainer className="border bg-teal" {...{ fullWidth, centered }}>
-          {range(1, 13).map(() => (
-            <div className="cell-1 row-1 h-12 text-black text-center border bg-white">
-              <p className="mt-0 pt-12 text-xs">60px</p>
-            </div>
-          ))}
-          {range(1, 13).map(() => (
-            <div className="cell-1 row-2 h-12 text-black text-center border bg-white">
-              <p className="mt-0 pt-12 text-xs">60px</p>
-            </div>
-          ))}
-        </GridContainer>
-      </section>
+      <div>
+        <section className="bg-grey p-12 hide-in-tests" style={{ width: 2000 }}>
+          <GridContainer className="border bg-teal" {...{ fullWidth, centered }}>
+            {range(1, 13).map(() => (
+              <div className="cell-1 row-1 h-12 text-black text-center border bg-white">
+                <p className="mt-0 pt-12 text-xs">60px</p>
+              </div>
+            ))}
+            {range(1, 13).map(() => (
+              <div className="cell-1 row-2 h-12 text-black text-center border bg-white">
+                <p className="mt-0 pt-12 text-xs">60px</p>
+              </div>
+            ))}
+          </GridContainer>
+        </section>
+      </div>
     );
   },
   {
@@ -69,12 +71,7 @@ stories.add(
 stories.add(
   'cells',
   () => {
-    const cSpan = number(
-      'span',
-      1,
-      { range: true, min: 1, max: 12, step: 1 },
-      'cell-<span>',
-    );
+    const cSpan = number('span', 1, { range: true, min: 1, max: 12, step: 1 }, 'cell-<span>');
 
     return (
       <section>
@@ -89,7 +86,7 @@ stories.add(
           </div>
         </GridContainer>
       </section>
-    )
+    );
   },
   {
     info: {
@@ -307,134 +304,142 @@ stories.add(
   },
 );
 
-stories.add('gutters', () => (
-  <section>
-    <GridContainer
-      collapsed={radios(
-        'collapse',
-        { rows: 'rows', cells: 'cells', all: true, none: false },
-        false,
-      )}
-    >
-      {range(1, 13).map(i => (
-        <div className={`cell-${i} row-${i} h-12 text-white text-center border bg-grey`}>
-          <p className="mt-0 pt-0">
-            .cell-
-            {i}
-          </p>
-        </div>
-      ))}
+stories.add(
+  'gutters',
+  () => (
+    <section>
+      <GridContainer
+        collapsed={radios(
+          'collapse',
+          { rows: 'rows', cells: 'cells', all: true, none: false },
+          false,
+        )}
+      >
+        {range(1, 13).map(i => (
+          <div className={`cell-${i} row-${i} h-12 text-white text-center border bg-grey`}>
+            <p className="mt-0 pt-0">
+              .cell-
+              {i}
+            </p>
+          </div>
+        ))}
 
-      {range(11, 0).map((i, idx) => (
-        <div className={`cell-${i} row-${idx + 1} h-12 text-white text-center border bg-grey`}>
-          <p className="mt-0 pt-0">
-            .cell-
-            {i}
-          </p>
-        </div>
-      ))}
-    </GridContainer>
-  </section>
-),{
-  info: {
-    text:`
+        {range(11, 0).map((i, idx) => (
+          <div className={`cell-${i} row-${idx + 1} h-12 text-white text-center border bg-grey`}>
+            <p className="mt-0 pt-0">
+              .cell-
+              {i}
+            </p>
+          </div>
+        ))}
+      </GridContainer>
+    </section>
+  ),
+  {
+    info: {
+      text: `
      ## Collapsable gutters
 
      Our grid gaps or gutters are set to 20px both vertically and horizontally to maintain an elegant horizontal and veritcal rhythm to our layouts. However sometimes we may come across use cases where the gutters are not desireable so we can collapse them using the GridContainer **collapse** prop.
-    `
-  }
-});
+    `,
+    },
+  },
+);
 
-stories.add('nested Grids', () => {
-  const collapsed = boolean('collapse gutters', false);
-  return (
-    <section>
-      <GridContainer {...{ collapsed }}>
-        <div className="cell-3 row-1 h-12 text-white text-center border bg-grey">
-          <p className="mt-0 pt-0">.cell-3</p>
-        </div>
-        <div className="cell-9 row-1 h-12 text-white text-center border bg-grey">
-          <p className="mt-0 pt-0">.cell-9</p>
-        </div>
-        <div className="cell-4 row-2 h-12 text-white text-center border bg-grey">
-          <p className="mt-0 pt-0">.cell-4</p>
-        </div>
-        <div className="cell-4 row-2 h-12 text-white text-center border bg-grey">
-          <p className="mt-0 pt-0">.cell-4</p>
-        </div>
-        <div className="cell-4 row-2 h-12 text-white text-center border bg-grey">
-          <p className="mt-0 pt-0">.cell-4</p>
-        </div>
+stories.add(
+  'nested Grids',
+  () => {
+    const collapsed = boolean('collapse gutters', false);
+    return (
+      <section>
+        <GridContainer {...{ collapsed }}>
+          <div className="cell-3 row-1 h-12 text-white text-center border bg-grey">
+            <p className="mt-0 pt-0">.cell-3</p>
+          </div>
+          <div className="cell-9 row-1 h-12 text-white text-center border bg-grey">
+            <p className="mt-0 pt-0">.cell-9</p>
+          </div>
+          <div className="cell-4 row-2 h-12 text-white text-center border bg-grey">
+            <p className="mt-0 pt-0">.cell-4</p>
+          </div>
+          <div className="cell-4 row-2 h-12 text-white text-center border bg-grey">
+            <p className="mt-0 pt-0">.cell-4</p>
+          </div>
+          <div className="cell-4 row-2 h-12 text-white text-center border bg-grey">
+            <p className="mt-0 pt-0">.cell-4</p>
+          </div>
 
-        <div className="cell-12 row-3  text-white text-center border bg-grey">
-          <p className="mt-0 pt-0">.cell-12</p>
-          <GridContainer {...{ collapsed }}>
-            {range(1, 10).map(i => (
-              <div className={`cell-${i} row-${i} h-12 text-white text-center border bg-blue`}>
-                <p className="mt-0 pt-0">
-                  .cell-
-                  {i}
-                </p>
+          <div className="cell-12 row-3  text-white text-center border bg-grey">
+            <p className="mt-0 pt-0">.cell-12</p>
+            <GridContainer {...{ collapsed }}>
+              {range(1, 10).map(i => (
+                <div className={`cell-${i} row-${i} h-12 text-white text-center border bg-blue`}>
+                  <p className="mt-0 pt-0">
+                    .cell-
+                    {i}
+                  </p>
+                </div>
+              ))}
+              <div className="cell-10 row-10  text-white text-center border bg-blue">
+                <p className="mt-0 pt-0">.cell-10</p>
+                <GridContainer {...{ collapsed }}>
+                  {range(1, 13).map(x => (
+                    <div
+                      className={`cell-${x} row-${x} h-12 text-white text-center border bg-purple`}
+                    >
+                      <p className="mt-0 pt-0">
+                        .cell-
+                        {x}
+                      </p>
+                    </div>
+                  ))}
+                  {range(11, 0).map((i, idx) => (
+                    <div
+                      className={`cell-${i} row-${idx +
+                        1} h-12 text-white text-center border bg-purple`}
+                    >
+                      <p className="mt-0 pt-0">
+                        .cell-
+                        {i}
+                      </p>
+                    </div>
+                  ))}
+                </GridContainer>
               </div>
-            ))}
-            <div className="cell-10 row-10  text-white text-center border bg-blue">
-              <p className="mt-0 pt-0">.cell-10</p>
-              <GridContainer {...{ collapsed }}>
-                {range(1, 13).map(x => (
-                  <div
-                    className={`cell-${x} row-${x} h-12 text-white text-center border bg-purple`}
-                  >
-                    <p className="mt-0 pt-0">
-                      .cell-
-                      {x}
-                    </p>
-                  </div>
-                ))}
-                {range(11, 0).map((i, idx) => (
-                  <div
-                    className={`cell-${i} row-${idx +
-                      1} h-12 text-white text-center border bg-purple`}
-                  >
-                    <p className="mt-0 pt-0">
-                      .cell-
-                      {i}
-                    </p>
-                  </div>
-                ))}
-              </GridContainer>
-            </div>
-            <div className="cell-11 row-11 h-12 text-white text-center border bg-blue">
-              <p className="mt-0 pt-0">.cell-11</p>
-            </div>
-            <div className="cell-12 row-12 h-12 text-white text-center border bg-blue">
-              <p className="mt-0 pt-0">.cell-12</p>
-            </div>
-          </GridContainer>
-        </div>
-        <div className="cell-3 row-4 h-12 text-white text-center border bg-grey">
-          <p className="mt-0 pt-0">.cell-3</p>
-        </div>
-        <div className="cell-9 row-4 h-12 text-white text-center border bg-grey">
-          <p className="mt-0 pt-0">.cell-9</p>
-        </div>
-        <div className="cell-4 row-5 h-12 text-white text-center border bg-grey">
-          <p className="mt-0 pt-0">.cell-4</p>
-        </div>
-        <div className="cell-4 row-5 h-12 text-white text-center border bg-grey">
-          <p className="mt-0 pt-0">.cell-4</p>
-        </div>
-        <div className="cell-4 row-5 h-12 text-white text-center border bg-grey">
-          <p className="mt-0 pt-0">.cell-4</p>
-        </div>
-      </GridContainer>
-    </section>
-  );
-}, {
-  info: {
-    text: `
+              <div className="cell-11 row-11 h-12 text-white text-center border bg-blue">
+                <p className="mt-0 pt-0">.cell-11</p>
+              </div>
+              <div className="cell-12 row-12 h-12 text-white text-center border bg-blue">
+                <p className="mt-0 pt-0">.cell-12</p>
+              </div>
+            </GridContainer>
+          </div>
+          <div className="cell-3 row-4 h-12 text-white text-center border bg-grey">
+            <p className="mt-0 pt-0">.cell-3</p>
+          </div>
+          <div className="cell-9 row-4 h-12 text-white text-center border bg-grey">
+            <p className="mt-0 pt-0">.cell-9</p>
+          </div>
+          <div className="cell-4 row-5 h-12 text-white text-center border bg-grey">
+            <p className="mt-0 pt-0">.cell-4</p>
+          </div>
+          <div className="cell-4 row-5 h-12 text-white text-center border bg-grey">
+            <p className="mt-0 pt-0">.cell-4</p>
+          </div>
+          <div className="cell-4 row-5 h-12 text-white text-center border bg-grey">
+            <p className="mt-0 pt-0">.cell-4</p>
+          </div>
+        </GridContainer>
+      </section>
+    );
+  },
+  {
+    info: {
+      text: `
       ## Grid Nesting
 
       To make our grid system even more powerful we can nest GridContianer(s) inside of our cells adding a great deal verstatiliy to our layouts. Nested grids have their outter margins collpased and take the full-width of their containing cells elements.
-    `
-  }
-});
+    `,
+    },
+  },
+);

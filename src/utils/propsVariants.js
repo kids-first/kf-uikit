@@ -30,10 +30,9 @@ export const generateVariantsFor = variationsByField => {
 
     if (!restFieldNames.length) {
       return vs;
-    } 
-    
+    }
+
     return flatMap(vs, newAcc => combinations(restFieldNames, newAcc));
-    
   };
 
   return combinations(fieldNames, {});
