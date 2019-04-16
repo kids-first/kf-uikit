@@ -2,24 +2,14 @@ import { toPairs } from 'lodash';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import * as tailwind from '../../tailwind.js';
-import spacingGridPNG from '../../assets/spacing_grid__4px_cells.png';
-
+import bgsIcon from './assets/bgs_icon.png';
 const stories = storiesOf('Spacing', module);
-
-const FourPxGrid = ({ className = '' }) => (
-  <img
-    src={spacingGridPNG}
-    className={`bg-grid block absolute z-0 top-0 left-0 ${className}`}
-    style={{ maxWidth: 840, width: 840, height: 270 }}
-    alt=""
-  />
-);
 
 stories.add(
   'spacing values',
   () => (
     <section className="container relative w-full mx-32 flex flex-wrap">
-      <header className="w-2/3 inline-block float-left hide-in-tests">
+      <header className="w-2/3 inline-block float-left">
         <h2 className="pb-8">
           All Spacing (margin, padding) css classes utilize the{' '}
           <a taget="_blank" href="https://tailwindcss.com/docs/spacing/#app">
@@ -32,12 +22,13 @@ stories.add(
           Consistent spacing creates visual balance and mathematical harmony that makes the user
           interface (UI) easier to scan. All spacing for components and typography is done in
           increments of 4 pixels using rem values,{' '}
-          <code className="bg-lightGrey text-sm p-4">1rem = 14px to 16px</code> on the same fluid
-          scale used for typography. This 4px value forms the basic unit of measurement for spacing.
+          <code className="bg-lightGrey text-sm p-4">1rem = 14px to 16px</code>{' '} 
+          on the same fluid scale used for typography. This 4px value forms the basic unit of measurement for spacing.
           Therefore, 4 is the magic number in all of our rules. It drives how column layouts are
           determined, elements are designed, how components interact with each other. The success of
           a digital design system lies in the intelligence of its math.
         </p>
+        
       </header>
 
       <div className="w-2/3 ml-32">
@@ -49,11 +40,13 @@ stories.add(
             <th>px</th>
           </thead>
           <tbody>
-            {toPairs(tailwind.margin).map(spacing => (
+            {toPairs(tailwind.margin).map((spacing) => (
               <tr className="border-b">
-                <td>{spacing[0]}</td>
+                <td>{spacing[0]}</td> 
                 <td className="text-xs">{spacing[1].replace('rem', '')}</td>
-                <td>{+spacing[1].replace('rem', '') * 16}</td>
+                <td> 
+                  {+spacing[1].replace('rem', '') * 16} 
+                 </td>
               </tr>
             ))}
           </tbody>
@@ -62,14 +55,16 @@ stories.add(
 
       <div className="relative overflow-hidden w-full  mb-16" style={{ height: 375 }}>
         <h2 className="mt-32 pb-16">Examples</h2>
-
+        <p className="italic font-bold">
+          To see the grid in action change the background by using the <img src={bgsIcon} style={{width: 30, marginBottom: -15}} alt=""/> icon in the top bar 
+        </p>
         <h3 className="z-20">
           <a target="_blank" href="https://tailwindcss.com/docs/spacing/#app">
             padding values (.p-N)
           </a>
           <br />
-          <small className="text-grey ">4px x 4px cells</small>
-          &nbsp;
+          <small className="text-grey ">4px x 4px cells</small> 
+            &nbsp;
           <small>
             <span className="inline-block bg-red opacity-75" style={{ width: 8, height: 8 }} />
             padding box &nbsp;
@@ -82,7 +77,7 @@ stories.add(
         </h3>
 
         <section className="w-full relative flex flex-wrap" style={{ height: 275 }}>
-          {[4, 8, 12, 16, 20, 32, 40, 60].map(i => (
+          {[4, 8, 12, 16, 20, 32, 40, 60].map((i) => (
             <div
               className={`flex items-center content-center text-center relative z-10 mr-${i} p-${i} ${
                 i === 4 ? 'ml-12' : null
@@ -90,26 +85,26 @@ stories.add(
               style={{ width: i * 3, height: i * 3 }}
             >
               <span className="w-full h-full bg-lightBlue" />
-              <span style={{ fontSize: 12, bottom: -20 }} className="absolute pin-l pin-b">
+              <span style={{ fontSize: 12, bottom: -20 }} className="absolute pin-l pin-b" >
                 {i}
               </span>
             </div>
           ))}
-          <FourPxGrid />
         </section>
       </div>
 
       <div className="relative overflow-hidden w-1/3 mb-16 text-sm" style={{ height: 175 }}>
         <h3 className="z-20">
+          
           <a target="_blank" href="https://tailwindcss.com/docs/spacing/#app">
             margin right values (.mr-N)
           </a>
-          <br />
+          <br /> 
           <small className="text-grey">4px x 4px cells</small>
         </h3>
 
         <section className="w-full relative flex flex-wrap">
-          {[4, 8, 12, 16, 20, 32, 40, 60].map(i => (
+          {[4, 8, 12, 16, 20, 32, 40, 60].map((i) => (
             <div
               className={`flex items-center content-center text-center relative z-10 mr-${i} ${
                 i === 4 ? 'ml-12' : null
@@ -121,20 +116,20 @@ stories.add(
               </span>
             </div>
           ))}
-          <FourPxGrid />
         </section>
       </div>
 
       <div className="relative overflow-hidden w-1/3 pl-40 mb-16" style={{ height: 175 }}>
         <h3 className="z-20">
-          Large Button
-          <br />
+          Large Button 
+          <br /> 
           <small className="text-grey">4px x 4px cells</small>
         </h3>
 
         <section className="w-full relative flex flex-wrap">
-          <button className="Button Button--large Button--secondary m-20">Large Button HERE</button>
-          <FourPxGrid />
+          <button className="Button Button--large Button--secondary m-20">
+            Large Button HERE
+          </button>
         </section>
       </div>
     </section>
