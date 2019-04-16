@@ -11,7 +11,14 @@
         text-xs
         text-tealA11y
         uppercase
-        leading-tight;
+        leading-tight
+        align-middle;
+
+  .Icon {
+    height: 8px;
+    width: 8px;
+    @apply mr-4;
+  }
 
   &:disabled {
     @apply bg-bluegrey
@@ -19,6 +26,10 @@
             border-greyBorder
             text-bluegrey-darkest;
     cursor: not-allowed;
+
+    .Icon {
+      @apply text-bluegrey-darkest;
+    }
 
     &:hover {
       @apply bg-bluegrey
@@ -38,12 +49,22 @@
   @apply px-20
         py-8
         text-base;
+
+  .Icon {
+    height: 12px;
+    width: 12px;
+    @apply mr-8;
+  }
 }
 
 .Button--primary {
   @apply bg-tealA11y
         border-tealA11y
         text-white;
+
+  .Icon {
+    @apply text-white;
+  }
 
   &:hover {
     @apply bg-tealHover
@@ -56,6 +77,10 @@
   @apply bg-purple
         border-purple
         text-white;
+
+  .Icon {
+    @apply text-white;
+  }
 
   &:hover {
     @apply bg-purpleHover

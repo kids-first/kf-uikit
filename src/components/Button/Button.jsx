@@ -1,11 +1,12 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import classes from 'classnames';
-
+import Icon from '../Icon/Icon';
+import iconNames from '../Icon/Icons';
 /**
  * A Simple rounded button
  */
-const Button = ({ size, color, disabled, onClick, type, className,
+const Button = ({ size, color, disabled, onClick, type, icon, className,
   children }) => {
 
   const buttonClass = classes(
@@ -22,6 +23,7 @@ const Button = ({ size, color, disabled, onClick, type, className,
       disabled={disabled}
       onClick={onClick}
     >
+      {icon && <Icon kind={icon} />}
       {children}
     </button>
     /* eslint-enable react/button-has-type */
@@ -41,7 +43,9 @@ Button.propTypes = {
   type: propTypes.oneOf(['button', 'submit', 'reset']),
   /** Any additional classes to be applied to the button */
   className: propTypes.string,
-  /** Children elements. */
+  /** The icon shown on button */
+  icon: propTypes.oneOf(Object.keys(iconNames)),
+  /** The text shown on button  */
   children: propTypes.string,
 };
 
@@ -53,6 +57,7 @@ Button.defaultProps = {
   type: 'button',
   className: null,
   children: null,
+  icon: null,
 };
 
 export default Button;
