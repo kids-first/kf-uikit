@@ -1,0 +1,16 @@
+.Badge {
+  @apply w-auto
+    m-4
+    py-4
+    px-20
+    rounded-full
+    text-center
+    text-xs
+    text-white
+    leading-tight
+    whitespace-no-wrap;
+}
+
+.Badge--loading {
+  @apply bg-lightGrey;
+}

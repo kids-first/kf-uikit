@@ -1,0 +1,1365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge color:black, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-black"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:black, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-black"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:black, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:black, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:blue, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-blue"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:blue, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-blue"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:blue, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:blue, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-dark, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey-dark"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-dark, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey-dark"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-dark, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-dark, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-darker, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey-darker"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-darker, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey-darker"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-darker, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-darker, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-darkest, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey-darkest"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-darkest, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey-darkest"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-darkest, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-darkest, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-light, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey-light"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-light, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey-light"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-light, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-light, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-lighter, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey-lighter"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-lighter, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey-lighter"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-lighter, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-lighter, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-lightest, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey-lightest"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-lightest, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-bluegrey-lightest"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-lightest, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:bluegrey-lightest, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:darkGrey, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-darkGrey"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:darkGrey, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-darkGrey"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:darkGrey, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:darkGrey, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-dark, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey-dark"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-dark, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey-dark"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-dark, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-dark, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-darker, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey-darker"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-darker, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey-darker"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-darker, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-darker, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-darkest, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey-darkest"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-darkest, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey-darkest"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-darkest, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-darkest, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-light, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey-light"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-light, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey-light"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-light, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-light, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-lighter, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey-lighter"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-lighter, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey-lighter"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-lighter, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-lighter, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-lightest, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey-lightest"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-lightest, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-grey-lightest"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-lightest, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:grey-lightest, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:greyBorder, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-greyBorder"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:greyBorder, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-greyBorder"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:greyBorder, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:greyBorder, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:lightBlue, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-lightBlue"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:lightBlue, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-lightBlue"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:lightBlue, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:lightBlue, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:lightGrey, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-lightGrey"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:lightGrey, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-lightGrey"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:lightGrey, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:lightGrey, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:mediumGrey, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-mediumGrey"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:mediumGrey, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-mediumGrey"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:mediumGrey, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:mediumGrey, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:orange, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-orange"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:orange, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-orange"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:orange, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:orange, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:pink, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-pink"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:pink, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-pink"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:pink, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:pink, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:purple, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-purple"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:purple, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-purple"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:purple, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:purple, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:purpleHover, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-purpleHover"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:purpleHover, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-purpleHover"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:purpleHover, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:purpleHover, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:red, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-red"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:red, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-red"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:red, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:red, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:teal, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-teal"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:teal, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-teal"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:teal, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:teal, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:tealA11y, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-tealA11y"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:tealA11y, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-tealA11y"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:tealA11y, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:tealA11y, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:tealHover, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-tealHover"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:tealHover, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-tealHover"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:tealHover, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:tealHover, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:transparent, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-transparent"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:transparent, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-transparent"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:transparent, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:transparent, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:white, ,loading:false, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge bg-white"
+>
+  <span>
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:white, ,loading:false, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge bg-white"
+>
+  <span>
+    valid
+  </span>
+</span>
+`;
+
+exports[`Badge color:white, ,loading:true, ,text:invalid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    invalid
+  </span>
+</span>
+`;
+
+exports[`Badge color:white, ,loading:true, ,text:valid,  renders correctly 1`] = `
+<span
+  className="Badge Badge--loading"
+>
+  <span
+    className="invisible"
+  >
+    valid
+  </span>
+</span>
+`;
