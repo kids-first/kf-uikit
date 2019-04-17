@@ -1,3 +1,26 @@
+# Kids First UI Kit Release 0.4.0
+
+## Features
+
+### Summary
+
+Feature Emojis: 📝x3 ⬆️x2 🐛x2 ♻️x2 ✅x1 🚑x1
+Feature Labels: [bug](https://api.github.com/repos/kids-first/kf-uikit/labels/bug) x4 [documentation](https://api.github.com/repos/kids-first/kf-uikit/labels/documentation) x3 [refactor](https://api.github.com/repos/kids-first/kf-uikit/labels/refactor) x3 [ready-for-review](https://api.github.com/repos/kids-first/kf-uikit/labels/ready-for-review) x2 [style](https://api.github.com/repos/kids-first/kf-uikit/labels/style) x2 [devops](https://api.github.com/repos/kids-first/kf-uikit/labels/devops) x1
+
+### New features and changes
+
+- (#106) ⬆️ Feature/storybook version bump v5 - @bdolly
+- (#110) 🐛 Bug fix for style build - @XuTheBunny
+- (#98) ✅ Adds Percy.io Visual Testing to CI - @bdolly
+- (#102) ♻️ Make header hoverable - @XuTheBunny
+- (#89) 🚑 Hotfix/molten leading values - @bdolly
+- (#96) ⬆️ Upgrade yarn deps - @dankolbman
+- (#88) 📝 typographic molten leading updates - @bdolly
+- (#87) ♻️ Refactor/spacing values - @bdolly
+- (#23) 📝 pull request template - @bdolly
+- (#70) 📝 Draft design process - @dankolbman
+- (#83) 🐛 Export stats component - @dankolbman
+
 # Kids First UI Kit Release 0.3.0
 
 ## Features
