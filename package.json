@@ -22,7 +22,7 @@
     "snapshot": "yarn storybook:build && percy-storybook --widths=320,1280 --minimum_height=2000",
     "storybook:build": "NODE_ENV=production build-storybook -c .storybook -o ./storybook-static/",
     "build": "NODE_ENV=production yarn run rollup -c",
-    "test": "yarn run jest"
+    "test": "NODE_ENV=testing yarn run jest"
   },
   "devDependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
@@ -53,6 +53,7 @@
     "moment-timezone": "^0.5.13",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
     "postcss-easy-import": "^3.0.0",
+    "postcss-for": "^2.1.1",
     "postcss-nested-props": "^2.0.0",
     "prettier": "^1.14.2",
     "react-docgen": "^4.1.0",

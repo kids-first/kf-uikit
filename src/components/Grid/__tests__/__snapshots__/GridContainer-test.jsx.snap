@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridContainer collapsed:cells   renders correctly 1`] = `
+<section
+  className="grid-container grid-container--collapsed-cells"
+>
+  <div>
+    Grid Container content
+  </div>
+</section>
+`;
+
+exports[`GridContainer collapsed:cells  fullWidth renders correctly 1`] = `
+<section
+  className="grid-container grid-container--collapsed-cells grid-container--fullWidth"
+>
+  <div>
+    Grid Container content
+  </div>
+</section>
+`;
+
+exports[`GridContainer collapsed:cells centered  renders correctly 1`] = `
+<section
+  className="grid-container mx-auto grid-container--collapsed-cells"
+>
+  <div>
+    Grid Container content
+  </div>
+</section>
+`;
+
+exports[`GridContainer collapsed:cells centered fullWidth renders correctly 1`] = `
+<section
+  className="grid-container mx-auto grid-container--collapsed-cells grid-container--fullWidth"
+>
+  <div>
+    Grid Container content
+  </div>
+</section>
+`;
+
+exports[`GridContainer collapsed:rows   renders correctly 1`] = `
+<section
+  className="grid-container grid-container--collapsed-rows"
+>
+  <div>
+    Grid Container content
+  </div>
+</section>
+`;
+
+exports[`GridContainer collapsed:rows  fullWidth renders correctly 1`] = `
+<section
+  className="grid-container grid-container--collapsed-rows grid-container--fullWidth"
+>
+  <div>
+    Grid Container content
+  </div>
+</section>
+`;
+
+exports[`GridContainer collapsed:rows centered  renders correctly 1`] = `
+<section
+  className="grid-container mx-auto grid-container--collapsed-rows"
+>
+  <div>
+    Grid Container content
+  </div>
+</section>
+`;
+
+exports[`GridContainer collapsed:rows centered fullWidth renders correctly 1`] = `
+<section
+  className="grid-container mx-auto grid-container--collapsed-rows grid-container--fullWidth"
+>
+  <div>
+    Grid Container content
+  </div>
+</section>
+`;
+
+exports[`GridContainer collapsed:true   renders correctly 1`] = `
+<section
+  className="grid-container grid-container--collapsed"
+>
+  <div>
+    Grid Container content
+  </div>
+</section>
+`;
+
+exports[`GridContainer collapsed:true  fullWidth renders correctly 1`] = `
+<section
+  className="grid-container grid-container--collapsed grid-container--fullWidth"
+>
+  <div>
+    Grid Container content
+  </div>
+</section>
+`;
+
+exports[`GridContainer collapsed:true centered  renders correctly 1`] = `
+<section
+  className="grid-container mx-auto grid-container--collapsed"
+>
+  <div>
+    Grid Container content
+  </div>
+</section>
+`;
+
+exports[`GridContainer collapsed:true centered fullWidth renders correctly 1`] = `
+<section
+  className="grid-container mx-auto grid-container--collapsed grid-container--fullWidth"
+>
+  <div>
+    Grid Container content
+  </div>
+</section>
+`;

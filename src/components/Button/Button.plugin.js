@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const _ = require('lodash')
-const defaultConfig = require('tailwindcss/defaultConfig')()
+const _ = require('lodash');
+const defaultConfig = require('tailwindcss/defaultConfig')();
 
 function defaultOptions() {
   return {
@@ -29,15 +29,13 @@ function defaultOptions() {
         fontSize: '1.25rem',
         padding: '.75rem 1.5rem',
         borderRadius: '1.7rem',
-      }
-    }
-  }
+      },
+    },
+  };
 }
 
-module.exports = (opts) => {
-  const options = _.isFunction(opts)
-   ? opts(defaultOptions())
-   : _.defaults(opts, defaultOptions())
+module.exports = opts => {
+  const options = _.isFunction(opts) ? opts(defaultOptions()) : _.defaults(opts, defaultOptions());
 
   return ({ addComponents, e }) => {
     addComponents([
@@ -48,8 +46,8 @@ module.exports = (opts) => {
           fontWeight: _.get(sizeOptions, 'fontWeight', options.fontWeight),
           lineHeight: _.get(sizeOptions, 'lineHeight', options.lineHeight),
           borderRadius: _.get(sizeOptions, 'borderRadius', options.borderRadius),
-        }
-      }))
-    ])
-  }
-}
+        },
+      })),
+    ]);
+  };
+};
