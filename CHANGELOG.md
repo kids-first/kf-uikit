@@ -4,11 +4,12 @@
 
 ### Summary
 
-Feature Emojis: ✨x1 ♻️x1
-Feature Labels: [component](https://api.github.com/repos/kids-first/kf-uikit/labels/component) x1 [feature](https://api.github.com/repos/kids-first/kf-uikit/labels/feature) x1 [ready-for-review](https://api.github.com/repos/kids-first/kf-uikit/labels/ready-for-review) x1 [style](https://api.github.com/repos/kids-first/kf-uikit/labels/style) x1 [devops](https://api.github.com/repos/kids-first/kf-uikit/labels/devops) x1
+Feature Emojis: ⬆️x1 ✨x1 ♻️x1
+Feature Labels: [refactor](https://api.github.com/repos/kids-first/kf-uikit/labels/refactor) x1 [component](https://api.github.com/repos/kids-first/kf-uikit/labels/component) x1 [feature](https://api.github.com/repos/kids-first/kf-uikit/labels/feature) x1 [style](https://api.github.com/repos/kids-first/kf-uikit/labels/style) x1 [devops](https://api.github.com/repos/kids-first/kf-uikit/labels/devops) x1
 
 ### New features and changes
 
+- (#122) ⬆️ Upgrade babel to 7 - @dankolbman
 - (#95) ✨ 12 column grid system - @bdolly
 - (#120) ♻️ Ignore percy in CircleCI - @dankolbman
 
