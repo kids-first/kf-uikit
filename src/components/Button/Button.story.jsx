@@ -29,14 +29,16 @@ stories.add(
         >
           Click Me
         </Button>
-        <div className="show-in-tests hidden">
-          {variants.map(props => (
-            <Button className="m-20" {...props}>
-              Button&nbsp;
-              {Object.values(props).join(' ')}
-            </Button>
-          ))}
-        </div>
+        {process.env.STORYBOOK_PERCY_ENV ? (
+          <div>
+            {variants.map(props => (
+              <Button className="m-20" {...props}>
+                Button&nbsp;
+                {Object.values(props).join(' ')}
+              </Button>
+            ))}
+          </div>
+        ) : null}
       </section>
     );
   },

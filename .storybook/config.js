@@ -6,7 +6,7 @@ import { withInfo } from '@storybook/addon-info';
 import centered from '@storybook/addon-centered';
 import '../src/tailwind.src.css';
 import gridImg from '../static/spacing_grid__4px_cells.png';
-console.log(process.env);
+
 addParameters({
   backgrounds: [
     { name: 'default', value: '#fff', default: true },

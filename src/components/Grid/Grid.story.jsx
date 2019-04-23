@@ -29,45 +29,47 @@ stories.add(
             ))}
           </GridContainer>
         </section>
-        <section className="show-in-tests" style={{ width: 1280 }}>
-          <GridContainer className="border bg-teal mb-20">
-            {range(1, 13).map(() => (
-              <div className="cell-1 row-1 h-12 text-black text-center border bg-white">
-                <p className="mt-0 pt-12 text-xs">60px</p>
-              </div>
-            ))}
-            {range(1, 13).map(() => (
-              <div className="cell-1 row-2 h-12 text-black text-center border bg-white">
-                <p className="mt-0 pt-12 text-xs">60px</p>
-              </div>
-            ))}
-          </GridContainer>
-          <GridContainer className="border bg-teal mb-20" fullWidth>
-            {range(1, 13).map(() => (
-              <div className="cell-1 row-1 h-12 text-black text-center border bg-white">
-                <p className="mt-0 pt-12 text-xs">60px</p>
-              </div>
-            ))}
-            {range(1, 13).map(() => (
-              <div className="cell-1 row-2 h-12 text-black text-center border bg-white">
-                <p className="mt-0 pt-12 text-xs">60px</p>
-              </div>
-            ))}
-          </GridContainer>
+        {process.env.STORYBOOK_PERCY_ENV ? (
+          <section className="show-in-tests" style={{ width: 1280 }}>
+            <GridContainer className="border bg-teal mb-20">
+              {range(1, 13).map(() => (
+                <div className="cell-1 row-1 h-12 text-black text-center border bg-white">
+                  <p className="mt-0 pt-12 text-xs">60px</p>
+                </div>
+              ))}
+              {range(1, 13).map(() => (
+                <div className="cell-1 row-2 h-12 text-black text-center border bg-white">
+                  <p className="mt-0 pt-12 text-xs">60px</p>
+                </div>
+              ))}
+            </GridContainer>
+            <GridContainer className="border bg-teal mb-20" fullWidth>
+              {range(1, 13).map(() => (
+                <div className="cell-1 row-1 h-12 text-black text-center border bg-white">
+                  <p className="mt-0 pt-12 text-xs">60px</p>
+                </div>
+              ))}
+              {range(1, 13).map(() => (
+                <div className="cell-1 row-2 h-12 text-black text-center border bg-white">
+                  <p className="mt-0 pt-12 text-xs">60px</p>
+                </div>
+              ))}
+            </GridContainer>
 
-          <GridContainer className="border bg-teal mb-20" centered={false}>
-            {range(1, 13).map(() => (
-              <div className="cell-1 row-1 h-12 text-black text-center border bg-white">
-                <p className="mt-0 pt-12 text-xs">60px</p>
-              </div>
-            ))}
-            {range(1, 13).map(() => (
-              <div className="cell-1 row-2 h-12 text-black text-center border bg-white">
-                <p className="mt-0 pt-12 text-xs">60px</p>
-              </div>
-            ))}
-          </GridContainer>
-        </section>
+            <GridContainer className="border bg-teal mb-20" centered={false}>
+              {range(1, 13).map(() => (
+                <div className="cell-1 row-1 h-12 text-black text-center border bg-white">
+                  <p className="mt-0 pt-12 text-xs">60px</p>
+                </div>
+              ))}
+              {range(1, 13).map(() => (
+                <div className="cell-1 row-2 h-12 text-black text-center border bg-white">
+                  <p className="mt-0 pt-12 text-xs">60px</p>
+                </div>
+              ))}
+            </GridContainer>
+          </section>
+        ) : null}
       </div>
     );
   },
@@ -260,25 +262,26 @@ stories.add(
             ))}
           </GridContainer>
         </section>
-
-        <section className="show-in-tests percy-min-width">
-          <GridContainer>
-            <div className="cell-4 cell-start-9 row-1 h-12 text-white text-center border bg-purple">
-              <p className="mt-0 pt-0">.cell-4 .cell-start-9</p>
-            </div>
-            <div className="cell-3-4 row-1 h-12 text-white text-center border bg-purple">
-              <p className="mt-0 pt-0">.cell-3-4</p>
-            </div>
-            {range(1, 13).map(i => (
-              <div className="cell-1 row-2 h-12 text-white text-center border bg-grey">
-                <p className="mt-0 pt-0">
-                  .cell-
-                  {i}
-                </p>
+        {process.env.STORYBOOK_PERCY_ENV ? (
+          <section className="show-in-tests percy-min-width">
+            <GridContainer>
+              <div className="cell-4 cell-start-9 row-1 h-12 text-white text-center border bg-purple">
+                <p className="mt-0 pt-0">.cell-4 .cell-start-9</p>
               </div>
-            ))}
-          </GridContainer>
-        </section>
+              <div className="cell-3-4 row-1 h-12 text-white text-center border bg-purple">
+                <p className="mt-0 pt-0">.cell-3-4</p>
+              </div>
+              {range(1, 13).map(i => (
+                <div className="cell-1 row-2 h-12 text-white text-center border bg-grey">
+                  <p className="mt-0 pt-0">
+                    .cell-
+                    {i}
+                  </p>
+                </div>
+              ))}
+            </GridContainer>
+          </section>
+        ) : null}
       </div>
     );
   },
@@ -345,23 +348,25 @@ stories.add(
             ))}
           </GridContainer>
         </section>
-        <section className="show-in-tests percy-min-width">
-          <GridContainer>
-            <div className="cell-7-6 row-9 h-12 text-white text-center border bg-purple">
-              <p className="mt-0 pt-12 text-xs">.row-9 .cell-7-6</p>
-            </div>
-            {range(1, 12).map((i, idx) => (
-              <div className={`cell-6 row-${i + 1} h-12 text-white text-center border bg-grey`}>
-                <p className="mt-0 pt-12 text-xs">
-                  ({idx + 1}
-                  ).row-
-                  {i + 1} .cell-
-                  {i}
-                </p>
+        {process.env.STORYBOOK_PERCY_ENV ? (
+          <section className="show-in-tests percy-min-width">
+            <GridContainer>
+              <div className="cell-7-6 row-9 h-12 text-white text-center border bg-purple">
+                <p className="mt-0 pt-12 text-xs">.row-9 .cell-7-6</p>
               </div>
-            ))}
-          </GridContainer>
-        </section>
+              {range(1, 12).map((i, idx) => (
+                <div className={`cell-6 row-${i + 1} h-12 text-white text-center border bg-grey`}>
+                  <p className="mt-0 pt-12 text-xs">
+                    ({idx + 1}
+                    ).row-
+                    {i + 1} .cell-
+                    {i}
+                  </p>
+                </div>
+              ))}
+            </GridContainer>
+          </section>
+        ) : null}
       </div>
     );
   },
@@ -415,53 +420,55 @@ stories.add(
           ))}
         </GridContainer>
       </section>
-      <section className="show-in-tests percy-min-width">
-        <h4 className="text-center">collapsed: all</h4>
-        <GridContainer collapsed className="mb-20">
-          <div className="cell-1 row-1 h-12 text-white text-center border bg-grey">
-            <p className="mt-0 pt-0">.cell-1</p>
-          </div>
-          <div className="cell-11 row-1 h-12 text-white text-center border bg-grey">
-            <p className="mt-0 pt-0">.cell-11</p>
-          </div>
-          <div className="cell-7 row-2 h-12 text-white text-center border bg-grey">
-            <p className="mt-0 pt-0">.cell-7 .row-2</p>
-          </div>
-          <div className="cell-5 row-2 h-12 text-white text-center border bg-grey">
-            <p className="mt-0 pt-0">.cell-5 .row-2 </p>
-          </div>
-        </GridContainer>
-        <h4 className="text-center">collapsed: rows</h4>
-        <GridContainer collapsed="rows" className="mb-20">
-          <div className="cell-1 row-1 h-12 text-white text-center border bg-grey">
-            <p className="mt-0 pt-0">.cell-1</p>
-          </div>
-          <div className="cell-11 row-1 h-12 text-white text-center border bg-grey">
-            <p className="mt-0 pt-0">.cell-11</p>
-          </div>
-          <div className="cell-7 row-2 h-12 text-white text-center border bg-grey">
-            <p className="mt-0 pt-0">.cell-7 .row-2</p>
-          </div>
-          <div className="cell-5 row-2 h-12 text-white text-center border bg-grey">
-            <p className="mt-0 pt-0">.cell-5 .row-2 </p>
-          </div>
-        </GridContainer>
-        <h4 className="text-center">collapsed: cells</h4>
-        <GridContainer collapsed="cells" className="mb-20">
-          <div className="cell-1 row-1 h-12 text-white text-center border bg-grey">
-            <p className="mt-0 pt-0">.cell-1</p>
-          </div>
-          <div className="cell-11 row-1 h-12 text-white text-center border bg-grey">
-            <p className="mt-0 pt-0">.cell-11</p>
-          </div>
-          <div className="cell-7 row-2 h-12 text-white text-center border bg-grey">
-            <p className="mt-0 pt-0">.cell-7 .row-2</p>
-          </div>
-          <div className="cell-5 row-2 h-12 text-white text-center border bg-grey">
-            <p className="mt-0 pt-0">.cell-5 .row-2 </p>
-          </div>
-        </GridContainer>
-      </section>
+      {process.env.STORYBOOK_PERCY_ENV ? (
+        <section className="show-in-tests percy-min-width">
+          <h4 className="text-center">collapsed: all</h4>
+          <GridContainer collapsed className="mb-20">
+            <div className="cell-1 row-1 h-12 text-white text-center border bg-grey">
+              <p className="mt-0 pt-0">.cell-1</p>
+            </div>
+            <div className="cell-11 row-1 h-12 text-white text-center border bg-grey">
+              <p className="mt-0 pt-0">.cell-11</p>
+            </div>
+            <div className="cell-7 row-2 h-12 text-white text-center border bg-grey">
+              <p className="mt-0 pt-0">.cell-7 .row-2</p>
+            </div>
+            <div className="cell-5 row-2 h-12 text-white text-center border bg-grey">
+              <p className="mt-0 pt-0">.cell-5 .row-2 </p>
+            </div>
+          </GridContainer>
+          <h4 className="text-center">collapsed: rows</h4>
+          <GridContainer collapsed="rows" className="mb-20">
+            <div className="cell-1 row-1 h-12 text-white text-center border bg-grey">
+              <p className="mt-0 pt-0">.cell-1</p>
+            </div>
+            <div className="cell-11 row-1 h-12 text-white text-center border bg-grey">
+              <p className="mt-0 pt-0">.cell-11</p>
+            </div>
+            <div className="cell-7 row-2 h-12 text-white text-center border bg-grey">
+              <p className="mt-0 pt-0">.cell-7 .row-2</p>
+            </div>
+            <div className="cell-5 row-2 h-12 text-white text-center border bg-grey">
+              <p className="mt-0 pt-0">.cell-5 .row-2 </p>
+            </div>
+          </GridContainer>
+          <h4 className="text-center">collapsed: cells</h4>
+          <GridContainer collapsed="cells" className="mb-20">
+            <div className="cell-1 row-1 h-12 text-white text-center border bg-grey">
+              <p className="mt-0 pt-0">.cell-1</p>
+            </div>
+            <div className="cell-11 row-1 h-12 text-white text-center border bg-grey">
+              <p className="mt-0 pt-0">.cell-11</p>
+            </div>
+            <div className="cell-7 row-2 h-12 text-white text-center border bg-grey">
+              <p className="mt-0 pt-0">.cell-7 .row-2</p>
+            </div>
+            <div className="cell-5 row-2 h-12 text-white text-center border bg-grey">
+              <p className="mt-0 pt-0">.cell-5 .row-2 </p>
+            </div>
+          </GridContainer>
+        </section>
+      ) : null}
     </div>
   ),
   {

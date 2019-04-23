@@ -7,7 +7,6 @@ import Stat from './Stat';
 import iconNames from '../Icon/Icons';
 
 const names = Object.keys(iconNames).reduce((cur, acc) => ({ [cur]: cur, ...acc }), {});
-console.log(names);
 const stories = storiesOf('Stats', module);
 
 stories.add(
