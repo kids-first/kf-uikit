@@ -8,3 +8,4 @@ export Header from './components/Header/Header';
 export Icon from './components/Icon/Icon';
 export Stats from './components/Stats/Stats';
 export GridContainer from './components/Grid/GridContainer';
+export SecondaryNav from './components/SecondaryNav/SecondaryNav';

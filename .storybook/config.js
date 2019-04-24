@@ -34,6 +34,7 @@ let req = {
   cards: './src/components/Card/Card.story.jsx',
   header: './src/components/Header/Header.story.jsx',
   stats: './src/components/Stats/Stats.story.jsx',
+  navigation: './src/components/SecondaryNav/SecondaryNav.story.jsx',
 };
 const storyReqs = require.context('../', true, /^.*\.story\.jsx$/);
 
