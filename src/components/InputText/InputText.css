@@ -1,0 +1,34 @@
+.InputForm {
+  @apply table w-auto;
+}
+
+.InputLabel {
+  @apply table-cell pr-8;
+}
+
+.InputBox {
+  border-radius: 5px;
+  @apply table-cell px-12 py-4 border;
+}
+
+.InputBox--Prefix {
+  border-radius: 5px 0px 0px 5px;
+  x: -5px;
+  @apply table-cell bg-lightGrey border px-12 text-sm;
+}
+
+.InputBox--Suffix {
+  border-radius: 0px 5px 5px 0px;
+  x: -5px;
+  @apply table-cell bg-lightGrey border px-12 text-sm;
+}
+
+.InputRequest {
+  @apply pl-8 text-red;
+}
+
+.InputMessage {
+  display: table-caption;
+  caption-side: bottom;
+  @apply text-xs text-right mr-4 my-0 leading-tight;
+}
