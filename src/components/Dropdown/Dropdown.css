@@ -1,0 +1,61 @@
+.Dropdown {
+  min-width: 200px;
+  @apply inline-block relative;
+  &:active,
+  &:focus,
+  &--open {
+    .Dropdown--container {
+      @apply block;
+      &:hover {
+        @apply block;
+      }
+    }
+  }
+}
+
+.Dropdown--container {
+  @apply hidden w-full absolute;
+  padding-top: 20px;
+  z-index: 100;
+  top: 0;
+
+  &:hover {
+    @apply block;
+  }
+}
+
+.Dropdown--button {
+  @apply w-full text-pink no-underline flex justify-center;
+  .Icon {
+    @apply text-pink;
+  }
+
+  &:focus {
+    & + .Dropdown--container {
+      @apply block;
+    }
+  }
+}
+
+.Dropdown--list {
+  margin: auto;
+  width: 200px;
+  @apply list-reset my-8 py-8 shadow-md rounded-sm flex flex-col bg-white;
+  li {
+    @apply p-0;
+  }
+}
+
+.Dropdown--item {
+  @apply px-20 py-12 text-sm text-left border-l-2 border-white text-black no-underline;
+  .Icon {
+    @apply text-grey mr-12;
+  }
+  &:hover,
+  &:focus {
+    @apply text-pink border-pink;
+    .Icon {
+      @apply text-pink;
+    }
+  }
+}

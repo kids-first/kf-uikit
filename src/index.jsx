@@ -10,3 +10,4 @@ export Stats from './components/Stats/Stats';
 export GridContainer from './components/Grid/GridContainer';
 export SecondaryNav from './components/SecondaryNav/SecondaryNav';
 export Avatar from './components/Avatar/Avatar';
+export Dropdown from './components/Dropdown/Dropdown';
