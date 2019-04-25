@@ -1,0 +1,26 @@
+.InputForm {
+  @apply table w-auto;
+}
+
+.InputLabel {
+  @apply table-cell pr-8;
+}
+
+.InputBox {
+  border-radius: 5px;
+  @apply table-cell px-12 py-4 border w-full h-full;
+}
+
+.InputBox--error {
+  @apply border-red;
+}
+
+.InputRequest {
+  @apply pl-8 text-red;
+}
+
+.InputMessage {
+  display: table-caption;
+  caption-side: bottom;
+  @apply text-xs text-right mr-4 my-0 leading-tight;
+}
