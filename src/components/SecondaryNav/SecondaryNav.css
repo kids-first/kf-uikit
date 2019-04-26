@@ -1,0 +1,53 @@
+.SecondaryNav {
+  @apply border-b-2
+      relative
+      bg-white
+      overflow-hidden
+      border-mediumGrey;
+}
+
+.SecondaryNav ul {
+  @apply p-0
+      m-0
+      relative
+      inline-block
+      h-full
+      max-w-full;
+}
+
+.SecondaryNav--link {
+  @apply m-0
+      p-0
+      relative
+      inline-block
+      h-full
+      border-lightGrey
+      border
+      border-b-0
+      font-semibold
+      cursor-pointer;
+
+  a {
+    @apply p-16
+              block
+              h-full
+              text-sm
+              font-semibold
+              text-purple
+              text-center
+              font-title
+              no-underline;
+    &:focus {
+      @apply text-pink
+            border-b-4
+            border-pink;
+    }
+  }
+}
+
+.SecondaryNav--link:hover a,
+.SecondaryNav--link-active a {
+  @apply text-pink
+      border-b-4
+      border-pink;
+}
