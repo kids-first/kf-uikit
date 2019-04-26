@@ -55,7 +55,7 @@ stories.add(
       },
     ];
     const variants = generateVariantsFor({
-      items: [[], ...items],
+      items: [[], items],
       open: [true, false, null],
     });
     return (
@@ -69,7 +69,7 @@ stories.add(
         {process.env.STORYBOOK_PERCY_ENV ? (
           <div className="show-in-tests" style={{ width: 1280 }}>
             {variants.map(props => (
-              <div className="float-left m-20" style={{ height: 300, width: 220 }}>
+              <div className="float-left m-20" style={{ height: 300, width: '25%' }}>
                 <Dropdown {...props}>
                   <span>
                     <Icon className="mr-12" width={16} height={16} kind="resources" />

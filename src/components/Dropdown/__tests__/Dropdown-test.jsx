@@ -1,22 +1,62 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { generateVariantsFor } from '../../../utils/propsVariants';
 import { toPairs } from 'lodash';
+import { generateVariantsFor } from '../../../utils/propsVariants';
 import Dropdown from '../Dropdown';
-import iconNames from '../../Icon/Icons';
+import Icon from '../../Icon/Icon';
 
+const items = [
+  {
+    value: 'Data Resource Protal',
+    icon: 'file-size',
+    onClick: e => {
+      e.preventDefault();
+    },
+    type: 'button',
+  },
+  {
+    value: 'Website',
+    icon: 'website',
+    onClick: e => {
+      e.preventDefault();
+    },
+    type: 'button',
+  },
+  {
+    value: 'Studies and Access',
+    icon: 'study',
+    onClick: e => {
+      e.preventDefault();
+    },
+    type: 'button',
+  },
+  {
+    value: 'Support',
+    icon: 'info',
+    onClick: e => {
+      e.preventDefault();
+    },
+    type: 'button',
+  },
+  {
+    value: 'Contact',
+    icon: 'email',
+    onClick: e => {
+      e.preventDefault();
+    },
+    type: 'link',
+    href: '/',
+  },
+];
 const variants = generateVariantsFor({
-  topText: [null, '', 'Resources'],
-  topIcon: [null, ...Object.keys(iconNames)],
-  items: [
-    [],
-    [
-      { value: 'Data Resource Protal', icon: 'file-size', onClick: () => {} },
-      { value: 'Website', icon: 'website', onClick: () => {} },
-      { value: 'Studies and Access', icon: 'study', onClick: () => {} },
-      { value: 'Support', icon: 'info', onClick: () => {} },
-      { value: 'Contact', icon: 'email', onClick: () => {} },
-    ],
+  items: [[], items],
+  open: [true, false, null],
+  children: [
+    <span>
+      <Icon className="mr-12" width={16} height={16} kind="resources" />
+      resources
+    </span>,
+    'Foobar no comp',
   ],
 });
 
