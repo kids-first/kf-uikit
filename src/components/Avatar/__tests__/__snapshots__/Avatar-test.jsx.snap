@@ -1,0 +1,2671 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar size:19, ,userName:, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=19"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=19"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=19"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=19"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:null, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:null, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:null, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:null, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:null, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:null, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=19"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:19, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=19"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=20"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=20"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=20"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=20"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:null, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:null, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:null, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:null, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:null, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:null, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=20"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:20, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 20,
+      "width": 20,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=20"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 160,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 160,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 160,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 160,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=200"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=200"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 160,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 160,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 160,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 160,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=200"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=200"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:null, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 160,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:null, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:null, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 160,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:null, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 160,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:null, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:null, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 160,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=200"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:200, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 200,
+      "width": 200,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=200"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=201"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=201"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=201"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=201"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:null, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:null, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:null, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:null, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:null, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:null, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=201"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:201, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=201"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=null"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt=" avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=null"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:Jacob N. Ross, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:Jacob N. Ross, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    J
+  </span>
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=null"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:Jacob N. Ross, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="Jacob N. Ross avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=null"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:null, ,userEmail:, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:null, ,userEmail:, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:null, ,userEmail:, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:null, ,userEmail:null, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:null, ,userEmail:null, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:null, ,userEmail:null, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <span
+    style={
+      Object {
+        "fontSize": 32,
+      }
+    }
+  >
+    ···
+  </span>
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=null"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:https://www.w3schools.com/css/img_avatar.png,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.w3schools.com/css/img_avatar.png"
+  />
+</div>
+`;
+
+exports[`Avatar size:null, ,userName:null, ,userEmail:xuzhu@d3b.center, ,imgUrl:null,  renders correctly 1`] = `
+<div
+  className="Avatar"
+  style={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+>
+  <img
+    alt="null avatar"
+    className="Avatar-img"
+    src="https://www.gravatar.com/avatar/b0c49ddc6da3f33aaf3e93f5c5e78a87?s=null"
+  />
+</div>
+`;
