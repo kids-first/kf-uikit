@@ -1,3 +1,22 @@
+# Kids First UI Kit Release 0.6.0
+
+## Features
+
+### Summary
+
+Feature Emojis: ✨x4 🔧x2 🔥x1
+Feature Labels: [feature](https://api.github.com/repos/kids-first/kf-uikit/labels/feature) x4 [component](https://api.github.com/repos/kids-first/kf-uikit/labels/component) x3 [bug](https://api.github.com/repos/kids-first/kf-uikit/labels/bug) x2 [ready-for-review](https://api.github.com/repos/kids-first/kf-uikit/labels/ready-for-review) x1 [devops](https://api.github.com/repos/kids-first/kf-uikit/labels/devops) x1 [style](https://api.github.com/repos/kids-first/kf-uikit/labels/style) x1 [refactor](https://api.github.com/repos/kids-first/kf-uikit/labels/refactor) x1
+
+### New features and changes
+
+- (#112) ✨ Add dropdown menu component - @XuTheBunny
+- (#109) ✨ Add avatar component - @XuTheBunny
+- (#105) ✨ Add SecondaryNav component - @XuTheBunny
+- (#127) 🔧 use STORYBOOK_PERCY_ENV for yarn snapshot - @bdolly
+- (#103) ✨ Add button with icon - @XuTheBunny
+- (#121) 🔧 Export bablified js - @dankolbman
+- (#123) 🔥 Remove .DS_Store - @dankolbman
+
 # Kids First UI Kit Release 0.5.0
 
 ## Features
