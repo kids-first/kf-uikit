@@ -7,6 +7,16 @@
   "files": [
     "dist"
   ],
+  "bundlesize": [
+    {
+      "path": "./dist/*.js",
+      "maxSize": "3 MB"
+    },
+    {
+      "path": "./dist/*.css",
+      "maxSize": "1 MB"
+    }
+  ],
   "dependencies": {
     "chroma-js": "^2.0.3",
     "classnames": "^2.2.6",
