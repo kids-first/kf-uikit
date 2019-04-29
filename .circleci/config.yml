@@ -32,4 +32,8 @@ jobs:
       - run: ./node_modules/.bin/eslint src/
       - run: NODE_ENV=testing yarn test
       - run: yarn build
+      - run:
+          command: |
+            yarn add -D bundlesize
+            yarn run bundlesize
       - run: set +e; yarn snapshot; true
