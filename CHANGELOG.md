@@ -1,3 +1,20 @@
+# Kids First UI Kit Release 0.6.1
+
+## Features
+
+Fixes build and adds CI checks.
+
+### Summary
+
+Feature Emojis: 👷x2 🔥x1
+Feature Labels: [devops](https://api.github.com/repos/kids-first/kf-uikit/labels/devops) x2 [bug](https://api.github.com/repos/kids-first/kf-uikit/labels/bug) x1
+
+### New features and changes
+
+- (#131) 👷 Bundle size status check - @dankolbman
+- (#130) 👷 Ensure bundle builds without error in CI - @dankolbman
+- (#129) 🔥 Remove lodash from Avatar - @dankolbman
+
 # Kids First UI Kit Release 0.6.0
 
 ## Features
