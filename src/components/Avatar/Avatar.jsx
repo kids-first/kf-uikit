@@ -2,13 +2,12 @@ import React from 'react';
 import propTypes from 'prop-types';
 import classes from 'classnames';
 import md5 from 'md5';
-import { trim } from 'lodash';
 /**
  * Displays user profile avatar image with/withour user name
  */
 const Avatar = ({ className, size, userName, imgUrl, userEmail }) => {
   const gravatarUrl = userEmail
-    ? `https://www.gravatar.com/avatar/${md5(trim(userEmail.toLowerCase()))}?s=${size}`
+    ? `https://www.gravatar.com/avatar/${md5(userEmail.toLowerCase().trim())}?s=${size}`
     : null;
   const avatarClass = classes('Avatar', className);
   const avatarSize =
