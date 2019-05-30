@@ -27,7 +27,7 @@ GridContainer.propTypes = {
   /** Children elements. */
   children: PropTypes.node,
   /** Collapse margins and gutters. */
-  collapsed: PropTypes.oneOf([true, 'cells', 'rows']),
+  collapsed: PropTypes.oneOf([true, false, 'cells', 'rows']),
   /** wheter or not to apply margin: 0 auto; */
   centered: PropTypes.bool,
   /** wheter or not to apply max-width: 100%; */
