@@ -3,7 +3,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { range } from 'lodash';
-import { number, radios, boolean } from '@storybook/addon-knobs';
+import { number, select, boolean } from '@storybook/addon-knobs';
 import GridContainer from './GridContainer';
 
 const stories = storiesOf('Layout', module);
@@ -394,13 +394,7 @@ stories.add(
   () => (
     <div>
       <section className="hide-in-tests">
-        <GridContainer
-          collapsed={radios(
-            'collapse',
-            { rows: 'rows', cells: 'cells', all: true, none: false },
-            false,
-          )}
-        >
+        <GridContainer collapsed={select('Collapse', ['rows', 'cells', true, false], false)}>
           {range(1, 13).map(i => (
             <div className={`cell-${i} row-${i} h-12 text-white text-center border bg-grey`}>
               <p className="mt-0 pt-0">
